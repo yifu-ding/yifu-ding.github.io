@@ -1081,6 +1081,7 @@ blockquote p {
 .modal-content {
   position: relative;
   display: flex;
+  z-index: 1060;
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
