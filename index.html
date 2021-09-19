@@ -121,7 +121,7 @@
                     <p>
                         [<a target="_blank" rel="noopener" href="http://arxiv.org/abs/2109.00212">PDF</a>], 
                         [<a target="_blank" rel="noopener" href="https://github.com/htqin/DSG">code</a>], 
-                        [<button type="button" class="mybtn" onclick="dianwo()">cite</button>]
+                        [<button type="button" class="mybtn" onclick="open_modal(/Publications/qin2021diverse/text.bib)">cite</button>]
                     </p>
                     <figure class="highlight plaintext">
                         <table>
@@ -285,7 +285,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h3 class="modal-title">cite</h3>
-                        <button type="button" class="mybtn" data-dismiss="modal" aria-label="Close" onclick="hidder()">
+                        <button type="button" class="mybtn" data-dismiss="modal" aria-label="Close" onclick="close_modal()">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -308,10 +308,11 @@
             let modal = document.getElementById('modal');
             let code = document.getElementById('code');
 			modal.style.display="none";
-			function dianwo(){
+			function open_modal(filename){
 				modal.style.display="";
+                console.log(filename)
 			}
-			function hidder(){
+			function close_modal(){
 				modal.style.display="none";
                 code.innerText = ""
 			}
