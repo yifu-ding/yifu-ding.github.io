@@ -36,20 +36,24 @@
                         alt="avatar"></div>
                     <div class="author-discrip">
                         <h3>Yifu Ding</h3>
-                        <p class="author-bio">Beihang University, PhD student</p>
+                        <p class="author-bio">PhD student<br>
+                        Beihang University</p>
                     </div>
                     <div class="author-links">
                         <button class="btn m-social-links">Links</button>
                         <ul class="social-links">
                             <li>
-                                <a class="e-social-link" href="yifuding@buaa.edu.cn" onclick="return false;" target="_blank">
+                                <!-- <a class="e-social-link" href="yifuding@buaa.edu.cn" onclick="return false;" target="_blank"> -->
+                                    <div class="e-social-link">
                                     <i class="fas fa-envelope" aria-hidden="true"></i>
-                                    <span>yifuding@buaa.edu.cn</span></a>
+                                    <span>yifuding@buaa.edu.cn</span>
+                                    </div>
+                                <!-- </a> -->
                             </li>
                             <li>
                                 <a class="e-social-link" href="https://github.com/yifu-ding" target="_blank">
                                     <i class="fab fa-github" aria-hidden="true"></i>
-                                    <span>github</span></a>
+                                    <span>Github</span></a>
                             </li>
                             <li>
                                 <a
@@ -110,154 +114,169 @@
                             <p>BSc in Computer Science and Technology, Beihang University, 2017.9 - 2021.6</p>
                         </li>
                     </ul>
-                    <h1 id="Publications">
-                        <a href="#Publications" class="headerlink" title="Publications"></a>Publications</h1>
-                    <p>
-                        <a target="_blank" rel="noopener" href="http://arxiv.org/abs/2109.00212">Diverse Sample Generation: Pushing the Limit of Data-free Quantization</a>
-                    </p>
-                    <p>Haotong Qin,
-                        <strong>Yifu Ding</strong>, Xiangguo Zhang, Aoyu Li, Jiakai Wang, Xianglong Liu, Jiwen Lu.
-                    </p>
-                    <p>
-                        [<a target="_blank" rel="noopener" href="http://arxiv.org/abs/2109.00212">PDF</a>] 
-                        [<a target="_blank" rel="noopener" href="https://github.com/htqin/DSG">code</a>] 
-                        [<button type="button" class="mybtn" onclick="open_modal('/Publications/qin2021diverse/text.bib')">cite</button>]
-                    </p>
-                    <figure class="highlight plaintext">
-                        <table>
-                            <tr>
-                                <td class="gutter">
-                                    <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre>
-                                </td>
-                                <td class="code">
-                                    <pre><span class="line">@misc&#123;qin2021diverse,</span><br><span class="line">      title=&#123;diverse sample generation: pushing the limit of data-free quantization&#125;, </span><br><span class="line">      author=&#123;haotong qin and yifu ding and xiangguo zhang and aoyu li and jiakai wang and xianglong liu and jiwen lu&#125;,</span><br><span class="line">      year=&#123;2021&#125;,</span><br><span class="line">      eprint=&#123;2109.00212&#125;,</span><br><span class="line">      archiveprefix=&#123;arxiv&#125;,</span><br><span class="line">      primaryclass=&#123;cs.cv&#125;</span><br><span class="line">&#125;</span><br></pre>
-                                </td>
-                            </tr>
-                        </table>
-                    </figure>
+                    
+                    <div id="Publications_part">
+                        <h1 id="Publications">
+                            <a href="#Publications" class="headerlink" title="Publications"></a>Publications
+                        </h1>
+                        
+                        <div class="publication_item">
+                            
+                            <div class=stream-meta>
+                                <h3 class="article-title mb-2 mt-0">
+                                    <a target="_blank" rel="noopener" href="http://arxiv.org/abs/2109.00212">Diverse Sample Generation: Pushing the Limit of Data-free Quantization</a>
+                                </h3>
+                                <div class="article-metadata">
 
-                    <p>
-                        <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2010.05501.pdf">Bipointnet: Binary neural network for point clouds</a>
-                    </p>
-                    <p>Haotong Qin*, Zhongang Cai*, Mingyuan Zhang*,
-                        <strong>Yifu Ding</strong>, Haiyu Zhao, Shuai Yi, Xianglong Liu, Hao Su (*equal contribution)</p>
-                    <p>
-                        [<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2010.05501.pdf">PDF</a>] 
-                        [<a target="_blank" rel="noopener" href="https://github.com/htqin/BiPointNet">code</a>] 
-                        [<button type="button" class="mybtn" onclick="open_modal('/Publications/qin_iclr21/text.bib')">cite</button>]
-                    </p>
-                    <figure class="highlight plaintext">
-                        <table>
-                            <tr>
-                                <td class="gutter">
-                                    <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre>
-                                </td>
-                                <td class="code">
-                                    <pre><span class="line">@inproceedings&#123;qin:iclr21,</span><br><span class="line">  author    = &#123;haotong qin and zhongang cai and mingyuan zhang </span><br><span class="line">  and yifu ding and haiyu zhao and shuai yi </span><br><span class="line">  and xianglong liu and hao su&#125;,</span><br><span class="line">  title     = &#123;bipointnet: binary neural network for point clouds&#125;,</span><br><span class="line">  booktitle = &#123;iclr&#125;,</span><br><span class="line">  year      = &#123;2021&#125;</span><br><span class="line">&#125;</span><br></pre>
-                                </td>
-                            </tr>
-                        </table>
-                    </figure>
+                                
+                                    <div>Haotong Qin,
+                                        <strong>Yifu Ding</strong>, Xiangguo Zhang, Aoyu Li, Jiakai Wang, Xianglong Liu, Jiwen Lu.
+                                    </div>
+                                    <div>
+                                        <a class="mya" target="_blank" rel="noopener" href="http://arxiv.org/abs/2109.00212">PDF</a> 
+                                        <a class="mya" target="_blank" rel="noopener" href="https://github.com/htqin/DSG">Code</a> 
+                                        <button type="button" class="mybtn" onclick="open_modal('/Publications/qin2021diverse/text.bib')">Cite</button>
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class='ml-3'>
+                                <img src="/Publications/qin2021diverse/img.png" alt="">
+                            </div>  
+                        </div>  
+                        
+                        <div class="publication_item">
+                             
+                            <div class=stream-meta>
+                                <h3 class="article-title mb-2 mt-0">
+                                    <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2010.05501.pdf">Bipointnet: Binary neural network for point clouds</a>
+                                </h3>
+                                <div class="article-metadata">
 
-                    <p>
-                        <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2103.01049">Diversifying Sample Generation for Accurate Data-Free Quantization</a>
-                    </p>
-                    <p>Xiangguo Zhang*, Haotong Qin*,
-                        <strong>Yifu Ding</strong>, Ruihao Gong, Qinghua Yan, Renshuai Tao, Yuhang Li,
-                        Fengwei Yu, Xianglong Liu. (*equal contribution)</p>
-                    <p>
-                        [<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2103.01049">PDF</a>] 
-                        [<button type="button" class="mybtn" onclick="open_modal('/Publications/zhangqdgytlyl21/text.bib')">cite</button>]
-                    </p>
-                    <figure class="highlight plaintext">
-                        <table>
-                            <tr>
-                                <td class="gutter">
-                                    <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre>
-                                </td>
-                                <td class="code">
-                                    <pre><span class="line">@inproceedings&#123;zhangqdgytlyl21,</span><br><span class="line">  author    = &#123;xiangguo zhang and</span><br><span class="line">               haotong qin and</span><br><span class="line">               yifu ding and</span><br><span class="line">               ruihao gong and</span><br><span class="line">               qinghua yan and</span><br><span class="line">               renshuai tao and</span><br><span class="line">               yuhang li and</span><br><span class="line">               fengwei yu and</span><br><span class="line">               xianglong liu&#125;,</span><br><span class="line">  title     = &#123;diversifying sample generation for accurate data-free quantization&#125;,</span><br><span class="line">  booktitle = &#123;&#123;ieee&#125; conference on computer vision and pattern recognition, &#123;cvpr&#125;&#125;,</span><br><span class="line">  year      = &#123;2021&#125;,</span><br><span class="line">&#125;</span><br></pre>
-                                </td>
-                            </tr>
-                        </table>
-                    </figure>
+                                
+                                    <div>Haotong Qin*, Zhongang Cai*, Mingyuan Zhang*,
+                                        <strong>Yifu Ding</strong>, Haiyu Zhao, Shuai Yi, Xianglong Liu, Hao Su (*equal contribution)
+                                    </div>
+                                    <div>
+                                        <a class="mya" target="_blank" rel="noopener" href="https://arxiv.org/pdf/2010.05501.pdf">PDF</a> 
+                                        <a class="mya" target="_blank" rel="noopener" href="https://github.com/htqin/BiPointNet">Code</a> 
+                                        <button type="button" class="mybtn" onclick="open_modal('/Publications/qin_iclr21/text.bib')">Cite</button>
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class='ml-3'>
+                                <img src="/Publications/qin_iclr21/img.png" alt="">
+                            </div> 
+                        </div>  
 
-                    <p>
-                        <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2103.05985">Multi-Pretext Attention Network for Few-shot Learning with Self-supervision</a>
-                    </p>
-                    <p>Hainan Li, Renshuai Tao, Jun Li, Haotong Qin,
-                        <strong>Yifu Ding</strong>, Shuo Wang, Xianglong Liu.
-                    </p>
-                    <p>
-                        [<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2103.05985.pdf">PDF</a>] 
-                        [<a target="_blank" rel="noopener" href="https://github.com/MAN-author/MAN">code</a>] 
-                        [<button type="button" class="mybtn" onclick="open_modal('/Publications/li2021multi/text.bib')">cite</button>]
-                    </p>
-                    <figure class="highlight plaintext">
-                        <table>
-                            <tr>
-                                <td class="gutter">
-                                    <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre>
-                                </td>
-                                <td class="code">
-                                    <pre><span class="line">@inproceedings &#123;li2021multi,</span><br><span class="line">    author = &#123;hainan li and renshuai tao and jun li and haotong qin and yifu ding and shuo wang and xianglong liu&#125;,</span><br><span class="line">    title = &#123;multi-pretext attention network for few-shot learning with self-supervision&#125;,</span><br><span class="line">    booktitle = &#123;&#123;ieee&#125; international conference on multimedia and expo, &#123;icme&#125;&#125;,</span><br><span class="line">    year = &#123;2021&#125;,</span><br><span class="line">&#125;</span><br></pre>
-                                </td>
-                            </tr>
-                        </table>
-                    </figure>
+                        <div class="publication_item">
+                             
+                            <div class=stream-meta>
+                                <h3 class="article-title mb-2 mt-0">
+                                    <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2103.01049">Diversifying Sample Generation for Accurate Data-Free Quantization</a>
+                                </h3>
+                                <div class="article-metadata">
 
-                    <p>
-                        <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2103.00809">Over-sampling
-                            de-occlusion attention network for prohibited items detection in noisy x-ray
-                            images</a>
-                    </p>
-                    <p>Renshuai Tao, Yanlu Wei, Hainan Li, Aishan Liu,
-                        <strong>Yifu Ding</strong>, Haotong Qin, Xianglong Liu.
-                    </p>
-                    <p>
-                        [<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2103.00809">PDF</a>] 
-                        [<a
-                        target="_blank"
-                        rel="noopener"
-                        href="https://github.com/OPIXray-author/OPIXray">code</a>] 
-                        [<button type="button" class="mybtn" onclick="open_modal('/Publications/tao2021oversampling/text.bib')">cite</button>]
-                    </p>
-                    <figure class="highlight plaintext">
-                        <table>
-                            <tr>
-                                <td class="gutter">
-                                    <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre>
-                                </td>
-                                <td class="code">
-                                    <pre><span class="line">@article&#123;tao2021oversampling,</span><br><span class="line">  author    = &#123;renshuai tao and</span><br><span class="line">               yanlu wei and</span><br><span class="line">               hainan li and</span><br><span class="line">               aishan liu and</span><br><span class="line">               yifu ding and</span><br><span class="line">               haotong qin and</span><br><span class="line">               xianglong liu&#125;,</span><br><span class="line">  title     = &#123;over-sampling de-occlusion attention network for prohibited items detection in noisy x-ray images&#125;,</span><br><span class="line">  year      = &#123;2021&#125;,</span><br><span class="line">  eprinttype = &#123;arxiv&#125;,</span><br><span class="line">  eprint    = &#123;2103.00809&#125;,</span><br><span class="line">&#125;</span><br></pre>
-                                </td>
-                            </tr>
-                        </table>
-                    </figure>
+                                
+                                    <div>Xiangguo Zhang*, Haotong Qin*,
+                                        <strong>Yifu Ding</strong>, Ruihao Gong, Qinghua Yan, Renshuai Tao, Yuhang Li,
+                                        Fengwei Yu, Xianglong Liu. (*equal contribution)
+                                    </div>
+                                    <div>
+                                        <a class="mya" target="_blank" rel="noopener" href="https://arxiv.org/abs/2103.01049">PDF</a> 
+                                        <button type="button" class="mybtn" onclick="open_modal('/Publications/zhangqdgytlyl21/text.bib')">Cite</button>
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class='ml-3'>
+                                <img src="/Publications/zhangqdgytlyl21/img.png" alt="">
+                            </div> 
+                        </div>  
 
-                    <p>Improving Generalization of Deepfake Detection with Domain Adaptive Batch
-                        Normalization.</p>
-                    <p>Zixin Yin, Jiakai Wang,
-                        <strong>Yifu Ding</strong>, Yisong Xiao, Jun Guo, Renshuai Tao, Haotong Qin.
-                    </p>
-                    <p>
-                        [<button type="button" class="mybtn" onclick="open_modal('/Publications/yin2021improving/text.bib')">cite</button>]
-                    </p>
-                    <figure class="highlight plaintext">
-                        <table>
-                            <tr>
-                                <td class="gutter">
-                                    <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre>
-                                </td>
-                                <td class="code">
-                                    <pre><span class="line">@article&#123;yin2021improving,</span><br><span class="line">  author    = &#123;zixin yin and jiakai wang and yifu ding and yisong xiao and jun guo and renshuai tao and haotong qin&#125;,</span><br><span class="line">  title     = &#123;improving generalization of deepfake detection with domain adaptive batch normalization&#125;,</span><br><span class="line">  year      = &#123;2021&#125;,</span><br><span class="line">  booktitle = &#123;acm mm workshop&#125;,</span><br><span class="line">&#125;</span><br></pre>
-                                </td>
-                            </tr>
-                        </table>
-                    </figure>
+
+                        <div class="publication_item">
+                              
+                            <div class=stream-meta>
+                                <h3 class="article-title mb-2 mt-0">
+                                    <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2103.05985">Multi-Pretext Attention Network for Few-shot Learning with Self-supervision</a>
+                                </h3>
+                                <div class="article-metadata">
+
+                                
+                                    <div>Hainan Li, Renshuai Tao, Jun Li, Haotong Qin,
+                                        <strong>Yifu Ding</strong>, Shuo Wang, Xianglong Liu.
+                                    </div>
+                                    <div>
+                                        <a class="mya" target="_blank" rel="noopener" href="https://arxiv.org/pdf/2103.05985.pdf">PDF</a> 
+                                        <a class="mya" target="_blank" rel="noopener" href="https://github.com/MAN-author/MAN">Code</a> 
+                                        <button type="button" class="mybtn" onclick="open_modal('/Publications/li2021multi/text.bib')">Cite</button>
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class='ml-3 '>
+                                <img src="/Publications/li2021multi/img.png" alt="">
+                            </div>
+                        </div>  
+
+                        <div class="publication_item">
+                             
+                            <div class=stream-meta>
+                                <h3 class="article-title mb-2 mt-0">
+                                    <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2103.00809">Over-sampling De-occlusion Attention Network for Prohibited Items Detection in Noisy X-ray Images</a>
+                                </h3>
+                                <div class="article-metadata">
+
+                                
+                                    <div>Renshuai Tao, Yanlu Wei, Hainan Li, Aishan Liu,
+                                        <strong>Yifu Ding</strong>, Haotong Qin, Xianglong Liu.
+                                    </div>
+                                    <div>
+                                        <a class="mya" target="_blank" rel="noopener" href="https://arxiv.org/abs/2103.00809">PDF</a> 
+                                        <a class="mya"
+                                        target="_blank"
+                                        rel="noopener"
+                                        href="https://github.com/OPIXray-author/OPIXray">Code</a> 
+                                        <button type="button" class="mybtn" onclick="open_modal('/Publications/tao2021oversampling/text.bib')">Cite</button>
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class='ml-3'>
+                                <img src="/Publications/tao2021oversampling/img.png" alt="">
+                            </div> 
+                        </div>  
+
+
+                        <div class="publication_item">
+                            
+                            <div class=stream-meta>
+                                <h3 class="article-title mb-2 mt-0">
+                                    Improving Generalization of Deepfake Detection with Domain Adaptive Batch Normalization.
+                                </h3>
+                                <div class="article-metadata">
+
+                                
+                                    <div>Zixin Yin, Jiakai Wang,
+                                        <strong>Yifu Ding</strong>, Yisong Xiao, Jun Guo, Renshuai Tao, Haotong Qin.
+                                    </div>
+                                    <div>
+                                        <button type="button" class="mybtn" onclick="open_modal('/Publications/yin2021improving/text.bib')">Cite</button>
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class='ml-3'>
+                                <img src="/Publications/yin2021improving/img.png" alt="">
+                            </div>  
+                        </div>  
+
+
+
+                    </div>
+
+
 
                 </article>
             </div>
+
+
         </main>
         <div class="nav-wrap">
             <div class="nav">
@@ -301,7 +320,7 @@
             <div class="modal-dialog">
                 <div class="modal-content" id="modal_content">
                     <div class="modal-header">
-                        <h3 class="modal-title">cite</h3>
+                        <h3 class="modal-title">Cite</h3>
                         <button type="button" class="mybtn" data-dismiss="modal" aria-label="Close" onclick="close_modal()">
                             <span aria-hidden="true">&times;</span>
                         </button>

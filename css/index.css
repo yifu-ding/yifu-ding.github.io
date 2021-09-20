@@ -987,7 +987,31 @@ blockquote p {
   display: inline-block;
   margin-bottom: 0.25em;
   font-size: 0.85em;
+  width: 45px !important;
+  height: 25px !important;
   font-weight: bold;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: #7a8288;
+  cursor: pointer;
+  color: #fff !important;
+  padding: 0.1em 0.4em;
+  text-decoration: none;
+  border-radius: 4px;
+  border-width: 0px !important;
+  border-style: initial !important;
+  border-color: initial !important;
+  border-image: initial !important;
+}
+
+.mya {
+  display: inline-block;
+  margin-bottom: 0.25em;
+  font-size: 0.85em;
+  width: 34.108px !important;
+  height: 22.268px !important;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   background-color: #7a8288;
   cursor: pointer;
@@ -1234,4 +1258,96 @@ body.dark {
 
 .mycode {
   font-family: "Roboto Mono",monospace;
+}
+
+
+.publication_item {
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: flex-start
+}
+.publication_item .article-title {
+  font-size: 2.2rem;
+}
+.publication_item .article-style {
+  margin-top: 2px;
+  /* font-size: 0.8rem; */
+}
+.publication_item .stream-meta {
+  margin-top: 0px;
+  flex: 1;
+}
+
+.ml-3 {
+  margin-left: 3rem !important;
+}
+
+.mr-3 {
+    margin-right: 3rem !important;
+}
+.mb-0,
+.my-0 {
+    margin-bottom: 0 !important;
+}
+.mt-0,
+.my-0 {
+    margin-top: 0 !important;
+}
+
+.mb-1,
+.my-1 {
+    margin-bottom: 1rem !important;
+}
+.mt-1,
+.my-1 {
+    margin-top: 1rem !important;
+}
+
+.mb-2,
+.my-2 {
+    margin-bottom: 2rem !important;
+}
+.mt-2,
+.my-2 {
+    margin-top: 2rem !important;
+}
+
+.mb-3,
+.my-3 {
+    margin-bottom: 3rem !important;
+}
+.mt-3,
+.my-3 {
+    margin-top: 3rem !important;
+}
+
+.publication_item .ml-3 {
+  /* position: relative; */
+  width: 200px;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  object-fit: cover;
+}
+
+.publication_item img {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+  max-height: 150px;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.article-metadata {
+  margin-bottom: 15px;
+  overflow: hidden;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: rgba(0,0,0,0.54);
+}
+
+.stream-meta.article-metadata {
+  margin-bottom: 5px;
 }
