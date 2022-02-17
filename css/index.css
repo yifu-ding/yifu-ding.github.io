@@ -705,10 +705,10 @@ blockquote p {
 @media (min-width: 34em) {
   .side-card {
     width: 15.25424%;
-    min-width: 165px;
+    min-width: 200px;
     float: left;
     margin-right: 1.69492%;
-    opacity: 0.75;
+    opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
   }
