@@ -58414,7 +58414,7 @@ A.DA.prototype={
 T(a,b){return new A.FA(new A.Vj(),!0,!0,null)}}
 A.Vj.prototype={
 $0(){var s=null,r=$.cK.av()
-return new A.lX(B.E1,new A.Vi(),"yifuding homepage",A.aeS(s,B.f5,A.a9F(s,s,s,A.q7(s,s,s,s,s,s,s,s,s,s,s,45*(A.b(r.e,"_minTextAdapt")?Math.min(r.gdX()/A.b(r.a,"uiSize").a,r.gj9()):r.gdX()/A.b(r.a,"uiSize").a),s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s,s,s,s,s,s,s,s,s,s,s)),!1,s)},
+return new A.lX(B.E1,new A.Vi(),"Yifu Ding",A.aeS(s,B.f5,A.a9F(s,s,s,A.q7(s,s,s,s,s,s,s,s,s,s,s,45*(A.b(r.e,"_minTextAdapt")?Math.min(r.gdX()/A.b(r.a,"uiSize").a,r.gj9()):r.gdX()/A.b(r.a,"uiSize").a),s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s,s,s,s,s,s,s,s,s,s,s)),!1,s)},
 $S:376}
 A.Vi.prototype={
 $2(a,b){$.cK.av().f=a
