@@ -58435,24 +58435,23 @@ Yu(a){var s=null,r=$.cq.ar().gfE(),q=$.cq.ar().gfE(),p=A.acH(new A.jP("images/yi
 return A.fD(A.a([new A.bu(new A.aF(0,20*r,0,5*q),p,s),n,new A.bu(new A.aF(0,m,0,m),s,s),A.jc(A.a([A.u_(B.O,B.zy,new A.a4l(this),B.bH,s),A.u_(B.O,B.zC,new A.a4m(),B.bH,s),A.u_(B.O,B.zw,new A.a4n(),B.bH,s)],o),B.X,B.bS,B.K,s)],o),B.X,B.a0,B.K)},
 Yt(a){var s=null,r=$.cq.ar().gfE(),q=$.cq.ar().gfE(),p=A.acH(new A.jP("images/yifu1.jpeg",s,s),100,100),o=t.p,n=A.fD(A.a([A.d1("PhD student",s,B.dU,s,s),A.d1("Beihang University",s,B.dU,s,s)],o),B.aY,B.a0,B.K),m=5*$.cq.ar().gfE()
 return A.fD(A.a([new A.bu(new A.aF(0,20*r,0,10*q),p,s),n,new A.bu(new A.aF(0,m,0,m),s,s),A.jc(A.a([A.u_(B.O,B.zz,new A.a4i(this),B.bH,s),A.u_(B.O,B.zD,new A.a4j(),B.bH,s),A.u_(B.O,B.zx,new A.a4k(),B.bH,s)],o),B.X,B.bS,B.K,s)],o),B.X,B.a0,B.K)},
-He(a){var s,r,q,p,o,n,m,l=null,k=a.c.a
-if(k<450){s=800
-r=200}else if(k<800){if(k<600)s=450+(700-k)*0.25
-else if(k<740)s=410+(700-k)*0.25
-else s=390+(700-k)*0.25
-r=300}else{if(k<1100)s=400+(1200-k)*0.25
-else if(k<1280)s=350+(1280-k)*0.25
+He(a){var s,r,q,p,o,n=null,m=a.c.a,l=m<450
+if(l){s=800
+r=200}else if(m<800){if(m<600)s=450+(700-m)*0.25
+else if(m<740)s=410+(700-m)*0.25
+else s=390+(700-m)*0.25
+r=300}else{if(m<1100)s=400+(1200-m)*0.25
+else if(m<1280)s=350+(1280-m)*0.25
 else s=330
 r=200}q=$.cq.ar()
 q=10*(q.gee()/A.b(q.a,"uiSize").a)
-k=k<800
-p=k?B.X:B.aY
-k=k?A.bT(l,l,B.k,l,l,l,l,l,l,l,l,l,l):new A.bu(B.zc,A.d1("Yifu Ding",l,B.tG,B.c2,l),l)
+m=m<800
+p=m?B.X:B.aY
+m=m?A.bT(n,n,B.k,n,n,n,n,n,n,n,n,n,n):new A.bu(B.zc,A.d1("Yifu Ding",n,B.tG,B.c2,n),n)
 o=$.cq.ar().gfE()
-n=$.cq.ar()
-m=n.gee()
-n=A.b(n.a,"uiSize").a
-return A.bT(l,A.fD(A.a([k,A.my(new A.Dm("I am a PhD student (2021.9-) in School of Computer Science and Engineering and Shen Yuan Honors College at [Beihang University](https://buaa.edu.cn) under the supervision of [Prof. Xianglong Liu](https://xlliu-beihang.github.io/). My research interest is model compression and acceleration, especially using quantization approaches. Under the trend of large models in deep learning, quantization can speed up the inference and reduce the consumption of storage and power resources when implemented on edge devices. I enjoy working with the responsible tutor and talented team members, and look forward to any possible cooperations. \n ### Education\n- PhD in Computer Software and Theory, Beihang University, *2021.9 -* \n- BSc in Computer Science and Technology, Beihang University, *2017.9 - 2021.6*\n### Research Interests\n- Model Compression and Acceleration (Model Quantization) \n- Computer Vision",!1,A.UE(l,l,l,B.t,l,l,l,l,B.t,l,l,l,l,l,B.t,l,l,B.t,l,B.tJ,B.t,l,l,B.t,l,l,B.t,l,l,B.t,l,l,l,l,l,l,B.t,B.J6,l,l,l,l,l,l,l,l,l,B.LS,l,B.t),l,l,new A.a4p(),l,l,l,l,l,l,l,l,B.DD,B.DE,B.DP,!1,l),s*o,r*(m/n))],t.p),p,B.bS,B.K),B.k,l,l,l,l,l,l,new A.aF(q,q,q,q),l,l,l)}}
+if(l)l=n
+else{l=$.cq.ar()
+l=r*(l.gee()/A.b(l.a,"uiSize").a)}return A.bT(n,A.fD(A.a([m,A.my(new A.Dm("I am a PhD student (2021.9-) in School of Computer Science and Engineering and Shen Yuan Honors College at [Beihang University](https://buaa.edu.cn) under the supervision of [Prof. Xianglong Liu](https://xlliu-beihang.github.io/). My research interest is model compression and acceleration, especially using quantization approaches. Under the trend of large models in deep learning, quantization can speed up the inference and reduce the consumption of storage and power resources when implemented on edge devices. I enjoy working with the responsible tutor and talented team members, and look forward to any possible cooperations. \n ### Education\n- PhD in Computer Software and Theory, Beihang University, *2021.9 -* \n- BSc in Computer Science and Technology, Beihang University, *2017.9 - 2021.6*\n### Research Interests\n- Model Compression and Acceleration (Model Quantization) \n- Computer Vision",!1,A.UE(n,n,n,B.t,n,n,n,n,B.t,n,n,n,n,n,B.t,n,n,B.t,n,B.tJ,B.t,n,n,B.t,n,n,B.t,n,n,B.t,n,n,n,n,n,n,B.t,B.J6,n,n,n,n,n,n,n,n,n,B.LS,n,B.t),n,n,new A.a4p(),n,n,n,n,n,n,n,n,B.DD,B.DE,B.DP,!1,n),s*o,l)],t.p),p,B.bS,B.K),B.k,n,n,n,n,n,n,new A.aF(q,q,q,q),n,n,n)}}
 A.a4o.prototype={
 $2(a,b){var s,r,q,p,o,n,m,l,k,j,i=null,h="uiSize",g="Yifu Ding",f="Under Review",e=b.c.a
 A.nr(e)
