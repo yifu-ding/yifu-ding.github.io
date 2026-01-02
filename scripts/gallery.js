@@ -261,6 +261,17 @@ const galleryData = {
             { file: '0e1c6603b1586ee2bbfe2092eb89646d.JPG', caption: '彩虹海浪', captionEn: 'Rainbow waves', bgColor: '#7898B8' }
         ]
     },
+    sky: {
+        location: 'Sky 2025',
+        title: 'Sky Colors',
+        titleZh: '天空',
+        folder: 'sky',
+        displayType: 'detailed', // 详细介绍模式
+        images: [
+            { file: ['1.JPG', '2.JPG'], caption: '彩虹', captionEn: 'Rainbow', bgColor: '#B8D0E0' }, 
+            { file: '3.JPG', caption: '火烧云', captionEn: 'Fire cloud', bgColor: '#B8D0E0' }, 
+        ]
+    },
     thailand: {
         location: 'Thailand Chiangmai 2025',
         title: 'Tropical Light',
@@ -666,6 +677,30 @@ class GalleryManager {
         });
     }
 
+    // 判断颜色是否较深（用于决定文字颜色）
+    isDarkColor(color) {
+        if (!color) return false;
+        
+        // 移除 # 号
+        const hex = color.replace('#', '');
+        
+        // 如果是 3 位十六进制，扩展为 6 位
+        const fullHex = hex.length === 3 
+            ? hex.split('').map(c => c + c).join('')
+            : hex;
+        
+        // 转换为 RGB
+        const r = parseInt(fullHex.substring(0, 2), 16);
+        const g = parseInt(fullHex.substring(2, 4), 16);
+        const b = parseInt(fullHex.substring(4, 6), 16);
+        
+        // 计算亮度（使用标准公式）
+        const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+        
+        // 如果亮度低于 0.5，认为是深色
+        return luminance < 0.5;
+    }
+
     createDetailedItem(image, index, folder) {
         const item = document.createElement('div');
         item.className = 'gallery-item gallery-item-detailed';
@@ -674,6 +709,10 @@ class GalleryManager {
         const title = this.currentLang === 'zh' ? (image.title || '') : (image.titleEn || '');
         const caption = this.currentLang === 'zh' ? image.caption : image.captionEn;
         const bgColor = image.bgColor || '#f5f5f5';
+        
+        // 判断背景色是否较深，决定文字颜色
+        const isDark = this.isDarkColor(bgColor);
+        const textColor = isDark ? '#FFFFFF' : 'inherit';
 
         // 检查 file 是否是数组
         const isMultipleFiles = Array.isArray(image.file);
@@ -694,10 +733,10 @@ class GalleryManager {
                  ${isMultipleFiles ? `data-image-count="${imageCount}"` : ''}>
                 ${imagesHTML}
             </div>
-            <div class="gallery-caption" style="background-color: ${bgColor};">
+            <div class="gallery-caption" style="background-color: ${bgColor}; color: ${textColor};">
                 <div class="gallery-caption-inner">
-                    ${title ? `<h3 class="gallery-caption-title">${title}</h3>` : ''}
-                    <p class="gallery-caption-text">${caption}</p>
+                    ${title ? `<h3 class="gallery-caption-title" style="color: ${textColor};">${title}</h3>` : ''}
+                    <p class="gallery-caption-text" style="color: ${textColor};">${caption}</p>
                 </div>
             </div>
         `;
@@ -834,4 +873,158 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 });
+
+// ===========================
+// Studio Page - Auto-generate Gallery Cards
+// ===========================
+(function() {
+    'use strict';
+
+    function getFirstImageFile(collection) {
+        if (collection.displayType === 'grid' && collection.groups && collection.groups.length > 0) {
+            // 网格模式：从第一个 group 的第一张图片获取
+            const firstGroup = collection.groups[0];
+            if (firstGroup.images && firstGroup.images.length > 0) {
+                const firstImage = firstGroup.images[0];
+                if (Array.isArray(firstImage.file)) {
+                    return firstImage.file[0];
+                }
+                return firstImage.file;
+            }
+        } else if (collection.images && collection.images.length > 0) {
+            // 详细模式或默认模式：从第一张图片获取
+            const firstImage = collection.images[0];
+            if (Array.isArray(firstImage.file)) {
+                return firstImage.file[0];
+            }
+            return firstImage.file;
+        }
+        return null;
+    }
+
+    function countTotalImages(collection) {
+        let count = 0;
+        if (collection.displayType === 'grid' && collection.groups) {
+            // 网格模式：统计所有 groups 中的图片
+            collection.groups.forEach(group => {
+                if (group.images) {
+                    group.images.forEach(image => {
+                        if (Array.isArray(image.file)) {
+                            count += image.file.length;
+                        } else {
+                            count += 1;
+                        }
+                    });
+                }
+            });
+        } else if (collection.images) {
+            // 详细模式或默认模式：统计 images 数组
+            collection.images.forEach(image => {
+                if (Array.isArray(image.file)) {
+                    count += image.file.length;
+                } else {
+                    count += 1;
+                }
+            });
+        }
+        return count;
+    }
+
+    function createGalleryCard(key, collection, currentLang) {
+        const card = document.createElement('a');
+        card.href = `gallery.html?collection=${key}`;
+        card.className = 'photo-showcase-card';
+
+        const firstImageFile = getFirstImageFile(collection);
+        const imageSrc = firstImageFile ? `src/photos/${collection.folder}/${firstImageFile}` : '';
+        const imageAlt = currentLang === 'zh' ? collection.titleZh : collection.title;
+        
+        const totalImages = countTotalImages(collection);
+        const imageCountText = currentLang === 'zh' 
+            ? `${totalImages} 张照片`
+            : `${totalImages} images`;
+
+        const title = currentLang === 'zh' ? collection.titleZh : collection.title;
+
+        card.innerHTML = `
+            <div class="photo-showcase-image">
+                <img src="${imageSrc}" alt="${imageAlt}" loading="lazy">
+            </div>
+            <div class="photo-showcase-meta">
+                <span class="photo-showcase-location">${collection.location}</span>
+                <h3 class="photo-showcase-title">${title}</h3>
+                <p class="photo-showcase-count">${imageCountText}</p>
+            </div>
+        `;
+
+        return card;
+    }
+
+    function renderGalleryCards() {
+        const track = document.querySelector('.photo-grid-track');
+        if (!track || typeof galleryData === 'undefined') return;
+
+        // 清空现有内容
+        track.innerHTML = '';
+
+        // 获取当前语言
+        const currentLang = localStorage.getItem('language') || 'en';
+
+        // 遍历 galleryData 生成卡片
+        Object.keys(galleryData).forEach(key => {
+            const collection = galleryData[key];
+            const card = createGalleryCard(key, collection, currentLang);
+            track.appendChild(card);
+        });
+    }
+
+    function updateGalleryCardsLanguage() {
+        const track = document.querySelector('.photo-grid-track');
+        if (!track || typeof galleryData === 'undefined') return;
+
+        const currentLang = localStorage.getItem('language') || 'en';
+        const cards = track.querySelectorAll('.photo-showcase-card');
+
+        cards.forEach((card, index) => {
+            const key = Object.keys(galleryData)[index];
+            const collection = galleryData[key];
+            if (!collection) return;
+
+            const title = currentLang === 'zh' ? collection.titleZh : collection.title;
+            const totalImages = countTotalImages(collection);
+            const imageCountText = currentLang === 'zh' 
+                ? `${totalImages} 张照片`
+                : `${totalImages} images`;
+
+            const titleEl = card.querySelector('.photo-showcase-title');
+            const countEl = card.querySelector('.photo-showcase-count');
+            
+            if (titleEl) titleEl.textContent = title;
+            if (countEl) countEl.textContent = imageCountText;
+        });
+    }
+
+    // 初始化
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', renderGalleryCards);
+    } else {
+        renderGalleryCards();
+    }
+
+    // 监听语言切换
+    window.addEventListener('languageChanged', (e) => {
+        updateGalleryCardsLanguage();
+    });
+
+    // 如果 LanguageManager 已经初始化，也监听它的变化
+    if (window.LanguageManager) {
+        const originalSwitchLanguage = window.LanguageManager.prototype?.switchLanguage;
+        if (originalSwitchLanguage) {
+            window.LanguageManager.prototype.switchLanguage = function(lang) {
+                originalSwitchLanguage.call(this, lang);
+                updateGalleryCardsLanguage();
+            };
+        }
+    }
+})();
 
