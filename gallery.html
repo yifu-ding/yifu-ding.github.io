@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Yifu Ding</title>
+    <meta name="description" content="Photography collection by Yifu Ding">
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/gallery.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-brand">Yifu Ding</a>
+            </div>
+            
+            <div class="nav-center">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">
+                        <span data-i18n="nav_home">Home</span>
+                    </a>
+                    <a href="research.html" class="nav-link">
+                        <span data-i18n="nav_research">Research</span>
+                    </a>
+                    <a href="studio.html" class="nav-link active">
+                        <span data-i18n="nav_studio">Photography</span>
+                    </a>
+                    <a href="contact.html" class="nav-link">
+                        <span data-i18n="nav_contact">Contact</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-button">
+                        <span>EN</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option active" data-lang="en">English</button>
+                        <button class="lang-option" data-lang="zh">中文</button>
+                    </div>
+                </div>
+
+                <!-- User Icon -->
+                <!-- <div class="user-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="main-container gallery-main">
+        
+        <!-- Gallery Header -->
+        <div class="gallery-header">
+            <div class="gallery-meta">
+                <span class="gallery-location" id="gallery-location">LOADING...</span>
+                <h1 class="gallery-title" id="gallery-title">Loading...</h1>
+                <p class="gallery-count" id="gallery-count">0 images</p>
+            </div>
+
+            <div class="gallery-back">
+                <a href="studio.html" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span data-i18n="back_to_studio">Back to Photography Portfolio</span>
+                </a>
+            </div>
+    
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-container" id="gallery-container">
+            <!-- Photos will be loaded dynamically -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <span>&copy; 2026 Yifu Ding</span>
+            </div>
+            <div class="footer-right">
+                <a href="#top" class="footer-link">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/gallery.js"></script>
+</body>
+</html>
+

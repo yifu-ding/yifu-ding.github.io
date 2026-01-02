@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Yifu Ding</title>
+    <meta name="description" content="Neural network compression and model quantization research.">
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-brand">Yifu Ding</a>
+            </div>
+            
+            <div class="nav-center">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">
+                        <span data-i18n="nav_home">Home</span>
+                    </a>
+                    <a href="research.html" class="nav-link active">
+                        <span data-i18n="nav_research">Research</span>
+                    </a>
+                    <a href="studio.html" class="nav-link">
+                        <span data-i18n="nav_studio">Studio</span>
+                    </a>
+                    <a href="contact.html" class="nav-link">
+                        <span data-i18n="nav_contact">Contact</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-button">
+                        <span>EN</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option active" data-lang="en">English</button>
+                        <button class="lang-option" data-lang="zh">中文</button>
+                    </div>
+                </div>
+
+                <!-- User Icon -->
+                <!-- <div class="user-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Background Image (same UI as Studio) -->
+    <section class="studio-hero-fullscreen research-hero" aria-label="Research hero">
+        <div class="studio-hero-image">
+            <img src="src/photos/yellowknife/IMG_1734.JPG" alt="Research" loading="eager">
+        </div>
+
+        <div class="studio-hero-overlay">
+            <div class="studio-hero-content research-hero-content">
+              <div class="hero-panel">
+                <div class="hero-panel-layout">
+                  <!-- Left side: Title, description, buttons, Research Focus -->
+                  <div class="hero-panel-left">
+                    <h1 class="studio-hero-title" data-i18n="research_title">Research</h1>
+            
+                    <p class="studio-hero-description" data-i18n="research_description">
+                      PhD Candidate at Beihang University, specializing in neural network compression and model quantization.
+                      Making deep learning more efficient and accessible for real-world deployment.
+                    </p>
+            
+                    <div id="research-focus" class="hero-focus" aria-label="Research focus">
+                      <div class="hero-focus-header">
+                        <h2 class="hero-focus-title" data-i18n="research_focus_title">Research Focus</h2>
+                      </div>
+            
+                      <div class="hero-focus-grid">
+                        <div class="hero-focus-item">
+                          <h3 class="hero-focus-item-title" data-i18n="research_focus_1_title">Neural Network Compression</h3>
+                          <p class="hero-focus-item-desc" data-i18n="research_focus_1_desc">
+                            Developing efficient methods to reduce model size and computational cost while maintaining accuracy.
+                          </p>
+                        </div>
+            
+                        <div class="hero-focus-item">
+                          <h3 class="hero-focus-item-title" data-i18n="research_focus_2_title">Model Quantization</h3>
+                          <p class="hero-focus-item-desc" data-i18n="research_focus_2_desc">
+                            Low-bit quantization techniques for LLMs, vision models, and multimodal systems.
+                          </p>
+                        </div>
+            
+                        <div class="hero-focus-item">
+                          <h3 class="hero-focus-item-title" data-i18n="research_focus_3_title">Efficient AI Systems</h3>
+                          <p class="hero-focus-item-desc" data-i18n="research_focus_3_desc">
+                            Hardware-aware optimization and deployment strategies for resource-constrained environments.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <!-- Right side: Metrics (vertical) -->
+                  <div class="hero-panel-right">
+                    <div class="hero-metrics" aria-label="Google Scholar metrics">
+                      <div class="metric-card">
+                        <div class="metric-label">Citations</div>
+                        <div class="metric-value">1290</div>
+                      </div>
+              
+                      <div class="metric-card">
+                        <div class="metric-label">Papers</div>
+                        <div class="metric-value">34</div>
+                      </div>
+              
+                      <div class="metric-card">
+                        <div class="metric-label">H-index</div>
+                        <div class="metric-value">17</div>
+                      </div>
+              
+                      <div class="metric-card">
+                        <div class="metric-label">I10-index</div>
+                        <div class="metric-value">23</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </section>
+
+    <main class="main-container">
+
+      <section id="selected-work" class="content-section selected-work" aria-label="Publications">
+        <h2 class="section-title" data-i18n="selected_work_title">All Publications</h2>
+      
+        <!-- Keyword Filter UI -->
+        <div class="paper-filter" id="paper-filter" aria-label="Paper keyword filter">
+          <div class="paper-filter-row keywords" id="kw-row" role="group" aria-label="Keywords"></div>
+      
+          <div class="paper-filter-row mode" role="group" aria-label="Match mode">
+            <span class="filter-rule-label" data-i18n="filter_rules">Filter Rules</span>
+            <button type="button" class="mode-btn is-active" data-mode="and" aria-pressed="true">AND</button>
+            <button type="button" class="mode-btn" data-mode="or" aria-pressed="false">OR</button>
+            <button type="button" class="clear-btn" id="kw-clear">Clear</button>
+            <span class="filter-status" id="filter-status" aria-live="polite"></span>
+          </div>
+        </div>
+      
+        <div class="pub-waterfall"></div>
+
+      </section>
+          
+        <div style="text-align: center; margin-top: var(--space-xxxl);">
+            <a class="link-more" href="https://scholar.google.ca/citations?user=RCEI1r0AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">
+            <span class="link-more__text">View publications on Google Scholar →</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <span>&copy; 2026 Yifu Ding</span>
+            </div>
+            <div class="footer-right">
+                <a href="#top" class="footer-link">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/papers-config.js"></script>
+    <script src="scripts/load-papers.js"></script>
+    <script src="scripts/paper-filter.js"></script>
+    <script src="scripts/main.js"></script>
+
+</body>
+</html>

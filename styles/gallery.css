@@ -1,0 +1,675 @@
+/* ===========================
+   Gallery Page Styles
+   参考 Assembly Line 的左右布局
+   =========================== */
+
+/* Override main-container for gallery page */
+.gallery-main {
+    max-width: none !important;
+    padding: 0 !important;
+}
+
+/* Gallery Header */
+.gallery-header {
+    padding: 100px 48px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.gallery-meta {
+    flex: 1;
+    max-width: 600px;
+}
+
+/* Gallery Back Button */
+.gallery-back {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-warm-gray-700);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--color-warm-gray-900);
+}
+
+.back-link svg {
+    transition: transform 0.2s ease;
+}
+
+.back-link:hover svg {
+    transform: translateX(-4px);
+}
+
+.gallery-location {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-warm-gray-500);
+    margin-bottom: 16px;
+}
+
+.gallery-title {
+    font-family: 'Charter', 'Georgia', serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--color-warm-gray-900);
+    margin: 0 0 16px 0;
+}
+
+.gallery-count {
+    font-size: 16px;
+    color: var(--color-warm-gray-600);
+    margin: 0;
+}
+
+/* Gallery Container - Assembly Line Style */
+.gallery-container {
+    padding: 0;
+}
+
+/* ===========================
+   Detailed Layout (左右布局)
+   =========================== */
+.gallery-item-detailed {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0;
+    margin-bottom: 0;
+    align-items: stretch;
+    max-width: 100%;
+    height: 600px;
+}
+
+/* Alternate layout for even items */
+.gallery-item-detailed:nth-child(even) {
+    direction: rtl;
+}
+
+.gallery-item-detailed:nth-child(even) > * {
+    direction: ltr;
+}
+
+/* Image Side */
+.gallery-image-wrapper {
+    position: relative;
+    width: auto;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    background: var(--color-warm-gray-100);
+    border-radius: 0;
+}
+
+.gallery-image-wrapper-multiple {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+    gap: 0;
+    min-width: 100%;
+}
+
+.gallery-image-wrapper-multiple::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gallery-image-wrapper-multiple::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.gallery-image-wrapper-multiple::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.gallery-image-wrapper-multiple::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* 根据图片数量动态设置容器宽度，每张图片始终保持原始容器宽度的 50% */
+.gallery-image-wrapper-multiple[data-image-count="2"] {
+    width: 100%;
+}
+
+.gallery-image-wrapper-multiple[data-image-count="3"] {
+    width: 150%;
+}
+
+.gallery-image-wrapper-multiple[data-image-count="4"] {
+    width: 200%;
+}
+
+.gallery-image-wrapper-multiple[data-image-count="5"] {
+    width: 250%;
+}
+
+/* 每张图片始终占据原始容器宽度的 50% */
+.gallery-image-wrapper-multiple .gallery-image {
+    flex: 0 0 50%;
+    scroll-snap-align: start;
+    height: 100%;
+    width: 50%;
+    max-width: 50%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.gallery-image {
+    height: 100%;
+    width: auto;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.gallery-item-detailed:hover .gallery-image {
+    transform: scale(1.01);
+}
+
+/* ===========================
+   Grid Layout (横向滚动)
+   =========================== */
+.gallery-grid-group {
+    margin-bottom: 64px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.gallery-grid-header {
+    padding: 0 48px 24px;
+}
+
+.gallery-grid-group-title {
+    font-family: 'Charter', 'Georgia', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--color-warm-gray-900);
+    margin: 0;
+}
+
+.gallery-grid-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 48px 24px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-warm-gray-400) var(--color-warm-gray-100);
+}
+
+.gallery-grid-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gallery-grid-scroll::-webkit-scrollbar-track {
+    background: var(--color-warm-gray-100);
+    border-radius: 4px;
+}
+
+.gallery-grid-scroll::-webkit-scrollbar-thumb {
+    background: var(--color-warm-gray-400);
+    border-radius: 4px;
+}
+
+.gallery-grid-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--color-warm-gray-500);
+}
+
+.gallery-grid-track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+}
+
+.gallery-grid-item {
+    flex-shrink: 0;
+    width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid-item:hover {
+    transform: translateY(-4px);
+}
+
+.gallery-grid-image-wrapper {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    background: var(--color-warm-gray-100);
+    margin-bottom: 12px;
+}
+
+.gallery-grid-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.gallery-grid-item:hover .gallery-grid-image {
+    transform: scale(1.05);
+}
+
+.gallery-grid-caption {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-warm-gray-700);
+    margin: 0;
+    padding: 0 4px;
+}
+
+/* Caption Side */
+.gallery-caption {
+    padding: 64px 80px;
+    max-width: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    background: #f5f5f5;
+}
+
+.gallery-caption-inner {
+    max-width: 500px;
+}
+
+.gallery-caption-title {
+    font-family: 'Charter', 'Georgia', serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--color-warm-gray-900);
+    margin: 0 0 16px 0;
+}
+
+.gallery-caption-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-warm-gray-800);
+    margin: 0;
+}
+
+.gallery-caption-meta {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-warm-gray-200);
+    font-size: 14px;
+    color: var(--color-warm-gray-500);
+}
+
+/* Loading State */
+.gallery-loading {
+    text-align: center;
+    padding: 120px 48px;
+    color: var(--color-warm-gray-500);
+}
+
+/* Empty State */
+.gallery-empty {
+    text-align: center;
+    padding: 120px 48px;
+}
+
+.gallery-empty-title {
+    font-size: 24px;
+    color: var(--color-warm-gray-700);
+    margin: 0 0 16px 0;
+}
+
+.gallery-empty-text {
+    font-size: 16px;
+    color: var(--color-warm-gray-500);
+    margin: 0 0 32px 0;
+}
+
+.gallery-empty-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--color-warm-gray-900);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.gallery-empty-button:hover {
+    background: var(--color-warm-gray-800);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .gallery-header {
+        padding-left: 32px;
+        padding-right: 32px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+    
+    .gallery-back {
+        padding-top: 0;
+    }
+
+    .gallery-title {
+        font-size: 36px;
+    }
+
+    .gallery-item-detailed {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 64px;
+        height: auto;
+    }
+
+    .gallery-image-wrapper-multiple {
+        height: 400px;
+    }
+
+    .gallery-item-detailed:nth-child(even) {
+        direction: ltr;
+    }
+
+    .gallery-caption {
+        padding: 0;
+        height: auto;
+        min-height: auto;
+    }
+
+    .gallery-caption-title {
+        font-size: 24px;
+    }
+    
+    .gallery-grid-header,
+    .gallery-grid-scroll {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    
+    .gallery-grid-group-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .gallery-header {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 32px;
+        padding-bottom: 48px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .gallery-back {
+        padding-top: 0;
+    }
+
+    .gallery-title {
+        font-size: 32px;
+    }
+
+    .gallery-count {
+        font-size: 14px;
+    }
+
+    .gallery-item-detailed {
+        margin-bottom: 48px;
+        gap: 24px;
+    }
+
+    .gallery-image-wrapper-multiple {
+        height: 300px;
+    }
+
+    .gallery-caption-title {
+        font-size: 20px;
+    }
+
+    .gallery-caption-text {
+        font-size: 15px;
+    }
+    
+    .gallery-grid-header,
+    .gallery-grid-scroll {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    
+    .gallery-grid-group-title {
+        font-size: 20px;
+    }
+    
+    .gallery-grid-item {
+        width: 300px;
+    }
+    
+    .gallery-grid-image-wrapper {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Animation */
+.gallery-item-detailed {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.gallery-item-detailed:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item-detailed:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item-detailed:nth-child(3) { animation-delay: 0.3s; }
+.gallery-item-detailed:nth-child(4) { animation-delay: 0.4s; }
+.gallery-item-detailed:nth-child(5) { animation-delay: 0.5s; }
+.gallery-item-detailed:nth-child(n+6) { animation-delay: 0.6s; }
+
+.gallery-grid-group:nth-child(1) { animation-delay: 0.1s; }
+.gallery-grid-group:nth-child(2) { animation-delay: 0.2s; }
+.gallery-grid-group:nth-child(3) { animation-delay: 0.3s; }
+.gallery-grid-group:nth-child(n+4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   Lightbox (大图查看器)
+   =========================== */
+.gallery-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.gallery-lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gallery-lightbox-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(8px);
+}
+
+.gallery-lightbox-content {
+    position: relative;
+    z-index: 1;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.gallery-lightbox-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-lightbox-info {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 0 24px;
+}
+
+.gallery-lightbox-title {
+    font-family: 'Charter', 'Georgia', serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 12px 0;
+    color: white;
+}
+
+.gallery-lightbox-caption {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.gallery-lightbox-counter {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+}
+
+.gallery-lightbox-close,
+.gallery-lightbox-prev,
+.gallery-lightbox-next {
+    position: absolute;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(10px);
+}
+
+.gallery-lightbox-close:hover,
+.gallery-lightbox-prev:hover,
+.gallery-lightbox-next:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.gallery-lightbox-close {
+    top: 24px;
+    right: 24px;
+}
+
+.gallery-lightbox-prev {
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.gallery-lightbox-next {
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.gallery-lightbox.active .gallery-lightbox-prev,
+.gallery-lightbox.active .gallery-lightbox-next {
+    transform: translateY(-50%);
+}
+
+.gallery-lightbox.active .gallery-lightbox-prev:hover,
+.gallery-lightbox.active .gallery-lightbox-next:hover {
+    transform: translateY(-50%) scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .gallery-lightbox-content {
+        max-width: 95vw;
+        gap: 16px;
+    }
+
+    .gallery-lightbox-image {
+        max-height: 70vh;
+    }
+
+    .gallery-lightbox-close,
+    .gallery-lightbox-prev,
+    .gallery-lightbox-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gallery-lightbox-close {
+        top: 16px;
+        right: 16px;
+    }
+
+    .gallery-lightbox-prev {
+        left: 16px;
+    }
+
+    .gallery-lightbox-next {
+        right: 16px;
+    }
+
+    .gallery-lightbox-title {
+        font-size: 20px;
+    }
+
+    .gallery-lightbox-caption {
+        font-size: 14px;
+    }
+}
+

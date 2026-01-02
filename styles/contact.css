@@ -1,0 +1,127 @@
+.contact-hero-content {
+    max-width: 1500px;
+    width: 100%;
+    padding: 0 48px;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: center;
+}
+
+.contact-left {
+    text-align: left;
+}
+
+.contact-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-dialog {
+    max-width: 520px;
+    width: 100%;
+    padding: var(--space-xl);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.contact-dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.form-field {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+.form-field input,
+.form-field textarea {
+    font-family: inherit;
+    font-size: var(--font-size-md);
+    padding: 12px 14px;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-color);
+    background: #fff;
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: var(--color-text-primary);
+}
+
+.submit-button {
+    margin-top: var(--space-md);
+    align-self: flex-end;
+    font-size: var(--font-size-md);
+    padding: 10px 24px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    background: var(--color-text-primary);
+    color: white;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.submit-button:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+
+.form-success {
+    display: none;
+    text-align: center;
+    font-size: var(--font-size-md);
+    color: var(--color-text-primary);
+    padding: var(--space-xl) 0;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-xxl);
+        text-align: center;
+    }
+
+    .contact-left {
+        text-align: center;
+    }
+
+    .contact-right {
+        justify-content: center;
+    }
+
+    .contact-hero-content {
+        padding: 0 32px;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-hero-content {
+        padding: 0 24px;
+    }
+
+    .contact-dialog {
+        padding: var(--space-lg);
+    }
+}

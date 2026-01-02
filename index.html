@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yifu Ding - Research & Photography</title>
+    <meta name="description" content="Research in efficient AI systems and a studio of photography, reading notes, and small tools.">
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+</head>
+
+<body id="top">
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-brand">Yifu Ding</a>
+            </div>
+
+            <div class="nav-center">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link active"><span data-i18n="nav_home">Home</span></a>
+                    <a href="research.html" class="nav-link"><span data-i18n="nav_research">Research</span></a>
+                    <a href="studio.html" class="nav-link"><span data-i18n="nav_studio">Photography</span></a>
+                    <a href="contact.html" class="nav-link"><span data-i18n="nav_contact">Contact</span></a>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <div class="lang-switcher">
+                    <button class="lang-button"><span>EN</span></button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option active" data-lang="en">English</button>
+                        <button class="lang-option" data-lang="zh">中文</button>
+                    </div>
+                </div>
+
+                <!-- <div class="user-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 1) Welcome (Split hero, full width) -->
+        <section class="split-hero welcome-hero full-bleed" aria-label="Welcome">
+            <div class="split-hero-inner">
+                <div class="split-hero-left">
+                    <div class="split-hero-copy">
+                        <h1 class="split-hero-title">
+                            <span data-i18n="inne_hero_line1">Welcome to Yifu's homepage. </span><br>
+                            <!-- <span data-i18n="inne_hero_line2">Leave your curiosity for the world,</span><br>
+                            <span data-i18n="inne_hero_line3">and let time deliver the answers.</span> -->
+                        </h1>
+
+                        <p class="split-hero-desc" data-i18n="home_hero_desc">
+                            Leave your curiosity for the world, and let time deliver the answers.
+                        </p>
+
+                        <div class="split-hero-actions">
+                            <a href="research.html" class="inne-btn inne-btn-primary" data-i18n="btn_view_research">View Research</a>
+
+                            <div class="studio-dropdown">
+                                <a href="studio.html" class="inne-btn inne-btn-primary" data-i18n="btn_hobby_studio">Photography Portfolio</a>
+                                <!-- <div class="studio-dropdown-menu">
+                                    <a href="studio.html#photography" class="studio-dropdown-item">
+                                        <span data-i18n="dropdown_photography">Photography</span>
+                                    </a>
+                                    <a href="studio.html#reading" class="studio-dropdown-item">
+                                        <span data-i18n="dropdown_reading">Reading</span>
+                                    </a>
+                                    <a href="studio.html#development" class="studio-dropdown-item">
+                                        <span data-i18n="dropdown_development">Development</span>
+                                    </a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="split-hero-right" aria-hidden="true">
+                    <div class="split-hero-media">
+                        <img src="src/photos/portrait/me.JPEG" alt="Portrait" loading="eager" decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2) Latest Work Across Channels (full width, horizontal list) -->
+        <section class="latest-section latest-grid full-bleed" aria-label="Latest Work">
+            <div class="latest-header">
+                <h2 class="latest-title channels-section-heading" data-i18n="latest_section_title">Latest Activities</h2>
+                <!-- <a class="latest-viewall" href="studio.html" data-i18n="latest_view_all">View all</a> -->
+            </div>
+
+            <div class="latest-scroll" role="region" aria-label="Latest items carousel">
+                <div class="latest-track">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0893608025007361"
+                       target="_blank"
+                       rel="noopener"
+                       class="latest-item">
+                        <div class="latest-item-image">
+                            <img src="src/papers/imgs/llm-quant-survey.png" alt="Research" loading="lazy">
+                            <span class="latest-badge">New</span>
+                        </div>
+                        <div class="latest-item-meta">
+                            <div class="latest-item-top">
+                                <span class="latest-item-category">Research</span>
+                                <span class="latest-item-time">Feb 2025</span>
+                            </div>
+                            <h3 class="latest-item-title">LLM Quantization Survey</h3>
+                            <p class="latest-item-subtitle">Neural Networks</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/yifu-ding/Awesome-Edge-LLMs"
+                       target="_blank"
+                       rel="noopener"
+                       class="latest-item">
+                        <div class="latest-item-image">
+                            <img src="src/papers/imgs/timeline-emergence-llms.png" alt="Research" loading="lazy">
+                            <span class="latest-badge">New</span>
+                        </div>
+                        <div class="latest-item-meta">
+                            <div class="latest-item-top">
+                                <span class="latest-item-category">Research</span>
+                                <span class="latest-item-time">Apr 2025</span>
+                            </div>
+                            <h3 class="latest-item-title">Awesome Edge LLMs Collection</h3>
+                            <p class="latest-item-subtitle">GitHub Repository</p>
+                        </div>
+                    </a>
+
+                    <a href="studio.html#photography" class="latest-item">
+                        <div class="latest-item-image">
+                            <img src="src/photos/guanajuato/guana2.JPG" alt="Photography" loading="lazy">
+                            <span class="latest-badge">New</span>
+                        </div>
+                        <div class="latest-item-meta">
+                            <div class="latest-item-top">
+                                <span class="latest-item-category">Photography</span>
+                                <span class="latest-item-time">Dec 2025</span>
+                            </div>
+                            <h3 class="latest-item-title">Urban Colors</h3>
+                            <p class="latest-item-subtitle">Guanajuato, Mexico</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/yifu-ding/VocabularyBuilder" target="_blank" rel="noopener" class="latest-item">
+                        <div class="latest-item-image">
+                            <img src="src/apps/imgs/Picture1.png" alt="Development" loading="lazy">
+                            <span class="latest-badge">New</span>
+                        </div>
+                        <div class="latest-item-meta">
+                            <div class="latest-item-top">
+                                <span class="latest-item-category">Development</span>
+                                <span class="latest-item-time">Dec 2025</span>
+                            </div>
+                            <h3 class="latest-item-title">VocabularyBuilder</h3>
+                            <p class="latest-item-subtitle">iOS App</p>
+                        </div>
+                    </a>
+
+                    <a href="studio.html#photography" class="latest-item">
+                        <div class="latest-item-image">
+                            <img src="src/photos/rocky/IMG_2222.JPG" alt="Photography" loading="lazy">
+                            <span class="latest-badge">New</span>
+                        </div>
+                        <div class="latest-item-meta">
+                            <div class="latest-item-top">
+                                <span class="latest-item-category">Photography</span>
+                                <span class="latest-item-time">Oct 2025</span>
+                            </div>
+                            <h3 class="latest-item-title">Rocky Mountains</h3>
+                            <p class="latest-item-subtitle">Travel in Canada</p>
+                        </div>
+                    </a>
+
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=RCEI1r0AAAAJ&sortby=pubdate&citation_for_view=RCEI1r0AAAAJ:YOwf2qJgpHMC"
+                    target="_blank"
+                    rel="noopener"
+                    class="latest-item">
+                     <div class="latest-item-image">
+                         <img src="src/papers/imgs/dynamic-parallel.png" alt="Research" loading="lazy">
+                         <span class="latest-badge">New</span>
+                     </div>
+                     <div class="latest-item-meta">
+                         <div class="latest-item-top">
+                             <span class="latest-item-category">Research</span>
+                             <span class="latest-item-time">Feb 2025</span>
+                         </div>
+                         <h3 class="latest-item-title">LLM Reasoning Acceleration</h3>
+                         <p class="latest-item-subtitle">ACL 2025</p>
+                     </div>
+                 </a>
+                   
+                </div>
+            </div>
+        </section>
+
+
+        <div class="channels-section-title full-bleed" aria-hidden="true">
+            <h2 class="channels-section-heading">Discover by Channels</h2>
+        </div>
+
+        <!-- 3) Channel features (each: left image, right text + button) -->
+        <section class="channels" aria-label="Channels">
+            <!-- Research -->
+            <section class="channel-feature full-bleed" id="channel-research">
+                <div class="channel-feature-inner">
+                    <div class="channel-feature-media" aria-hidden="true">
+                        <img src="src/papers/imgs/timeline-emergence-llms.png" alt="Research cover" loading="lazy" decoding="async">
+                    </div>
+                    <div class="channel-feature-content">
+                        <h2 class="channel-feature-title">Research</h2>
+                        <p class="channel-feature-desc">
+                            Efficient AI systems, model compression, and low bit inference. Papers, projects, and technical notes.
+                        </p>
+                        <!-- <a href="research.html" class="channel-feature-btn">Explore Research</a> -->
+                        <a class="link-more" href="research.html" rel="noopener">
+                          <span class="link-more__text" data-i18n="btn_view_research_2">View Research →</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="channel-divider full-bleed" aria-hidden="true"></div>
+
+            <!-- Photography -->
+            <section class="channel-feature full-bleed" id="channel-photography">
+                <div class="channel-feature-inner reverse">
+                    <div class="channel-feature-media" aria-hidden="true">
+                        <img src="src/photos/rocky/IMG_2222.JPG" alt="Photography" loading="lazy" decoding="async">
+                    </div>
+                    <div class="channel-feature-content">
+                        <h2 class="channel-feature-title">Photography</h2>
+                        <p class="channel-feature-desc">
+                            Personal work across cities, mountains, and quiet moments. Series and selected shots.
+                        </p>
+                        <a class="link-more" href="studio.html" rel="noopener">
+                          <span class="link-more__text" data-i18n="btn_enter_studio">Enter Studio →</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="channel-divider full-bleed" aria-hidden="true"></div>
+
+            <!-- Reading -->
+            <!-- <section class="channel-feature full-bleed" id="channel-reading">
+                <div class="channel-feature-inner">
+                    <div class="channel-feature-media" aria-hidden="true">
+                        <img src="src/books/covers/deeptime.jpg" alt="Reading" loading="lazy" decoding="async">
+                    </div>
+                    <div class="channel-feature-content">
+                        <h2 class="channel-feature-title">Reading</h2>
+                        <p class="channel-feature-desc">
+                            Notes on systems, design, cognition, and long form essays. Book lists and distilled takeaways.
+                        </p>
+                        <a href="studio.html#reading" class="channel-feature-btn">Enter Reading</a>
+                    </div>
+                </div>
+            </section> -->
+
+            <div class="channel-divider full-bleed" aria-hidden="true"></div>
+
+            <!-- Development -->
+            <section class="channel-feature full-bleed" id="channel-development">
+                <div class="channel-feature-inner">
+                    <div class="channel-feature-media" aria-hidden="true">
+                        <img src="src/apps/imgs/Picture1.png" alt="Development" loading="lazy" decoding="async">
+                    </div>
+                    <div class="channel-feature-content">
+                        <h2 class="channel-feature-title">Development</h2>
+                        <p class="channel-feature-desc">
+                            Small tools, experiments, and side projects. Prototypes with clean engineering and practical intent.
+                        </p>
+                        <a class="link-more" href="https://github.com/yifu-ding/VocabularyBuilder" target="_blank" rel="noopener">
+                          <span class="link-more__text" data-i18n="btn_view_development">View Details on GitHub →</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <span>&copy; 2026 Yifu Ding</span>
+            </div>
+            <div class="footer-right">
+                <a href="#top" class="footer-link">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+/* ===========================
+   Color Schemes
+   =========================== */
+
+/* ====================================
+   方案 1: Neutral + Blue + Yellow + Coral（当前使用）
+   Neutral: #D6D6D6, #CBDFDF
+   Blue: #3E96D1
+   Yellow: #FACD56, #FCD924
+   Coral: #F1895E
+   ==================================== */
+
+:root {
+    /* ===========================
+       基础底色与文字
+       =========================== */
+    --color-background: #F7FAFA;          /* 页面背景: 偏冷白 */
+    --color-surface: #FFFFFF;             /* 卡片/区块背景 */
+    --color-section: #F1F7F7;             /* 次级区块背景（分区） */
+    --color-cream: #F1F7F7;               /* 兼容旧用法（原来 footer 用过） */
+    --color-overlay: rgba(17, 24, 39, 0.04);
+
+    --color-text-primary: #111827;        /* 主要文字 */
+    --color-text-secondary: #4B5563;      /* 次要文字 */
+    --color-text-tertiary: #6B7280;       /* 弱化文字 */
+    --color-text-muted: #6B7280;          /* 兼容旧变量名 */
+    --color-text-disabled: #9CA3AF;
+
+    /* ===========================
+       Neutral / Cool（兼容 warm-gray 变量名）
+       Neutral: #D6D6D6, #CBDFDF
+       =========================== */
+    --color-warm-white: #FFFFFF;
+    --color-warm-gray-50: #F7FAFA;
+    --color-warm-gray-100: #F1F7F7;
+    --color-warm-gray-200: #CBDFDF;
+    --color-warm-gray-300: #D6D6D6;
+    --color-warm-gray-400: #BFC7C7;
+    --color-warm-gray-500: #9AA6A6;
+    --color-warm-gray-600: #6B7280;
+    --color-warm-gray-700: #4B5563;
+    --color-warm-gray-800: #1F2937;
+    --color-warm-gray-900: #111827;
+
+    /* ===========================
+       边框/分割线
+       =========================== */
+    --color-border: #D6D6D6;
+    --border-color: #D6D6D6;              /* 别名（代码里用到） */
+    --color-border-light: #E6EEEE;
+    --border-color-light: #E6EEEE;        /* 别名 */
+    --color-border-strong: #CBDFDF;
+    --color-divider: #D6D6D6;
+
+    /* ===========================
+       品牌与交互主色（收敛到 4 色）
+       Primary: Blue (#3E96D1)
+       Secondary/Emphasis: Coral (#F1895E)
+       =========================== */
+    --color-primary: #3E96D1;
+    --color-primary-hover: #2F7FB5;
+    --color-primary-active: #276C9A;
+    --color-primary-light: rgba(62, 150, 209, 0.14);
+    --color-primary-pale: rgba(62, 150, 209, 0.08);
+
+    --color-secondary: #F1895E;
+    --color-secondary-hover: #E6764A;
+    --color-link: #3E96D1;
+    --color-link-hover: #2F7FB5;
+
+    /* ===========================
+       强调与状态色
+       Yellow: #FCD924 / #FACD56
+       Coral: #F1895E
+       Info: #51A3B8
+       Success: #BBC258
+       =========================== */
+    --color-accent-yellow: #FACD56;       /* 默认更柔和 */
+    --color-accent-yellow-strong: #FCD924;
+    --color-accent-coral: #F1895E;
+    --color-info: #CBDFDF;
+    --color-success: #3E96D1;
+    --color-warning: #FACD56;
+    --color-error: #F1895E;
+
+    /* ===========================
+       兼容旧点缀变量名（减少改动面）
+       =========================== */
+    --color-accent-sage: #CBDFDF;
+    --color-accent-terracotta: #F1895E;
+    --color-accent-slate: #3E96D1;
+    --color-accent-rose: #FACD56;
+
+    --color-accent: #3E96D1;
+    --color-accent-hover: #2F7FB5;
+    --color-accent-light: rgba(62, 150, 209, 0.14);
+    --color-accent-pale: rgba(62, 150, 209, 0.08);
+
+    /* Badge / Tag（按你规则） */
+    --color-badge-new-bg: #FACD56;
+    --color-badge-featured-bg: #F1895E;
+    --color-badge-info-bg: #CBDFDF;
+    --color-badge-onlight-text: #111827;
+    --color-badge-info-text: #0B3A3A;
+
+    /* ===========================
+       阴影（保持细腻）
+       =========================== */
+    --shadow-sm: 0 1px 3px rgba(17, 24, 39, 0.08);
+    --shadow-md: 0 6px 16px rgba(17, 24, 39, 0.10);
+    --shadow-lg: 0 14px 28px rgba(17, 24, 39, 0.12);
+    --shadow-xl: 0 24px 44px rgba(17, 24, 39, 0.14);
+}
+
+/* ====================================
+   方案 1（旧）: Assembly Line 暖白风（已放入注释归档）
+   ==================================== */
+/*
+:root {
+    --color-background: #FEFDFB;
+    --color-surface: #FFFFFF;
+    --color-cream: #F5F5F0;
+    --color-overlay: rgba(0, 0, 0, 0.03);
+
+    --color-text-primary: #1A1A1A;
+    --color-text-secondary: #4A4A4A;
+    --color-text-tertiary: #6B6B6B;
+    --color-text-muted: #9B9B9B;
+    --color-text-disabled: #BBBBBB;
+
+    --color-warm-white: #FEFDFB;
+    --color-warm-gray-50: #F8F7F4;
+    --color-warm-gray-100: #F0EFE9;
+    --color-warm-gray-200: #E5E4DC;
+    --color-warm-gray-300: #D1D0C5;
+    --color-warm-gray-400: #A8A79A;
+    --color-warm-gray-500: #85847A;
+    --color-warm-gray-600: #6B6A62;
+    --color-warm-gray-700: #4E4D47;
+    --color-warm-gray-800: #353530;
+    --color-warm-gray-900: #1F1F1C;
+
+    --color-border: #E8E7E0;
+    --border-color: #E8E7E0;
+    --color-border-light: #F0EFE9;
+    --border-color-light: #F0EFE9;
+    --color-border-strong: #D1D0C5;
+    --color-divider: #F4F3ED;
+
+    --color-primary: #2C2C2C;
+    --color-primary-hover: #1A1A1A;
+    --color-primary-active: #0F0F0F;
+    --color-primary-light: #F4F4F4;
+    --color-primary-pale: #FAFAFA;
+
+    --color-accent-sage: #9CAF88;
+    --color-accent-terracotta: #C17767;
+    --color-accent-slate: #7B9BB0;
+    --color-accent-rose: #D4A59A;
+
+    --color-accent: #9CAF88;
+    --color-accent-hover: #8A9D77;
+    --color-accent-light: #E8EDE3;
+    --color-accent-pale: #F4F6F2;
+
+    --color-success: #8A9D77;
+    --color-warning: #C9A86A;
+    --color-error: #C17767;
+    --color-info: #7B9BB0;
+
+    --shadow-sm: 0 1px 3px rgba(26, 26, 26, 0.06);
+    --shadow-md: 0 4px 8px rgba(26, 26, 26, 0.08);
+    --shadow-lg: 0 10px 20px rgba(26, 26, 26, 0.10);
+    --shadow-xl: 0 20px 35px rgba(26, 26, 26, 0.12);
+}
+*/
+
+/* ====================================
+   方案 2: 暖白 + 酒红（杂志感）
+   Warm & Editorial Magazine Style
+   ==================================== 
+   
+   如需切换到方案2，请：
+   1. 注释掉上面的 :root { ... }
+   2. 取消下面的注释
+*/
+
+/*
+:root {
+    --color-background: #FBF7F0;
+    --color-surface: #FFFFFF;
+    --color-overlay: rgba(0, 0, 0, 0.05);
+
+    --color-text-primary: #1F2937;
+    --color-text-secondary: #6B7280;
+    --color-text-tertiary: #9CA3AF;
+    --color-text-disabled: #D1D5DB;
+
+    --color-border: #E5E7EB;
+    --color-border-strong: #D1D5DB;
+    --color-divider: #F3F4F6;
+
+    --color-primary: #7C2D12;
+    --color-primary-hover: #9A3412;
+    --color-primary-active: #B45309;
+    --color-primary-light: #FED7AA;
+    --color-primary-pale: #FEF3C7;
+
+    --color-accent: #0F766E;
+    --color-accent-hover: #115E59;
+    --color-accent-light: #CCFBF1;
+    --color-accent-pale: #F0FDFA;
+
+    --color-success: #10B981;
+    --color-warning: #F59E0B;
+    --color-error: #DC2626;
+    --color-info: #3B82F6;
+
+    --shadow-sm: 0 1px 2px rgba(31, 41, 55, 0.04);
+    --shadow-md: 0 4px 6px rgba(31, 41, 55, 0.06);
+    --shadow-lg: 0 10px 15px rgba(31, 41, 55, 0.08);
+    --shadow-xl: 0 20px 25px rgba(31, 41, 55, 0.10);
+}
+*/
+
+/* ===========================
+   Design Guidelines
+   =========================== */
+/*
+【方案 1 - 极简科研风】使用规则：
+1. 页面整体靠中性灰蓝做层级
+2. 蓝色（primary）只用于"可点击"元素（链接、按钮）
+3. 点缀色（accent）只用于少数标签/徽章，别和蓝抢戏
+4. 避免大面积使用强色，保持克制
+5. 利用留白和细微对比营造高级感
+
+【方案 2 - 暖白 + 酒红】使用规则：
+1. 适合文字叙述较多，有"人文研究+作品"的气质
+2. 强调色更"温"，比蓝更像个人站
+3. 酒红棕要控制使用面积，只用于关键交互元素
+4. 墨绿作为点缀，营造杂志/编辑部质感
+5. 暖色背景配合大量留白，更有亲和力
+
+使用示例：
+- 页面背景: background-color: var(--color-background);
+- 卡片: background-color: var(--color-surface); border: 1px solid var(--color-border);
+- 主标题: color: var(--color-text-primary);
+- 正文: color: var(--color-text-secondary);
+- 按钮: background: var(--color-primary); &:hover { background: var(--color-primary-hover); }
+- 标签: background: var(--color-accent-light); color: var(--color-accent);
+*/
+
