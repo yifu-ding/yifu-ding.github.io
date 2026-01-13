@@ -2,6 +2,8 @@
 (function() {
     'use strict';
   
+    let currentSortOrder = 'year-desc'; // Default sort order
+  
     function normalizeTag(tag) {
       return String(tag || '').trim().toLowerCase().replace(/\s+/g, ' ');
     }
@@ -60,6 +62,24 @@
       return all;
     }
   
+    function sortPapers(papers, sortOrder) {
+      const sorted = [...papers];
+      if (sortOrder === 'year-desc') {
+        sorted.sort((a, b) => {
+          const ay = Number(a && a.year) || 0;
+          const by = Number(b && b.year) || 0;
+          return by - ay;
+        });
+      } else if (sortOrder === 'year-asc') {
+        sorted.sort((a, b) => {
+          const ay = Number(a && a.year) || 0;
+          const by = Number(b && b.year) || 0;
+          return ay - by;
+        });
+      }
+      return sorted;
+    }
+  
     function loadPapers() {
       const waterfall = document.querySelector('.pub-waterfall');
       if (!waterfall) return;
@@ -72,15 +92,9 @@
       grid.setAttribute('aria-label', 'All papers');
   
       const allPapers = flattenAllPapers();
+      const sortedPapers = sortPapers(allPapers, currentSortOrder);
   
-      // Optional: sort by year desc if you have paper.year (otherwise keeps stable order)
-      allPapers.sort((a, b) => {
-        const ay = Number(a && a.year) || 0;
-        const by = Number(b && b.year) || 0;
-        return by - ay;
-      });
-  
-      for (const paper of allPapers) {
+      for (const paper of sortedPapers) {
         grid.appendChild(createPaperCard(paper));
       }
   
@@ -91,10 +105,49 @@
       document.dispatchEvent(new CustomEvent('papers:rendered'));
     }
   
+    function initSortButtons() {
+      const sortButtons = document.querySelectorAll('.sort-btn');
+      sortButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const sortOrder = this.getAttribute('data-sort');
+          if (sortOrder === currentSortOrder) return;
+          
+          currentSortOrder = sortOrder;
+          
+          // Update button states
+          sortButtons.forEach(b => {
+            b.classList.remove('is-active');
+            b.setAttribute('aria-pressed', 'false');
+          });
+          this.classList.add('is-active');
+          this.setAttribute('aria-pressed', 'true');
+          
+          // Reload papers with new sort order
+          loadPapers();
+          
+          // Note: Filters will be re-applied automatically via papers:rendered event
+        });
+      });
+    }
+    
+    // Export sort function for external use
+    window.paperSorter = {
+      getSortOrder: () => currentSortOrder,
+      setSortOrder: (order) => {
+        if (order !== 'year-desc' && order !== 'year-asc') return;
+        currentSortOrder = order;
+        loadPapers();
+      }
+    };
+  
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', loadPapers);
+      document.addEventListener('DOMContentLoaded', () => {
+        loadPapers();
+        initSortButtons();
+      });
     } else {
       loadPapers();
+      initSortButtons();
     }
   })();
   

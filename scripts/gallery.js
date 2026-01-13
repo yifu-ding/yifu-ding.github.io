@@ -248,6 +248,100 @@ const galleryData = {
             }
         ]
     },
+    
+    'vegetation-landscape': {
+        location: 'Nature & Vegetation 2024-2025',
+        title: 'Nature & Vegetation',
+        titleZh: '自然与植被',
+        folder: 'vegetation_n_landscape',
+        displayType: 'detailed',
+        images: [
+            { 
+                file: 'IMG_1332.JPG', 
+                title: '尼亚加拉瀑布（美国侧）',
+                titleEn: 'Niagara Falls (American Side)',
+                caption: '傍晚时分，尼亚加拉瀑布在暮色中奔流不息。晚霞从深邃的蓝渐变到温暖的橙，一只热气球静静地悬浮在空中，时间仿佛在这一刻凝固。水声轰鸣，却带不走这份宁静的永恒。',
+                captionEn: 'At dusk, Niagara Falls flows ceaselessly in the twilight. The evening glow transitions from deep blue to warm orange, while a hot air balloon hovers motionless in the sky, as if time itself has frozen. The roaring water cannot carry away this moment of serene eternity.',
+                bgColor: '#B8D0E0' 
+            },
+            { 
+                file: 'IMG_2779.JPG', 
+                title: 'Fanshawe 自然保护区',
+                titleEn: 'Fanshawe Conservation Area',
+                caption: '加拿大安大略省伦敦的 Fanshawe 自然保护区，密密的树林如绿色的屏障，柔软的草皮在脚下延伸。阳光透过枝叶洒下斑驳的光影，每一寸土地都散发着原始而纯净的气息。',
+                captionEn: 'Fanshawe Conservation Area in London, Ontario, Canada. Dense forests form green barriers, while soft grass extends beneath your feet. Sunlight filters through leaves, casting dappled shadows, and every inch of land exudes a primitive and pure essence.',
+                bgColor: '#C8D8C0' 
+            },
+            { 
+                file: 'IMG_3652.JPG', 
+                title: '天坑之心',
+                titleEn: 'The Heart of the Cenote',
+                caption: '墨西哥奇琴伊察附近的一处天坑，茂密的热带植被如绿色的帷幕，层层环绕着这被贯穿的大地之心。清澈的池水倒映着天空，仿佛连接着两个世界，神秘而深邃。',
+                captionEn: 'A cenote near Chichen Itza, Mexico. Lush tropical vegetation forms green curtains, layer upon layer surrounding this pierced heart of the earth. The clear pool reflects the sky, as if connecting two worlds, mysterious and profound.',
+                bgColor: '#A0B8C8' 
+            },
+            { 
+                file: 'IMG_8633.JPG', 
+                title: '城市绿意',
+                titleEn: 'Urban Greenery',
+                caption: '新加坡的一处公寓楼下，植被的叶子错落有致，在有限的空间里争夺着阳光和雨露。每一片叶子都在诉说着生存的智慧，在钢筋水泥的缝隙中，生命依然顽强而美丽。',
+                captionEn: 'Beneath an apartment building in Singapore, vegetation leaves are arranged in an orderly yet natural way, competing for sunlight and rain in limited space. Each leaf tells a story of survival wisdom, and life remains tenacious and beautiful in the gaps between steel and concrete.',
+                bgColor: '#D0E0C8' 
+            }
+        ]
+    },
+
+    mexico: {
+        location: 'Mexico 2025',
+        title: 'Mexico',
+        titleZh: '墨西哥',
+        folder: 'mexico',
+        displayType: 'grid',
+        groups: [
+            {
+                groupTitle: 'Gran Hotel',
+                groupTitleEn: 'Gran Hotel',
+                images: [
+                    { file: 'IMG_4166.JPG', caption: 'Gran Hotel', captionEn: 'Gran Hotel', bgColor: '#E8C8B8' },
+                    { file: 'IMG_4162.JPG', caption: 'Gran Hotel', captionEn: 'Gran Hotel', bgColor: '#E8C8B8' },
+                    { file: 'IMG_3818.PNG', caption: 'Gran Hotel', captionEn: 'Gran Hotel', bgColor: '#E8C8B8' }
+                ]
+            },
+            {
+                groupTitle: '特奥蒂瓦坎金字塔',
+                groupTitleEn: 'Teotihuacan Pyramids',
+                images: [
+                    { file: 'IMG_4120.JPG', caption: '特奥蒂瓦坎金字塔', captionEn: 'Teotihuacan Pyramids', bgColor: '#D8E0E8' }
+                ]
+            },
+            {
+                groupTitle: '城市景观',
+                groupTitleEn: 'City View',
+                images: [
+                    { file: 'IMG_4053.JPG', caption: '城市景观', captionEn: 'City View', bgColor: '#C8D5E0' },
+                    { file: 'IMG_4028.JPG', caption: '城市景观', captionEn: 'City View', bgColor: '#C8D5E0' },
+                    { file: 'IMG_2777.JPG', caption: '城市景观', captionEn: 'City View', bgColor: '#C8D5E0' },
+                    { file: 'IMG_4023.JPG', caption: '城市景观', captionEn: 'City View', bgColor: '#C8D5E0' },
+                    { file: 'IMG_4017.JPG', caption: '城市景观', captionEn: 'City View', bgColor: '#C8D5E0' },
+                    { file: 'IMG_4010.JPG', caption: '城市景观', captionEn: 'City View', bgColor: '#C8D5E0' },
+                    { file: 'IMG_3829.JPG', caption: '城市景观', captionEn: 'City View', bgColor: '#C8D5E0' },
+                    { file: 'IMG_3828.JPG', caption: '城市景观', captionEn: 'City View', bgColor: '#C8D5E0' },
+                    { file: 'IMG_3827.JPG', caption: '城市景观', captionEn: 'City View', bgColor: '#C8D5E0' }
+                ]
+            },
+            {
+                groupTitle: '奇琴伊察',
+                groupTitleEn: 'Chichen Itza',
+                images: [
+                    { file: 'IMG_3643.JPG', caption: '奇琴伊察', captionEn: 'Chichen Itza', bgColor: '#E8EDF2' },
+                    { file: 'IMG_1848.JPG', caption: '奇琴伊察', captionEn: 'Chichen Itza', bgColor: '#E8EDF2' },
+                    { file: 'IMG_1892.JPG', caption: '奇琴伊察', captionEn: 'Chichen Itza', bgColor: '#E8EDF2' },
+                    { file: 'IMG_1977.JPG', caption: '奇琴伊察', captionEn: 'Chichen Itza', bgColor: '#E8EDF2' }
+                ]
+            }
+        ]
+    },
+    
     sea: {
         location: 'Thailand Phuket 2025',
         title: 'Coastlines',
@@ -287,6 +381,7 @@ const galleryData = {
             { file: '828da493a750ff4463d3b6bfdaee26ed.JPG', caption: '异国的韵味', captionEn: 'Exotic charm', bgColor: '#D0C5B8' }
         ]
     },
+    
     'close-up': {
         location: 'CLOSE STUDIES 2023-2024',
         title: 'Details & Textures',
@@ -308,7 +403,7 @@ const galleryData = {
                 titleEn: 'A City in Heavy Rain',
                 caption: '在曼谷的民宿里，窗外下着猛烈而饱满的雨。雨水敲击屋顶与街道，空气中充满湿热与能量。这种近乎喧闹的雨，与这座城市本身一样，鲜活、直接、不加克制。',
                 captionEn: 'In a Bangkok guesthouse, heavy rain pours outside the window. Water strikes rooftops and streets, filling the air with heat and energy. The rain, intense and unapologetic, mirrors the city itself.',
-                bgColor: '#D8D0C8'
+                bgColor: '#A0B2D4'
             },
             { 
                 file: 'IMG_8685.JPG',
@@ -316,7 +411,7 @@ const galleryData = {
                 titleEn: 'An Unspoken Birthday',
                 caption: '生日那天我没有对任何人提起，但合租的室友悄悄准备了一个草莓小蛋糕和蜡烛。点燃蜡烛的瞬间，房间里的光线变得柔软而安静，这份被察觉的关心显得格外克制而真诚。',
                 captionEn: 'On my birthday, which I did not mention to anyone, my housemates quietly prepared a small strawberry cake and candles. As the candles were lit, the room softened into a calm glow, a restrained yet sincere gesture of being seen.',
-                bgColor: '#C8D8C0'
+                bgColor: '#E5E6F4'
             },
             { 
                 file: 'IMG_9752.JPG',
@@ -324,7 +419,7 @@ const galleryData = {
                 titleEn: 'Red Wine at Night',
                 caption: '在清迈的民宿里，窗外是一片漆黑，只剩零星的光影。我们坐在室内，慢慢喝着红酒，时间被刻意放缓。这是一种无需言语的陪伴，与夜色一起沉静下来。',
                 captionEn: 'In a Chiang Mai guesthouse, darkness fills the view outside, broken only by scattered lights. Inside, we drink red wine slowly, allowing time to decelerate. It is a quiet form of companionship, settling into the night.',
-                bgColor: '#E0D8C8'
+                bgColor: '#E0D9DD'
             },
             { 
                 file: 'IMG_1111.JPG',
@@ -332,7 +427,7 @@ const galleryData = {
                 titleEn: 'Food with Care',
                 caption: '在清迈吃到的每一道菜和饮品，都被细致地装饰，分量也毫不吝啬。食物不仅仅是味觉体验，更体现了一种被认真对待的态度。',
                 captionEn: 'Every dish and drink in Chiang Mai is carefully presented, generous in portion. The food offers not only flavor but a sense of attentiveness and respect.',
-                bgColor: '#F0E0D0'
+                bgColor: '#FFFCB9'
             },
             { 
                 file: 'IMG_1112.JPG',

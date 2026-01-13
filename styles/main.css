@@ -121,7 +121,8 @@ button {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(254, 253, 251, 0.95);
+    /* background-color: rgba(254, 253, 251, 0.95); */
+    background-color: #FFFFFF;
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-color-light);
     z-index: 1000;
@@ -398,7 +399,8 @@ button {
     flex-direction: column;
     gap: var(--space-lg);
     padding: var(--space-lg);
-    background: var(--color-warm-white);
+    /* background: var(--color-warm-white); */
+    background: #FFFFFF;
     border: 1px solid var(--border-color-light);
     border-radius: var(--border-radius-lg);
 }
@@ -719,7 +721,8 @@ button {
 }
 
 .content-card {
-    background: var(--color-warm-white);
+    /* background: var(--color-warm-white); */
+    background: #FFFFFF;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-md);
     padding: var(--space-lg);

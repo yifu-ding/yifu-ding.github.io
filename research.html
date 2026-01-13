@@ -46,12 +46,6 @@
                     </div>
                 </div>
 
-                <!-- User Icon -->
-                <!-- <div class="user-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                </div> -->
             </div>
         </div>
     </nav>
@@ -110,12 +104,12 @@
                     <div class="hero-metrics" aria-label="Google Scholar metrics">
                       <div class="metric-card">
                         <div class="metric-label">Citations</div>
-                        <div class="metric-value">1290</div>
+                        <div class="metric-value">1297</div>
                       </div>
               
                       <div class="metric-card">
                         <div class="metric-label">Papers</div>
-                        <div class="metric-value">34</div>
+                        <div class="metric-value">32</div>
                       </div>
               
                       <div class="metric-card">
@@ -150,10 +144,16 @@
             <button type="button" class="mode-btn is-active" data-mode="and" aria-pressed="true">AND</button>
             <button type="button" class="mode-btn" data-mode="or" aria-pressed="false">OR</button>
             <button type="button" class="clear-btn" id="kw-clear">Clear</button>
-            <span class="filter-status" id="filter-status" aria-live="polite"></span>
           </div>
+          
+          <div class="paper-filter-row sort" role="group" aria-label="Sort order">
+            <span class="filter-rule-label" data-i18n="sort_by">Sort by Year</span>
+            <button type="button" class="sort-btn is-active" data-sort="year-desc" aria-pressed="true" data-i18n="sort_year_desc">Newest</button>
+            <button type="button" class="sort-btn" data-sort="year-asc" aria-pressed="false" data-i18n="sort_year_asc">Oldest</button>
+          </div>
+
+          <span class="filter-status" id="filter-status" aria-live="polite"></span>
         </div>
-      
         <div class="pub-waterfall"></div>
 
       </section>

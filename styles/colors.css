@@ -14,7 +14,7 @@
     /* ===========================
        基础底色与文字
        =========================== */
-    --color-background: #F7FAFA;          /* 页面背景: 偏冷白 */
+    --color-background: #FFFFFF;          /* 页面背景: 偏冷白 */
     --color-surface: #FFFFFF;             /* 卡片/区块背景 */
     --color-section: #F1F7F7;             /* 次级区块背景（分区） */
     --color-cream: #F1F7F7;               /* 兼容旧用法（原来 footer 用过） */

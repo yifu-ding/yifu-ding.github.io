@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio - Yifu Ding</title>
-    <meta name="description" content="Photography, reading notes, and tools.">
+    <meta name="description" content="A studio of photography.">
     <link rel="stylesheet" href="styles/colors.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/components.css">
 </head>
 <body>
-    <!-- Navigation -->
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
@@ -47,12 +46,6 @@
                     </div>
                 </div>
 
-                <!-- User Icon -->
-                <!-- <div class="user-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                </div> -->
             </div>
         </div>
     </nav>
@@ -68,30 +61,25 @@
                 <p class="studio-hero-description" data-i18n="studio_description">
                      A space for my photography portfolio. 
                 </p>
-                <!-- <div class="studio-hero-actions" aria-label="Quick jump">
-                    <a class="studio-hero-btn" href="#photography">Photography</a>
-                    <a class="studio-hero-btn" href="#reading">Reading</a>
-                    <a class="studio-hero-btn" href="#development">Development</a>
-                </div> -->
+                <div class="studio-hero-actions" aria-label="Quick jump">
+                    <a class="studio-hero-btn" href="#static_photos" data-i18n="photography_title">Photography</a>
+                    <a class="studio-hero-btn" href="#video" data-i18n="selected_shorts_title">Video</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Main Content Container -->
     <main class="main-container">
+        
+        <div class="channels-section-title full-bleed" aria-hidden="true" id="static_photos">
+            <h2 class="channels-section-heading" data-i18n="photography_title">Photography</h2>
+        </div>
 
         <!-- Photography Section -->
-        <section  class="content-section full-bleed">
-            <div   id="photography" class="photo-section-wrapper">
-                <!-- <div class="photo-section-header">
-                    <div id="photography">
-                        <h2 class="section-title" data-i18n="photography_title">Photography</h2>
-                        <p class="section-description" data-i18n="photography_description">
-                            A collection of photographic series exploring patterns, light, and composition across different environments.
-                        </p>
-                    </div>
-                </div>
-                 -->
+        <!-- <section  class="channels full-bleed"> -->
+        <section class="channels" aria-label="static_photos"></section>
+            <div id="photography" class="photo-section-wrapper">
                 <div class="photo-grid-scroll">
                     <div class="photo-grid-track">
                         <!-- Gallery cards will be loaded dynamically by gallery.js -->
@@ -99,89 +87,49 @@
                 </div>
             </div>
         </section>
+       
+        <div class="latest-header" id="video">
+            <h2 class="latest-title channels-section-heading" data-i18n="selected_shorts_title" >Selected Shorts</h2>
+        </div>
 
-        <!-- Reading Section -->
-        <!-- <section id="reading" class="content-section">
-            <h2 class="section-title">Reading</h2>
-            
-            <div class="cards-grid">
-                <div class="content-card">
-                    <span class="card-category">Systems · Finished Dec 2024</span>
-                    <h3 class="card-title">Thinking in Systems</h3>
-                    <p class="card-description">
-                        Donella H. Meadows · Essential framework for understanding complex systems and feedback loops.
-                    </p>
-                    <div class="card-stats">
-                        <div class="card-stat">
-                            <span class="stat-label">Highlights</span>
-                            <span class="stat-value">25</span>
-                        </div>
+       <!-- Video Section -->
+        <section class="content-section full-bleed">
+            <div class="video-section-wrapper">
+                <div class="video-container">
+                    <div class="video-item video-item-guana">
+                        <video class="video-player" controls preload="metadata">
+                            <source src="src/photos/videos/guana_video.mov" type="video/quicktime">
+                            <source src="src/photos/videos/guana_video.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3 class="video-title" data-i18n="video_guana_title">Sunset in Guanajuato 💫</h3>
                     </div>
-                    <a href="#" class="card-link">View notes</a>
-                </div>
-
-                <div class="content-card">
-                    <span class="card-category">Design · Finished Nov 2024</span>
-                    <h3 class="card-title">The Design of Everyday Things</h3>
-                    <p class="card-description">
-                        Don Norman · Principles of good design apply directly to ML system design and interpretability.
-                    </p>
-                    <div class="card-stats">
-                        <div class="card-stat">
-                            <span class="stat-label">Highlights</span>
-                            <span class="stat-value">18</span>
-                        </div>
+                    <div class="video-item video-item-north-light">
+                        <video class="video-player" controls preload="metadata">
+                            <source src="src/photos/videos/north_light.MOV" type="video/quicktime">
+                            <source src="src/photos/videos/north_light.MOV" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3 class="video-title" data-i18n="video_north_light_title">Aurora Capital Yellowknife 💫</h3>
                     </div>
-                    <a href="#" class="card-link">View notes</a>
+                    <div class="video-item video-item-macritchie">
+                        <video class="video-player" controls preload="metadata">
+                            <source src="src/photos/videos/MacRitchie.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3 class="video-title" data-i18n="video_macritchie_title">MacRitchie Tropical Nature Reserve 💫</h3>
+                    </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
-        <!-- Tools Section -->
-        <!-- <section id="development" class="content-section">
-            <h2 class="section-title" data-i18n="tools_title">Individual Development</h2>
-            
-            <div class="cards-grid">
-                <div class="content-card">
-                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 200px; border-radius: 8px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 64px;">
-                        📚
-                    </div>
-                    <span class="card-category">Swift · SwiftUI · iOS</span>
-                    <h3 class="card-title">VocabularyBuilder</h3>
-                    <p class="card-description" data-i18n="vocab_builder_desc">
-                        基于词源学习的 iOS 英语词汇构建应用。通过词源解释和四阶段科学记忆训练系统，帮助用户深度理解和记忆英语单词。离线使用，无需登录。
-                    </p>
-                    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px;">
-                        <span style="font-size: 12px; padding: 4px 8px; background: var(--color-warm-gray-100); border-radius: 4px;" data-i18n="vocab_tag_etymology">词源学习</span>
-                        <span style="font-size: 12px; padding: 4px 8px; background: var(--color-warm-gray-100); border-radius: 4px;" data-i18n="vocab_tag_practice">四阶段练习</span>
-                        <span style="font-size: 12px; padding: 4px 8px; background: var(--color-warm-gray-100); border-radius: 4px;" data-i18n="vocab_tag_offline">离线词典</span>
-                    </div>
-                    <a class="link-more" href="https://github.com/yifu-ding/VocabularyBuilder" target="_blank" rel="noopener">
-                        <span class="link-more__plus" aria-hidden="true">→</span>
-                        <span class="link-more__text">View on GitHub</span>
-                    </a>
-                </div>
-
-                <div class="content-card">
-                    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); height: 200px; border-radius: 8px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 48px;">
-                        🔧
-                    </div>
-                    <span class="card-category">Python · PyTorch · In Progress</span>
-                    <h3 class="card-title">Model Quantization Toolkit</h3>
-                    <p class="card-description" data-i18n="quant_toolkit_desc">
-                        Open-source toolkit for efficient neural network quantization. Implements PTQ and QAT methods with support for various model architectures.
-                    </p>
-                    <a href="#" class="card-link" data-i18n="coming_soon">Coming soon</a>
-                </div>
-            </div>
-        </section> -->
     </main>
 
     <!-- Footer -->
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-left">
-                <span>&copy; 2026 Yifu Ding · Beihang University</span>
+                <span>&copy; 2026 Yifu Ding</span>
             </div>
             <div class="footer-right">
                 <a href="#top" class="footer-link">Back to top ↑</a>
