@@ -104,9 +104,14 @@ class LanguageManager {
                 latest_subtitle: 'A short log across research and studio.',
                 latest_section_title: 'Latest Activities',
                 latest_view_all: 'View All',
-                selected_shorts_title: 'Selected Shorts',
+                selected_shorts_title: 'Selected Shorts 🎥',
+                video_guana_desc: 'At dusk, the sunset sweeps over the ridge of Pipila like a stream of molten gold, and Guanajuato sinks into a gentleness of color. This mountain city, as if God had spilled a palette across it, gradually sheds the daytime clamor in the twilight and welcomes the revelry that belongs to the night. The drifting clouds deepen from a fervent orange-red into a profound violet, and every flicker of light and shadow dances across the painted walls. Buildings as bright as candy grow richer as the shadows lengthen swiftly, as though the whispered secrets of time were murmuring along the winding cobblestone streets. When the last trace of afterglow finally sinks into the valley, the whole city seems to be awakened from within by starlight. One by one, countless lamps bloom in the dark blue night, like the Milky Way fallen to earth, gathering into a river in the quiet gorge. In that fleeting instant when light gives way to darkness, the sunset in Guanajuato becomes a dream of romance and eternity.',
+                video_north_light_desc: 'When the last trace of rosy afterglow sinks into the frozen earth, Yellowknife steps into the dominion of the stars. As the world’s aurora capital, this vast wilderness quietly kindles another kind of light amid winter’s darkness and silence. A deep blue night sky drapes down like an immense velvet curtain, and newly unfurled, emerald-tinted radiance begins to dance lightly across the heavens. Those leaping ribbons of light grow ever more crystalline in the bitter air. In that fleeting instant when brightness yields to shadow, Yellowknife’s aurora tells a story of motion in green.',
+                video_macritchie_desc: 'As the fierce afternoon sun pierces the lush canopy, MacRitchie descends into the depths of verdure. A tropical sanctuary within the city, this jungle harbors the whispers of all living souls within its humid air. The atmosphere carries the scent of water and the crisp sweetness of leaves warmed by the sun. Mottled light and shadow play across the winding boardwalk. Stepping onto the TreeTop Walk, one’s perspective is suddenly lifted, as if shifting from an earthly narrative to a chapter among the clouds. The canopy undulates beneath your feet like a slow-motion sea, while the tropical breeze weaves through the foliage, bringing a coolness laden with mist and greenery.',
                 footer_rights: '',
                 back_to_top: 'Back to top',
+                gallery_view_grid: 'Grid',
+                gallery_view_detailed: 'Detailed',
                 btn_enter_studio: 'Enter Studio →',
                 btn_view_development: 'View Details on GitHub →',
                 
@@ -136,7 +141,7 @@ class LanguageManager {
                 studio_filter_photo: 'Photography',
                 studio_filter_reading: 'Reading',
                 studio_filter_apps: 'Apps',
-                photography_title: 'Static Photos',
+                photography_title: 'Static Photos 📸',
                 photography_series: 'Series',
                 reading_title: 'Reading',
                 reading_highlights: 'Highlights & Notes',
@@ -163,7 +168,7 @@ class LanguageManager {
                 series_6: 'Rocky Mountains',
                 
                 // Contact Page
-                contact_title: 'Leave a message',
+                contact_title: 'Leave a message 💬',
                 contact_description: 'You can use the form below to send me a message regarding research collaborations, academic discussions, or related inquiries.', 
                 contact_research_collab: 'Research Collaboration',
                 contact_research_desc: 'Open to collaborations on model compression, quantization, and efficient deep learning.',
@@ -246,9 +251,14 @@ class LanguageManager {
                 latest_subtitle: '研究和工作室的简短日志。',
                 latest_section_title: '最新动态',
                 latest_view_all: '查看全部',
-                selected_shorts_title: '精选短片',
+                selected_shorts_title: '精选短片 🎥',
+                video_guana_desc: '傍晚的日暮如流金般掠过皮皮拉的山脊，瓜纳华托便坠入色彩的温柔。这座仿佛被上帝打翻调色盘的山城，在暮色里逐渐褪去白日的喧嚣，迎来属于夜晚的狂欢。流云从热烈的橘红晕染成深邃的紫罗兰，光影在彩色墙面上跳跃；那些如糖果般绚烂的建筑，在飞速拉长的阴影里愈发浓郁，仿佛岁月的密语正沿着蜿蜒的石板路低回。直到最后一抹余晖彻底沉入谷底，整座城市像被星光从内而外唤醒，万家灯火在幽蓝的夜色中次第亮起，犹如银河跌落人间，在静谧的峡谷里汇聚成河。在这场明暗交替的瞬息里，瓜纳华托的日落，是一场关于浪漫与永恒的梦境。',
+                video_north_light_desc: '当最后的霞光没入冰封的大地，耶洛奈夫便步入星辰的疆域。作为世界的极光之都，这片旷野在凛冬的黑暗与寂静中悄悄点燃了另一种光。深蓝的夜幕如巨大的丝绒缓缓垂下，初绽的翡翠色流光便在苍穹间轻盈起舞；那些跃动的光带，在极寒的空气中愈发清冽。在这场明暗交替的瞬息里，耶洛奈夫的极光，用绿色讲述流动。',
+                video_macritchie_desc: '当午后的炽阳穿透繁茂的林冠，麦里芝便步入了绿意的深处。作为城市里的热带原乡，这片丛林在湿润的空气中保护着万物生灵的低语。空气里有水的味道，也有叶片被阳光烘热后的清甜。斑驳的光影在蜿蜒的木栈道上。踏上TreeTop Walk，视线忽然被抬高，仿佛从地面的叙事切换到云端的章节。树冠在脚下起伏，像一片缓慢移动的海，热带的风从叶片之间穿行，带着水汽与绿意的凉爽。',
                 footer_rights: '',
                 back_to_top: '返回顶部',
+                gallery_view_grid: '网格',
+                gallery_view_detailed: '详细',
                 btn_enter_studio: '查看作品集 →',
                 btn_view_development: '在GitHub查看详情 →',
                 // 研究页面
@@ -658,4 +668,3 @@ if (form) {
         }
     });
 }
-

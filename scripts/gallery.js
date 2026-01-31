@@ -18,32 +18,32 @@ const galleryData = {
                 groupTitleEn: 'Lakes',
                 images: [
                     {
-                        file: 'IMG_2985.JPG',
+                        file: ['IMG_2985.JPG', 'IMG_2971.JPG'],
                         caption: '路易斯湖',
                         captionEn: 'Lake Louise',
                         bgColor: '#E8C8B8'
                     }, 
-                    {
-                        file: 'IMG_2971.JPG',
-                        caption: '路易斯湖',
-                        captionEn: 'Lake Louise',
-                        bgColor: '#E8C8B8'
-                    },
                     {
                         file: 'IMG_0312.JPG',
                         caption: '路易斯湖',
                         captionEn: 'Lake Louise',
                         bgColor: '#E8C8B8'
                     },
+                    {
+                        file: 'IMG_2917.JPG',
+                        caption: '湖畔一角',
+                        captionEn: 'By the lake',
+                        bgColor: '#D8E0E8'
+                    },
                     { 
                         file: 'IMG_3146.JPG',
                         caption: '梦莲湖',
-                        captionEn: 'Lake Louise',
+                        captionEn: 'Moraine Lake',
                         bgColor: '#C8D5E0'
                     },
                     { 
                         file: 'IMG_2219.JPG',
-                        caption: 'Medicine Lake，水位已经很浅',
+                        caption: 'Medicine Lake, 水位已经很浅',
                         captionEn: 'Medicine Lake with very low water level',
                         bgColor: '#D8E0E8'
                     },
@@ -83,6 +83,24 @@ const galleryData = {
                         captionEn: 'Columbia Icefield',
                         bgColor: '#E8C8B8'
                     }, 
+                    {
+                        file: 'IMG_3449.JPG',
+                        caption: '冰原山谷',
+                        captionEn: 'Icefield Valley',
+                        bgColor: '#D8E0E8'
+                    },
+                    {
+                        file: 'IMG_3462.JPG',
+                        caption: '冰川边缘',
+                        captionEn: 'Glacier Edge',
+                        bgColor: '#E0E8F0'
+                    },
+                    {
+                        file: 'IMG_3475.JPG',
+                        caption: '冰原纹理',
+                        captionEn: 'Icefield Textures',
+                        bgColor: '#D0D8E8'
+                    }
                 ]
             },
             {
@@ -205,6 +223,18 @@ const galleryData = {
         titleZh: '城市色彩',
         folder: 'guanajuato',
         displayType: 'detailed', // 详细介绍模式
+        detailedGroups: [
+            {
+                groupTitle: '暮色与时间',
+                groupTitleEn: 'Twilight and Time',
+                imageIndexes: [1, 2, 3, 7]
+            },
+            {
+                groupTitle: '城市色彩',
+                groupTitleEn: 'Urban Palette',
+                imageIndexes: [0, 4, 5, 6]
+            }
+        ],
         images: [
             { 
                 file: 'guana4.JPG', 
@@ -239,12 +269,28 @@ const galleryData = {
                 bgColor: '#F5E8D8' 
             },
             { 
-                file: 'IMG_3189.JPG', 
-                title: '建筑与天空',
-                titleEn: 'Architecture and Sky',
-                caption: '建筑的垂直线条与天空的水平线形成对话，人造的几何形状与自然的云彩相互呼应。这是一个关于秩序与自由、坚固与流动的视觉对话。',
-                captionEn: 'The vertical lines of architecture dialogue with the horizontal line of the sky, man-made geometry echoing natural clouds. This is a visual conversation about order and freedom, solidity and flow.',
+                file: ['IMG_3189.JPG', 'IMG_3796.JPG'], 
+                title: '屁屁山的夜色',
+                titleEn: 'Night on Pipila Hill',
+                caption: '在屁屁山俯望，城市灯火层层铺开；栏杆与屋顶把夜色切成清晰的层次。',
+                captionEn: 'From Pipila Hill, the city lights spread in layers; railings and rooftops cut the night into crisp tiers.',
                 bgColor: '#C8D5E8' 
+            },
+            { 
+                file: 'death.JPG', 
+                title: '屁屁山的死神',
+                titleEn: 'La Catrina on Pipila Hill',
+                caption: '屁屁山上的死神 cosplay 很友好，路过就能免费给他拍一张。',
+                captionEn: 'A friendly La Catrina cosplay on Pipila Hill—he was happy to be photographed for free.',
+                bgColor: '#E3D0C4' 
+            },
+            { 
+                file: 'IMG_3788.JPG', 
+                title: '屏幕里的夜',
+                titleEn: 'Night in the Screen',
+                caption: '相机屏幕里是清晰的城景，屏幕外是散开的灯光。前景的器材与远处的夜色把这一瞬间定格成观看与被观看。',
+                captionEn: 'A sharp cityscape glows on the camera screen, while the world beyond dissolves into bokeh. The gear in the foreground turns the night into a moment of looking and being looked at.',
+                bgColor: '#C8C4D8' 
             }
         ]
     },
@@ -255,6 +301,18 @@ const galleryData = {
         titleZh: '自然与植被',
         folder: 'vegetation_n_landscape',
         displayType: 'detailed',
+        detailedGroups: [
+            {
+                groupTitle: '水域与深处',
+                groupTitleEn: 'Water and Depths',
+                imageIndexes: [0, 2, 6, 10]
+            },
+            {
+                groupTitle: '林地与城市绿意',
+                groupTitleEn: 'Forest and Urban Green',
+                imageIndexes: [1, 3, 4, 5, 7, 8, 9]
+            }
+        ],
         images: [
             { 
                 file: 'IMG_1332.JPG', 
@@ -287,6 +345,62 @@ const galleryData = {
                 caption: '新加坡的一处公寓楼下，植被的叶子错落有致，在有限的空间里争夺着阳光和雨露。每一片叶子都在诉说着生存的智慧，在钢筋水泥的缝隙中，生命依然顽强而美丽。',
                 captionEn: 'Beneath an apartment building in Singapore, vegetation leaves are arranged in an orderly yet natural way, competing for sunlight and rain in limited space. Each leaf tells a story of survival wisdom, and life remains tenacious and beautiful in the gaps between steel and concrete.',
                 bgColor: '#D0E0C8' 
+            },
+            { 
+                file: '1-1.jpeg', 
+                title: '叶脉的光',
+                titleEn: 'Veins of Light',
+                caption: '细密的叶脉在光里浮现，像被放大的自然纹理。',
+                captionEn: 'Delicate leaf veins surface in the light, like nature’s textures magnified.',
+                bgColor: '#C8D8C0' 
+            },
+            { 
+                file: '1-2.jpeg', 
+                title: '绿影层叠',
+                titleEn: 'Layers of Green',
+                caption: '叶片在阴影与光线之间叠加，形成柔和的层次。',
+                captionEn: 'Leaves overlap between shadow and light, forming gentle layers.',
+                bgColor: '#D0E0C8' 
+            },
+            { 
+                file: '2.jpeg', 
+                title: '水边的呼吸',
+                titleEn: 'Breath by the Water',
+                caption: '水汽与植被交织，氛围变得清凉而安静。',
+                captionEn: 'Moist air and vegetation intertwine, the scene turning cool and quiet.',
+                bgColor: '#B8D0E0' 
+            },
+            { 
+                file: '3.jpeg', 
+                title: '林间纹理',
+                titleEn: 'Forest Textures',
+                caption: '树影与苔色交织，细节构成了森林的节奏。',
+                captionEn: 'Tree shadows and mossy tones interlace, details forming the forest’s rhythm.',
+                bgColor: '#C0D0C0' 
+            },
+            { 
+                file: '4.jpeg', 
+                title: '枝叶的秩序',
+                titleEn: 'Order of Branches',
+                caption: '枝叶在空间中拉开距离，留出呼吸与光。',
+                captionEn: 'Branches and leaves space themselves out, leaving room for breath and light.',
+                bgColor: '#C8D8C8' 
+            },
+            { 
+                file: '5.jpeg', 
+                title: '雨后的绿意',
+                titleEn: 'Green After Rain',
+                caption: '雨后的空气让色彩更饱满，绿意更清晰。',
+                captionEn: 'After rain, colors grow richer and greens more vivid.',
+                bgColor: '#C8E0D0' 
+            },
+            { 
+                file: '6.jpeg', 
+                title: '静水与植被',
+                titleEn: 'Still Water and Greens',
+                caption: '平静的水面与岸边植被相互映照。',
+                captionEn: 'Still water mirrors the greenery along the shore.',
+                bgColor: '#B8C8D8' 
             }
         ]
     },
@@ -348,11 +462,23 @@ const galleryData = {
         titleZh: '海岸线',
         folder: 'sea',
         displayType: 'detailed', // 详细介绍模式
+        detailedGroups: [
+            {
+                groupTitle: '晨光',
+                groupTitleEn: 'Dawn Light',
+                imageIndexes: [0, 1]
+            },
+            {
+                groupTitle: '海平线',
+                groupTitleEn: 'Horizon',
+                imageIndexes: [2, 3]
+            }
+        ],
         images: [
             { file: ['IMG_0974.JPG', 'IMG_0955.JPG',], caption: '天亮前', captionEn: 'Before dawn', bgColor: '#B8D0E0' },
             { file: ['IMG_0959.JPG', 'IMG_0929.JPG'], caption: '红色朝霞', captionEn: 'Red sunrise', bgColor: '#B8D0E0' },
             { file: ['IMG_1038.JPG', 'IMG_1055.JPG'], caption: '远方的船只', captionEn: 'Distant vessels', bgColor: '#A0B8D0' },
-            { file: '0e1c6603b1586ee2bbfe2092eb89646d.JPG', caption: '彩虹海浪', captionEn: 'Rainbow waves', bgColor: '#7898B8' }
+            { file: 'phuket-sea-1.JPG', caption: '彩虹海浪', captionEn: 'Rainbow waves', bgColor: '#7898B8' }
         ]
     },
     sky: {
@@ -361,6 +487,13 @@ const galleryData = {
         titleZh: '天空',
         folder: 'sky',
         displayType: 'detailed', // 详细介绍模式
+        detailedGroups: [
+            {
+                groupTitle: '天空现象',
+                groupTitleEn: 'Sky Phenomena',
+                imageIndexes: [0, 1]
+            }
+        ],
         images: [
             { file: ['1.JPG', '2.JPG'], caption: '彩虹', captionEn: 'Rainbow', bgColor: '#B8D0E0' }, 
             { file: '3.JPG', caption: '火烧云', captionEn: 'Fire cloud', bgColor: '#B8D0E0' }, 
@@ -372,13 +505,52 @@ const galleryData = {
         titleZh: '热带光影',
         folder: 'thailand',
         displayType: 'detailed', // 详细介绍模式
+        detailedGroups: [
+            {
+                groupTitle: '寺庙与色彩',
+                groupTitleEn: 'Temple and Color',
+                imageIndexes: [0, 1, 2]
+            },
+            {
+                groupTitle: '市集与日常',
+                groupTitleEn: 'Markets and Everyday',
+                imageIndexes: [6, 7, 8, 9, 10, 11, 12, 13]
+            },
+            {
+                groupTitle: '城市与夜色',
+                groupTitleEn: 'City and Night',
+                imageIndexes: [4, 5, 15, 16, 17, 18]
+            },
+            {
+                groupTitle: '日落与光',
+                groupTitleEn: 'Sunset and Light',
+                imageIndexes: [3, 14, 19, 20, 21, 22]
+            }
+        ],
         images: [
             { file: 'IMG_9514.JPG', caption: '热带的色彩', captionEn: 'Tropical colors', bgColor: '#E8D5C0' },
             { file: 'IMG_9560.JPG', caption: '寺庙的光影', captionEn: 'Temple light and shadow', bgColor: '#BAE4EF' },
-            { file: 'IMG_9521.JPG', caption: '市场的生活', captionEn: 'Market life', bgColor: '#E0C8A8' },
+            { file: 'IMG_9686.JPG', caption: '庙宇细节', captionEn: 'Temple details', bgColor: '#D8E4EF' },
             { file: 'IMG_9810.JPG', caption: '日落的金色', captionEn: 'Golden sunset', bgColor: '#F0D8B8' },
-            { file: '28c1bcef6deba8aaa3e7d6c01e69939a.JPG', caption: '热带的宁静', captionEn: 'Tropical serenity', bgColor: '#C8D8C0' },
-            { file: '828da493a750ff4463d3b6bfdaee26ed.JPG', caption: '异国的韵味', captionEn: 'Exotic charm', bgColor: '#D0C5B8' }
+            { file: 'bankok1.JPG', caption: '城市剪影', captionEn: 'City silhouettes', bgColor: '#C8CCD8' },
+            { file: 'bankok2.JPG', caption: '街巷一隅', captionEn: 'A street corner', bgColor: '#D8D2C8' },
+            { file: 'market1.JPG', caption: '市集摊位', captionEn: 'Market stalls', bgColor: '#E0C8A8' },
+            { file: 'market2.JPG', caption: '市集人群', captionEn: 'Market crowd', bgColor: '#E2C9A8' },
+            { file: 'market3.JPG', caption: '市集日常', captionEn: 'Market life', bgColor: '#E0C8A8' },
+            { file: 'market4-1.JPG', caption: '市集细节', captionEn: 'Market details', bgColor: '#D8C2A8' },
+            { file: 'market4-2.JPG', caption: '市集细节', captionEn: 'Market details', bgColor: '#D8C2A8' },
+            { file: 'market5.JPG', caption: '市集光影', captionEn: 'Market light and shadow', bgColor: '#E4C8A8' },
+            { file: 'market6.JPG', caption: '市集色彩', captionEn: 'Market colors', bgColor: '#E3C2A0' },
+            { file: 'market7.JPG', caption: '市集一角', captionEn: 'A market corner', bgColor: '#D8C0A8' },
+            { file: 'IMG_9521.JPG', caption: '雨后空气', captionEn: 'Air after rain', bgColor: '#D0E0C8' },
+            { file: 'night.JPG', caption: '夜色与灯光', captionEn: 'Night lights', bgColor: '#B0B8C8' },
+            { file: 'bankok3.JPG', caption: '城市日常', captionEn: 'City routines', bgColor: '#C8C4C0' },
+            { file: 'bankok5.JPG', caption: '街头色彩', captionEn: 'Street colors', bgColor: '#D8C8B8' },
+            { file: 'bankok6.JPG', caption: '巷口光影', captionEn: 'Alley light and shadow', bgColor: '#D0C4B8' },
+            { file: 'bankok-sky-1.JPG', caption: '雨季的天空', captionEn: 'Monsoon sky', bgColor: '#B8C8D8' },
+            { file: 'bankok-sky-2.JPG', caption: '云层与光', captionEn: 'Clouds and light', bgColor: '#C0D0E0' },
+            { file: 'bankok-rainbow-1.JPG', caption: '雨后彩虹', captionEn: 'After-rain rainbow', bgColor: '#B8C8D0' },
+            { file: 'bankok-rainbow-2.JPG', caption: '彩虹尽头', captionEn: 'At the rainbow’s edge', bgColor: '#C0C8D0' }
         ]
     },
     
@@ -388,6 +560,23 @@ const galleryData = {
         titleZh: '细节与纹理',
         folder: 'close-up',
         displayType: 'detailed', // 详细介绍模式
+        detailedGroups: [
+            {
+                groupTitle: '自然与天气',
+                groupTitleEn: 'Nature and Weather',
+                imageIndexes: [0, 1]
+            },
+            {
+                groupTitle: '安静时刻',
+                groupTitleEn: 'Quiet Moments',
+                imageIndexes: [2, 3]
+            },
+            {
+                groupTitle: '食物与物件',
+                groupTitleEn: 'Food and Objects',
+                imageIndexes: [4, 5]
+            }
+        ],
         images: [
             { 
                 file: 'IMG_2991.JPG',
@@ -445,6 +634,13 @@ const galleryData = {
         titleZh: '北极光',
         folder: 'yellowknife',
         displayType: 'detailed', // 详细介绍模式
+        detailedGroups: [
+            {
+                groupTitle: '极光之夜',
+                groupTitleEn: 'Aurora Nights',
+                imageIndexes: [0, 1, 2]
+            }
+        ],
         images: [
             { 
                 file: ['IMG_3538.JPG', 'IMG_3540.JPG'],
@@ -482,6 +678,7 @@ class GalleryManager {
         this.currentLang = 'en';
         this.allImages = []; // 存储所有图片信息用于 lightbox
         this.currentImageIndex = 0;
+        this.currentDisplayType = null;
         this.init();
     }
 
@@ -496,6 +693,9 @@ class GalleryManager {
         }
 
         this.currentCollection = collection;
+        const data = galleryData[this.currentCollection];
+        this.currentDisplayType = this.getSavedDisplayType(data);
+        this.setupViewToggle();
         this.loadGallery();
 
         // 监听语言变化
@@ -530,23 +730,58 @@ class GalleryManager {
         this.createLightbox();
 
         // 根据displayType决定渲染方式
-        if (data.displayType === 'detailed') {
+        if (this.currentDisplayType === 'detailed') {
             // 详细模式：左右布局
             this.renderDetailedGallery(data, container);
-        } else if (data.displayType === 'grid') {
+        } else if (this.currentDisplayType === 'grid') {
             // 网格模式：横向滚动组
             this.renderGridGallery(data, container);
         }
 
         // 为所有图片添加点击事件
         this.attachImageClickHandlers();
+        this.updateToggleState();
     }
 
     collectAllImages(data) {
         this.allImages = [];
         
-        if (data.displayType === 'detailed') {
-            // 详细模式：直接使用 images 数组
+        if (this.currentDisplayType === 'detailed') {
+            // 详细模式：使用分组后的 images
+            const groups = this.getDetailedGroups(data);
+            groups.forEach((group) => {
+                group.images.forEach((image) => {
+                    if (Array.isArray(image.file)) {
+                        image.file.forEach((file) => {
+                            this.allImages.push({
+                                src: `src/photos/${data.folder}/${file}`,
+                                caption: this.currentLang === 'zh' ? image.caption : image.captionEn,
+                                title: this.currentLang === 'zh' ? (image.title || '') : (image.titleEn || '')
+                            });
+                        });
+                    } else {
+                        this.allImages.push({
+                            src: `src/photos/${data.folder}/${image.file}`,
+                            caption: this.currentLang === 'zh' ? image.caption : image.captionEn,
+                            title: this.currentLang === 'zh' ? (image.title || '') : (image.titleEn || '')
+                        });
+                    }
+                });
+            });
+        } else if (this.currentDisplayType === 'grid') {
+            // 网格模式：遍历所有 groups
+            const groups = this.getGridGroups(data);
+            groups.forEach((group) => {
+                group.images.forEach((image) => {
+                    this.allImages.push({
+                        src: `src/photos/${data.folder}/${image.file}`,
+                        caption: this.currentLang === 'zh' ? image.caption : image.captionEn,
+                        title: ''
+                    });
+                });
+            });
+        } else if (data.displayType === 'detailed') {
+            // 兼容旧模式
             data.images.forEach((image) => {
                 // 如果 file 是数组，将每个文件都添加到 allImages
                 if (Array.isArray(image.file)) {
@@ -564,17 +799,6 @@ class GalleryManager {
                         title: this.currentLang === 'zh' ? (image.title || '') : (image.titleEn || '')
                     });
                 }
-            });
-        } else if (data.displayType === 'grid') {
-            // 网格模式：遍历所有 groups
-            data.groups.forEach((group) => {
-                group.images.forEach((image) => {
-                    this.allImages.push({
-                        src: `src/photos/${data.folder}/${image.file}`,
-                        caption: this.currentLang === 'zh' ? image.caption : image.captionEn,
-                        title: ''
-                    });
-                });
             });
         } else {
             // 默认模式（没有 displayType）
@@ -737,36 +961,45 @@ class GalleryManager {
     }
 
     renderDetailedGallery(data, container) {
-        // 渲染详细介绍模式
-        // 正确统计图片数量：如果 file 是数组，统计数组长度；否则算 1 张
-        const totalImageCount = data.images.reduce((count, image) => {
-            if (Array.isArray(image.file)) {
-                return count + image.file.length;
-            } else {
-                return count + 1;
-            }
-        }, 0);
+        // 渲染详细介绍模式（分组）
+        const groups = this.getDetailedGroups(data);
+        const totalImageCount = this.countDetailedGroupsImages(groups);
         
         const imageCountText = this.currentLang === 'zh' 
             ? `${totalImageCount} 张照片`
             : `${totalImageCount} images`;
         document.getElementById('gallery-count').textContent = imageCountText;
 
-        data.images.forEach((image, index) => {
-            const item = this.createDetailedItem(image, index, data.folder);
-            container.appendChild(item);
+        let itemIndex = 0;
+        groups.forEach((group, groupIndex) => {
+            const groupElement = document.createElement('div');
+            groupElement.className = 'gallery-detailed-group';
+            groupElement.style.animationDelay = `${groupIndex * 0.1}s`;
+
+            const itemsWrapper = document.createElement('div');
+            itemsWrapper.className = 'gallery-detailed-items';
+
+            group.images.forEach((image) => {
+                const item = this.createDetailedItem(image, itemIndex, data.folder);
+                itemsWrapper.appendChild(item);
+                itemIndex += 1;
+            });
+
+            groupElement.appendChild(itemsWrapper);
+            container.appendChild(groupElement);
         });
     }
 
     renderGridGallery(data, container) {
         // 渲染网格滚动模式
-        const totalImages = data.groups.reduce((sum, group) => sum + group.images.length, 0);
+        const groups = this.getGridGroups(data);
+        const totalImages = groups.reduce((sum, group) => sum + group.images.length, 0);
         const imageCountText = this.currentLang === 'zh' 
             ? `${totalImages} 张照片`
             : `${totalImages} images`;
         document.getElementById('gallery-count').textContent = imageCountText;
 
-        data.groups.forEach((group, groupIndex) => {
+        groups.forEach((group, groupIndex) => {
             const groupElement = this.createGridGroup(group, groupIndex, data.folder);
             container.appendChild(groupElement);
         });
@@ -890,49 +1123,126 @@ class GalleryManager {
     updateLanguage() {
         if (!this.currentCollection) return;
 
-        const data = galleryData[this.currentCollection];
-        document.getElementById('gallery-title').textContent = this.currentLang === 'zh' ? data.titleZh : data.title;
-        
-        // 更新图片数量翻译
-        let imageCountText;
-        if (data.displayType === 'grid') {
-            const totalImages = data.groups.reduce((sum, group) => sum + group.images.length, 0);
-            imageCountText = this.currentLang === 'zh' 
-                ? `${totalImages} 张照片`
-                : `${totalImages} images`;
-        } else {
-            // 正确统计图片数量：如果 file 是数组，统计数组长度；否则算 1 张
-            const totalImageCount = data.images.reduce((count, image) => {
+        this.loadGallery();
+    }
+
+    getSavedDisplayType(data) {
+        const storageKey = `galleryDisplayType:${this.currentCollection}`;
+        const stored = localStorage.getItem(storageKey);
+        return stored || data.displayType || 'detailed';
+    }
+
+    setupViewToggle() {
+        const toggle = document.querySelector('.gallery-view-toggle');
+        if (!toggle) return;
+        const buttons = toggle.querySelectorAll('.gallery-view-btn');
+
+        buttons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const view = button.getAttribute('data-view');
+                if (!view || view === this.currentDisplayType) return;
+                this.currentDisplayType = view;
+                const storageKey = `galleryDisplayType:${this.currentCollection}`;
+                localStorage.setItem(storageKey, view);
+                this.loadGallery();
+            });
+        });
+    }
+
+    updateToggleState() {
+        const buttons = document.querySelectorAll('.gallery-view-btn');
+        buttons.forEach((button) => {
+            const view = button.getAttribute('data-view');
+            const isActive = view === this.currentDisplayType;
+            button.classList.toggle('active', isActive);
+            button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+    }
+
+    countDetailedGroupsImages(groups) {
+        return groups.reduce((count, group) => {
+            return count + group.images.reduce((innerCount, image) => {
                 if (Array.isArray(image.file)) {
-                    return count + image.file.length;
-                } else {
-                    return count + 1;
+                    return innerCount + image.file.length;
                 }
+                return innerCount + 1;
             }, 0);
-            imageCountText = this.currentLang === 'zh' 
-                ? `${totalImageCount} 张照片`
-                : `${totalImageCount} images`;
+        }, 0);
+    }
+
+    getDetailedGroups(data) {
+        if (data.detailedGroups && data.images) {
+            return data.detailedGroups.map((group) => {
+                const images = (group.imageIndexes || [])
+                    .map((index) => data.images[index])
+                    .filter(Boolean);
+                return {
+                    groupTitle: group.groupTitle || '',
+                    groupTitleEn: group.groupTitleEn || '',
+                    images
+                };
+            }).filter((group) => group.images.length > 0);
         }
-        document.getElementById('gallery-count').textContent = imageCountText;
 
-        // 重新收集图片信息（因为语言改变了）
-        this.collectAllImages(data);
+        if (data.groups) {
+            return data.groups.map((group) => ({
+                groupTitle: group.groupTitle || '',
+                groupTitleEn: group.groupTitleEn || '',
+                images: group.images.map((image) => ({
+                    file: image.file,
+                    caption: image.caption,
+                    captionEn: image.captionEn,
+                    bgColor: image.bgColor
+                }))
+            }));
+        }
 
-        // 更新所有caption
-        const items = document.querySelectorAll('.gallery-item');
-        items.forEach((item, index) => {
-            const captionText = item.querySelector('.gallery-caption-text');
-            const image = data.images[index];
-            if (captionText && image) {
-                captionText.textContent = this.currentLang === 'zh' ? image.caption : image.captionEn;
+        if (data.images) {
+            return [{
+                groupTitle: '',
+                groupTitleEn: '',
+                images: data.images
+            }];
+        }
+
+        return [];
+    }
+
+    getGridGroups(data) {
+        if (data.groups) {
+            return data.groups;
+        }
+
+        const detailedGroups = this.getDetailedGroups(data);
+        return detailedGroups.map((group) => ({
+            groupTitle: group.groupTitle || '',
+            groupTitleEn: group.groupTitleEn || '',
+            images: this.flattenDetailedImagesToGrid(group.images)
+        }));
+    }
+
+    flattenDetailedImagesToGrid(images) {
+        const gridImages = [];
+        images.forEach((image) => {
+            if (Array.isArray(image.file)) {
+                image.file.forEach((file) => {
+                    gridImages.push({
+                        file,
+                        caption: image.caption,
+                        captionEn: image.captionEn,
+                        bgColor: image.bgColor
+                    });
+                });
+            } else {
+                gridImages.push({
+                    file: image.file,
+                    caption: image.caption,
+                    captionEn: image.captionEn,
+                    bgColor: image.bgColor
+                });
             }
         });
-
-        // 如果 lightbox 正在显示，更新当前图片信息
-        const lightbox = document.getElementById('gallery-lightbox');
-        if (lightbox && lightbox.classList.contains('active')) {
-            this.showImage(this.currentImageIndex);
-        }
+        return gridImages;
     }
 
     showEmptyState() {
@@ -1122,4 +1432,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 })();
-

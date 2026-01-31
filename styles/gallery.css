@@ -29,6 +29,9 @@
     display: flex;
     align-items: center;
     padding-top: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
 }
 
 .back-link {
@@ -52,6 +55,35 @@
 
 .back-link:hover svg {
     transform: translateX(-4px);
+}
+
+.gallery-view-toggle {
+    display: flex;
+    gap: 8px;
+}
+
+.gallery-view-btn {
+    border: 1px solid var(--color-warm-gray-300);
+    background: #fff;
+    color: var(--color-warm-gray-700);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gallery-view-btn:hover {
+    border-color: var(--color-warm-gray-500);
+    color: var(--color-warm-gray-900);
+}
+
+.gallery-view-btn.active {
+    background: var(--color-warm-gray-900);
+    border-color: var(--color-warm-gray-900);
+    color: #fff;
 }
 
 .gallery-location {
@@ -87,6 +119,22 @@
 /* ===========================
    Detailed Layout (左右布局)
    =========================== */
+.gallery-detailed-group {
+    margin-bottom: 0;
+}
+
+.gallery-detailed-header {
+    padding: 0 48px 24px;
+}
+
+.gallery-detailed-group-title {
+    font-family: 'Charter', 'Georgia', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--color-warm-gray-900);
+    margin: 0;
+}
+
 .gallery-item-detailed {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -375,6 +423,7 @@
     
     .gallery-back {
         padding-top: 0;
+        align-items: flex-start;
     }
 
     .gallery-title {
@@ -386,6 +435,15 @@
         gap: 32px;
         margin-bottom: 64px;
         height: auto;
+    }
+
+    .gallery-detailed-header {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .gallery-detailed-group-title {
+        font-size: 24px;
     }
 
     .gallery-image-wrapper-multiple {
@@ -443,6 +501,15 @@
     .gallery-item-detailed {
         margin-bottom: 48px;
         gap: 24px;
+    }
+
+    .gallery-detailed-header {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .gallery-detailed-group-title {
+        font-size: 20px;
     }
 
     .gallery-image-wrapper-multiple {
@@ -706,4 +773,3 @@
         font-size: 14px;
     }
 }
-
