@@ -103,17 +103,17 @@
 
                 <div class="split-hero-right" aria-hidden="true">
                     <div class="split-hero-media">
-                        <img src="src/photos/portrait/me.JPEG" alt="Portrait" loading="eager" decoding="async">
+                        <img src="styles/IMG_2172.JPG" alt="Portrait" loading="eager" decoding="async">
                     </div>
                 </div>
             </div>
         </section>
  
         <!-- <div class="channels-section-title full-bleed" aria-hidden="true">
-            <h2 class="channels-section-heading">News & Selected Papers</h2>
+            <h2 class="channels-section-heading">News & Recent Papers</h2>
         </div> -->
 
-        <!-- Updates & Selected Papers Section -->
+        <!-- Updates & Recent Papers Section -->
         <section class="updates-section full-bleed" aria-label="Updates">
             <div class="updates-section-inner">
                 <!-- Updates Subsection -->
@@ -124,13 +124,15 @@
                     <div class="subsection-content">
                         <ol class="updates-list">
                             <li>
-                                <span class="update-icon">📢</span> We are hiring speaker at <strong>ICML 2026 Workshop</strong> (The 3rd Efficient Computing under Limited Resources: Modern AI Models and Systems). Past workshop homepage: 
+                                <span class="update-icon">📢</span> We are hiring speakers at <strong>ICML 2026 Workshop</strong> (The 3rd Efficient Computing under Limited Resources: Modern AI Models and Systems). Past workshop homepage: 
                                 <a href="https://eclr-workshop.github.io/" target="_blank" rel="noopener">2nd at ICCV 2025</a>, 
                                 <a href="https://eclr-workshop.github.io/index_2024.html" target="_blank" rel="noopener">1st at ACM MM 2024</a>.
                             </li>
+                            
                             <li>
-                                <span class="update-icon">🎉</span> One paper accepted by <strong>Neural Network Special Issue</strong>. <span class="paper-title">"<a href="https://www.sciencedirect.com/science/article/pii/S0893608025007361" target="_blank" rel="noopener">LLM Quantization Survey</a>"</span>, a comprehensive survey about quantization techniques from low-level systems to upper-level algorithms.
+                                <span class="update-icon">🎉</span> One paper accepted by <strong>ICLR 2026</strong>: <span class="paper-title">"<a href="https://arxiv.org/pdf/2505.11497" target="_blank" rel="noopener">QVGen: Pushing the Limit of Quantized Video Generative Models</a>"</span>.
                             </li>
+                            
                             <li>
                                 <span class="update-icon github-icon">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -146,215 +148,228 @@
                             <li>
                                 <span class="update-icon">🎉</span> One paper accepted by <strong>ACL 2025</strong>: <span class="paper-title">"<a href="https://aclanthology.org/2025.acl-long.550.pdf" target="_blank" rel="noopener">Dynamic Parallel Tree Search for Efficient LLM Reasoning</a>"</span>.
                             </li>
+                            <li>
+                                <span class="update-icon">🎉</span> One paper accepted by <strong>IJCAI 2025</strong>: <span class="paper-title">"<a href="https://www.ijcai.org/proceedings/2025/0059.pdf" target="_blank" rel="noopener">Unlocking the Potential of Lightweight Quantized Models for Deepfake Detection</a>"</span>.
+                            </li>
+                            <li>
+                                <span class="update-icon">🎉</span> One paper accepted by <strong>NeurIPS 2025</strong>: <span class="paper-title">"<a href="https://arxiv.org/pdf/2505.18809" target="_blank" rel="noopener">VORTA: Efficient Video Diffusion via Routing Sparse Attention</a>"</span>.
+                            </li>
                         </ol>
                     </div>
                 </div>
 
-                <!-- Selected Papers Subsection -->
-                <!-- <div class="subsection-item">
+             
+
+                <!-- Recent Papers Subsection -->
+                <div class="subsection-item">
                     <div class="subsection-label">
-                        <h3 class="subsection-title">Selected Papers</h3>
+                        <h3 class="subsection-title">Recent Papers</h3>
                     </div>
                     <div class="subsection-content">
+                        <div class="papers-list">
+                            <!-- Paper 1: LLM Quantization Survey -->
+                            <div class="paper-card">
+                                <div class="paper-card-image-wrapper">
+                                    <img src="src/papers/imgs/llm-quant-survey.png" alt="LLM Quantization Survey" loading="lazy">
+                                </div>
+                                <div class="paper-card-content">
+                                    <h4 class="paper-card-title">A survey of low-bit large language models: Basics, systems, and algorithms</h4>
+                                    <p class="paper-card-authors">Ruihao Gong, <strong>Yifu Ding</strong>, Zining Wang, Chengtao Lv, Xingyu Zheng, Jinyang Du, Haotong Qin, Jinyang Guo, Michele Magno, Xianglong Liu</p>
+                                    <div class="paper-card-meta">
+                                        <p class="paper-card-venue">Neural Networks</p>
+                                        <div class="paper-card-links">
+                                            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0893608025007361" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                            <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="llm-quant-survey">BibTex</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="paper-card-abstract">This survey systematically reviews low-bit quantization for large language models, covering core principles, data formats, system and framework support, and algorithmic methods for efficient training and inference. It highlights how low-bit techniques reduce memory and computation costs while preserving performance, and discusses open challenges and future research directions.</p>
+                            </div>
+
+                            <!-- Paper 2: DA-KD -->
+                            <div class="paper-card">
+                                <div class="paper-card-image-wrapper">
+                                    <img src="src/papers/imgs/da-kd.png" alt="DA-KD" loading="lazy">
+                                </div>
+                                <div class="paper-card-content">
+                                    <h4 class="paper-card-title">DA-KD: Difficulty-Aware Knowledge Distillation for Efficient Large Language Models</h4>
+                                    <p class="paper-card-authors">Changyi He, <strong>Yifu Ding</strong>, Jinyang Guo, Ruihao Gong, Haotong Qin, Xianglong Liu</p>
+                                    <div class="paper-card-meta">
+                                        <p class="paper-card-venue">ICML 2025</p>
+                                        <div class="paper-card-links">
+                                            <a href="https://openreview.net/forum?id=NCYBdRCpw1" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                            <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="da-kd">BibTex</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="paper-card-abstract">DA-KD cuts distillation cost by dynamically selecting training samples based on difficulty, avoiding wasted effort on easy examples. It also introduces bidirectional discrepancy loss to stabilize optimization and learn better from hard samples, achieving 2% accuracy gain with half training cost and around 4.7x compression.
+                                </p>
+                            </div>
+
+                            <!-- Paper 3: DPTS -->
+                            <div class="paper-card">
+                                <div class="paper-card-image-wrapper">
+                                    <img src="src/papers/imgs/dpts-small.png" alt="DPTS" loading="lazy">
+                                </div>
+                                <div class="paper-card-content">
+                                    <h4 class="paper-card-title">Dynamic Parallel Tree Search for Efficient LLM Reasoning</h4>
+                                    <p class="paper-card-authors"><strong>Yifu Ding</strong>, Wentao Jiang, Shunyu Liu, Yongcheng Jing, Jinyang Guo, Yingjie Wang, Jing Zhang, Zengmao Wang, Ziwei Liu, Bo Du, Xianglong Liu, Dacheng Tao</p>
+                                    <div class="paper-card-meta">
+                                        <p class="paper-card-venue">ACL 2025</p>
+                                        <div class="paper-card-links">
+                                            <a href="https://aclanthology.org/2025.acl-long.550.pdf" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                            <a href="https://github.com/yifu-ding/DPTS" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
+                                            <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="dpts">BibTex</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="paper-card-abstract">DPTS accelerates Tree of Thoughts reasoning by reducing redundant exploration and frequent focus switching during search. It introduces a parallelism streamline that enables flexible multi-path generation via cache management and alignment, plus a search and transition mechanism to filter candidates and keep the search focused. Experiments on Qwen-2.5 and Llama-3 show 2 to 4× speedup with comparable or better accuracy.</p>
+                            </div>
+
+                            <!-- Paper 4: VORTA -->
+                            <div class="paper-card">
+                                <div class="paper-card-image-wrapper">
+                                    <img src="src/papers/imgs/vorta.png" alt="VORTA" loading="lazy">
+                                </div>
+                                <div class="paper-card-content">
+                                    <h4 class="paper-card-title">VORTA: Efficient Video Diffusion via Routing Sparse Attention</h4>
+                                    <p class="paper-card-authors">Wenhao Sun, Rong-Cheng Tu, <strong>Yifu Ding</strong>, Zhao Jin, Jingyi Liao, Shunyu Liu, Dacheng Tao</p>
+                                    <div class="paper-card-meta">
+                                        <p class="paper-card-venue">NeurIPS 2025</p>
+                                        <div class="paper-card-links">
+                                            <a href="https://arxiv.org/pdf/2505.18809" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                            <a href="https://github.com/wenhao728/VORTA" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
+                                            <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="vorta">BibTex</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="paper-card-abstract">VORTA accelerates video diffusion transformers by using sparse attention for long-range dependencies and routing to replace full 3D attention with specialized sparse variants. It achieves 1.76× end-to-end speedup on VBench without quality loss, and composes with other methods to reach up to 14.41× speedup.                                </p>
+                            </div>
+
+                            <!-- Paper 5: Deepfake Detection -->
+                            <div class="paper-card">
+                                <div class="paper-card-image-wrapper">
+                                    <img src="src/papers/imgs/unlocking.png" alt="Deepfake Detection" loading="lazy">
+                                </div>
+                                <div class="paper-card-content">
+                                    <h4 class="paper-card-title">Unlocking the Potential of Lightweight Quantized Models for Deepfake Detection</h4>
+                                    <p class="paper-card-authors">Renshuai Tao, Ziheng Qin, <strong>Yifu Ding</strong>, Chuangchuang Tan, Jiakai Wang, Wei Wang</p>
+                                    <div class="paper-card-meta">
+                                        <p class="paper-card-venue">IJCAI 2025</p>
+                                        <div class="paper-card-links">
+                                            <a href="https://www.ijcai.org/proceedings/2025/0059.pdf" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                            <a href="https://github.com/rstao-bjtu/QMDD" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
+                                            <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="deepfake">BibTex</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="paper-card-abstract">This work targets real-time edge deepfake detection via a low-bit quantization framework. A Connected Quantized Block captures shared forgery features while preserving method-specific textures via shortcuts. A Shifted Logarithmic Redistribution Quantizer improves near-zero activation quantization. Results show 10.8× compute and 12.4× storage reduction with strong accuracy, even beating some SOTA under 5% FLOPs.
+                                </p>
+                            </div>
+
+                            <!-- Paper 6: QVGen -->
+                            <div class="paper-card">
+                                <div class="paper-card-image-wrapper">
+                                    <img src="src/papers/imgs/qvgen.png" alt="QVGen" loading="lazy">
+                                </div>
+                                <div class="paper-card-content">
+                                    <h4 class="paper-card-title">QVGen: Pushing the Limit of Quantized Video Generative Models</h4>
+                                    <p class="paper-card-authors">Yushi Huang, Ruihao Gong, Jing Liu, <strong>Yifu Ding</strong>, Chengtao Lv, Haotong Qin, Jun Zhang</p>
+                                    <div class="paper-card-meta">
+                                        <p class="paper-card-venue">ICLR 2026</p>
+                                        <div class="paper-card-links">
+                                            <a href="https://arxiv.org/pdf/2505.11497" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                            <a href="https://github.com/ModelTC/QVGen" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
+                                            <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="qvgen">BibTex</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="paper-card-abstract">QVGen enables extremely low-bit (4-bit or below) quantization-aware training for video diffusion models, where naive quantization fails. It stabilizes QAT by reducing gradient norms with auxiliary modules that absorb quantization error, then removes their inference overhead via rank-decay using repeated SVD and rank regularization. Experiments show near full-precision quality at 4-bit and strong 3-bit gains on VBench.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div> -->
+                </div>
+
+                <!-- Tools Subsection -->
+                <div class="subsection-item">
+                    <div class="subsection-label">
+                        <h3 class="subsection-title" data-i18n="tools_subsection_title">Customized Tools</h3>
+                    </div>
+                    <div class="subsection-content">
+                        <ol class="updates-list">
+                            <li>
+                                <span class="update-icon">📱</span> <strong><span data-i18n="tool_vocab_app">English Vocabulary iOS App</span></strong>: <span data-i18n="tool_vocab_desc">A vocabulary learning app based on etymology tracing. Features four-stage memory training system, offline dictionary, and comprehensive word root analysis.</span> 
+                                <a href="https://github.com/yifu-ding/VocabularyBuilder" target="_blank" rel="noopener">GitHub</a>.
+                            </li>
+                            <li>
+                                <span class="update-icon">📄</span> <strong><span data-i18n="tool_workshop_template">Conference Workshop Proposal Template</span></strong>: <span data-i18n="tool_workshop_desc">A LaTeX template for conference workshop proposals, based on successful proposals from previous workshops. Includes compact and full versions.</span> 
+                                <a href="https://github.com/yifu-ding/Conference-Workshop-Proposal-Template" target="_blank" rel="noopener">GitHub</a>.
+                            </li>
+                            <li>
+                                <span class="update-icon">📄</span> <strong><span data-i18n="tool_journal_template">Journal Response Template</span></strong>: <span data-i18n="tool_journal_desc">A LaTeX template for journal response letters. Supports structured responses to editors and reviewers with track changes functionality.</span> 
+                                <a href="https://github.com/yifu-ding/Journal-Response-Template" target="_blank" rel="noopener">GitHub</a>.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 2) Latest Work Across Channels (full width, horizontal list) -->
-        <!-- <section class="latest-section latest-grid full-bleed" aria-label="Latest Work">
-            <div class="latest-header">
-                <h2 class="latest-title channels-section-heading" data-i18n="latest_section_title">Latest Activities</h2>
-            </div>
+        <!-- Channels Section -->
+        <section class="channels-section full-bleed" aria-label="Channels">
+            <div class="channels-section-inner">
+                <div class="subsection-item">
+                    <div class="subsection-label">
+                        <h3 class="subsection-title">Discover by Channels</h3>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="channels-cards">
+                            <!-- Research -->
+                            <a href="research.html" class="latest-item">
+                                <div class="latest-item-image">
+                                    <img src="src/papers/imgs/timeline-emergence-llms.png" alt="Research" loading="lazy">
+                                </div>
+                                <div class="latest-item-meta">
+                                    <div class="latest-item-top">
+                                        <span class="latest-item-category">Research</span>
+                                    </div>
+                                    <h3 class="latest-item-title">Research</h3>
+                                    <p class="latest-item-subtitle">Efficient AI systems, model compression, and low bit inference. Papers, projects, and technical notes.</p>
+                                </div>
+                            </a>
 
-            <div class="latest-scroll" role="region" aria-label="Latest items carousel">
-                <div class="latest-track">
-                    <a href="https://www.sciencedirect.com/science/article/pii/S0893608025007361"
-                       target="_blank"
-                       rel="noopener"
-                       class="latest-item">
-                        <div class="latest-item-image">
-                            <img src="src/papers/imgs/llm-quant-survey.png" alt="Research" loading="lazy">
-                            <span class="latest-badge">New</span>
-                        </div>
-                        <div class="latest-item-meta">
-                            <div class="latest-item-top">
-                                <span class="latest-item-category">Research</span>
-                                <span class="latest-item-time">Feb 2025</span>
-                            </div>
-                            <h3 class="latest-item-title">LLM Quantization Survey</h3>
-                            <p class="latest-item-subtitle">Neural Networks</p>
-                        </div>
-                    </a>
+                            <!-- Photography -->
+                            <a href="studio.html" class="latest-item">
+                                <div class="latest-item-image">
+                                    <img src="src/photos/rocky/IMG_2222.JPG" alt="Photography" loading="lazy">
+                                </div>
+                                <div class="latest-item-meta">
+                                    <div class="latest-item-top">
+                                        <span class="latest-item-category">Photography</span>
+                                    </div>
+                                    <h3 class="latest-item-title">Photography</h3>
+                                    <p class="latest-item-subtitle">Personal work across cities, mountains, and quiet moments. Series and selected shots.</p>
+                                </div>
+                            </a>
 
-                    <a href="https://github.com/yifu-ding/Awesome-Edge-LLMs"
-                       target="_blank"
-                       rel="noopener"
-                       class="latest-item">
-                        <div class="latest-item-image">
-                            <img src="src/papers/imgs/timeline-emergence-llms.png" alt="Research" loading="lazy">
-                            <span class="latest-badge">New</span>
+                            <!-- Development -->
+                            <a href="https://github.com/yifu-ding/VocabularyBuilder" target="_blank" rel="noopener" class="latest-item">
+                                <div class="latest-item-image">
+                                    <img src="src/apps/imgs/Picture1.png" alt="Development" loading="lazy">
+                                </div>
+                                <div class="latest-item-meta">
+                                    <div class="latest-item-top">
+                                        <span class="latest-item-category">Development</span>
+                                    </div>
+                                    <h3 class="latest-item-title">Development</h3>
+                                    <p class="latest-item-subtitle" data-i18n="channel_development_desc_custom">An iOS app for vocabulary learning through etymology tracing (Personal use)</p>
+                                </div>
+                            </a>
                         </div>
-                        <div class="latest-item-meta">
-                            <div class="latest-item-top">
-                                <span class="latest-item-category">Research</span>
-                                <span class="latest-item-time">Apr 2025</span>
-                            </div>
-                            <h3 class="latest-item-title">Awesome Edge LLMs Collection</h3>
-                            <p class="latest-item-subtitle">GitHub Repository</p>
-                        </div>
-                    </a>
-
-                    <a href="studio.html#static_photos" class="latest-item">
-                        <div class="latest-item-image">
-                            <img src="src/photos/guanajuato/guana2.JPG" alt="Photography" loading="lazy">
-                            <span class="latest-badge">New</span>
-                        </div>
-                        <div class="latest-item-meta">
-                            <div class="latest-item-top">
-                                <span class="latest-item-category">Photography</span>
-                                <span class="latest-item-time">Dec 2025</span>
-                            </div>
-                            <h3 class="latest-item-title">Urban Colors</h3>
-                            <p class="latest-item-subtitle">Guanajuato, Mexico</p>
-                        </div>
-                    </a>
-
-                    <a href="https://github.com/yifu-ding/VocabularyBuilder" target="_blank" rel="noopener" class="latest-item">
-                        <div class="latest-item-image">
-                            <img src="src/apps/imgs/Picture1.png" alt="Development" loading="lazy">
-                            <span class="latest-badge">New</span>
-                        </div>
-                        <div class="latest-item-meta">
-                            <div class="latest-item-top">
-                                <span class="latest-item-category">Development</span>
-                                <span class="latest-item-time">Dec 2025</span>
-                            </div>
-                            <h3 class="latest-item-title">VocabularyBuilder</h3>
-                            <p class="latest-item-subtitle">iOS App</p>
-                        </div>
-                    </a>
-
-                    <a href="studio.html#static_photos" class="latest-item">
-                        <div class="latest-item-image">
-                            <img src="src/photos/rocky/IMG_2222.JPG" alt="Photography" loading="lazy">
-                            <span class="latest-badge">New</span>
-                        </div>
-                        <div class="latest-item-meta">
-                            <div class="latest-item-top">
-                                <span class="latest-item-category">Photography</span>
-                                <span class="latest-item-time">Oct 2025</span>
-                            </div>
-                            <h3 class="latest-item-title">Rocky Mountains</h3>
-                            <p class="latest-item-subtitle">Travel in Canada</p>
-                        </div>
-                    </a>
-
-                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=RCEI1r0AAAAJ&sortby=pubdate&citation_for_view=RCEI1r0AAAAJ:YOwf2qJgpHMC"
-                    target="_blank"
-                    rel="noopener"
-                    class="latest-item">
-                     <div class="latest-item-image">
-                         <img src="src/papers/imgs/dynamic-parallel.png" alt="Research" loading="lazy">
-                         <span class="latest-badge">New</span>
-                     </div>
-                     <div class="latest-item-meta">
-                         <div class="latest-item-top">
-                             <span class="latest-item-category">Research</span>
-                             <span class="latest-item-time">Feb 2025</span>
-                         </div>
-                         <h3 class="latest-item-title">LLM Reasoning Acceleration</h3>
-                         <p class="latest-item-subtitle">ACL 2025</p>
-                     </div>
-                 </a>
-                   
+                    </div>
                 </div>
             </div>
-        </section> -->
-
-
-        <div class="channels-section-title full-bleed" aria-hidden="true">
-            <h2 class="channels-section-heading">Discover by Channels</h2>
-        </div>
-
-        <!-- 3) Channel features (each: left image, right text + button) -->
-        <section class="channels" aria-label="Channels">
-            <!-- Research -->
-            <section class="channel-feature full-bleed" id="channel-research">
-                <div class="channel-feature-inner">
-                    <div class="channel-feature-media" aria-hidden="true">
-                        <img src="src/papers/imgs/timeline-emergence-llms.png" alt="Research cover" loading="lazy" decoding="async">
-                    </div>
-                    <div class="channel-feature-content">
-                        <h2 class="channel-feature-title">Research</h2>
-                        <p class="channel-feature-desc">
-                            Efficient AI systems, model compression, and low bit inference. Papers, projects, and technical notes.
-                        </p>
-                        <!-- <a href="research.html" class="channel-feature-btn">Explore Research</a> -->
-                        <a class="link-more" href="research.html" rel="noopener">
-                          <span class="link-more__text" data-i18n="btn_view_research_2">View Research →</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <div class="channel-divider full-bleed" aria-hidden="true"></div>
-
-            <!-- Photography -->
-            <section class="channel-feature full-bleed" id="channel-photography">
-                <div class="channel-feature-inner reverse">
-                    <div class="channel-feature-media" aria-hidden="true">
-                        <img src="src/photos/rocky/IMG_2222.JPG" alt="Photography" loading="lazy" decoding="async">
-                    </div>
-                    <div class="channel-feature-content">
-                        <h2 class="channel-feature-title">Photography</h2>
-                        <p class="channel-feature-desc">
-                            Personal work across cities, mountains, and quiet moments. Series and selected shots.
-                        </p>
-                        <a class="link-more" href="studio.html" rel="noopener">
-                          <span class="link-more__text" data-i18n="btn_enter_studio">Enter Studio →</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <div class="channel-divider full-bleed" aria-hidden="true"></div>
-
-            <!-- Reading -->
-            <!-- <section class="channel-feature full-bleed" id="channel-reading">
-                <div class="channel-feature-inner">
-                    <div class="channel-feature-media" aria-hidden="true">
-                        <img src="src/books/covers/deeptime.jpg" alt="Reading" loading="lazy" decoding="async">
-                    </div>
-                    <div class="channel-feature-content">
-                        <h2 class="channel-feature-title">Reading</h2>
-                        <p class="channel-feature-desc">
-                            Notes on systems, design, cognition, and long form essays. Book lists and distilled takeaways.
-                        </p>
-                        <a href="studio.html#reading" class="channel-feature-btn">Enter Reading</a>
-                    </div>
-                </div>
-            </section> -->
-
-            <div class="channel-divider full-bleed" aria-hidden="true"></div>
-
-            <!-- Development -->
-            <section class="channel-feature full-bleed" id="channel-development">
-                <div class="channel-feature-inner">
-                    <div class="channel-feature-media" aria-hidden="true">
-                        <img src="src/apps/imgs/Picture1.png" alt="Development" loading="lazy" decoding="async">
-                    </div>
-                    <div class="channel-feature-content">
-                        <h2 class="channel-feature-title">Development</h2>
-                        <p class="channel-feature-desc" data-i18n="channel_development_desc_custom">
-                            An iOS app for vocabulary learning through etymology tracing (Personal use)
-                        </p>
-                        <a class="link-more" href="https://github.com/yifu-ding/VocabularyBuilder" target="_blank" rel="noopener">
-                          <span class="link-more__text" data-i18n="btn_view_development">View Details on GitHub →</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
         </section>
     </main>
 

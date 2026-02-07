@@ -71,6 +71,15 @@ class LanguageManager {
                 intro_enrolled_date: 'Sep 2021',
                 intro_expected_label: 'Expected Graduation: ',
                 intro_expected_date: 'Jun 2027',
+                
+                // Tools subsection
+                tools_subsection_title: 'Tools',
+                tool_vocab_app: 'English Vocabulary iOS App',
+                tool_vocab_desc: 'A vocabulary learning app based on etymology tracing. Features four-stage memory training system, offline dictionary, and comprehensive word root analysis.',
+                tool_workshop_template: 'Conference Workshop Proposal Template',
+                tool_workshop_desc: 'A LaTeX template for conference workshop proposals, based on successful proposals from previous workshops. Includes compact and full versions.',
+                tool_journal_template: 'Journal Response Template',
+                tool_journal_desc: 'A LaTeX template for journal response letters. Supports structured responses to editors and reviewers with track changes functionality.',
 
                 // Home Page - Hero
                 inne_hero_line1: 'Welcome to Yifu\'s Homepage.',
@@ -233,6 +242,15 @@ class LanguageManager {
                 intro_enrolled_date: '2021年9月',
                 intro_expected_label: '预计毕业',
                 intro_expected_date: '2027年6月',
+                
+                // 工具包 subsection
+                tools_subsection_title: '工具包',
+                tool_vocab_app: '英语词汇 iOS 应用',
+                tool_vocab_desc: '基于词源学习的背单词应用。包含四阶段记忆训练系统、离线词典和全面的词根分析功能。',
+                tool_workshop_template: '会议 Workshop 提案模板',
+                tool_workshop_desc: '用于会议 workshop 提案的 LaTeX 模板，基于以往成功提案制作。包含紧凑版和完整版。',
+                tool_journal_template: '期刊回复模板',
+                tool_journal_desc: '用于期刊回复信的 LaTeX 模板。支持结构化回复编辑和审稿人，包含修订追踪功能。',
 
                 // 首页 - Hero
                 inne_hero_line1: '欢迎来到一芙的网站。',
@@ -698,3 +716,120 @@ if (form) {
         }
     });
 }
+
+// ===========================
+// BibTex Copy Functionality
+// ===========================
+
+// BibTex database embedded in JavaScript
+const BIBTEX_DATABASE = {
+    'llm-quant-survey': `@article{gong2025llm-quant-survey,
+title = {A survey of low-bit large language models: Basics, systems, and algorithms},
+journal = {Neural Networks},
+volume = {192},
+pages = {107856},
+year = {2025},
+issn = {0893-6080},
+doi = {https://doi.org/10.1016/j.neunet.2025.107856},
+url = {https://www.sciencedirect.com/science/article/pii/S0893608025007361},
+author = {Ruihao Gong and Yifu Ding and Zining Wang and Chengtao Lv and Xingyu Zheng and Jinyang Du and Yang Yong and Shiqiao Gu and Haotong Qin and Jinyang Guo and Dahua Lin and Michele Magno and Xianglong Liu},
+keywords = {Large language model, Quantization, Low-bit, System, Algorithm},
+}`,
+    
+    'da-kd': `@inproceedings{he2025da-kd,
+  title={DA-KD: Difficulty-Aware Knowledge Distillation for Efficient Large Language Models},
+  author={He, Changyi and Ding, Yifu and Guo, Jinyang and Gong, Ruihao and Qin, Haotong and Liu, Xianglong},
+  booktitle={Forty-second International Conference on Machine Learning}
+}`,
+    
+    'dpts': `@inproceedings{ding2025dpts,
+  author    = {Yifu Ding and Wentao Jiang and Shunyu Liu and Yongcheng Jing and Jinyang Guo and Yingjie Wang and Jing Zhang and Zengmao Wang and Ziwei Liu and Bo Du and Xianglong Liu and Dacheng Tao},
+  year      = {2025},
+  title     = {Dynamic Parallel Tree Search for Efficient LLM Reasoning},
+  booktitle = {arXiv.org},
+  doi       = {10.48550/arXiv.2502.16235},
+}`,
+    
+    'vorta': `@article{DBLP:journals/corr/abs-2505-18809,
+  author       = {Wenhao Sun and
+                  Rong{-}Cheng Tu and
+                  Yifu Ding and
+                  Zhao Jin and
+                  Jingyi Liao and
+                  Shunyu Liu and
+                  Dacheng Tao},
+  title        = {{VORTA:} Efficient Video Diffusion via Routing Sparse Attention},
+  journal      = {CoRR},
+  volume       = {abs/2505.18809},
+  year         = {2025}
+}`,
+    
+    'deepfake': `@inproceedings{tao2025Unlocking,
+  title     = {Unlocking the Potential of Lightweight Quantized Models for Deepfake Detection},
+  author    = {Tao, Renshuai and Qin, Ziheng and Ding, Yifu and Tan, Chuangchuang and Wang, Jiakai and Wang, Wei},
+  booktitle = {Proceedings of the Thirty-Fourth International Joint Conference on
+               Artificial Intelligence, {IJCAI-25}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  editor    = {James Kwok},
+  pages     = {520--528},
+  year      = {2025},
+  month     = {8},
+  note      = {Main Track},
+  doi       = {10.24963/ijcai.2025/59},
+  url       = {https://doi.org/10.24963/ijcai.2025/59},
+}`,
+    
+    'qvgen': `@article{huang2025qvgen,
+  title={QVGen: Pushing the Limit of Quantized Video Generative Models},
+  author={Huang, Yushi and Gong, Ruihao and Liu, Jing and Ding, Yifu and Lv, Chengtao and Qin, Haotong and Zhang, Jun},
+  journal={arXiv preprint arXiv:2505.11497},
+  year={2025}
+}`
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    const bibtexLinks = document.querySelectorAll('.paper-card-link-bibtex');
+    
+    bibtexLinks.forEach(link => {
+        link.addEventListener('click', async (e) => {
+            e.preventDefault();
+            
+            const bibtexKey = link.getAttribute('data-bibtex-key');
+            
+            if (!bibtexKey || bibtexKey === '') {
+                alert('BibTex not available yet.');
+                return;
+            }
+            
+            const bibtexContent = BIBTEX_DATABASE[bibtexKey];
+            
+            if (!bibtexContent) {
+                alert('BibTex not found for this paper.');
+                console.error('BibTex key not found:', bibtexKey);
+                return;
+            }
+            
+            try {
+                // Copy to clipboard
+                await navigator.clipboard.writeText(bibtexContent);
+                
+                // Visual feedback
+                const originalText = link.textContent;
+                link.textContent = '✓ Copied';
+                link.style.backgroundColor = 'rgba(34, 197, 94, 0.1)';
+                link.style.borderColor = '#22c55e';
+                link.style.color = '#22c55e';
+                
+                setTimeout(() => {
+                    link.textContent = originalText;
+                    link.style.backgroundColor = '';
+                    link.style.borderColor = '';
+                    link.style.color = '';
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy BibTex:', err);
+                alert('Failed to copy BibTex. Please try again.');
+            }
+        });
+    });
+});

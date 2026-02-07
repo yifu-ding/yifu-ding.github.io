@@ -3,10 +3,10 @@
    =========================== */
 
 /* ====================================
-   方案 1: Neutral + Blue + Yellow + Coral（当前使用）
+   方案 1: Neutral + Teal + Yellow + Coral（当前使用）
    Neutral: #D6D6D6, #CBDFDF
-   Blue: #3E96D1
-   Yellow: #FACD56, #FCD924
+   Teal: #1CB3B0
+   Yellow: #FCD924
    Coral: #F1895E
    ==================================== */
 
@@ -54,33 +54,33 @@
 
     /* ===========================
        品牌与交互主色（收敛到 4 色）
-       Primary: Blue (#3E96D1)
+       Primary: Teal (#1CB3B0)
        Secondary/Emphasis: Coral (#F1895E)
        =========================== */
-    --color-primary: #3E96D1;
-    --color-primary-hover: #2F7FB5;
-    --color-primary-active: #276C9A;
-    --color-primary-light: rgba(62, 150, 209, 0.14);
-    --color-primary-pale: rgba(62, 150, 209, 0.08);
+    --color-primary: #1CB3B0;
+    --color-primary-hover: #179A97;
+    --color-primary-active: #13817E;
+    --color-primary-light: rgba(28, 179, 176, 0.14);
+    --color-primary-pale: rgba(28, 179, 176, 0.08);
 
     --color-secondary: #F1895E;
     --color-secondary-hover: #E6764A;
-    --color-link: #3E96D1;
-    --color-link-hover: #2F7FB5;
+    --color-link: #2563EB;
+    --color-link-hover: #1D4ED8;
 
     /* ===========================
        强调与状态色
-       Yellow: #FCD924 / #FACD56
+       Yellow: #FCD924
        Coral: #F1895E
-       Info: #51A3B8
-       Success: #BBC258
+       Info: #CBDFDF
+       Success: #1CB3B0
        =========================== */
-    --color-accent-yellow: #FACD56;       /* 默认更柔和 */
+    --color-accent-yellow: #FCD924;
     --color-accent-yellow-strong: #FCD924;
     --color-accent-coral: #F1895E;
     --color-info: #CBDFDF;
-    --color-success: #3E96D1;
-    --color-warning: #FACD56;
+    --color-success: #1CB3B0;
+    --color-warning: #FCD924;
     --color-error: #F1895E;
 
     /* ===========================
@@ -88,16 +88,16 @@
        =========================== */
     --color-accent-sage: #CBDFDF;
     --color-accent-terracotta: #F1895E;
-    --color-accent-slate: #3E96D1;
-    --color-accent-rose: #FACD56;
+    --color-accent-slate: #1CB3B0;
+    --color-accent-rose: #FCD924;
 
-    --color-accent: #3E96D1;
-    --color-accent-hover: #2F7FB5;
-    --color-accent-light: rgba(62, 150, 209, 0.14);
-    --color-accent-pale: rgba(62, 150, 209, 0.08);
+    --color-accent: #1CB3B0;
+    --color-accent-hover: #179A97;
+    --color-accent-light: rgba(28, 179, 176, 0.14);
+    --color-accent-pale: rgba(28, 179, 176, 0.08);
 
     /* Badge / Tag（按你规则） */
-    --color-badge-new-bg: #FACD56;
+    --color-badge-new-bg: #FCD924;
     --color-badge-featured-bg: #F1895E;
     --color-badge-info-bg: #CBDFDF;
     --color-badge-onlight-text: #111827;
