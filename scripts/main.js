@@ -73,7 +73,7 @@ class LanguageManager {
                 intro_expected_date: 'Jun 2027',
                 
                 // Tools subsection
-                tools_subsection_title: 'Tools',
+                tools_subsection_title: 'Customized Tools',
                 tool_vocab_app: 'English Vocabulary iOS App',
                 tool_vocab_desc: 'A vocabulary learning app based on etymology tracing. Features four-stage memory training system, offline dictionary, and comprehensive word root analysis.',
                 tool_workshop_template: 'Conference Workshop Proposal Template',
@@ -216,6 +216,7 @@ class LanguageManager {
                 read_more: 'Read more',
                 view_details: 'View details',
                 close: 'Close',
+                load_more_papers: 'Load More Papers',
                 
                 // Gallery Page
                 back_to_studio: 'Back to Portfolio',
@@ -384,6 +385,7 @@ class LanguageManager {
                 read_more: '阅读更多',
                 view_details: '查看详情',
                 close: '关闭',
+                load_more_papers: '加载更多论文',
                 
                 // 照片集页面
                 back_to_studio: '返回工作室',
@@ -831,5 +833,61 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Failed to copy BibTex. Please try again.');
             }
         });
+    });
+});
+
+// ===========================
+// Load More Papers Functionality
+// ===========================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loadMoreBtn = document.getElementById('load-more-papers');
+    
+    if (!loadMoreBtn) return;
+    
+    const paperCards = document.querySelectorAll('.papers-list .paper-card');
+    const totalPapers = paperCards.length;
+    const initialVisible = 3;
+    const loadPerClick = 3;
+    let currentVisible = initialVisible;
+    
+    // Show only first 3 papers initially
+    paperCards.forEach((card, index) => {
+        if (index >= initialVisible) {
+            card.style.display = 'none';
+        }
+    });
+    
+    // Hide button if all papers already visible
+    if (totalPapers <= initialVisible) {
+        loadMoreBtn.style.display = 'none';
+    }
+    
+    loadMoreBtn.addEventListener('click', () => {
+        const nextVisible = Math.min(currentVisible + loadPerClick, totalPapers);
+        
+        // Show next batch of papers
+        for (let i = currentVisible; i < nextVisible; i++) {
+            if (paperCards[i]) {
+                paperCards[i].style.display = 'grid';
+                // Add entrance animation
+                setTimeout(() => {
+                    paperCards[i].style.opacity = '0';
+                    paperCards[i].style.transform = 'translateY(20px)';
+                    paperCards[i].style.transition = 'all 0.5s ease';
+                    setTimeout(() => {
+                        paperCards[i].style.opacity = '1';
+                        paperCards[i].style.transform = 'translateY(0)';
+                    }, 50);
+                }, (i - currentVisible) * 100);
+            }
+        }
+        
+        currentVisible = nextVisible;
+        
+        // Hide button if all papers are now visible
+        if (currentVisible >= totalPapers) {
+            loadMoreBtn.style.display = 'none';
+        }
     });
 });

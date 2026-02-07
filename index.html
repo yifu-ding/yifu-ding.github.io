@@ -169,124 +169,126 @@
                         <div class="papers-list">
                             <!-- Paper 1: LLM Quantization Survey -->
                             <div class="paper-card">
-                                <div class="paper-card-image-wrapper">
-                                    <img src="src/papers/imgs/llm-quant-survey.png" alt="LLM Quantization Survey" loading="lazy">
+                                <div class="paper-card-left">
+                                    <div class="paper-card-image-wrapper">
+                                        <p class="paper-card-venue">Neural Networks</p>
+                                        <img src="src/papers/imgs/llm-quant-survey.png" alt="LLM Quantization Survey" loading="lazy">
+                                    </div>
+                                    <div class="paper-card-links">
+                                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0893608025007361" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="llm-quant-survey">BibTex</a>
+                                    </div>
                                 </div>
                                 <div class="paper-card-content">
                                     <h4 class="paper-card-title">A survey of low-bit large language models: Basics, systems, and algorithms</h4>
                                     <p class="paper-card-authors">Ruihao Gong, <strong>Yifu Ding</strong>, Zining Wang, Chengtao Lv, Xingyu Zheng, Jinyang Du, Haotong Qin, Jinyang Guo, Michele Magno, Xianglong Liu</p>
-                                    <div class="paper-card-meta">
-                                        <p class="paper-card-venue">Neural Networks</p>
-                                        <div class="paper-card-links">
-                                            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0893608025007361" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
-                                            <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="llm-quant-survey">BibTex</a>
-                                        </div>
-                                    </div>
+                                    <p class="paper-card-abstract">This survey reviews low-bit quantization for large language models, covering core principles, data formats, system support, and algorithmic methods. It highlights how low-bit techniques reduce memory and computation costs while preserving performance.</p>
                                 </div>
-                                <p class="paper-card-abstract">This survey systematically reviews low-bit quantization for large language models, covering core principles, data formats, system and framework support, and algorithmic methods for efficient training and inference. It highlights how low-bit techniques reduce memory and computation costs while preserving performance, and discusses open challenges and future research directions.</p>
                             </div>
 
                             <!-- Paper 2: DA-KD -->
                             <div class="paper-card">
-                                <div class="paper-card-image-wrapper">
-                                    <img src="src/papers/imgs/da-kd.png" alt="DA-KD" loading="lazy">
+                                <div class="paper-card-left">
+                                    <div class="paper-card-image-wrapper">
+                                        <p class="paper-card-venue">ICML 2025</p>
+                                        <img src="src/papers/imgs/da-kd.png" alt="DA-KD" loading="lazy">
+                                    </div>
+                                    <div class="paper-card-links">
+                                        <a href="https://openreview.net/forum?id=NCYBdRCpw1" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="da-kd">BibTex</a>
+                                    </div>
                                 </div>
                                 <div class="paper-card-content">
                                     <h4 class="paper-card-title">DA-KD: Difficulty-Aware Knowledge Distillation for Efficient Large Language Models</h4>
                                     <p class="paper-card-authors">Changyi He, <strong>Yifu Ding</strong>, Jinyang Guo, Ruihao Gong, Haotong Qin, Xianglong Liu</p>
-                                    <div class="paper-card-meta">
-                                        <p class="paper-card-venue">ICML 2025</p>
-                                        <div class="paper-card-links">
-                                            <a href="https://openreview.net/forum?id=NCYBdRCpw1" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
-                                            <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="da-kd">BibTex</a>
-                                        </div>
-                                    </div>
+                                    <p class="paper-card-abstract">DA-KD reduces distillation cost by dynamically selecting training samples based on difficulty. It introduces bidirectional discrepancy loss to stabilize optimization, achieving 2% accuracy gain with half training cost and 4.7× compression.</p>
                                 </div>
-                                <p class="paper-card-abstract">DA-KD cuts distillation cost by dynamically selecting training samples based on difficulty, avoiding wasted effort on easy examples. It also introduces bidirectional discrepancy loss to stabilize optimization and learn better from hard samples, achieving 2% accuracy gain with half training cost and around 4.7x compression.
-                                </p>
                             </div>
 
                             <!-- Paper 3: DPTS -->
                             <div class="paper-card">
-                                <div class="paper-card-image-wrapper">
-                                    <img src="src/papers/imgs/dpts-small.png" alt="DPTS" loading="lazy">
+                                <div class="paper-card-left">
+                                    <div class="paper-card-image-wrapper">
+                                        <p class="paper-card-venue">ACL 2025</p>
+                                        <img src="src/papers/imgs/dpts-small.png" alt="DPTS" loading="lazy">
+                                    </div>
+                                    <div class="paper-card-links">
+                                        <a href="https://aclanthology.org/2025.acl-long.550.pdf" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                        <a href="https://github.com/yifu-ding/DPTS" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
+                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="dpts">BibTex</a>
+                                    </div>
                                 </div>
                                 <div class="paper-card-content">
                                     <h4 class="paper-card-title">Dynamic Parallel Tree Search for Efficient LLM Reasoning</h4>
                                     <p class="paper-card-authors"><strong>Yifu Ding</strong>, Wentao Jiang, Shunyu Liu, Yongcheng Jing, Jinyang Guo, Yingjie Wang, Jing Zhang, Zengmao Wang, Ziwei Liu, Bo Du, Xianglong Liu, Dacheng Tao</p>
-                                    <div class="paper-card-meta">
-                                        <p class="paper-card-venue">ACL 2025</p>
-                                        <div class="paper-card-links">
-                                            <a href="https://aclanthology.org/2025.acl-long.550.pdf" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
-                                            <a href="https://github.com/yifu-ding/DPTS" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
-                                            <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="dpts">BibTex</a>
-                                        </div>
-                                    </div>
+                                    <p class="paper-card-abstract">DPTS accelerates Tree of Thoughts reasoning by reducing redundant exploration and focus switching. It introduces parallelism streamline for flexible multi-path generation and search mechanism to keep focused. Achieves 2-4× speedup on Qwen-2.5 and Llama-3.</p>
                                 </div>
-                                <p class="paper-card-abstract">DPTS accelerates Tree of Thoughts reasoning by reducing redundant exploration and frequent focus switching during search. It introduces a parallelism streamline that enables flexible multi-path generation via cache management and alignment, plus a search and transition mechanism to filter candidates and keep the search focused. Experiments on Qwen-2.5 and Llama-3 show 2 to 4× speedup with comparable or better accuracy.</p>
                             </div>
 
                             <!-- Paper 4: VORTA -->
                             <div class="paper-card">
-                                <div class="paper-card-image-wrapper">
-                                    <img src="src/papers/imgs/vorta.png" alt="VORTA" loading="lazy">
+                                <div class="paper-card-left">
+                                    <div class="paper-card-image-wrapper">
+                                        <p class="paper-card-venue">NeurIPS 2025</p>
+                                        <img src="src/papers/imgs/vorta.png" alt="VORTA" loading="lazy">
+                                    </div>
+                                    <div class="paper-card-links">
+                                        <a href="https://arxiv.org/pdf/2505.18809" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                        <a href="https://github.com/wenhao728/VORTA" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
+                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="vorta">BibTex</a>
+                                    </div>
                                 </div>
                                 <div class="paper-card-content">
                                     <h4 class="paper-card-title">VORTA: Efficient Video Diffusion via Routing Sparse Attention</h4>
                                     <p class="paper-card-authors">Wenhao Sun, Rong-Cheng Tu, <strong>Yifu Ding</strong>, Zhao Jin, Jingyi Liao, Shunyu Liu, Dacheng Tao</p>
-                                    <div class="paper-card-meta">
-                                        <p class="paper-card-venue">NeurIPS 2025</p>
-                                        <div class="paper-card-links">
-                                            <a href="https://arxiv.org/pdf/2505.18809" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
-                                            <a href="https://github.com/wenhao728/VORTA" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
-                                            <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="vorta">BibTex</a>
-                                        </div>
-                                    </div>
+                                    <p class="paper-card-abstract">VORTA accelerates video diffusion transformers using sparse attention for long-range dependencies and routing to replace full 3D attention. It achieves 1.76× speedup on VBench and composes with other methods to reach 14.41× speedup.</p>
                                 </div>
-                                <p class="paper-card-abstract">VORTA accelerates video diffusion transformers by using sparse attention for long-range dependencies and routing to replace full 3D attention with specialized sparse variants. It achieves 1.76× end-to-end speedup on VBench without quality loss, and composes with other methods to reach up to 14.41× speedup.                                </p>
                             </div>
 
                             <!-- Paper 5: Deepfake Detection -->
                             <div class="paper-card">
-                                <div class="paper-card-image-wrapper">
-                                    <img src="src/papers/imgs/unlocking.png" alt="Deepfake Detection" loading="lazy">
+                                <div class="paper-card-left">
+                                    <div class="paper-card-image-wrapper">
+                                        <p class="paper-card-venue">IJCAI 2025</p>
+                                        <img src="src/papers/imgs/unlocking.png" alt="Deepfake Detection" loading="lazy">
+                                    </div>
+                                    <div class="paper-card-links">
+                                        <a href="https://www.ijcai.org/proceedings/2025/0059.pdf" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                        <a href="https://github.com/rstao-bjtu/QMDD" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
+                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="deepfake">BibTex</a>
+                                    </div>
                                 </div>
                                 <div class="paper-card-content">
                                     <h4 class="paper-card-title">Unlocking the Potential of Lightweight Quantized Models for Deepfake Detection</h4>
                                     <p class="paper-card-authors">Renshuai Tao, Ziheng Qin, <strong>Yifu Ding</strong>, Chuangchuang Tan, Jiakai Wang, Wei Wang</p>
-                                    <div class="paper-card-meta">
-                                        <p class="paper-card-venue">IJCAI 2025</p>
-                                        <div class="paper-card-links">
-                                            <a href="https://www.ijcai.org/proceedings/2025/0059.pdf" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
-                                            <a href="https://github.com/rstao-bjtu/QMDD" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
-                                            <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="deepfake">BibTex</a>
-                                        </div>
-                                    </div>
+                                    <p class="paper-card-abstract">This work targets real-time edge deepfake detection via low-bit quantization. A Connected Quantized Block captures shared forgery features while preserving textures. Results show 10.8× compute and 12.4× storage reduction with strong accuracy.</p>
                                 </div>
-                                <p class="paper-card-abstract">This work targets real-time edge deepfake detection via a low-bit quantization framework. A Connected Quantized Block captures shared forgery features while preserving method-specific textures via shortcuts. A Shifted Logarithmic Redistribution Quantizer improves near-zero activation quantization. Results show 10.8× compute and 12.4× storage reduction with strong accuracy, even beating some SOTA under 5% FLOPs.
-                                </p>
                             </div>
 
                             <!-- Paper 6: QVGen -->
-                            <div class="paper-card">
-                                <div class="paper-card-image-wrapper">
-                                    <img src="src/papers/imgs/qvgen.png" alt="QVGen" loading="lazy">
+                            <div class="paper-card" style="display: none;">
+                                <div class="paper-card-left">
+                                    <div class="paper-card-image-wrapper">
+                                        <p class="paper-card-venue">ICLR 2026</p>
+                                        <img src="src/papers/imgs/qvgen.png" alt="QVGen" loading="lazy">
+                                    </div>
+                                    <div class="paper-card-links">
+                                        <a href="https://arxiv.org/pdf/2505.11497" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                        <a href="https://github.com/ModelTC/QVGen" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
+                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="qvgen">BibTex</a>
+                                    </div>
                                 </div>
                                 <div class="paper-card-content">
                                     <h4 class="paper-card-title">QVGen: Pushing the Limit of Quantized Video Generative Models</h4>
                                     <p class="paper-card-authors">Yushi Huang, Ruihao Gong, Jing Liu, <strong>Yifu Ding</strong>, Chengtao Lv, Haotong Qin, Jun Zhang</p>
-                                    <div class="paper-card-meta">
-                                        <p class="paper-card-venue">ICLR 2026</p>
-                                        <div class="paper-card-links">
-                                            <a href="https://arxiv.org/pdf/2505.11497" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
-                                            <a href="https://github.com/ModelTC/QVGen" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
-                                            <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="qvgen">BibTex</a>
-                                        </div>
-                                    </div>
+                                    <p class="paper-card-abstract">QVGen enables extremely low-bit quantization-aware training for video diffusion models. It stabilizes QAT by reducing gradient norms with auxiliary modules, then removes inference overhead via rank-decay. Shows near full-precision quality at 4-bit.</p>
                                 </div>
-                                <p class="paper-card-abstract">QVGen enables extremely low-bit (4-bit or below) quantization-aware training for video diffusion models, where naive quantization fails. It stabilizes QAT by reducing gradient norms with auxiliary modules that absorb quantization error, then removes their inference overhead via rank-decay using repeated SVD and rank regularization. Experiments show near full-precision quality at 4-bit and strong 3-bit gains on VBench.
-                                </p>
                             </div>
+                        </div>
+                        
+                        <!-- Load More Button -->
+                        <div class="load-more-container" style="text-align: center; margin-top: 2rem;">
+                            <button id="load-more-papers" class="load-more-btn" data-i18n="load_more_papers">Load More Papers</button>
                         </div>
                     </div>
                 </div>
