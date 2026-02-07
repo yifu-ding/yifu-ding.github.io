@@ -35,6 +35,12 @@
             </div>
 
             <div class="nav-right">
+                <!-- Dark Mode Toggle -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon theme-icon-light">☀️</span>
+                    <span class="theme-icon theme-icon-dark">🌙</span>
+                </button>
+                
                 <!-- Language Switcher -->
                 <div class="lang-switcher">
                     <button class="lang-button">
@@ -70,30 +76,30 @@
                     </p>
             
                     <div id="research-focus" class="hero-focus" aria-label="Research focus">
-                      <div class="hero-focus-header">
-                        <h2 class="hero-focus-title" data-i18n="research_focus_title">Research Focus</h2>
-                      </div>
+                      <!-- <div class="hero-focus-header">
+                        <h2 class="hero-focus-title" data-i18n="research_focus_title">Research Focus</h2> -->
+                      <!-- </div> -->
             
                       <div class="hero-focus-grid">
                         <div class="hero-focus-item">
-                          <h3 class="hero-focus-item-title" data-i18n="research_focus_1_title">Neural Network Compression</h3>
-                          <p class="hero-focus-item-desc" data-i18n="research_focus_1_desc">
-                            Developing efficient methods to reduce model size and computational cost while maintaining accuracy.
-                          </p>
+                          <h3 class="hero-focus-item-title" data-i18n="research_focus_title">Research Focus</h3>
+                          <ul class="hero-focus-list">
+                            <li><strong><span data-i18n="research_focus_1_bold">Efficiency optimization for large foundation models</span></strong><span data-i18n="research_focus_1_rest">, especially LLMs, to reduce memory footprint, latency, and cost with minimal quality loss.</span></li>
+                            <li><strong><span data-i18n="research_focus_2_bold">Low-bit quantization</span></strong><span data-i18n="research_focus_2_rest"> for LLMs, vision models, and multimodal systems, including practical PTQ and QAT oriented techniques.</span></li>
+                            <li><strong><span data-i18n="research_focus_3_bold">Structured pruning and model slimming</span></strong><span data-i18n="research_focus_3_rest">, focusing on hardware-friendly structures (for example channels, heads, FFN dimensions, and MoE experts).</span></li>
+                            <li><strong><span data-i18n="research_focus_4_bold">Efficient AI systems and deployment</span></strong><span data-i18n="research_focus_4_rest">, translating model-side compression into real speedups via hardware-aware design and optimization.</span></li>
+                          </ul>
                         </div>
             
                         <div class="hero-focus-item">
-                          <h3 class="hero-focus-item-title" data-i18n="research_focus_2_title">Model Quantization</h3>
-                          <p class="hero-focus-item-desc" data-i18n="research_focus_2_desc">
-                            Low-bit quantization techniques for LLMs, vision models, and multimodal systems.
-                          </p>
-                        </div>
-            
-                        <div class="hero-focus-item">
-                          <h3 class="hero-focus-item-title" data-i18n="research_focus_3_title">Efficient AI Systems</h3>
-                          <p class="hero-focus-item-desc" data-i18n="research_focus_3_desc">
-                            Hardware-aware optimization and deployment strategies for resource-constrained environments.
-                          </p>
+                          <h3 class="hero-focus-item-title" data-i18n="research_interests_title">Research Interests</h3>
+                          <ul class="hero-focus-list">
+                            <li data-i18n="research_interest_1">LLM efficiency as an end-to-end, budgeted problem across the full lifecycle, covering both training and inference, and both serving and edge scenarios.</li>
+                            <li data-i18n="research_interest_2">Long-context and KV-cache-aware inference, targeting memory growth, bandwidth limits, and decoding efficiency.</li>
+                            <!-- <li data-i18n="research_interest_3">Serving efficiency under SLA constraints, focusing on concurrency, tail latency, and cost efficiency.</li> -->
+                            <li data-i18n="research_interest_4">Edge efficiency under strict power and memory limits, including heterogeneous collaboration and deployment feasibility.</li>
+                            <li data-i18n="research_interest_5">Co-design across algorithms, systems, and hardware, with measurable evaluation of quality, latency, peak memory, bandwidth, and energy.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -104,7 +110,7 @@
                     <div class="hero-metrics" aria-label="Google Scholar metrics">
                       <div class="metric-card">
                         <div class="metric-label">Citations</div>
-                        <div class="metric-value">1297</div>
+                        <div class="metric-value">1343</div>
                       </div>
               
                       <div class="metric-card">

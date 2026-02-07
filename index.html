@@ -28,6 +28,12 @@
             </div>
 
             <div class="nav-right">
+                <!-- Dark Mode Toggle -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon theme-icon-light">☀️</span>
+                    <span class="theme-icon theme-icon-dark">🌙</span>
+                </button>
+                
                 <div class="lang-switcher">
                     <button class="lang-button"><span>EN</span></button>
                     <div class="lang-dropdown">
@@ -48,7 +54,7 @@
                 <div class="split-hero-left">
                     <div class="split-hero-copy">
                         <h1 class="split-hero-title">
-                            <span data-i18n="inne_hero_line1">Welcome to Yifu's homepage. </span><br>
+                            <span data-i18n="inne_hero_line1">Welcome to Yifu's homepage. </span>
                             <!-- <span data-i18n="inne_hero_line2">Leave your curiosity for the world,</span><br>
                             <span data-i18n="inne_hero_line3">and let time deliver the answers.</span> -->
                         </h1>
@@ -80,8 +86,8 @@
                         <div class="personal-intro">
                             <div class="personal-intro-text">
                                 <p class="personal-intro-paragraph">
-                                    <span class="intro-label" data-i18n="intro_bio_label">Bio:</span> <strong><span data-i18n="intro_phd_label">PhD Candidate</span></strong> at <a href="https://www.buaa.edu.cn/" target="_blank" rel="noopener">Beihang University</a><span class="nowrap"> & </span><a href="https://www.ntu.edu.sg/" target="_blank" rel="noopener">Nanyang Technological University</a> <span data-i18n="intro_joint">(joint programme).</span><br>
-                                    <span class="intro-label" data-i18n="intro_supervised">Supervised by</span> <strong><a href="https://xlliu-beihang.github.io/" target="_blank" rel="noopener">Prof. Xianglong Liu</a></strong> <span data-i18n="intro_and">and</span> <strong><a href="https://dr.ntu.edu.sg/entities/person/Tao-Dacheng" target="_blank" rel="noopener">Prof. Dacheng Tao</a></strong>.<br>
+                                    <span class="intro-label" data-i18n="intro_bio_label">Bio:</span> <strong><span data-i18n="intro_phd_label">PhD Candidate</span></strong> <span data-i18n="intro_at">at</span> <a href="https://www.buaa.edu.cn/" target="_blank" rel="noopener"><span data-i18n="intro_buaa">Beihang University</span></a><span class="nowrap"> & </span><a href="https://www.ntu.edu.sg/" target="_blank" rel="noopener"><span data-i18n="intro_ntu">Nanyang Technological University</span></a> <span data-i18n="intro_joint">(joint programme).</span><br>
+                                    <span class="intro-label" data-i18n="intro_supervised">Supervised by</span> <strong><a href="https://xlliu-beihang.github.io/" target="_blank" rel="noopener"><span data-i18n="intro_prof_liu">Prof. Xianglong Liu</span></a></strong> <span data-i18n="intro_and">and</span> <strong><a href="https://dr.ntu.edu.sg/entities/person/Tao-Dacheng" target="_blank" rel="noopener"><span data-i18n="intro_prof_tao">Prof. Dacheng Tao</span></a></strong>.<br>
                                     <span class="intro-label" data-i18n="intro_research_label">Research focus:</span> <em><span data-i18n="intro_research_area">model compression and inference efficiency</span></em>.<br>
                                     <span class="intro-label" data-i18n="intro_bachelor">Bachelor's degree</span> <span data-i18n="intro_bachelor_graduated">Graduated 2021</span>.<br>
                                     <span class="intro-label" data-i18n="intro_enrolled_label">Ph.D Enrolled</span> <span data-i18n="intro_enrolled_date">Sep 2021</span> · <span class="intro-label" data-i18n="intro_expected_label">Expected graduation</span> <span data-i18n="intro_expected_date">Jun 2027</span>.
@@ -124,13 +130,13 @@
                     <div class="subsection-content">
                         <ol class="updates-list">
                             <li>
-                                <span class="update-icon">📢</span> We warmly welcome potential speakers to join us at <strong>ICML 2026 Workshop</strong> (The 3rd Efficient Computing under Limited Resources: Modern AI Models and Systems). Past workshop homepages: 
+                                <span class="update-icon">📢</span> We warmly welcome potential speakers to join us at ICML 2026 Workshop, <strong>The 3rd Efficient Computing under Limited Resources: Modern AI Models and Systems</strong>. Past workshop homepages: 
                                 <a href="https://eclr-workshop.github.io/" target="_blank" rel="noopener">2nd at ICCV 2025</a>, 
                                 <a href="https://eclr-workshop.github.io/index_2024.html" target="_blank" rel="noopener">1st at ACM MM 2024</a>.
                             </li>
                             
                             <li>
-                                <span class="update-icon">🎉</span> One paper accepted by <strong>ICLR 2026</strong>: <span class="paper-title">"<a href="https://arxiv.org/pdf/2505.11497" target="_blank" rel="noopener">QVGen: Pushing the Limit of Quantized Video Generative Models</a>"</span>.
+                                <span class="update-icon">🎉</span> One paper accepted by <strong>ICLR 2026</strong>: <span class="paper-title">"<a href="https://arxiv.org/pdf/2505.11497" target="_blank" rel="noopener">QVGen: Pushing the Limit of Quantized Video Generative Models</a>"</span>. Congratulations to <a href="https://harahan.github.io/" target="_blank" rel="noopener">Yushi Huang</a>!
                             </li>
                             
                             <li>
@@ -143,16 +149,16 @@
                                 collecting papers, deployment toolchains, frameworks, whitebooks about large language models on edge scenarios.
                             </li>
                             <li>
-                                <span class="update-icon">🎉</span> One paper accepted by <strong>ICML 2025</strong>: <span class="paper-title">"<a href="https://openreview.net/forum?id=NCYBdRCpw1" target="_blank" rel="noopener">DA-KD: Difficulty-Aware Knowledge Distillation for Efficient Large Language Models</a>"</span>.
+                                <span class="update-icon">🎉</span> One paper accepted by <strong>ICML 2025</strong>: <span class="paper-title">"<a href="https://openreview.net/forum?id=NCYBdRCpw1" target="_blank" rel="noopener">DA-KD: Difficulty-Aware Knowledge Distillation for Efficient Large Language Models</a>"</span>. Congratulations to Changyi He!
                             </li>
                             <li>
                                 <span class="update-icon">🎉</span> One paper accepted by <strong>ACL 2025</strong>: <span class="paper-title">"<a href="https://aclanthology.org/2025.acl-long.550.pdf" target="_blank" rel="noopener">Dynamic Parallel Tree Search for Efficient LLM Reasoning</a>"</span>.
                             </li>
                             <li>
-                                <span class="update-icon">🎉</span> One paper accepted by <strong>IJCAI 2025</strong>: <span class="paper-title">"<a href="https://www.ijcai.org/proceedings/2025/0059.pdf" target="_blank" rel="noopener">Unlocking the Potential of Lightweight Quantized Models for Deepfake Detection</a>"</span>.
+                                <span class="update-icon">🎉</span> One paper accepted by <strong>IJCAI 2025</strong>: <span class="paper-title">"<a href="https://www.ijcai.org/proceedings/2025/0059.pdf" target="_blank" rel="noopener">Unlocking the Potential of Lightweight Quantized Models for Deepfake Detection</a>"</span>. Congratulations to Ziheng Qin!
                             </li>
                             <li>
-                                <span class="update-icon">🎉</span> One paper accepted by <strong>NeurIPS 2025</strong>: <span class="paper-title">"<a href="https://arxiv.org/pdf/2505.18809" target="_blank" rel="noopener">VORTA: Efficient Video Diffusion via Routing Sparse Attention</a>"</span>.
+                                <span class="update-icon">🎉</span> One paper accepted by <strong>NeurIPS 2025</strong>: <span class="paper-title">"<a href="https://arxiv.org/pdf/2505.18809" target="_blank" rel="noopener">VORTA: Efficient Video Diffusion via Routing Sparse Attention</a>"</span>. Congratulations to <a href="https://scholar.google.com/citations?user=pUevLugAAAAJ&hl" target="_blank" rel="noopener">Wenhao Sun</a>!
                             </li>
                         </ol>
                     </div>

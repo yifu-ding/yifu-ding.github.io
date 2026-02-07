@@ -224,6 +224,51 @@
 */
 
 /* ===========================
+   Dark Mode Colors
+   =========================== */
+[data-theme="dark"] {
+    --color-background: #0f1419;
+    --color-surface: #1a1f26;
+    --color-section: #1f2937;
+    --color-cream: #1f2937;
+    --color-overlay: rgba(255, 255, 255, 0.06);
+
+    --color-text-primary: #e5e7eb;
+    --color-text-secondary: #9ca3af;
+    --color-text-tertiary: #6b7280;
+    --color-text-muted: #6b7280;
+    --color-text-disabled: #4b5563;
+
+    --color-warm-white: #0f1419;
+    --color-warm-gray-50: #1a1f26;
+    --color-warm-gray-100: #1f2937;
+    --color-warm-gray-200: #374151;
+    --color-warm-gray-300: #4b5563;
+    --color-warm-gray-400: #6b7280;
+    --color-warm-gray-500: #9ca3af;
+    --color-warm-gray-600: #d1d5db;
+    --color-warm-gray-700: #e5e7eb;
+    --color-warm-gray-800: #f3f4f6;
+    --color-warm-gray-900: #f9fafb;
+
+    --color-border: #374151;
+    --border-color: #374151;
+    --color-border-light: #1f2937;
+
+    --color-primary: #3E96D1;
+    --color-primary-hover: #2e7bb5;
+    --color-primary-active: #25649a;
+    
+    --color-link: #94C2FA;
+    --color-link-hover: #a8d0fb;
+    
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* ===========================
    Design Guidelines
    =========================== */
 /*

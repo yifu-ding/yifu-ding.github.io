@@ -60,8 +60,13 @@ class LanguageManager {
                 // Home Page - Personal intro (above Welcome)
                 intro_bio_label: 'Bio:',
                 intro_phd_label: 'PhD Candidate',
+                intro_at: 'at',
+                intro_buaa: 'Beihang University',
+                intro_ntu: 'Nanyang Technological University',
                 intro_joint: '(joint programme). ',
                 intro_supervised: 'Supervised by',
+                intro_prof_liu: 'Prof. Xianglong Liu',
+                intro_prof_tao: 'Prof. Dacheng Tao',
                 intro_and: 'and',
                 intro_research_label: 'Research focus:',
                 intro_research_area: 'Model compression and Inference efficiency',
@@ -83,7 +88,7 @@ class LanguageManager {
 
                 // Home Page - Hero
                 inne_hero_line1: 'Welcome to Yifu\'s Homepage.',
-                inne_hero_line2: 'Keep your curiosity for the world,',
+                inne_hero_line2: '',
                 inne_hero_line3: 'and let time deliver the answers.',
                 home_hero_desc: 'Keep your curiosity for the world, and let time deliver the answers.',
                 
@@ -143,12 +148,20 @@ class LanguageManager {
                 research_title: 'Research',
                 research_description: 'PhD Candidate at Beihang University, specializing in neural network compression and model quantization. Making deep learning more efficient and accessible for real-world deployment.',
                 research_focus_title: 'Research Focus',
-                research_focus_1_title: 'Neural Network Compression',
-                research_focus_1_desc: 'Developing efficient methods to reduce model size and computational cost while maintaining accuracy.',
-                research_focus_2_title: 'Model Quantization',
-                research_focus_2_desc: 'Low-bit quantization techniques for LLMs, vision models, and multimodal systems.',
-                research_focus_3_title: 'Efficient AI Systems',
-                research_focus_3_desc: 'Hardware-aware optimization and deployment strategies for resource-constrained environments.',
+                research_focus_1_bold: 'Efficiency optimization for large foundation models',
+                research_focus_1_rest: ', especially LLMs, to reduce memory footprint, latency, and cost with minimal quality loss.',
+                research_focus_2_bold: 'Low-bit quantization',
+                research_focus_2_rest: ' for LLMs, vision models, and multimodal systems, including practical PTQ and QAT oriented techniques.',
+                research_focus_3_bold: 'Structured pruning and model slimming',
+                research_focus_3_rest: ', focusing on hardware-friendly structures (for example channels, heads, FFN dimensions, and MoE experts).',
+                research_focus_4_bold: 'Efficient AI systems and deployment',
+                research_focus_4_rest: ', translating model-side compression into real speedups via hardware-aware design and optimization.',
+                research_interests_title: 'Interests',
+                research_interest_1: 'LLM efficiency as an end-to-end, budgeted problem across the full lifecycle, covering both training and inference, and both serving and edge scenarios.',
+                research_interest_2: 'Long-context and KV-cache-aware inference, targeting memory growth, bandwidth limits, and decoding efficiency.',
+                research_interest_3: 'Serving efficiency under SLA constraints, focusing on concurrency, tail latency, and cost efficiency.',
+                research_interest_4: 'Edge efficiency under strict power and memory limits, including heterogeneous collaboration and deployment feasibility.',
+                research_interest_5: 'Cross-layer co-design across algorithms, systems, and hardware, with measurable evaluation of quality, latency, peak memory, bandwidth, and energy.',
                 selected_work_title: 'All Publications',
                 paper_category_quantization: 'Model Quantization',
                 paper_category_sparsification: 'Sparsification / Model Pruning',
@@ -232,8 +245,13 @@ class LanguageManager {
                 // 首页 - 个人介绍（Welcome 上方）
                 intro_bio_label: '简介：',
                 intro_phd_label: '博士研究生',
+                intro_at: '于',
+                intro_buaa: '北京航空航天大学',
+                intro_ntu: '新加坡南洋理工大学',
                 intro_joint: '（联合培养）。',
                 intro_supervised: '导师',
+                intro_prof_liu: '刘祥龙教授',
+                intro_prof_tao: '陶大程教授',
                 intro_and: '与',
                 intro_research_label: '研究方向：',
                 intro_research_area: '模型压缩与推理效率',
@@ -313,13 +331,21 @@ class LanguageManager {
                 // 研究页面
                 research_title: '研究',
                 research_description: '北京航空航天大学博士研究生，专注于神经网络压缩和模型量化。致力于让深度学习更高效、更易于实际部署。',
-                research_focus_title: '研究方向',
-                research_focus_1_title: '神经网络压缩',
-                research_focus_1_desc: '开发高效的方法来减少模型大小和计算成本，同时保持准确性。',
-                research_focus_2_title: '模型量化',
-                research_focus_2_desc: '针对大语言模型、视觉模型和多模态系统的低比特量化技术。',
-                research_focus_3_title: '高效AI系统',
-                research_focus_3_desc: '面向资源受限环境的硬件感知优化和部署策略。',
+                research_focus_title: '研究重点',
+                research_focus_1_bold: '大型基础模型的效率优化',
+                research_focus_1_rest: '，尤其是大语言模型，在最小化质量损失的前提下减少内存占用、延迟和成本，涵盖模型压缩和推理时策略（如解码和计算控制）。',
+                research_focus_2_bold: '低比特量化',
+                research_focus_2_rest: '，面向大语言模型、视觉模型和多模态系统，包括实用的训练后量化（PTQ）和量化感知训练（QAT）技术。',
+                research_focus_3_bold: '结构化剪枝和模型瘦身',
+                research_focus_3_rest: '，聚焦于硬件友好的结构（例如通道、注意力头、FFN维度和MoE专家）。',
+                research_focus_4_bold: '高效AI系统与部署',
+                research_focus_4_rest: '，通过硬件感知的设计和优化将模型侧压缩转化为实际加速。',
+                research_interests_title: '研究兴趣',
+                research_interest_1: '将大语言模型效率视为覆盖全生命周期的端到端预算问题，涵盖训练和推理、服务端和边缘场景。',
+                research_interest_2: '长上下文和KV缓存感知的推理，针对内存增长、带宽限制和解码效率。',
+                research_interest_3: '服务级协议（SLA）约束下的服务效率，关注并发性、尾延迟和成本效率。',
+                research_interest_4: '严格功耗和内存限制下的边缘效率，包括异构协作和部署可行性。',
+                research_interest_5: '算法、系统和硬件的跨层协同设计，通过质量、延迟、峰值内存、带宽和能耗的可测量评估。',
                 selected_work_title: '论文合集',
                 paper_category_quantization: '模型量化',
                 paper_category_sparsification: '稀疏化 / 模型剪枝',
@@ -563,6 +589,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const clockManager = new ClockManager();
     const languageManager = new LanguageManager();
     const cardManager = new CardManager();
+    const themeManager = new ThemeManager();
 
     // Add smooth scrolling for anchor links (only for #hash links, not page navigation)
     document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
@@ -584,6 +611,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log('✨ Personal homepage initialized successfully!');
 });
+
+// ===========================
+// Theme Manager - Dark Mode Toggle
+// ===========================
+
+class ThemeManager {
+    constructor() {
+        this.currentTheme = localStorage.getItem('theme') || 'light';
+        this.themeToggle = document.getElementById('theme-toggle');
+        this.init();
+    }
+
+    init() {
+        // Apply saved theme
+        this.applyTheme();
+        
+        // Setup toggle button
+        if (this.themeToggle) {
+            this.themeToggle.addEventListener('click', () => {
+                this.toggleTheme();
+            });
+        }
+    }
+
+    toggleTheme() {
+        this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+        localStorage.setItem('theme', this.currentTheme);
+        this.applyTheme();
+    }
+
+    applyTheme() {
+        document.documentElement.setAttribute('data-theme', this.currentTheme);
+    }
+
+    getCurrentTheme() {
+        return this.currentTheme;
+    }
+}
 
 // ===========================
 // Navigation Auto-hide on Scroll

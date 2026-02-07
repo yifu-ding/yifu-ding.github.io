@@ -206,6 +206,54 @@ button {
     gap: var(--space-lg);
 }
 
+/* Theme Toggle */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    position: relative;
+    padding: 0;
+}
+
+.theme-toggle:hover {
+    background: var(--color-warm-gray-50);
+    border-color: var(--color-warm-gray-300);
+    transform: scale(1.05);
+}
+
+.theme-icon {
+    position: absolute;
+    font-size: 18px;
+    transition: all var(--transition-fast);
+}
+
+.theme-icon-light {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.theme-icon-dark {
+    opacity: 0;
+    transform: rotate(180deg) scale(0);
+}
+
+[data-theme="dark"] .theme-icon-light {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0);
+}
+
+[data-theme="dark"] .theme-icon-dark {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
 /* Language Switcher */
 .lang-switcher {
     position: relative;
