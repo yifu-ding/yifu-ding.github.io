@@ -229,6 +229,114 @@ html, body {
     color: var(--color-primary);
 }
 
+/* ===========================
+   Personal intro (inside split-hero-left)
+   =========================== */
+.personal-intro {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.personal-intro-text {
+    margin-bottom: var(--space-lg);
+    max-width: 65ch;
+}
+
+.personal-intro-paragraph {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.personal-intro-paragraph a {
+    color: var(--color-primary);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.personal-intro-paragraph a:hover {
+    color: var(--color-primary-hover);
+    border-bottom-color: var(--color-primary-hover);
+}
+
+.personal-intro-paragraph strong {
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+
+.personal-intro-paragraph strong a {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.personal-intro-paragraph strong a:hover {
+    color: var(--color-primary-hover);
+}
+
+.personal-intro-paragraph .intro-label {
+    font-weight: 600;
+    color: #31211C;
+}
+
+.personal-intro-paragraph em {
+    font-style: normal;
+    color: var(--color-text-primary);
+}
+
+.personal-intro-paragraph .nowrap {
+    white-space: nowrap;
+}
+
+.personal-intro-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+}
+
+.profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: var(--border-radius-sm);
+    color: var(--color-text-secondary);
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: var(--font-size-sm);
+    transition: all var(--transition-fast);
+    text-decoration: none;
+}
+
+.profile-link:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-1px);
+}
+
+.profile-link .profile-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+
+.profile-link:hover .profile-icon {
+    opacity: 1;
+}
+
+.profile-link .profile-label {
+    font-weight: 500;
+}
+
 .inne-hero.full-bleed {
     position: relative;
     padding: 120px clamp(32px, 5vw, 80px) 80px;
@@ -1378,6 +1486,123 @@ html, body {
     background: var(--color-warm-white);
   }
   
+  /* ===========================
+     Updates & Selected Papers Section
+     =========================== */
+  .updates-section {
+    background: var(--color-background);
+    padding: var(--space-xxxl) 0;
+  }
+
+  .updates-section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-xxl);
+  }
+
+  .subsection-item {
+    display: grid;
+    grid-template-columns: minmax(200px, 250px) 1fr;
+    gap: var(--space-xxl);
+    margin-bottom: var(--space-xxxl);
+    align-items: start;
+  }
+
+  .subsection-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .subsection-label {
+    position: sticky;
+    top: calc(72px + var(--space-lg));
+  }
+
+  .subsection-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    font-style: italic;
+    color: var(--color-text-primary);
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+
+  .subsection-content {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-secondary);
+  }
+
+  .paper-title {
+    font-style: italic;
+  }
+
+  .updates-list {
+    margin: 0;
+    padding-left: var(--space-lg);
+    list-style: none;
+    counter-reset: updates-counter;
+  }
+
+  .updates-list li {
+    margin-bottom: var(--space-md);
+    counter-increment: updates-counter;
+    position: relative;
+    padding-left: 0;
+  }
+
+  .updates-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .updates-list li::before {
+    content: counter(updates-counter) ".";
+    position: absolute;
+    left: calc(-1 * var(--space-lg));
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  .update-icon {
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: baseline;
+  }
+
+  .update-icon.github-icon {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  .update-icon.github-icon svg {
+    width: 16px;
+    height: 16px;
+    color: var(--color-text-secondary);
+  }
+
+  .updates-list a {
+    color: var(--color-primary);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+  }
+
+  .updates-list a:hover {
+    color: var(--color-primary-hover);
+    border-bottom-color: var(--color-primary-hover);
+  }
+
+  .updates-list strong {
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  .paper-title a {
+    font-style: italic;
+  }
+
   .channel-feature-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -3083,6 +3308,29 @@ html, body {
   
     .focus-desc-inline {
       font-size: 0.9375rem;
+    }
+
+    .personal-intro {
+      margin-top: var(--space-lg);
+      padding-top: var(--space-md);
+    }
+
+    .personal-intro-links {
+      flex-wrap: wrap;
+    }
+
+    .updates-section-inner {
+      padding: 0 var(--space-lg);
+    }
+
+    .subsection-item {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      margin-bottom: var(--space-xxl);
+    }
+
+    .subsection-label {
+      position: static;
     }
   }
   

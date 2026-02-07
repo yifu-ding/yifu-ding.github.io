@@ -57,6 +57,21 @@ class LanguageManager {
                 nav_studio: 'Photography',
                 nav_contact: 'Contact',
                 
+                // Home Page - Personal intro (above Welcome)
+                intro_bio_label: 'Bio:',
+                intro_phd_label: 'PhD Candidate',
+                intro_joint: '(joint programme). ',
+                intro_supervised: 'Supervised by',
+                intro_and: 'and',
+                intro_research_label: 'Research focus:',
+                intro_research_area: 'Model compression and Inference efficiency',
+                intro_bachelor: 'Bachelor\'s Degree Graduated: ',
+                intro_bachelor_graduated: '2021',
+                intro_enrolled_label: 'Ph.D Enrolled: ',
+                intro_enrolled_date: 'Sep 2021',
+                intro_expected_label: 'Expected Graduation: ',
+                intro_expected_date: 'Jun 2027',
+
                 // Home Page - Hero
                 inne_hero_line1: 'Welcome to Yifu\'s Homepage.',
                 inne_hero_line2: 'Keep your curiosity for the world,',
@@ -204,6 +219,21 @@ class LanguageManager {
                 nav_studio: '摄影',
                 nav_contact: '联系',
                 
+                // 首页 - 个人介绍（Welcome 上方）
+                intro_bio_label: '简介：',
+                intro_phd_label: '博士研究生',
+                intro_joint: '（联合培养）。',
+                intro_supervised: '导师',
+                intro_and: '与',
+                intro_research_label: '研究方向：',
+                intro_research_area: '模型压缩与推理效率',
+                intro_bachelor: '本科',
+                intro_bachelor_graduated: '2021年毕业',
+                intro_enrolled_label: '博士入学',
+                intro_enrolled_date: '2021年9月',
+                intro_expected_label: '预计毕业',
+                intro_expected_date: '2027年6月',
+
                 // 首页 - Hero
                 inne_hero_line1: '欢迎来到一芙的网站。',
                 inne_hero_line2: '把好奇心留给世界，',

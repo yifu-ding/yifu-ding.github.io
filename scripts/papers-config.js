@@ -61,8 +61,8 @@ const PAPERS_CONFIG = {
     subtitle: "Post-training quantization for vision models and hardware-aware deployment.",
     papers: [
       {
-        url: "https://arxiv.org/pdf/2505.11497?",
-        venue: "arXiv 2025",
+        url: "https://openreview.net/forum?id=XJXZXuTj11",
+        venue: "ICLR 2026",
         year: 2025,
         title: "QVGen: Pushing the Limit of Quantized Video Generative Models",
         tags: ["Video Generation", "Diffusion", "PTQ", "Quantization"]
