@@ -773,3 +773,73 @@
         font-size: 14px;
     }
 }
+
+/* Dark mode styles */
+[data-theme="dark"] .gallery-view-btn {
+    border: 1px solid #4b5563;
+    background: #1f2937;
+    color: #d1d5db;
+}
+
+[data-theme="dark"] .gallery-view-btn:hover {
+    border-color: #6b7280;
+    background: #374151;
+    color: #f3f4f6;
+}
+
+[data-theme="dark"] .gallery-view-btn.active {
+    background: #f3f4f6;
+    border-color: #f3f4f6;
+    color: #0f1419;
+}
+
+[data-theme="dark"] .back-link {
+    color: #9ca3af;
+}
+
+[data-theme="dark"] .back-link:hover {
+    color: #f3f4f6;
+}
+
+[data-theme="dark"] .gallery-location {
+    color: #9ca3af;
+}
+
+[data-theme="dark"] .gallery-title {
+    color: #f3f4f6;
+}
+
+[data-theme="dark"] .gallery-count {
+    color: #9ca3af;
+}
+
+[data-theme="dark"] .gallery-detailed-group-title,
+[data-theme="dark"] .gallery-grid-group-title {
+    color: #f3f4f6;
+}
+
+[data-theme="dark"] .gallery-caption {
+    background: #1f2937;
+}
+
+[data-theme="dark"] .gallery-caption-title {
+    color: #f3f4f6;
+}
+
+[data-theme="dark"] .gallery-caption-text {
+    color: #d1d5db;
+}
+
+[data-theme="dark"] .gallery-caption-meta {
+    color: #9ca3af;
+    border-top-color: #374151;
+}
+
+[data-theme="dark"] .gallery-grid-caption {
+    color: #d1d5db;
+}
+
+[data-theme="dark"] .gallery-image-wrapper,
+[data-theme="dark"] .gallery-grid-image-wrapper {
+    background: #1f2937;
+}

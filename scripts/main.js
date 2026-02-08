@@ -91,6 +91,7 @@ class LanguageManager {
                 inne_hero_line2: '',
                 inne_hero_line3: 'and let time deliver the answers.',
                 home_hero_desc: 'Keep your curiosity for the world, and let time deliver the answers.',
+                home_photo_credit: 'Photo taken by Zihao Jing, Model & Direction: Yifu Ding, November 2025, Lake Minnewanka, Canadian Rockies',
                 
                 btn_view_research: 'Research',
                 btn_view_research_2: 'View Research →',
@@ -147,6 +148,7 @@ class LanguageManager {
                 // Research Page
                 research_title: 'Research',
                 research_description: 'PhD Candidate at Beihang University, specializing in neural network compression and model quantization. Making deep learning more efficient and accessible for real-world deployment.',
+                research_photo_credit: 'Photo taken by Yifu Ding in Yellowknife, Canada, December 2025 - Northern Lights',
                 research_focus_title: 'Research Focus',
                 research_focus_1_bold: 'Efficiency optimization for large foundation models',
                 research_focus_1_rest: ', especially LLMs, to reduce memory footprint, latency, and cost with minimal quality loss.',
@@ -179,6 +181,7 @@ class LanguageManager {
                 studio_filter_reading: 'Reading',
                 studio_filter_apps: 'Apps',
                 photography_title: 'Static Photos 📸',
+                studio_photo_credit: 'Photo taken by Yifu Ding, December 2025, Pípila Hill, Guanajuato, Mexico',
                 photography_series: 'Series',
                 reading_title: 'Reading',
                 reading_highlights: 'Highlights & Notes',
@@ -206,6 +209,7 @@ class LanguageManager {
                 
                 // Contact Page
                 contact_title: 'Leave a message 💬',
+                contact_photo_credit: 'Photo taken by Zihao Jing, Model & Direction: Yifu Ding, November 2025, Lake Minnewanka, Canadian Rockies',
                 contact_description: 'You can use the form below to send me a message regarding research collaborations, academic discussions, or related inquiries.', 
                 contact_research_collab: 'Research Collaboration',
                 contact_research_desc: 'Open to collaborations on model compression, quantization, and efficient deep learning.',
@@ -276,6 +280,7 @@ class LanguageManager {
                 inne_hero_line2: '把好奇心留给世界，',
                 inne_hero_line3: '把答案交给时间。',
                 home_hero_desc: '把好奇心留给世界，把答案交给时间。',
+                home_photo_credit: '照片由景子昊拍摄，模特&指导：丁一芙，2025年11月，明尼旺卡湖，加拿大落基山脉',
                 
                 btn_view_research: '研究工作',
                 btn_view_research_2: '查看研究 →',
@@ -331,6 +336,7 @@ class LanguageManager {
                 // 研究页面
                 research_title: '研究',
                 research_description: '北京航空航天大学博士研究生，专注于神经网络压缩和模型量化。致力于让深度学习更高效、更易于实际部署。',
+                research_photo_credit: '照片由丁一芙拍摄于2025年12月加拿大黄刀镇 - 极光',
                 research_focus_title: '研究重点',
                 research_focus_1_bold: '大型基础模型的效率优化',
                 research_focus_1_rest: '，尤其是大语言模型，在最小化质量损失的前提下减少内存占用、延迟和成本，涵盖模型压缩和推理时策略（如解码和计算控制）。',
@@ -363,6 +369,7 @@ class LanguageManager {
                 studio_filter_reading: '阅读',
                 studio_filter_apps: '应用',
                 photography_title: '静态照片',
+                studio_photo_credit: '照片由丁一芙拍摄，2025年12月，墨西哥瓜纳华托皮皮拉山',
                 photography_series: '系列',
                 reading_title: '阅读',
                 reading_highlights: '摘录与笔记',
@@ -390,6 +397,7 @@ class LanguageManager {
                 
                 // 联系页面
                 contact_title: '留言',
+                contact_photo_credit: '照片由景子昊拍摄，模特&指导：丁一芙，2025年11月，明尼旺卡湖，加拿大落基山脉',
                 contact_description: '您可以使用以下表格向我发送有关研究合作、学术讨论或相关咨询的信息。',
                 contact_research_collab: '研究合作',
                 contact_research_desc: '欢迎在模型压缩、量化和高效深度学习方面进行合作。',

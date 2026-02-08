@@ -348,10 +348,10 @@ const galleryData = {
             },
             { 
                 file: '1-1.jpeg', 
-                title: '叶脉的光',
-                titleEn: 'Veins of Light',
-                caption: '细密的叶脉在光里浮现，像被放大的自然纹理。',
-                captionEn: 'Delicate leaf veins surface in the light, like nature’s textures magnified.',
+                title: '叶脉的光和瓢虫',
+                titleEn: 'Veins of Light and Ladybugs',
+                caption: '细密的叶脉在光里浮现，像被放大的自然纹理。瓢虫在叶子上爬行。',
+                captionEn: 'Delicate leaf veins surface in the light, like nature’s textures magnified. Ladybugs are crawling on the leaves.',
                 bgColor: '#C8D8C0' 
             },
             { 
@@ -396,10 +396,10 @@ const galleryData = {
             },
             { 
                 file: '6.jpeg', 
-                title: '静水与植被',
-                titleEn: 'Still Water and Greens',
-                caption: '平静的水面与岸边植被相互映照。',
-                captionEn: 'Still water mirrors the greenery along the shore.',
+                title: '暴风后的植被',
+                titleEn: 'Greens After Storm',
+                caption: '暴风后植被被吹断，城市比森林更容易被摧毁。',
+                captionEn: 'After the storm, the vegetation is broken, the city is easier to destroy than the forest.',
                 bgColor: '#B8C8D8' 
             }
         ]
