@@ -125,3 +125,44 @@
         padding: var(--space-lg);
     }
 }
+
+/* Dark mode */
+[data-theme="dark"] .contact-dialog {
+    background: #1a1f26;
+    border: 1px solid #374151;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .form-field label {
+    color: #e5e7eb;
+}
+
+[data-theme="dark"] .form-field input,
+[data-theme="dark"] .form-field textarea {
+    background: #0f1419;
+    border-color: #4b5563;
+    color: #f3f4f6;
+}
+
+[data-theme="dark"] .form-field input::placeholder,
+[data-theme="dark"] .form-field textarea::placeholder {
+    color: #6b7280;
+}
+
+[data-theme="dark"] .form-field input:focus,
+[data-theme="dark"] .form-field textarea:focus {
+    border-color: #6b7280;
+}
+
+[data-theme="dark"] .form-success {
+    color: #e5e7eb;
+}
+
+[data-theme="dark"] .submit-button {
+    background: #f3f4f6;
+    color: #0f1419;
+}
+
+[data-theme="dark"] .submit-button:hover {
+    background: #e5e7eb;
+}
