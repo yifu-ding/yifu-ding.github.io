@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/components.css">
 </head>
-<body>
+<body class="simple-page research-page">
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
@@ -22,12 +22,18 @@
                     <a href="index.html" class="nav-link">
                         <span data-i18n="nav_home">Home</span>
                     </a>
+                    <a href="news.html" class="nav-link">
+                        <span data-i18n="nav_news">News</span>
+                    </a>
                     <a href="research.html" class="nav-link active">
                         <span data-i18n="nav_research">Research</span>
                     </a>
-                    <a href="studio.html" class="nav-link">
-                        <span data-i18n="nav_studio">Studio</span>
+                    <a href="workshops.html" class="nav-link">
+                        <span data-i18n="nav_workshops">Workshops</span>
                     </a>
+                    <!-- <a href="studio.html" class="nav-link">
+                        <span data-i18n="nav_studio">Studio</span>
+                    </a> -->
                     <a href="contact.html" class="nav-link">
                         <span data-i18n="nav_contact">Contact</span>
                     </a>
@@ -56,94 +62,74 @@
         </div>
     </nav>
 
-    <!-- Hero Background Image (same UI as Studio) -->
-    <section class="studio-hero-fullscreen research-hero" aria-label="Research hero">
-        <div class="studio-hero-image">
-            <img src="src/photos/yellowknife/IMG_1734.JPG" alt="Research" loading="eager">
-            <div class="photo-credit" data-i18n="research_photo_credit">Photo taken by Yifu Ding in Yellowknife, Canada, December 2025 - Northern Lights</div>
-        </div>
+    <main class="simple-page-shell">
+      <header class="simple-page-header">
+        <h1 class="simple-page-title" data-i18n="research_title">Research</h1>
+        <p class="simple-page-subtitle" data-i18n="research_description">
+          PhD Candidate at Beihang University, specializing in neural network compression and model quantization.
+          Making deep learning more efficient and accessible for real-world deployment.
+        </p>
+      </header>
 
-        <div class="studio-hero-overlay">
-            <div class="studio-hero-content research-hero-content">
-              <div class="hero-panel">
-                <div class="hero-panel-layout">
-                  <!-- Left side: Title, description, buttons, Research Focus -->
-                  <div class="hero-panel-left">
-                    <h1 class="studio-hero-title" data-i18n="research_title">Research</h1>
-            
-                    <p class="studio-hero-description" data-i18n="research_description">
-                      PhD Candidate at Beihang University, specializing in neural network compression and model quantization.
-                      Making deep learning more efficient and accessible for real-world deployment.
-                    </p>
-            
-                    <div id="research-focus" class="hero-focus" aria-label="Research focus">
-                      <!-- <div class="hero-focus-header">
-                        <h2 class="hero-focus-title" data-i18n="research_focus_title">Research Focus</h2> -->
-                      <!-- </div> -->
-            
-                      <div class="hero-focus-grid">
-                        <div class="hero-focus-item">
-                          <h3 class="hero-focus-item-title" data-i18n="research_focus_title">Research Focus</h3>
-                          <ul class="hero-focus-list">
-                            <li><strong><span data-i18n="research_focus_1_bold">Efficiency optimization for large foundation models</span></strong><span data-i18n="research_focus_1_rest">, especially LLMs, to reduce memory footprint, latency, and cost with minimal quality loss.</span></li>
-                            <li><strong><span data-i18n="research_focus_2_bold">Low-bit quantization</span></strong><span data-i18n="research_focus_2_rest"> for LLMs, vision models, and multimodal systems, including practical PTQ and QAT oriented techniques.</span></li>
-                            <li><strong><span data-i18n="research_focus_3_bold">Structured pruning and model slimming</span></strong><span data-i18n="research_focus_3_rest">, focusing on hardware-friendly structures (for example channels, heads, FFN dimensions, and MoE experts).</span></li>
-                            <li><strong><span data-i18n="research_focus_4_bold">Efficient AI systems and deployment</span></strong><span data-i18n="research_focus_4_rest">, translating model-side compression into real speedups via hardware-aware design and optimization.</span></li>
-                          </ul>
-                        </div>
-            
-                        <div class="hero-focus-item">
-                          <h3 class="hero-focus-item-title" data-i18n="research_interests_title">Research Interests</h3>
-                          <ul class="hero-focus-list">
-                            <li data-i18n="research_interest_1">LLM efficiency as an end-to-end, budgeted problem across the full lifecycle, covering both training and inference, and both serving and edge scenarios.</li>
-                            <li data-i18n="research_interest_2">Long-context and KV-cache-aware inference, targeting memory growth, bandwidth limits, and decoding efficiency.</li>
-                            <!-- <li data-i18n="research_interest_3">Serving efficiency under SLA constraints, focusing on concurrency, tail latency, and cost efficiency.</li> -->
-                            <li data-i18n="research_interest_4">Edge efficiency under strict power and memory limits, including heterogeneous collaboration and deployment feasibility.</li>
-                            <li data-i18n="research_interest_5">Co-design across algorithms, systems, and hardware, with measurable evaluation of quality, latency, peak memory, bandwidth, and energy.</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-          
-                  <!-- Right side: Metrics (vertical) -->
-                  <div class="hero-panel-right">
-                    <div class="hero-metrics" aria-label="Google Scholar metrics">
-                      <div class="metric-card">
-                        <div class="metric-label">Citations</div>
-                        <div class="metric-value">1343</div>
-                      </div>
-              
-                      <div class="metric-card">
-                        <div class="metric-label">Papers</div>
-                        <div class="metric-value">32</div>
-                      </div>
-              
-                      <div class="metric-card">
-                        <div class="metric-label">H-index</div>
-                        <div class="metric-value">17</div>
-                      </div>
-              
-                      <div class="metric-card">
-                        <div class="metric-label">I10-index</div>
-                        <div class="metric-value">23</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <div class="simple-page-content">
+        <section class="simple-info-grid" aria-label="Research focus">
+          <div class="simple-focus-grid">
+            <div class="simple-focus-card">
+              <h2><strong data-i18n="research_focus_title">Research Focus</strong></h2>
+              <ul>
+                <li data-i18n-html="research_focus_1">Efficient inference and deployment for large language models and MoE models.</li>
+                <li data-i18n-html="research_focus_2">Post-training compression and acceleration, e.g., quantization, pruning, kv cache and decoding optimization.</li>
+                <li data-i18n-html="research_focus_3">High-performance operators and kernels for low-bit, sparse, and hardware-aware computation.</li>
+                <li data-i18n-html="research_focus_4">Multimodal understanding and generation, including vision-language models and image/video diffusion models.</li>
+              </ul>
+            </div>
+
+            <div class="simple-focus-card">
+              <h2><strong data-i18n="research_interests_title">Ongoing Projects</strong></h2>
+              <ul>
+                <li data-i18n="research_interest_1">Clinical World Model for physiological forecasting.</li>
+                <li data-i18n="research_interest_2">Real-time quantum error correction with customized FPGA.</li>
+                <li data-i18n="research_interest_4">Deployment-friendly multimodal MoE compression.</li>
+                <li data-i18n="research_interest_5">Super-resolution diffusion acceleration for image generation.</li>
+              </ul>
             </div>
           </div>
-          
-    </section>
 
-    <main class="main-container">
+          <aside class="simple-metrics-card" aria-label="Google Scholar metrics">
+            <h2>Statistics</h2>
+            <div class="simple-metrics-list">
+              <div class="simple-metric">
+                <span class="simple-metric-value">1343</span>
+                <span class="simple-metric-label">Citations</span>
+              </div>
+              <div class="simple-metric">
+                <span class="simple-metric-value">32</span>
+                <span class="simple-metric-label">Papers</span>
+              </div>
+              <div class="simple-metric">
+                <span class="simple-metric-value">17</span>
+                <span class="simple-metric-label">H-index</span>
+              </div>
+              <div class="simple-metric">
+                <span class="simple-metric-value">23</span>
+                <span class="simple-metric-label">I10-index</span>
+              </div>
+            </div>
+          </aside>
+        </section>
 
       <section id="selected-work" class="content-section selected-work" aria-label="Publications">
         <h2 class="section-title" data-i18n="selected_work_title">All Publications</h2>
       
         <!-- Keyword Filter UI -->
         <div class="paper-filter" id="paper-filter" aria-label="Paper keyword filter">
+          <div class="paper-searchbar">
+            <label class="paper-search-label" for="paper-search">
+              <span class="paper-search-icon" aria-hidden="true">⌕</span>
+              <input id="paper-search" type="search" placeholder="Search by title, venue, year, or tags" autocomplete="off">
+            </label>
+          </div>
+
           <div class="paper-filter-row keywords" id="kw-row" role="group" aria-label="Keywords"></div>
       
           <div class="paper-filter-row mode" role="group" aria-label="Match mode">
@@ -170,6 +156,7 @@
             <span class="link-more__text">View publications on Google Scholar →</span>
             </a>
         </div>
+      </div>
     </main>
 
     <!-- Footer -->

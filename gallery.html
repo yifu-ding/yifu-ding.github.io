@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/components.css">
     <link rel="stylesheet" href="styles/gallery.css">
 </head>
-<body>
+<body class="simple-page">
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
@@ -23,8 +23,14 @@
                     <a href="index.html" class="nav-link">
                         <span data-i18n="nav_home">Home</span>
                     </a>
+                    <a href="news.html" class="nav-link">
+                        <span data-i18n="nav_news">News</span>
+                    </a>
                     <a href="research.html" class="nav-link">
                         <span data-i18n="nav_research">Research</span>
+                    </a>
+                    <a href="workshops.html" class="nav-link">
+                        <span data-i18n="nav_workshops">Workshops</span>
                     </a>
                     <a href="studio.html" class="nav-link active">
                         <span data-i18n="nav_studio">Photography</span>
@@ -63,17 +69,18 @@
         </div>
     </nav>
 
-    <!-- Main Content Container -->
-    <main class="main-container gallery-main">
+    <main class="simple-page-shell gallery-main">
         
         <!-- Gallery Header -->
-        <div class="gallery-header">
+        <div class="simple-page-header gallery-header">
             <div class="gallery-meta">
                 <span class="gallery-location" id="gallery-location">LOADING...</span>
-                <h1 class="gallery-title" id="gallery-title">Loading...</h1>
+                <h1 class="simple-page-title gallery-title" id="gallery-title">Loading...</h1>
                 <p class="gallery-count" id="gallery-count">0 images</p>
             </div>
+        </div>
 
+        <div class="simple-page-content">
             <div class="gallery-back">
                 <a href="studio.html" class="back-link">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,11 +97,11 @@
                     </button>
                 </div>
             </div>
-        </div>
 
-        <!-- Gallery Grid -->
-        <div class="gallery-container" id="gallery-container">
-            <!-- Photos will be loaded dynamically -->
+            <!-- Gallery Grid -->
+            <div class="gallery-container" id="gallery-container">
+                <!-- Photos will be loaded dynamically -->
+            </div>
         </div>
     </main>
 

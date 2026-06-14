@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/components.css">
     <link rel="stylesheet" href="styles/contact.css">
 </head>
-<body>
+<body class="simple-page contact-page">
     <!-- Navigation -->
     <!-- Navigation -->
     <nav class="main-nav">
@@ -24,12 +24,18 @@
                     <a href="index.html" class="nav-link">
                         <span data-i18n="nav_home">Home</span>
                     </a>
+                    <a href="news.html" class="nav-link">
+                        <span data-i18n="nav_news">News</span>
+                    </a>
                     <a href="research.html" class="nav-link">
                         <span data-i18n="nav_research">Research</span>
                     </a>
-                    <a href="studio.html" class="nav-link">
-                        <span data-i18n="nav_studio">Photography Portfolio</span>
+                    <a href="workshops.html" class="nav-link">
+                        <span data-i18n="nav_workshops">Workshops</span>
                     </a>
+                    <!-- <a href="studio.html" class="nav-link">
+                        <span data-i18n="nav_studio">Photography Portfolio</span>
+                    </a> -->
                     <a href="contact.html" class="nav-link active">
                         <span data-i18n="nav_contact">Contact</span>
                     </a>
@@ -64,64 +70,130 @@
         </div>
     </nav>
 
-    <!-- Hero Background Image -->
-    <section class="studio-hero-fullscreen contact-hero">
-        <div class="studio-hero-image">
-            <img src="src/photos/rocky/IMG_0154.JPG" alt="Contact" loading="eager">
-            <div class="photo-credit" data-i18n="contact_photo_credit">Photo taken by Zihao Jing, Model & Direction: Yifu Ding, November 2025, Lake Minnewanka, Canadian Rockies</div>
-        </div>
-        <div class="studio-hero-overlay">
-            <div class="studio-hero-content contact-hero-content">
-                <div class="contact-layout">
-                    <div class="contact-left">
-                        <h1 class="studio-hero-title" data-i18n="contact_title">Leave a message</h1>
-                        <p class="studio-hero-description" data-i18n="contact_description">
-                            Send me a message directly.<br>I usually reply within a few days.
-                        </p>
+    <main class="simple-page-shell contact-photo-shell">
+        <header class="simple-page-header">
+            <h1 class="simple-page-title" data-i18n="contact_title">Leave a message</h1>
+            <p class="simple-page-subtitle" data-i18n="contact_description">
+                Send me a message directly.<br>I usually reply within a few days.
+            </p>
+        </header>
+
+        <div class="simple-page-content contact-page-content">
+            <div class="contact-card contact-dialog">
+                <h2 class="contact-card-title" data-i18n="contact_form_title">Contact Form</h2>
+                <form id="contact-form">
+                    <div class="form-field">
+                        <label for="name" data-i18n="contact_form_name">Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            data-i18n-placeholder="contact_form_name_placeholder"
+                            placeholder="Your name"
+                        />
                     </div>
-                    
-                    <div class="contact-right">
-                        <div class="contact-dialog">
-                            <form id="contact-form">
-                                <div class="form-field">
-                                    <label for="email" data-i18n="contact_form_email">Your email (optional)</label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        required
-                                    />
-                                </div>
-                        
-                                <div class="form-field">
-                                    <label for="message" data-i18n="contact_form_message">Message</label>
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        rows="6"
-                                        required
-                                    ></textarea>
-                                </div>
-                        
-                                <button type="submit" class="submit-button" data-i18n="contact_form_send">
-                                    Send
-                                </button>
-                            </form>
-                        
-                            <div id="form-success" class="form-success">
-                                <span data-i18n="contact_form_success_line1">Thank you for visiting my website.</span>
-                                <br>
-                                <span data-i18n="contact_form_success_line2">I have received your message.</span>
-                            </div>
-                        </div>
+
+                    <div class="form-field">
+                        <label for="email" data-i18n="contact_form_email">Your email (optional)</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            data-i18n-placeholder="contact_form_email_placeholder"
+                            placeholder="your@email.com"
+                            required
+                        />
                     </div>
+
+                    <div class="form-field">
+                        <label for="message" data-i18n="contact_form_message">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="3"
+                            data-i18n-placeholder="contact_form_message_placeholder"
+                            placeholder="Your message"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        <svg class="submit-button-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M22 2 11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="m22 2-7 20-4-9-9-4 20-7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span data-i18n="contact_form_send">Send Message</span>
+                    </button>
+                </form>
+
+                <div id="form-success" class="form-success">
+                    <span data-i18n="contact_form_success_line1">Thank you for visiting my website.</span>
+                    <br>
+                    <span data-i18n="contact_form_success_line2">I have received your message.</span>
                 </div>
             </div>
+
+            <aside class="contact-card contact-methods" aria-labelledby="contact-methods-title">
+                <h2 class="contact-card-title" id="contact-methods-title" data-i18n="contact_methods_title">Other Ways to Connect</h2>
+                <ul class="contact-method-list">
+                    <li>
+                        <span class="contact-method-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <span class="email-line">
+                                <a href="mailto:yifuding@buaa.edu.cn">yifuding@buaa.edu.cn</a>
+                                <span class="email-note">(Preferred work email)</span>
+                            </span>
+                            <span class="email-line">
+                                <a href="mailto:eveedyf@gmail.com">eveedyf@gmail.com</a>
+                                <span class="email-note">(Personal email)</span>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-method-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.81a2 2 0 0 1-.45 2.11L8.05 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.31 1.85.53 2.81.66A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <div class="phone-line">
+                            <span class="phone-entry">
+                                <a href="tel:+6584514020">+65 8451 4020</a>
+                                <span class="phone-note">(Phone &amp; WhatsApp)</span>
+                            </span>
+                            <span class="phone-entry">
+                                <a href="tel:+8618868001866">+86 188 6800 1866</a>
+                                <span class="phone-note">(Phone &amp; Wechat)</span>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-method-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <a href="https://github.com/yifu-ding" target="_blank" rel="noopener">github.com/yifu-ding</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-method-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M7.2 9.6V20M12 20v-5.8c0-2.7 1.5-4.6 4-4.6s3.8 1.7 3.8 4.7V20M4.4 6.5a2.1 2.1 0 1 0 0-4.2 2.1 2.1 0 0 0 0 4.2ZM2.6 9.6h3.6V20H2.6V9.6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <a href="https://www.linkedin.com/in/yifuding123" target="_blank" rel="noopener">linkedin.com/in/yifuding123</a>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
         </div>
-    </section>
-    
-    <main class="main-container">
-        <!-- Main content can go here if needed -->
     </main>
     
     
@@ -141,4 +213,3 @@
     <script src="scripts/main.js"></script>
 </body>
 </html>
-

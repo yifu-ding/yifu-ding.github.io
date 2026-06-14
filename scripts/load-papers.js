@@ -8,29 +8,62 @@
       return String(tag || '').trim().toLowerCase().replace(/\s+/g, ' ');
     }
   
+    function escapeHtml(value) {
+      return String(value || '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;');
+    }
+
+    function getPaperHref(paper) {
+      return paper.detailUrl || paper.url || '#';
+    }
+
     function createPaperCard(paper) {
       const card = document.createElement('a');
-      card.href = paper.url;
-      card.target = '_blank';
-      card.rel = 'noopener';
+      const href = getPaperHref(paper);
+      const isExternal = /^https?:\/\//i.test(href);
+      card.href = href;
+      if (isExternal) {
+        card.target = '_blank';
+        card.rel = 'noopener';
+      }
       card.className = 'pub-card reveal';
       
       // 添加 title 属性，悬停时显示链接地址
-      if (paper.url) {
-        card.title = paper.url;
+      if (href && href !== '#') {
+        card.title = href;
       }
   
       const tags = Array.isArray(paper.tags) ? paper.tags : [];
       const normTags = tags.map(normalizeTag).filter(Boolean);
       card.setAttribute('data-tags', normTags.join(','));
+      card.setAttribute(
+        'data-search',
+        [paper.title, paper.venue, paper.year, tags.join(' ')]
+          .filter(Boolean)
+          .join(' ')
+          .toLowerCase()
+      );
+
+      const title = paper.title || 'Untitled paper';
+      const venue = paper.venue || '';
+      const imageUrl = paper.imageUrl || '';
+      const thumb = imageUrl
+        ? `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(title)} thumbnail" loading="lazy">`
+        : `<span>${escapeHtml(String(paper.year || '').slice(-2) || 'AI')}</span>`;
   
       card.innerHTML = `
-        <div class="pub-meta">
-          <span class="pub-venue">${paper.venue}</span>
-        </div>
-        <div class="pub-title">${paper.title}</div>
-        <div class="pub-tags">
-          ${tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+        <div class="pub-thumb${imageUrl ? ' has-image' : ''}">${thumb}</div>
+        <div class="pub-info">
+          <div class="pub-meta">
+            <span class="pub-venue">${escapeHtml(venue)}</span>
+          </div>
+          <div class="pub-title">${escapeHtml(title)}</div>
+          <div class="pub-tags">
+            ${tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}
+          </div>
         </div>
       `;
       return card;
@@ -53,6 +86,10 @@
     }
   
     function flattenAllPapers() {
+      if (Array.isArray(PAPERS_CONFIG)) {
+        return [...PAPERS_CONFIG];
+      }
+
       const all = [];
       Object.keys(PAPERS_CONFIG).forEach(categoryKey => {
         const category = PAPERS_CONFIG[categoryKey];
@@ -79,6 +116,16 @@
       }
       return sorted;
     }
+
+    function groupPapersByYear(papers) {
+      const groups = new Map();
+      for (const paper of papers) {
+        const year = String(paper.year || 'Other');
+        if (!groups.has(year)) groups.set(year, []);
+        groups.get(year).push(paper);
+      }
+      return Array.from(groups.entries());
+    }
   
     function loadPapers() {
       const waterfall = document.querySelector('.pub-waterfall');
@@ -86,19 +133,30 @@
   
       waterfall.innerHTML = '';
   
-      // One unified grid, no category sections
-      const grid = document.createElement('div');
-      grid.className = 'pub-grid';
-      grid.setAttribute('aria-label', 'All papers');
-  
       const allPapers = flattenAllPapers();
       const sortedPapers = sortPapers(allPapers, currentSortOrder);
-  
-      for (const paper of sortedPapers) {
-        grid.appendChild(createPaperCard(paper));
+
+      for (const [year, papers] of groupPapersByYear(sortedPapers)) {
+        const group = document.createElement('section');
+        group.className = 'pub-year-group';
+        group.setAttribute('data-year-group', year);
+
+        const heading = document.createElement('h3');
+        heading.className = 'pub-year-title';
+        heading.textContent = year;
+
+        const grid = document.createElement('div');
+        grid.className = 'pub-grid';
+        grid.setAttribute('aria-label', `${year} papers`);
+
+        for (const paper of papers) {
+          grid.appendChild(createPaperCard(paper));
+        }
+
+        group.appendChild(heading);
+        group.appendChild(grid);
+        waterfall.appendChild(group);
       }
-  
-      waterfall.appendChild(grid);
   
       setTimeout(initRevealAnimation, 50);
   
@@ -150,4 +208,3 @@
       initSortButtons();
     }
   })();
-  

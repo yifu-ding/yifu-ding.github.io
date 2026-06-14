@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/components.css">
 </head>
-<body>
+<body class="simple-page">
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
@@ -22,8 +22,14 @@
                     <a href="index.html" class="nav-link">
                         <span data-i18n="nav_home">Home</span>
                     </a>
+                    <a href="news.html" class="nav-link">
+                        <span data-i18n="nav_news">News</span>
+                    </a>
                     <a href="research.html" class="nav-link">
                         <span data-i18n="nav_research">Research</span>
+                    </a>
+                    <a href="workshops.html" class="nav-link">
+                        <span data-i18n="nav_workshops">Workshops</span>
                     </a>
                     <a href="studio.html" class="nav-link active">
                         <span data-i18n="nav_studio">Photo Studio</span>
@@ -56,36 +62,22 @@
         </div>
     </nav>
 
-    <!-- Hero Background Image -->
-    <section class="studio-hero-fullscreen">
-        <div class="studio-hero-image">
-            <img src="src/photos/guanajuato/guana1.JPG" alt="Studio" loading="eager">
-            <div class="photo-credit" data-i18n="studio_photo_credit">Photo taken by Yifu Ding, December 2025, Pípila Hill, Guanajuato, Mexico</div>
-        </div>
-        <div class="studio-hero-overlay">
-            <div class="studio-hero-content">
-                <h1 class="studio-hero-title" data-i18n="studio_title">Photography Portfolio</h1>
-                <p class="studio-hero-description" data-i18n="studio_description">
-                     A space for my photography portfolio. 
-                </p>
-                <div class="studio-hero-actions" aria-label="Quick jump">
-                    <a class="studio-hero-btn" href="#static_photos" data-i18n="photography_title">Photography</a>
-                    <a class="studio-hero-btn" href="#video" data-i18n="selected_shorts_title">Video</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main class="simple-page-shell">
+        <header class="simple-page-header">
+            <h1 class="simple-page-title" data-i18n="studio_title">Photography Portfolio</h1>
+            <p class="simple-page-subtitle" data-i18n="studio_description">
+                A space for my photography portfolio.
+            </p>
+        </header>
 
-    <!-- Main Content Container -->
-    <main class="main-container">
+        <div class="simple-page-content">
         
-        <div class="channels-section-title full-bleed" aria-hidden="true" id="static_photos">
+        <div class="channels-section-title" aria-hidden="true" id="static_photos">
             <h2 class="channels-section-heading" data-i18n="photography_title">Photography</h2>
         </div>
 
         <!-- Photography Section -->
-        <!-- <section  class="channels full-bleed"> -->
-        <section class="channels" aria-label="static_photos"></section>
+        <section class="channels" aria-label="static_photos">
             <div id="photography" class="photo-section-wrapper">
                 <div class="photo-grid-scroll">
                     <div class="photo-grid-track">
@@ -100,7 +92,7 @@
         </div>
 
        <!-- Video Section -->
-        <section class="content-section full-bleed">
+        <section class="content-section">
             <div class="video-section-wrapper">
                 <div class="video-container">
                     <div class="video-item video-item-guana">
@@ -139,6 +131,7 @@
             </div>
         </section>
 
+        </div>
     </main>
 
     <!-- Footer -->
