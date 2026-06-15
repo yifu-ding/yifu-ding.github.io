@@ -89,6 +89,11 @@
     box-shadow: var(--shadow-md);
 }
 
+.contact-methods {
+    width: 80%;
+    justify-self: end;
+}
+
 .contact-card-title {
     margin: 0 0 var(--space-md);
     font-family: var(--font-sans);
@@ -322,6 +327,11 @@
     margin-top: 4px;
 }
 
+.contact-method-list .phone-entry .phone-note {
+    display: inline;
+    margin-top: 0;
+}
+
 
 .form-success {
     display: none;
@@ -336,6 +346,11 @@
 @media (max-width: 968px) {
     .contact-page-content {
         grid-template-columns: 1fr;
+    }
+
+    .contact-methods {
+        width: 100%;
+        justify-self: stretch;
     }
 
     .contact-layout {
@@ -377,8 +392,13 @@
     }
 
     .phone-entry {
-        flex-wrap: wrap;
-        white-space: normal;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        font-size: var(--font-size-sm);
+    }
+
+    .contact-method-list .phone-entry .phone-note {
+        font-size: var(--font-size-xs);
     }
 }
 

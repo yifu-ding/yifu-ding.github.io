@@ -6,7 +6,7 @@
   const statusEl = document.querySelector('[data-project-status]');
   if (!grid || !topicRow || !statusEl) return;
 
-  const API_URL = 'https://api.github.com/users/yifu-ding/repos?per_page=100&sort=updated';
+  const API_URL = 'https://api.github.com/users/yifu-ding/repos?per_page=100&sort=created&direction=desc';
 
   function escapeHtml(value) {
     return String(value || '')
@@ -23,12 +23,13 @@
   }
 
   function fallbackDescription(repo) {
-    return repo.description || 'Open-source project hosted on GitHub.';
+    return repo.description || 'Open-source repository hosted on GitHub.';
   }
 
   function getRepoTags(repo) {
     const tags = [];
     if (repo.language) tags.push(repo.language);
+    if (repo.fork) tags.push('Fork');
     for (const topic of repo.topics || []) tags.push(topic);
     if (repo.stargazers_count > 0) tags.push(`${repo.stargazers_count} stars`);
     return Array.from(new Set(tags)).slice(0, 7);
@@ -53,12 +54,12 @@
   function renderRepos(repos) {
     grid.innerHTML = repos.map(repo => {
       const tags = getRepoTags(repo);
-      const updated = formatMonth(repo.updated_at);
+      const created = formatMonth(repo.created_at);
       return `
         <article class="project-card">
           <div class="project-card-head">
             <h2>${escapeHtml(repo.name)}</h2>
-            <time datetime="${escapeHtml(repo.updated_at)}">${escapeHtml(updated)}</time>
+            <time datetime="${escapeHtml(repo.created_at)}">${escapeHtml(created)}</time>
           </div>
           <p>${escapeHtml(fallbackDescription(repo))}</p>
           <div class="project-tags">
@@ -73,14 +74,14 @@
     }).join('');
   }
 
-  async function loadProjects() {
+  async function loadRepositories() {
     try {
       const response = await fetch(API_URL, { headers: { Accept: 'application/vnd.github+json' } });
       if (!response.ok) throw new Error(`GitHub API ${response.status}`);
       const repos = await response.json();
       const visibleRepos = repos
-        .filter(repo => !repo.fork && !repo.archived)
-        .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+        .filter(repo => !repo.archived)
+        .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
       renderTopics(visibleRepos);
       renderRepos(visibleRepos);
       statusEl.textContent = `${visibleRepos.length} public repositories loaded from GitHub.`;
@@ -90,5 +91,5 @@
     }
   }
 
-  loadProjects();
+  loadRepositories();
 })();

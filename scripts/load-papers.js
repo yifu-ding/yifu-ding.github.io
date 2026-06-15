@@ -31,10 +31,10 @@
       return `<a class="pub-action ${className}" href="${escapeHtml(href)}" target="${target}"${rel}>${escapeHtml(label)}</a>`;
     }
 
-    function createPaperCard(paper) {
+    function createPaperCard(paper, isSelected) {
       const card = document.createElement('article');
       const href = getPaperHref(paper);
-      card.className = 'pub-card reveal';
+      card.className = `pub-card reveal${isSelected ? ' pub-card-selected' : ''}`;
       card.tabIndex = 0;
       card.setAttribute('role', 'link');
       
@@ -73,7 +73,7 @@
         <div class="pub-thumb${imageUrl ? ' has-image' : ''}">${thumb}</div>
         <div class="pub-info">
           <div class="pub-title">${escapeHtml(title)}</div>
-          ${authors ? `<div class="pub-authors">${escapeHtml(authors)}</div>` : ''}
+          ${authors && !isSelected ? `<div class="pub-authors">${escapeHtml(authors)}</div>` : ''}
           ${venue ? `<div class="pub-venue">${escapeHtml(venue)}</div>` : ''}
           ${description ? `<div class="pub-description">${escapeHtml(description)}</div>` : ''}
           <div class="pub-tags">
@@ -169,6 +169,7 @@
       if (!waterfall) return;
   
       waterfall.innerHTML = '';
+      const isSelected = waterfall.getAttribute('data-paper-list') === 'selected';
   
       for (const [year, items] of groupPapersByYear(papers)) {
         const group = document.createElement('section');
@@ -184,7 +185,7 @@
         grid.setAttribute('aria-label', `${year} papers`);
 
         for (const paper of items) {
-          grid.appendChild(createPaperCard(paper));
+          grid.appendChild(createPaperCard(paper, isSelected));
         }
 
         group.appendChild(heading);
