@@ -36,11 +36,37 @@
   }
 
   function renderWorkshops() {
-    const grid = document.querySelector('[data-workshop-cards]');
-    if (!grid || !Array.isArray(WORKSHOPS_CONFIG)) return;
-    grid.innerHTML = '';
-    WORKSHOPS_CONFIG.forEach(item => {
-      grid.appendChild(createWorkshopCard(item));
+    const root = document.querySelector('[data-workshop-cards]');
+    if (!root || !Array.isArray(WORKSHOPS_CONFIG)) return;
+
+    const seriesConfig = [
+      { key: 'practical', title: '🛠️ Practical-DL Series' },
+      { key: 'glow', title: '🌍 GLOW Series' },
+      { key: 'eclr', title: '⚡ ECLR / EMCLR Series' }
+    ];
+
+    root.innerHTML = '';
+    seriesConfig.forEach(series => {
+      const items = WORKSHOPS_CONFIG.filter(item => item.series === series.key);
+      if (items.length === 0) return;
+
+      const section = document.createElement('section');
+      section.className = 'workshop-series-section';
+
+      const heading = document.createElement('h2');
+      heading.className = 'workshop-series-title';
+      heading.textContent = series.title;
+
+      const grid = document.createElement('div');
+      grid.className = 'workshop-card-grid';
+
+      items.forEach(item => {
+        grid.appendChild(createWorkshopCard(item));
+      });
+
+      section.appendChild(heading);
+      section.appendChild(grid);
+      root.appendChild(section);
     });
   }
 

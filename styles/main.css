@@ -1350,14 +1350,18 @@ button {
 .page-sidebar-nav-links {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     gap: 4px;
 }
 
 .page-sidebar-nav-link {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     padding: 6px 4px;
-    font-size: var(--font-size-sm);
+    width: max-content;
+    max-width: 100%;
+    font-size: 0.8rem;
     font-weight: 700;
     color: var(--color-text-muted);
     border-radius: 0;
@@ -1370,8 +1374,23 @@ button {
 
 .page-sidebar-nav-link-sub {
     padding-left: 18px;
-    font-size: 0.8rem;
     font-weight: 650;
+}
+
+.research-sidebar-nav .page-sidebar-nav-link-sub {
+    align-self: flex-end;
+    margin-right: 18px;
+    padding: 4px 0 4px 14px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: rgba(17, 24, 39, 0.58);
+    border-left: 1px solid rgba(17, 24, 39, 0.14);
+}
+
+.research-sidebar-nav .page-sidebar-nav-link-sub.active,
+.research-sidebar-nav .page-sidebar-nav-link-sub:hover {
+    color: var(--color-text-primary);
+    border-left-color: rgba(42, 157, 143, 0.55);
 }
 
 .page-sidebar-nav-link .nav-arrow {
@@ -1547,6 +1566,17 @@ button {
 
 [data-theme="dark"] .page-sidebar-nav-link.active {
     background: transparent;
+}
+
+[data-theme="dark"] .research-sidebar-nav .page-sidebar-nav-link-sub {
+    color: rgba(229, 231, 235, 0.62);
+    border-left-color: rgba(229, 231, 235, 0.16);
+}
+
+[data-theme="dark"] .research-sidebar-nav .page-sidebar-nav-link-sub.active,
+[data-theme="dark"] .research-sidebar-nav .page-sidebar-nav-link-sub:hover {
+    color: #f3f4f6;
+    border-left-color: rgba(45, 212, 191, 0.58);
 }
 
 [data-theme="dark"] .home-profile-card {

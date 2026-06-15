@@ -1,53 +1,26 @@
 const KW_GROUPS = {
   model: new Set([
-    "LLM", "Language Model", "MoE", "SAM", "Diffusion", "Attention",
-    "CNN", "BERT", "ViT", "FSMN", "PointNet", "Transformer"
+    "LLM", "Language Model", "MoE", "Transformer", "BERT", "Diffusion",
+    "SAM", "Attention", "ViT", "CNN", "FSMN", "PointNet"
   ]),
   taskApplication: new Set([
+    "Multimodal", "Multimodal Understanding", "Video Generation",
+    "Image Generation", "Code Generation", "Reasoning", "Mathematical Reasoning",
+    "Tree of Thoughts", "GLUE", "Hardware", "On-chip",
     "Action Recognition", "Detection", "Image Detection", "Deepfake",
     "Segmentation", "Regression", "Keyword Spotting", "Super-Resolution",
-    "Few-shot Learning", "Reasoning", "GLUE", "X-ray", "Multimodal",
-    "Video Generation", "Point Clouds", "Hardware", "On-chip",
-    "FPGA", "Tree of Thoughts", "Code Generation", "Mathematical Reasoning",
-    "Multimodal Understanding"
+    "Few-shot Learning", "X-ray", "Point Clouds"
   ]),
   technique: new Set([
-    "Quantization", "PTQ", "Binarization", "Knowledge Distillation",
-    "Domain Adaptation", "Cross-domain", "Expert Skipping", "Data-free",
-    "Caching", "Pruning", "Acceleration", "Training-free", "Mid-Training",
-    "De-occlusion", "Triton Kernel", "CUDA Kernel", "MXFP"
+    "Caching", "Expert Skipping", "Knowledge Distillation", "Training-free",
+    "Mid-Training", "Triton Kernel", "CUDA Kernel", "MXFP", "FPGA",
+    "Quantization", "PTQ", "Binarization", "Pruning", "Acceleration",
+    "Domain Adaptation", "Cross-domain", "Data-free", "De-occlusion"
   ]),
   other: new Set([
     "Benchmark", "Survey", "Workshop", "Efficient Computing"
   ])
 };
-
-function capitalizeKeyword(kw) {
-  const str = String(kw || "").trim();
-  if (!str) return str;
-  
-  // Known acronyms that should stay uppercase
-  const acronyms = new Set(["llm", "vit", "bert", "moe", "sam", "ptq", "x-ray", "cnn", "fsmn", "glue"]);
-  const kwLower = str.toLowerCase();
-  
-  // If it's a known acronym, return the mapped uppercase version
-  if (acronyms.has(kwLower)) {
-    const acronymMap = {
-      "llm": "LLM", "vit": "ViT", "bert": "BERT", "moe": "MoE", 
-      "sam": "SAM", "ptq": "PTQ", "x-ray": "X-Ray", "cnn": "CNN",
-      "fsmn": "FSMN", "glue": "GLUE"
-    };
-    return acronymMap[kwLower] || str;
-  }
-  
-  // Split by spaces and hyphens, capitalize each part, then rejoin
-  return str.split(/([\s-]+)/).map((part, index) => {
-    if (/[\s-]/.test(part)) return part; // Keep separators as-is
-    if (part.length === 0) return part;
-    // Capitalize first letter, lowercase the rest
-    return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
-  }).join("");
-}
 
 function getGroupForKw(kw) {
   const kwLower = String(kw || "").trim().toLowerCase().replace(/\s+/g, " ");
@@ -138,6 +111,13 @@ function getGroupForKw(kw) {
       return Array.from(tagNodes).map(n => norm(n.textContent || n.getAttribute("data-tag"))).filter(Boolean);
     };
 
+    const getCardDisplayTags = (card) => {
+      const tagNodes = card.querySelectorAll(".tag, .pub-tag, [data-tag]");
+      return Array.from(tagNodes)
+        .map(n => String(n.textContent || n.getAttribute("data-tag") || "").trim())
+        .filter(Boolean);
+    };
+
     const getSearchText = (card) => {
       const dataSearch = card.getAttribute("data-search");
       if (dataSearch) return norm(dataSearch);
@@ -202,6 +182,13 @@ const GROUP_LABEL = {
   other: "Other"
 };
 
+const getKeywordOrder = (kw) => {
+  const group = getGroupForKw(kw);
+  const groupKeywords = Array.from(KW_GROUPS[group] || []);
+  const index = groupKeywords.findIndex(item => norm(item) === norm(kw));
+  return index === -1 ? Number.MAX_SAFE_INTEGER : index;
+};
+
 const renderKeywords = (allKeywords) => {
   kwRow.innerHTML = "";
 
@@ -211,9 +198,9 @@ const renderKeywords = (allKeywords) => {
     buckets[getGroupForKw(kw)].push(kw);
   }
 
-  // stable ordering inside each group
+  // Keep each group close to the research narrative rather than alphabetic order.
   for (const k of Object.keys(buckets)) {
-    buckets[k].sort((a, b) => a.localeCompare(b));
+    buckets[k].sort((a, b) => getKeywordOrder(a) - getKeywordOrder(b) || a.localeCompare(b));
   }
 
   // render groups
@@ -234,8 +221,8 @@ const renderKeywords = (allKeywords) => {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "kw-btn";
-      btn.textContent = capitalizeKeyword(kw);
-      btn.dataset.kw = kw;
+      btn.textContent = kw;
+      btn.dataset.kw = norm(kw);
       btn.setAttribute("aria-pressed", "false");
 
       btn.addEventListener("click", () => {
@@ -310,7 +297,12 @@ const renderKeywords = (allKeywords) => {
         return;
       }
   
-      const allKeywords = Array.from(new Set(cards.flatMap(getCardTags))).sort((a, b) => a.localeCompare(b));
+      const keywordMap = new Map();
+      for (const tag of cards.flatMap(getCardDisplayTags)) {
+        const key = norm(tag);
+        if (key && !keywordMap.has(key)) keywordMap.set(key, tag);
+      }
+      const allKeywords = Array.from(keywordMap.values()).sort((a, b) => a.localeCompare(b));
       renderKeywords(allKeywords);
   
       for (const b of modeBtns) {

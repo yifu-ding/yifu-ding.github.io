@@ -15,7 +15,7 @@ const PAPERS_CONFIG = [
     tags: ["LLM","MoE","Pruning","Quantization", "Language Model", "Training-free"]
   },
   {
-    url: "https://icml.cc/virtual/2026/poster/66363",
+    url: "https://arxiv.org/abs/2602.02544",
     pdfUrl: "https://arxiv.org/abs/2602.02544",
     codeUrl: "https://github.com/wenhao728/spa-cache",
     detailUrl: "",
@@ -29,7 +29,7 @@ const PAPERS_CONFIG = [
     tags: ["LLM","Diffusion","Caching","Acceleration", "Language Model", "Training-free"]
   },
   {
-    url: "https://www.sciencedirect.com/science/article/abs/pii/S0893608025007361",
+    url: "https://arxiv.org/abs/2409.16694",
     pdfUrl: "https://arxiv.org/abs/2409.16694",
     codeUrl: "",
     detailUrl: "",
@@ -233,7 +233,7 @@ const PAPERS_CONFIG = [
     venue: "ICLR 2022",
     year: 2022,
     title: "Bibert: Accurate fully binarized bert",
-    tags: ["BERT","Binarization","GLUE"]
+    tags: ["BERT","Binarization"]
   },
   {
     url: "https://www.ijcai.org/proceedings/2022/0603.pdf",
@@ -266,11 +266,11 @@ const PAPERS_CONFIG = [
     tags: ["Attention","Triton Kernel","Quantization"]
   },
   {
-    url: "https://arxiv.org/abs/2604.03950",
+    url: "https://arxiv.org/pdf/2604.03950",
     pdfUrl: "https://arxiv.org/pdf/2604.03950",
     codeUrl: "https://github.com/yifu-ding/MP-Sparse-Attn",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/diagonal-tailed-overview.png",
     venue: "EDGE @ CVPR 2026",
     year: 2026,
     title: "Diagonal-Tiled Mixed-Precision Attention for Efficient Low-Bit MXFP Inference",
@@ -279,7 +279,7 @@ const PAPERS_CONFIG = [
     tags: ["Attention","Triton Kernel","Quantization","MXFP"]
   },
   {
-    url: "https://arxiv.org/abs/2604.03957",
+    url: "https://arxiv.org/pdf/2604.03957",
     pdfUrl: "https://arxiv.org/pdf/2604.03957",
     codeUrl: "https://github.com/yifu-ding/BGEMM-CUDA",
     detailUrl: "",
@@ -318,15 +318,6 @@ const PAPERS_CONFIG = [
     tags: ["Video Generation","Diffusion","Attention"]
   },
   {
-    url: "https://arxiv.org/pdf/2309.01945",
-    detailUrl: "",
-    imageUrl: "src/papers/imgs/on-chip-hardware-intro-figure.png",
-    venue: "ACM MM 2022",
-    year: 2022,
-    title: "OHQ: On-chip Hardware-aware Quantization",
-    tags: ["Hardware","On-chip","Quantization"]
-  },
-  {
     url: "https://www.ijcai.org/proceedings/2025/0059.pdf",
     pdfUrl: "https://www.ijcai.org/proceedings/2025/0059.pdf",
     codeUrl: "https://github.com/rstao-bjtu/QMDD",
@@ -352,7 +343,7 @@ const PAPERS_CONFIG = [
   {
     url: "https://doi.org/10.1109/TCSVT.2023.3250646",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/spatial-temporal-adaptive-overview.png",
     venue: "IEEE TCSVT 2021",
     year: 2021,
     title: "Spatio-temporal adaptive network with bidirectional temporal difference for action recognition",

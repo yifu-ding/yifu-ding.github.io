@@ -107,6 +107,45 @@ class LanguageManager {
                 fund_completion_title: 'Outstanding Doctoral Academic Fund Completion',
                 fund_completion_desc: 'Successfully passed the completion review for the Outstanding Doctoral Academic Fund at Beihang University.',
                 fund_completion_date: 'Jun 2026',
+                timeline_phd_completion_title: '⭐️ Expected Ph.D. Completion and Open to Industry Research Opportunities ⭐️',
+                timeline_phd_completion_desc: 'Expected to complete my Ph.D. in December 2026. I am currently seeking Singapore-based opportunities at major technology companies and warmly welcome interview opportunities.',
+                timeline_phd_completion_date: 'Dec 2026',
+                timeline_ntu_visit_title: 'Started Visiting Research at Nanyang Technological University',
+                timeline_ntu_visit_desc: 'Visited Nanyang Technological University in Singapore, supervised by Prof. Dacheng Tao.',
+                timeline_ntu_visit_date: 'Nov 2024',
+                timeline_emclr_publicity_title: 'Publicity Chair for EMCLR Workshop at ACM MM 2024',
+                timeline_emclr_publicity_desc: 'Served as Publicity Chair for the 1st International Workshop on Efficient Multimedia Computing under Limited Resources at ACM MM 2024.',
+                timeline_emclr_publicity_date: 'Oct 2024',
+                timeline_glow_local_title: 'Local Arrangement Chair for GLOW Workshop at IJCAI 2024',
+                timeline_glow_local_desc: 'Served as Local Arrangement Chair for the 2nd International Workshop on Generalizing from Limited Resources in the Open World at IJCAI 2024, responsible for on-site logistics and coordination to ensure smooth workshop operations.',
+                timeline_glow_local_date: 'Aug 2024',
+                timeline_reg_ptq_title: 'Paper Accepted at CVPR 2024',
+                timeline_reg_ptq_desc: '"Reg-PTQ: Regression-specialized Post-training Quantization for Fully Quantized Object Detector" accepted at CVPR 2024.',
+                timeline_reg_ptq_date: 'Jun 2024',
+                timeline_proposal_title: 'Passed Ph.D. Proposal Defense with Outstanding Recognition',
+                timeline_proposal_desc: 'Passed the Ph.D. proposal defense at Beihang University and received Outstanding Proposal recognition.',
+                timeline_proposal_date: 'Mar 2024',
+                timeline_qualification_title: 'Passed Ph.D. Qualification Exam',
+                timeline_qualification_desc: 'Passed the doctoral qualification exam at Beihang University.',
+                timeline_qualification_date: 'Oct 2022',
+                timeline_meituan_title: 'Research Intern at Meituan Foundation Model Group',
+                timeline_meituan_desc: 'Worked on edge deployment research for vision ViT models at Meituan Foundation Model Group, mentored by Zhenhua Chai.',
+                timeline_meituan_date: '2022 - 2023',
+                timeline_apq_vit_title: 'First First-authored Paper Accepted at CVPR 2022',
+                timeline_apq_vit_desc: '"Towards Accurate Post-Training Quantization for Vision Transformer" accepted at CVPR 2022, my first first-authored paper.',
+                timeline_apq_vit_date: 'Jun 2022',
+                timeline_phd_start_title: 'Started Direct Ph.D. Study at Beihang University',
+                timeline_phd_start_desc: 'Enrolled as a direct Ph.D. student at the School of Computer Science and Engineering, Beihang University, supervised by Prof. Xianglong Liu, and started my academic journey.',
+                timeline_phd_start_date: 'Sep 2021',
+                timeline_bachelor_title: 'Received B.Eng. Degree from Beihang University',
+                timeline_bachelor_desc: 'Received my B.Eng. degree from the School of Computer Science and Engineering, Beihang University, with an Outstanding Undergraduate Thesis on low-bit quantization, compression, and acceleration for BERT models.',
+                timeline_bachelor_date: 'Jun 2021',
+                timeline_tag_visit: 'Visit',
+                timeline_tag_milestone: 'Milestone',
+                timeline_tag_internship: 'Internship',
+                timeline_tag_education: 'Education',
+                timeline_tag_opportunity: 'Opportunity',
+                timeline_tag_service: 'Service',
                 
                 btn_view_research: 'Research',
                 btn_view_research_2: 'View Research →',
@@ -345,6 +384,45 @@ class LanguageManager {
                 fund_completion_title: '优秀博士研究生学术卓越基金结题',
                 fund_completion_desc: '顺利通过北京航空航天大学优秀博士研究生学术卓越基金结题验收。',
                 fund_completion_date: 'Jun 2026',
+                timeline_phd_completion_title: '⭐️ 即将完成博士学业，并寻找新加坡工作机会 ⭐️',
+                timeline_phd_completion_desc: '预计于 2026 年 12 月完成博士学业。目前正积极关注新加坡地区大型科技公司的研究与工程岗位机会，欢迎相关面试邀约。',
+                timeline_phd_completion_date: '2026年12月',
+                timeline_ntu_visit_title: '赴南洋理工大学访问研究',
+                timeline_ntu_visit_desc: '前往新加坡南洋理工大学访问，师从陶大程教授。',
+                timeline_ntu_visit_date: '2024年11月',
+                timeline_emclr_publicity_title: '担任 ACM MM 2024 EMCLR Workshop 宣传主席',
+                timeline_emclr_publicity_desc: '担任 ACM MM 2024 第 1 届 Efficient Multimedia Computing under Limited Resources 国际研讨会宣传主席。',
+                timeline_emclr_publicity_date: '2024年10月',
+                timeline_glow_local_title: '担任 IJCAI 2024 GLOW Workshop 会务主席',
+                timeline_glow_local_desc: '担任 IJCAI 2024 第 2 届 Generalizing from Limited Resources in the Open World 国际研讨会会务主席，负责现场会务和协调工作，保障 workshop 顺利运行。',
+                timeline_glow_local_date: '2024年8月',
+                timeline_reg_ptq_title: '论文被 CVPR 2024 接收',
+                timeline_reg_ptq_desc: '论文“Reg-PTQ: Regression-specialized Post-training Quantization for Fully Quantized Object Detector”被 CVPR 2024 接收。',
+                timeline_reg_ptq_date: '2024年6月',
+                timeline_proposal_title: '博士开题答辩通过并获优秀开题',
+                timeline_proposal_desc: '在北京航空航天大学通过博士开题答辩，并获得优秀开题。',
+                timeline_proposal_date: '2024年3月',
+                timeline_qualification_title: '通过博士生资格考试',
+                timeline_qualification_desc: '在北京航空航天大学通过博士生资格考试。',
+                timeline_qualification_date: '2022年10月',
+                timeline_meituan_title: '美团基础模型组研究实习',
+                timeline_meituan_desc: '在美团基础模型组实习，导师为柴振华，从事视觉 ViT 模型端侧部署研究。',
+                timeline_meituan_date: '2022年 - 2023年',
+                timeline_apq_vit_title: '首篇一作论文被 CVPR 2022 接收',
+                timeline_apq_vit_desc: '论文“Towards Accurate Post-Training Quantization for Vision Transformer”被 CVPR 2022 接收，这是我的第一篇一作论文。',
+                timeline_apq_vit_date: '2022年6月',
+                timeline_phd_start_title: '直博入学北京航空航天大学计算机学院',
+                timeline_phd_start_desc: '直博入学北京航空航天大学计算机学院，师从刘祥龙教授，开启学术研究旅程。',
+                timeline_phd_start_date: '2021年9月',
+                timeline_bachelor_title: '获得北京航空航天大学计算机学院学士学位',
+                timeline_bachelor_desc: '获得北京航空航天大学计算机学院学士学位，并获得优秀本科毕业设计；毕设主题为面向 BERT 模型的低比特量化、压缩与加速。',
+                timeline_bachelor_date: '2021年6月',
+                timeline_tag_visit: '访问',
+                timeline_tag_milestone: '里程碑',
+                timeline_tag_internship: '实习',
+                timeline_tag_education: '教育',
+                timeline_tag_opportunity: '机会',
+                timeline_tag_service: '服务',
                 
                 btn_view_research: '研究工作',
                 btn_view_research_2: '查看研究 →',
@@ -1239,13 +1317,33 @@ document.addEventListener('DOMContentLoaded', () => {
 // Load More Functionality
 // ===========================
 
-function setupLoadMore(buttonId, itemSelector, initialVisible, loadPerClick, visibleDisplay) {
+function setupLoadMore(buttonId, itemSelector, initialVisible, loadPerClick, visibleDisplay, finalAction) {
     const loadMoreBtn = document.getElementById(buttonId);
     if (!loadMoreBtn) return;
 
-    const items = document.querySelectorAll(itemSelector);
+    const items = Array.from(document.querySelectorAll(itemSelector))
+        .filter(item => item.style.display !== 'none');
     const totalItems = items.length;
     let currentVisible = initialVisible;
+    let isFinalAction = false;
+
+    const setFinalAction = () => {
+        if (!finalAction) {
+            loadMoreBtn.style.display = 'none';
+            return;
+        }
+
+        isFinalAction = true;
+        loadMoreBtn.style.display = '';
+        loadMoreBtn.removeAttribute('data-i18n');
+        const label = loadMoreBtn.querySelector('.load-more-label');
+        if (label) {
+            label.removeAttribute('data-i18n');
+            label.textContent = finalAction.text;
+        } else {
+            loadMoreBtn.textContent = finalAction.text;
+        }
+    };
 
     items.forEach((item, index) => {
         if (index >= initialVisible) {
@@ -1254,10 +1352,15 @@ function setupLoadMore(buttonId, itemSelector, initialVisible, loadPerClick, vis
     });
 
     if (totalItems <= initialVisible) {
-        loadMoreBtn.style.display = 'none';
+        setFinalAction();
     }
 
     loadMoreBtn.addEventListener('click', () => {
+        if (isFinalAction) {
+            window.location.href = finalAction.href;
+            return;
+        }
+
         const nextVisible = Math.min(currentVisible + loadPerClick, totalItems);
 
         for (let i = currentVisible; i < nextVisible; i++) {
@@ -1278,12 +1381,18 @@ function setupLoadMore(buttonId, itemSelector, initialVisible, loadPerClick, vis
         currentVisible = nextVisible;
 
         if (currentVisible >= totalItems) {
-            loadMoreBtn.style.display = 'none';
+            setFinalAction();
         }
     });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    setupLoadMore('load-more-papers', '.papers-list .paper-card', 3, 3, 'grid');
-    setupLoadMore('load-more-news', '.updates-timeline > li', 5, 3, '');
+    setupLoadMore('load-more-papers', '.papers-list .paper-card', 3, 3, 'grid', {
+        text: 'Go to Publication Page',
+        href: 'research.html#all-publications'
+    });
+    setupLoadMore('load-more-news', '.updates-timeline > li', 4, 3, '', {
+        text: 'Go to Timeline Page',
+        href: 'timeline.html'
+    });
 });

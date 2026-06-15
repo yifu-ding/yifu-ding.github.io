@@ -211,9 +211,14 @@
                         <ol class="updates-list timeline-list updates-timeline">
                             <li>
                                 <span class="update-icon">📢</span>
-                                <span class="timeline-entry-content">We warmly welcome potential speakers to join us at this year's workshop, <strong>The 3rd Efficient Computing under Limited Resources: Modern AI Models and Systems</strong>. Past workshop homepages:
+                                <span class="timeline-entry-content"><span class="timeline-entry-title-alert">We warmly welcome potential speakers to join us at this year's workshop, <strong>The 3rd Efficient Computing under Limited Resources: Modern AI Models and Systems</strong>.</span> Past workshop homepages:
                                 <a href="https://eclr-workshop.github.io/" target="_blank" rel="noopener">2nd at ICCV 2025</a>,
                                 <a href="https://eclr-workshop.github.io/index_2024.html" target="_blank" rel="noopener">1st at ACM MM 2024</a>.</span>
+                                <time class="timeline-date" datetime="2026-06">Jun 2026</time>
+                            </li>
+                            <li>
+                                <span class="update-icon">📢</span>
+                                <span class="timeline-entry-content">My colleagues are holding <a href="https://glow-ijcai-2026.github.io/glow-ijcai-2026/" target="_blank" rel="noopener"><strong>the 4th International Workshop on Generalizing from Limited Resources in the Open World</strong></a> at IJCAI 2026 in Bremen, Germany. Welcome to follow and attend.</span>
                                 <time class="timeline-date" datetime="2026-06">Jun 2026</time>
                             </li>
                             <li>
@@ -233,6 +238,7 @@
                                 <time class="timeline-date" datetime="2026-01">Jan 2026</time>
                             </li>
                             
+                            <!-- 2025 updates are available on the timeline page.
                             <li>
                                 <span class="update-icon github-icon">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -264,6 +270,7 @@
                                 <span class="timeline-entry-content">One paper accepted by <strong>NeurIPS 2025</strong>: <span class="paper-title">"<a href="https://arxiv.org/pdf/2505.18809" target="_blank" rel="noopener">VORTA: Efficient Video Diffusion via Routing Sparse Attention</a>"</span>. Congratulations to <a href="https://scholar.google.com/citations?user=pUevLugAAAAJ&hl" target="_blank" rel="noopener">Wenhao Sun</a>!</span>
                                 <time class="timeline-date" datetime="2025">2025</time>
                             </li>
+                            -->
                         </ol>
                         <div class="load-more-container">
                             <button id="load-more-news" class="load-more-btn"><span class="load-more-label" data-i18n="load_more_news">Load More Updates</span></button>
@@ -320,11 +327,31 @@
                                 </div>
                             </div>
 
+                            <!-- Paper 6: QVGen -->
+                            <div class="paper-card" style="display: none;">
+                                <div class="paper-card-left">
+                                    <div class="paper-card-image-wrapper">
+                                        <p class="paper-card-venue">ICLR 2026</p>
+                                        <img src="src/papers/imgs/qvgen.png" alt="QVGen" loading="lazy">
+                                    </div>
+                                    <div class="paper-card-links">
+                                        <a href="https://arxiv.org/pdf/2505.11497" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                        <a href="https://github.com/ModelTC/QVGen" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
+                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="qvgen">BibTex</a>
+                                    </div>
+                                </div>
+                                <div class="paper-card-content">
+                                    <h4 class="paper-card-title">QVGen: Pushing the Limit of Quantized Video Generative Models</h4>
+                                    <p class="paper-card-authors">Yushi Huang, Ruihao Gong, Jing Liu, <strong>Yifu Ding</strong>, Chengtao Lv, Haotong Qin, Jun Zhang</p>
+                                    <p class="paper-card-abstract">QVGen enables extremely low-bit quantization-aware training for video diffusion models. It stabilizes QAT by reducing gradient norms with auxiliary modules, then removes inference overhead via rank-decay. Shows near full-precision quality at 4-bit.</p>
+                                </div>
+                            </div>
+
                             <!-- Paper 2: LLM Quantization Survey -->
                             <div class="paper-card">
                                 <div class="paper-card-left">
                                     <div class="paper-card-image-wrapper">
-                                        <p class="paper-card-venue">Neural Networks</p>
+                                        <p class="paper-card-venue">Neural Networks 2025</p>
                                         <img src="src/papers/imgs/llm-quant-survey.png" alt="LLM Quantization Survey" loading="lazy">
                                     </div>
                                     <div class="paper-card-links">
@@ -398,45 +425,7 @@
                                 </div>
                             </div>
 
-                            <!-- Paper 5: Deepfake Detection
-                            <div class="paper-card">
-                                <div class="paper-card-left">
-                                    <div class="paper-card-image-wrapper">
-                                        <p class="paper-card-venue">IJCAI 2025</p>
-                                        <img src="src/papers/imgs/unlocking.png" alt="Deepfake Detection" loading="lazy">
-                                    </div>
-                                    <div class="paper-card-links">
-                                        <a href="https://www.ijcai.org/proceedings/2025/0059.pdf" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
-                                        <a href="https://github.com/rstao-bjtu/QMDD" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
-                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="deepfake">BibTex</a>
-                                    </div>
-                                </div>
-                                <div class="paper-card-content">
-                                    <h4 class="paper-card-title">Unlocking the Potential of Lightweight Quantized Models for Deepfake Detection</h4>
-                                    <p class="paper-card-authors">Renshuai Tao, Ziheng Qin, <strong>Yifu Ding</strong>, Chuangchuang Tan, Jiakai Wang, Wei Wang</p>
-                                    <p class="paper-card-abstract">This work targets real-time edge deepfake detection via low-bit quantization. A Connected Quantized Block captures shared forgery features while preserving textures. Results show 10.8× compute and 12.4× storage reduction with strong accuracy.</p>
-                                </div>
-                            </div> -->
-
-                            <!-- Paper 6: QVGen -->
-                            <div class="paper-card" style="display: none;">
-                                <div class="paper-card-left">
-                                    <div class="paper-card-image-wrapper">
-                                        <p class="paper-card-venue">ICLR 2026</p>
-                                        <img src="src/papers/imgs/qvgen.png" alt="QVGen" loading="lazy">
-                                    </div>
-                                    <div class="paper-card-links">
-                                        <a href="https://arxiv.org/pdf/2505.11497" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
-                                        <a href="https://github.com/ModelTC/QVGen" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
-                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="qvgen">BibTex</a>
-                                    </div>
-                                </div>
-                                <div class="paper-card-content">
-                                    <h4 class="paper-card-title">QVGen: Pushing the Limit of Quantized Video Generative Models</h4>
-                                    <p class="paper-card-authors">Yushi Huang, Ruihao Gong, Jing Liu, <strong>Yifu Ding</strong>, Chengtao Lv, Haotong Qin, Jun Zhang</p>
-                                    <p class="paper-card-abstract">QVGen enables extremely low-bit quantization-aware training for video diffusion models. It stabilizes QAT by reducing gradient norms with auxiliary modules, then removes inference overhead via rank-decay. Shows near full-precision quality at 4-bit.</p>
-                                </div>
-                            </div>
+                            
                         </div>
                         
                         <!-- Load More Button -->
@@ -615,7 +604,7 @@
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-top">
-                <p class="footer-built">Built by <a href="index.html">Yifu Ding</a> with research, code, and curiosity.</p>
+                <p class="footer-built">Built by <a href="index.html">Yifu Ding</a>.</p>
                 <div class="footer-social" aria-label="Footer links">
                     <a href="https://scholar.google.com/citations?user=RCEI1r0AAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
