@@ -1263,6 +1263,27 @@ keywords = {Large language model, Quantization, Low-bit, System, Algorithm},
   author={Huang, Yushi and Gong, Ruihao and Liu, Jing and Ding, Yifu and Lv, Chengtao and Qin, Haotong and Zhang, Jun},
   journal={arXiv preprint arXiv:2505.11497},
   year={2025}
+}`,
+
+    'modes': `@inproceedings{huang2026modes,
+  title={MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping},
+  author={Huang, Yushi and Wang, Zining and Yuan, Zhenyu and Ding, Yifu and Gong, Ruihao and Guo, Jinyang and Liu, Xianglong and Zhang, Jun},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2026}
+}`,
+
+    'diagonal-tiled': `@inproceedings{ding2026diagonal,
+  title={Diagonal-Tiled Mixed-Precision Attention for Efficient Low-Bit MXFP Inference},
+  author={Ding, Yifu and Zhang, Xuan},
+  booktitle={EDGE Workshop at IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2026}
+}`,
+
+    'lowbit-flash': `@inproceedings{du2025lowbit,
+  title={Low-bit FlashAttention Accelerated Operator Design Based on Triton},
+  author={Du, Jinyang and Guo, Jinyang and Ding, Yifu},
+  booktitle={ECLR Workshop at IEEE/CVF International Conference on Computer Vision (ICCV)},
+  year={2025}
 }`
 };
 

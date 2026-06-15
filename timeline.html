@@ -69,13 +69,16 @@
             <p>Latest updates, publications, and milestones.</p>
         </header>
 
+        <div class="timeline-filter" id="timeline-filter"></div>
+
         <section class="news-timeline" aria-label="Timeline">
             <article class="news-item">
                 <div class="news-marker" aria-hidden="true">🚀</div>
                 <div class="news-content">
                     <h2 class="timeline-highlight-red" data-i18n="timeline_phd_completion_title">Expected Ph.D. Completion and Open to Industry Research Opportunities</h2>
                     <p data-i18n="timeline_phd_completion_desc">Expected to complete my Ph.D. in December 2026. I am currently seeking Singapore-based opportunities at major technology companies and warmly welcome interview opportunities.</p>
-                    <span class="news-tag tag-service" data-i18n="timeline_tag_opportunity">Opportunity</span>
+                    <span class="news-tag tag-education" data-i18n="timeline_tag_education">Education</span>
+                    <span class="news-tag tag-career">Career</span>
                 </div>
                 <time datetime="2026-12" data-i18n="timeline_phd_completion_date">Dec 2026</time>
             </article>
@@ -165,7 +168,7 @@
                 <div class="news-content">
                     <h2 data-i18n="timeline_ntu_visit_title">Started Visiting Research at Nanyang Technological University</h2>
                     <p data-i18n="timeline_ntu_visit_desc">Visited Nanyang Technological University in Singapore, supervised by Prof. Dacheng Tao.</p>
-                    <span class="news-tag tag-service" data-i18n="timeline_tag_visit">Visit</span>
+                    <span class="news-tag tag-education" data-i18n="timeline_tag_education">Education</span>
                 </div>
                 <time datetime="2024-11" data-i18n="timeline_ntu_visit_date">Nov 2024</time>
             </article>
@@ -306,5 +309,65 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script>
+    (function() {
+        const items = document.querySelectorAll('.news-timeline .news-item');
+        const filterContainer = document.getElementById('timeline-filter');
+        const tagSet = new Set();
+        const selectedTags = new Set();
+
+        // Collect all unique tags
+        items.forEach(item => {
+            item.querySelectorAll('.news-tag').forEach(tag => {
+                tagSet.add(tag.textContent.trim());
+            });
+        });
+
+        // Build filter bar
+        const row = document.createElement('div');
+        row.className = 'timeline-filter-row';
+
+        tagSet.forEach(name => {
+            const btn = document.createElement('button');
+            btn.className = 'tl-tag-btn';
+            btn.textContent = name;
+            btn.addEventListener('click', () => {
+                if (selectedTags.has(name)) {
+                    selectedTags.delete(name);
+                    btn.classList.remove('is-selected');
+                } else {
+                    selectedTags.add(name);
+                    btn.classList.add('is-selected');
+                }
+                applyFilter();
+            });
+            row.appendChild(btn);
+        });
+
+        const clearBtn = document.createElement('button');
+        clearBtn.className = 'tl-clear-btn';
+        clearBtn.textContent = 'Clear';
+        clearBtn.addEventListener('click', () => {
+            selectedTags.clear();
+            row.querySelectorAll('.tl-tag-btn').forEach(b => b.classList.remove('is-selected'));
+            applyFilter();
+        });
+        row.appendChild(clearBtn);
+
+        filterContainer.appendChild(row);
+
+        function applyFilter() {
+            items.forEach(item => {
+                if (selectedTags.size === 0) {
+                    item.style.display = '';
+                    return;
+                }
+                const itemTags = Array.from(item.querySelectorAll('.news-tag')).map(t => t.textContent.trim());
+                const match = itemTags.some(t => selectedTags.has(t));
+                item.style.display = match ? '' : 'none';
+            });
+        }
+    })();
+    </script>
 </body>
 </html>

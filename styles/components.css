@@ -2346,6 +2346,63 @@ html, body {
     color: var(--color-text-secondary);
   }
 
+  /* Timeline tag filter */
+  .timeline-filter {
+    margin-bottom: var(--space-lg);
+  }
+
+  .timeline-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .tl-tag-btn {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(17, 24, 39, 0.04);
+    color: rgba(17, 24, 39, 0.72);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    line-height: 1.3;
+    cursor: pointer;
+    transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  .tl-tag-btn:hover {
+    transform: translateY(-1px);
+    background: rgba(17, 24, 39, 0.09);
+  }
+
+  .tl-tag-btn.is-selected {
+    background: var(--color-accent, #FCD924);
+    color: rgba(17, 24, 39, 0.9);
+    border-color: transparent;
+  }
+
+  .tl-clear-btn {
+    border: none;
+    background: transparent;
+    color: var(--color-text-muted);
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 120ms ease;
+  }
+
+  .tl-clear-btn:hover {
+    color: var(--color-text-primary);
+  }
+
   .news-timeline {
     position: relative;
     margin: 0 auto;
@@ -2467,6 +2524,11 @@ html, body {
   .tag-service {
     color: #2563eb;
     background: #dbeafe;
+  }
+
+  .tag-career {
+    color: #7c3aed;
+    background: #ede9fe;
   }
 
   .tag-grant {
@@ -5657,6 +5719,30 @@ html, body {
     color: #9ca3af;
   }
   
+  /* Timeline filter - dark mode */
+  [data-theme="dark"] .tl-tag-btn {
+    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  [data-theme="dark"] .tl-tag-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  [data-theme="dark"] .tl-tag-btn.is-selected {
+    background: var(--color-accent, #FCD924);
+    color: rgba(17, 24, 39, 0.9);
+  }
+
+  [data-theme="dark"] .tl-clear-btn {
+    color: #9ca3af;
+  }
+
+  [data-theme="dark"] .tl-clear-btn:hover {
+    color: #e5e7eb;
+  }
+
   /* Studio page buttons - dark mode */
   [data-theme="dark"] .studio-hero-btn {
     background: #1f2937;

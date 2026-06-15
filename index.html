@@ -287,7 +287,7 @@
                     </div>
                     <div class="subsection-content">
                         <div class="papers-list">
-                            <!-- Paper 0: MoE Compression -->
+                            <!-- Paper: MoE Compression - ICML 2026 Spotlight -->
                             <div class="paper-card">
                                 <div class="paper-card-left">
                                     <div class="paper-card-image-wrapper">
@@ -307,7 +307,7 @@
                                 </div>
                             </div>
 
-                            <!-- Paper 1: SPA-Cache -->
+                            <!-- Paper: SPA-Cache - ICML 2026 -->
                             <div class="paper-card">
                                 <div class="paper-card-left">
                                     <div class="paper-card-image-wrapper">
@@ -327,8 +327,48 @@
                                 </div>
                             </div>
 
-                            <!-- Paper 6: QVGen -->
-                            <div class="paper-card" style="display: none;">
+                            <!-- Paper: MoDES - CVPR 2026 -->
+                            <div class="paper-card">
+                                <div class="paper-card-left">
+                                    <div class="paper-card-image-wrapper">
+                                        <p class="paper-card-venue">CVPR 2026</p>
+                                        <img src="src/papers/imgs/modes-overview.png" alt="MoDES" loading="lazy">
+                                    </div>
+                                    <div class="paper-card-links">
+                                        <a href="https://arxiv.org/pdf/2511.15690" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                        <a href="https://github.com/ModelTC/MoDES" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
+                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="modes">BibTex</a>
+                                    </div>
+                                </div>
+                                <div class="paper-card-content">
+                                    <h4 class="paper-card-title">MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping</h4>
+                                    <p class="paper-card-authors">Yushi Huang, Zining Wang, Zhenyu Yuan, <strong>Yifu Ding</strong>, Ruihao Gong, Jinyang Guo, Xianglong Liu, Jun Zhang</p>
+                                    <p class="paper-card-abstract">MoDES accelerates multimodal LLM inference with training-free expert skipping driven by modality heterogeneity.</p>
+                                </div>
+                            </div>
+
+                            <!-- Paper: Diagonal-Tiled - EDGE @ CVPR 2026 -->
+                            <div class="paper-card">
+                                <div class="paper-card-left">
+                                    <div class="paper-card-image-wrapper">
+                                        <p class="paper-card-venue">EDGE @ CVPR 2026</p>
+                                        <img src="src/papers/imgs/diagonal-tailed-overview.png" alt="Diagonal-Tiled Mixed-Precision Attention" loading="lazy">
+                                    </div>
+                                    <div class="paper-card-links">
+                                        <a href="https://arxiv.org/pdf/2604.03950" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                        <a href="https://github.com/yifu-ding/MP-Sparse-Attn" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
+                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="diagonal-tiled">BibTex</a>
+                                    </div>
+                                </div>
+                                <div class="paper-card-content">
+                                    <h4 class="paper-card-title">Diagonal-Tiled Mixed-Precision Attention for Efficient Low-Bit MXFP Inference</h4>
+                                    <p class="paper-card-authors"><strong>Yifu Ding</strong>, Xuan Zhang</p>
+                                    <p class="paper-card-abstract">A Triton-based MXFP mixed-precision attention kernel for efficient and accurate low-bit attention inference on NVIDIA B200.</p>
+                                </div>
+                            </div>
+
+                            <!-- Paper: QVGen - ICLR 2026 -->
+                            <div class="paper-card">
                                 <div class="paper-card-left">
                                     <div class="paper-card-image-wrapper">
                                         <p class="paper-card-venue">ICLR 2026</p>
@@ -347,7 +387,7 @@
                                 </div>
                             </div>
 
-                            <!-- Paper 2: LLM Quantization Survey -->
+                            <!-- Paper: LLM Quantization Survey - Neural Networks 2025 -->
                             <div class="paper-card">
                                 <div class="paper-card-left">
                                     <div class="paper-card-image-wrapper">
@@ -366,46 +406,7 @@
                                 </div>
                             </div>
 
-                            <!-- Paper 3: DA-KD -->
-                            <div class="paper-card">
-                                <div class="paper-card-left">
-                                    <div class="paper-card-image-wrapper">
-                                        <p class="paper-card-venue">ICML 2025</p>
-                                        <img src="src/papers/imgs/da-kd.png" alt="DA-KD" loading="lazy">
-                                    </div>
-                                    <div class="paper-card-links">
-                                        <a href="https://openreview.net/forum?id=NCYBdRCpw1" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
-                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="da-kd">BibTex</a>
-                                    </div>
-                                </div>
-                                <div class="paper-card-content">
-                                    <h4 class="paper-card-title">DA-KD: Difficulty-Aware Knowledge Distillation for Efficient Large Language Models</h4>
-                                    <p class="paper-card-authors">Changyi He, <strong>Yifu Ding</strong>, Jinyang Guo, Ruihao Gong, Haotong Qin, Xianglong Liu</p>
-                                    <p class="paper-card-abstract">DA-KD reduces distillation cost by dynamically selecting training samples based on difficulty. It introduces bidirectional discrepancy loss to stabilize optimization, achieving 2% accuracy gain with half training cost and 4.7× compression.</p>
-                                </div>
-                            </div>
-
-                            <!-- Paper 3: DPTS -->
-                            <div class="paper-card">
-                                <div class="paper-card-left">
-                                    <div class="paper-card-image-wrapper">
-                                        <p class="paper-card-venue">ACL 2025</p>
-                                        <img src="src/papers/imgs/dpts-small.png" alt="DPTS" loading="lazy">
-                                    </div>
-                                    <div class="paper-card-links">
-                                        <a href="https://aclanthology.org/2025.acl-long.550.pdf" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
-                                        <a href="https://github.com/yifu-ding/DPTS" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
-                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="dpts">BibTex</a>
-                                    </div>
-                                </div>
-                                <div class="paper-card-content">
-                                    <h4 class="paper-card-title">Dynamic Parallel Tree Search for Efficient LLM Reasoning</h4>
-                                    <p class="paper-card-authors"><strong>Yifu Ding</strong>, Wentao Jiang, Shunyu Liu, Yongcheng Jing, Jinyang Guo, Yingjie Wang, Jing Zhang, Zengmao Wang, Ziwei Liu, Bo Du, Xianglong Liu, Dacheng Tao</p>
-                                    <p class="paper-card-abstract">DPTS accelerates Tree of Thoughts reasoning by reducing redundant exploration and focus switching. It introduces parallelism streamline for flexible multi-path generation and search mechanism to keep focused. Achieves 2-4× speedup on Qwen-2.5 and Llama-3.</p>
-                                </div>
-                            </div>
-
-                            <!-- Paper 4: VORTA -->
+                            <!-- Paper: VORTA - NeurIPS 2025 -->
                             <div class="paper-card">
                                 <div class="paper-card-left">
                                     <div class="paper-card-image-wrapper">
@@ -425,7 +426,84 @@
                                 </div>
                             </div>
 
-                            
+                            <!-- Paper: Deepfake Detection - IJCAI 2025 -->
+                            <div class="paper-card">
+                                <div class="paper-card-left">
+                                    <div class="paper-card-image-wrapper">
+                                        <p class="paper-card-venue">IJCAI 2025</p>
+                                        <img src="src/papers/imgs/unlocking.png" alt="Deepfake Detection" loading="lazy">
+                                    </div>
+                                    <div class="paper-card-links">
+                                        <a href="https://www.ijcai.org/proceedings/2025/0059.pdf" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                        <a href="https://github.com/rstao-bjtu/QMDD" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
+                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="deepfake">BibTex</a>
+                                    </div>
+                                </div>
+                                <div class="paper-card-content">
+                                    <h4 class="paper-card-title">Unlocking the Potential of Lightweight Quantized Models for Deepfake Detection</h4>
+                                    <p class="paper-card-authors">Renshuai Tao, Ziheng Qin, <strong>Yifu Ding</strong>, Chuangchuang Tan, Jiakai Wang, Wei Wang</p>
+                                    <p class="paper-card-abstract">This work targets real-time edge deepfake detection with low-bit quantization, reducing compute and storage while preserving strong accuracy.</p>
+                                </div>
+                            </div>
+
+                            <!-- Paper: DA-KD - ICML 2025 -->
+                            <div class="paper-card">
+                                <div class="paper-card-left">
+                                    <div class="paper-card-image-wrapper">
+                                        <p class="paper-card-venue">ICML 2025</p>
+                                        <img src="src/papers/imgs/da-kd.png" alt="DA-KD" loading="lazy">
+                                    </div>
+                                    <div class="paper-card-links">
+                                        <a href="https://openreview.net/forum?id=NCYBdRCpw1" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="da-kd">BibTex</a>
+                                    </div>
+                                </div>
+                                <div class="paper-card-content">
+                                    <h4 class="paper-card-title">DA-KD: Difficulty-Aware Knowledge Distillation for Efficient Large Language Models</h4>
+                                    <p class="paper-card-authors">Changyi He, <strong>Yifu Ding</strong>, Jinyang Guo, Ruihao Gong, Haotong Qin, Xianglong Liu</p>
+                                    <p class="paper-card-abstract">DA-KD reduces distillation cost by dynamically selecting training samples based on difficulty. It introduces bidirectional discrepancy loss to stabilize optimization, achieving 2% accuracy gain with half training cost and 4.7× compression.</p>
+                                </div>
+                            </div>
+
+                            <!-- Paper: DPTS - ACL 2025 -->
+                            <div class="paper-card">
+                                <div class="paper-card-left">
+                                    <div class="paper-card-image-wrapper">
+                                        <p class="paper-card-venue">ACL 2025</p>
+                                        <img src="src/papers/imgs/dpts-small.png" alt="DPTS" loading="lazy">
+                                    </div>
+                                    <div class="paper-card-links">
+                                        <a href="https://aclanthology.org/2025.acl-long.550.pdf" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                        <a href="https://github.com/yifu-ding/DPTS" target="_blank" rel="noopener" class="paper-card-link paper-card-link-code">Code</a>
+                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="dpts">BibTex</a>
+                                    </div>
+                                </div>
+                                <div class="paper-card-content">
+                                    <h4 class="paper-card-title">Dynamic Parallel Tree Search for Efficient LLM Reasoning</h4>
+                                    <p class="paper-card-authors"><strong>Yifu Ding</strong>, Wentao Jiang, Shunyu Liu, Yongcheng Jing, Jinyang Guo, Yingjie Wang, Jing Zhang, Zengmao Wang, Ziwei Liu, Bo Du, Xianglong Liu, Dacheng Tao</p>
+                                    <p class="paper-card-abstract">DPTS accelerates Tree of Thoughts reasoning by reducing redundant exploration and focus switching. It introduces parallelism streamline for flexible multi-path generation and search mechanism to keep focused. Achieves 2-4× speedup on Qwen-2.5 and Llama-3.</p>
+                                </div>
+                            </div>
+
+                            <!-- Paper: Low-bit FlashAttention - ECLR 2025 (ICCV Workshop) -->
+                            <div class="paper-card">
+                                <div class="paper-card-left">
+                                    <div class="paper-card-image-wrapper">
+                                        <p class="paper-card-venue">ECLR 2025 (ICCV Workshop)</p>
+                                        <img src="src/papers/imgs/du-low-bit-flash-attention-overview.png" alt="Low-bit FlashAttention" loading="lazy">
+                                    </div>
+                                    <div class="paper-card-links">
+                                        <a href="https://openaccess.thecvf.com/content/ICCV2025W/ECLR/papers/Du_Low-bit_FlashAttention_Accelerated_Operator_Design_Based_on_Triton_ICCVW_2025_paper.pdf" target="_blank" rel="noopener" class="paper-card-link paper-card-link-pdf">PDF</a>
+                                        <a href="#" class="paper-card-link paper-card-link-bibtex" data-bibtex-key="lowbit-flash">BibTex</a>
+                                    </div>
+                                </div>
+                                <div class="paper-card-content">
+                                    <h4 class="paper-card-title">Low-bit FlashAttention Accelerated Operator Design Based on Triton</h4>
+                                    <p class="paper-card-authors">Jinyang Du, Jinyang Guo, <strong>Yifu Ding</strong></p>
+                                    <p class="paper-card-abstract">A Triton-based mixed-precision FlashAttention operator integrates quantization, dequantization, and attention for efficient low-bit inference.</p>
+                                </div>
+                            </div>
+
                         </div>
                         
                         <!-- Load More Button -->
