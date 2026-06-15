@@ -53,7 +53,10 @@ class LanguageManager {
             en: {
                 // Navigation
                 nav_home: 'Home',
+                nav_news: 'News',
+                nav_education: 'Education',
                 nav_research: 'Research',
+                nav_workshops: 'Workshops',
                 nav_studio: 'Photography',
                 nav_contact: 'Contact',
                 
@@ -62,20 +65,25 @@ class LanguageManager {
                 intro_phd_label: 'PhD Candidate',
                 intro_at: 'at',
                 intro_buaa: 'Beihang University',
+                intro_buaa_school: 'School of Computer Science and Engineering',
                 intro_ntu: 'Nanyang Technological University',
+                intro_ntu_college: 'College of Computing and Data Science',
                 intro_joint: '(joint programme). ',
                 intro_supervised: 'Supervised by',
                 intro_prof_liu: 'Prof. Xianglong Liu',
                 intro_prof_tao: 'Prof. Dacheng Tao',
                 intro_and: 'and',
                 intro_research_label: 'Research focus:',
-                intro_research_area: 'Model compression and Inference efficiency',
+                intro_research_area: 'Efficient foundation-model inference and deployment',
                 intro_bachelor: 'Bachelor\'s Degree Graduated: ',
                 intro_bachelor_graduated: '2021',
                 intro_enrolled_label: 'Ph.D Enrolled: ',
                 intro_enrolled_date: 'Sep 2021',
                 intro_expected_label: 'Expected Graduation: ',
                 intro_expected_date: 'Jun 2027',
+                intro_phd_expected: 'PhD Expected Graduation: Dec 2026',
+                intro_phd_expected_label: 'PhD Expected Graduation:',
+                intro_phd_expected_date: 'Dec 2026',
                 
                 // Tools subsection
                 tools_subsection_title: 'Customized Tools',
@@ -109,6 +117,9 @@ class LanguageManager {
                 quick_links: 'Quick links',
                 google_scholar: 'Google Scholar',
                 github: 'GitHub',
+                cv_button: 'CV',
+                cv_option_en: 'EN',
+                cv_option_cn: 'CN',
                 featured_title: 'Featured across channels',
                 featured_subtitle: 'A few representative pieces. Each item is intentionally small and specific.',
                 featured_research_title: 'Neural Network Compression Survey',
@@ -147,23 +158,26 @@ class LanguageManager {
                 
                 // Research Page
                 research_title: 'Research',
-                research_description: 'PhD Candidate at Beihang University, specializing in neural network compression and model quantization. Making deep learning more efficient and accessible for real-world deployment.',
+                research_description: 'AI researcher and Ph.D. candidate in Computer Science, specializing in model compression and acceleration for efficient foundation-model inference and deployment. ',
                 research_photo_credit: 'Photo taken by Yifu Ding in Yellowknife, Canada, December 2025 - Northern Lights',
                 research_focus_title: 'Research Focus',
-                research_focus_1_bold: 'Efficiency optimization for large foundation models',
+                research_focus_1_bold: 'Efficient inference and deployment for large language models and MoE models.',
                 research_focus_1_rest: ', especially LLMs, to reduce memory footprint, latency, and cost with minimal quality loss.',
-                research_focus_2_bold: 'Low-bit quantization',
+                research_focus_1: '<strong>Efficient inference and deployment</strong> for large language models and MoE models.',
                 research_focus_2_rest: ' for LLMs, vision models, and multimodal systems, including practical PTQ and QAT oriented techniques.',
-                research_focus_3_bold: 'Structured pruning and model slimming',
+                research_focus_2: '<strong>Post-training compression and acceleration, </strong> e.g., quantization, pruning, kv cache and decoding optimization.',
+                research_focus_3_bold: 'High-performance operators and kernels for low-bit, sparse, and hardware-aware computation.',
                 research_focus_3_rest: ', focusing on hardware-friendly structures (for example channels, heads, FFN dimensions, and MoE experts).',
-                research_focus_4_bold: 'Efficient AI systems and deployment',
+                research_focus_3: '<strong>High-performance operators and kernels</strong> for low-bit, sparse, and hardware-aware computation.',
+                research_focus_4_bold: 'Multimodal understanding and generation, including vision-language models and image/video diffusion models.',
                 research_focus_4_rest: ', translating model-side compression into real speedups via hardware-aware design and optimization.',
-                research_interests_title: 'Interests',
-                research_interest_1: 'LLM efficiency as an end-to-end, budgeted problem across the full lifecycle, covering both training and inference, and both serving and edge scenarios.',
-                research_interest_2: 'Long-context and KV-cache-aware inference, targeting memory growth, bandwidth limits, and decoding efficiency.',
+                research_focus_4: '<strong>Multimodal understanding and generation</strong>, including vision-language models and image/video diffusion acceleration.',
+                research_interests_title: 'Ongoing Projects',
+                research_interest_1: 'Clinical World Model for physiological forecasting.',
+                research_interest_2: 'Real-time quantum error correction with customized FPGA.',
                 research_interest_3: 'Serving efficiency under SLA constraints, focusing on concurrency, tail latency, and cost efficiency.',
-                research_interest_4: 'Edge efficiency under strict power and memory limits, including heterogeneous collaboration and deployment feasibility.',
-                research_interest_5: 'Cross-layer co-design across algorithms, systems, and hardware, with measurable evaluation of quality, latency, peak memory, bandwidth, and energy.',
+                research_interest_4: 'Deployment-friendly multimodal MoE compression.',
+                research_interest_5: 'Super-resolution diffusion acceleration for image generation.',
                 selected_work_title: 'All Publications',
                 paper_category_quantization: 'Model Quantization',
                 paper_category_sparsification: 'Sparsification / Model Pruning',
@@ -173,6 +187,26 @@ class LanguageManager {
                 sort_by: 'Sort by',
                 sort_year_desc: 'Newest',
                 sort_year_asc: 'Oldest',
+
+                // Education Page
+                education_title: 'Education',
+                education_description: 'My education background.',
+                education_ntu_school: 'Nanyang Technological University',
+                education_ntu_degree: 'Joint-Training Doctoral Student, College of Computing and Data Science',
+                education_ntu_time: 'Nov 2024 - Nov 2026',
+                education_ntu_location: 'Singapore',
+                education_ntu_advisor: 'Supervised by <a href="https://dr.ntu.edu.sg/entities/person/Tao-Dacheng" target="_blank" rel="noopener">Prof. Dacheng Tao</a>.',
+                education_ntu_desc: 'China Scholarship Council joint training program; research focus on efficient foundation-model inference and deployment, especially model compression and quantization for large models.',
+                education_buaa_school: 'Beihang University',
+                education_buaa_phd_degree: 'Ph.D. Candidate, School of Computer Science and Engineering',
+                education_buaa_phd_time: 'Sep 2021 - Dec 2026',
+                education_buaa_location: 'Beijing, China',
+                education_buaa_phd_advisor: 'Supervised by <a href="https://xlliu-beihang.github.io/" target="_blank" rel="noopener">Prof. Xianglong Liu</a> and <a href="https://dr.ntu.edu.sg/entities/person/Tao-Dacheng" target="_blank" rel="noopener">Prof. Dacheng Tao</a>.',
+                education_buaa_phd_desc: 'Research on quantization and compression for Transformer-based architectures, with a focus on efficient foundation-model inference and deployment.',
+                education_buaa_bachelor_school: 'Beihang University',
+                education_buaa_bachelor_degree: 'Bachelor of Engineering, Computer Science',
+                education_buaa_bachelor_time: 'Sep 2017 - Jun 2021',
+                education_buaa_bachelor_desc: 'GPA: 3.80/4.0; rank: 25/257.',
                 // Studio Page
                 studio_title: 'Photography Portfolio',
                 studio_description: 'A space for creative work outside the main track.',
@@ -220,13 +254,20 @@ class LanguageManager {
                 contact_location_label: 'Location',
                 contact_location_value: 'Beijing, China',
                 contact_social_title: 'Connect',
-                contact_form_title: 'Send a Message',
+                contact_form_title: 'Contact Form',
                 contact_form_name: 'Name',
+                contact_form_name_placeholder: 'Your name',
                 contact_form_email: 'Your Email (optional)',
+                contact_form_email_placeholder: 'your@email.com',
                 contact_form_message: 'Message',
+                contact_form_message_placeholder: 'Your message',
                 contact_form_send: 'Send Message',
                 contact_form_success_line1: 'Thank you for your message.',
                 contact_form_success_line2: 'I will get back to you as soon as possible.',
+                contact_methods_title: 'Other Ways to Connect',
+                // contact_email_note: 'Preferred work email',
+                // contact_phone_sg_note: 'Singapore phone',
+                // contact_phone_cn_note: 'Phone / WeChat',
                 
                 // Common
                 loading: 'Loading...',
@@ -242,29 +283,37 @@ class LanguageManager {
             zh: {
                 // 导航
                 nav_home: '首页',
+                nav_news: '新闻',
+                nav_education: '教育经历',
                 nav_research: '研究',
+                nav_workshops: '研讨会',
                 nav_studio: '摄影',
                 nav_contact: '联系',
                 
                 // 首页 - 个人介绍（Welcome 上方）
                 intro_bio_label: '简介：',
                 intro_phd_label: '博士研究生',
-                intro_at: '于',
+                intro_at: '，',
                 intro_buaa: '北京航空航天大学',
+                intro_buaa_school: '计算机学院',
                 intro_ntu: '新加坡南洋理工大学',
+                intro_ntu_college: 'College of Computing and Data Science',
                 intro_joint: '（联合培养）。',
                 intro_supervised: '导师',
                 intro_prof_liu: '刘祥龙教授',
                 intro_prof_tao: '陶大程教授',
                 intro_and: '与',
                 intro_research_label: '研究方向：',
-                intro_research_area: '模型压缩与推理效率',
+                intro_research_area: '高效基础模型推理与部署',
                 intro_bachelor: '本科',
                 intro_bachelor_graduated: '2021年毕业',
                 intro_enrolled_label: '博士入学',
                 intro_enrolled_date: '2021年9月',
                 intro_expected_label: '预计毕业',
                 intro_expected_date: '2027年6月',
+                intro_phd_expected: '博士预计毕业：2026年12月',
+                intro_phd_expected_label: '博士预计毕业：',
+                intro_phd_expected_date: '2026年12月',
                 
                 // 工具包 subsection
                 tools_subsection_title: '工具包',
@@ -298,6 +347,9 @@ class LanguageManager {
                 quick_links: '快速链接',
                 google_scholar: '谷歌学术',
                 github: 'GitHub',
+                cv_button: '简历',
+                cv_option_en: '英文',
+                cv_option_cn: '中文',
                 featured_title: '精选作品',
                 featured_subtitle: '几件代表性作品。每一件都经过精心挑选。',
                 featured_research_title: '神经网络压缩综述',
@@ -335,23 +387,27 @@ class LanguageManager {
                 btn_view_development: '在GitHub查看详情 →',
                 // 研究页面
                 research_title: '研究',
-                research_description: '北京航空航天大学博士研究生，专注于神经网络压缩和模型量化。致力于让深度学习更高效、更易于实际部署。',
+                research_description: 'AI 研究者，计算机专业博士研究生，研究方向为基础模型的压缩与推理加速，致力于提升深度学习模型的部署效率与实际应用能力。',
                 research_photo_credit: '照片由丁一芙拍摄于2025年12月加拿大黄刀镇 - 极光',
                 research_focus_title: '研究重点',
-                research_focus_1_bold: '大型基础模型的效率优化',
+                research_focus_1_bold: '面向大语言模型和 MoE 模型的高效推理与部署。',
                 research_focus_1_rest: '，尤其是大语言模型，在最小化质量损失的前提下减少内存占用、延迟和成本，涵盖模型压缩和推理时策略（如解码和计算控制）。',
-                research_focus_2_bold: '低比特量化',
+                research_focus_1: '<strong>高效推理与部署</strong>，面向大语言模型和 MoE 模型。',
+                research_focus_2_bold: '训练后压缩与加速，包括量化、剪枝、瘦身和蒸馏。',
                 research_focus_2_rest: '，面向大语言模型、视觉模型和多模态系统，包括实用的训练后量化（PTQ）和量化感知训练（QAT）技术。',
-                research_focus_3_bold: '结构化剪枝和模型瘦身',
+                research_focus_2: '<strong>训练后压缩与加速</strong>，包括量化、剪枝、瘦身和蒸馏。',
+                research_focus_3_bold: '面向低比特、稀疏和硬件感知计算的高性能算子与内核。',
                 research_focus_3_rest: '，聚焦于硬件友好的结构（例如通道、注意力头、FFN维度和MoE专家）。',
-                research_focus_4_bold: '高效AI系统与部署',
+                research_focus_3: '<strong>高性能算子与内核</strong>，面向低比特、稀疏和硬件感知计算。',
+                research_focus_4_bold: '多模态理解与生成，包括视觉语言模型和图像/视频扩散模型。',
                 research_focus_4_rest: '，通过硬件感知的设计和优化将模型侧压缩转化为实际加速。',
-                research_interests_title: '研究兴趣',
-                research_interest_1: '将大语言模型效率视为覆盖全生命周期的端到端预算问题，涵盖训练和推理、服务端和边缘场景。',
-                research_interest_2: '长上下文和KV缓存感知的推理，针对内存增长、带宽限制和解码效率。',
+                research_focus_4: '<strong>多模态理解与生成</strong>，包括视觉语言模型和图像/视频扩散模型。',
+                research_interests_title: '进行中的项目',
+                research_interest_1: '面向生理状态预测的临床世界模型。',
+                research_interest_2: '基于定制 FPGA 的实时量子纠错。',
                 research_interest_3: '服务级协议（SLA）约束下的服务效率，关注并发性、尾延迟和成本效率。',
-                research_interest_4: '严格功耗和内存限制下的边缘效率，包括异构协作和部署可行性。',
-                research_interest_5: '算法、系统和硬件的跨层协同设计，通过质量、延迟、峰值内存、带宽和能耗的可测量评估。',
+                research_interest_4: '部署友好的多模态 MoE 压缩。',
+                research_interest_5: '面向图像生成的超分辨率扩散模型加速。',
                 selected_work_title: '论文合集',
                 paper_category_quantization: '模型量化',
                 paper_category_sparsification: '稀疏化 / 模型剪枝',
@@ -361,6 +417,26 @@ class LanguageManager {
                 sort_by: '排序',
                 sort_year_desc: '最新',
                 sort_year_asc: '最早',
+
+                // 教育页面
+                education_title: '教育经历',
+                education_description: '我的教育背景。',
+                education_ntu_school: '新加坡南洋理工大学',
+                education_ntu_degree: '联合培养博士生，College of Computing and Data Science',
+                education_ntu_time: '2024年11月 - 2026年11月',
+                education_ntu_location: '新加坡',
+                education_ntu_advisor: '导师：<a href="https://dr.ntu.edu.sg/entities/person/Tao-Dacheng" target="_blank" rel="noopener">陶大程教授</a>。',
+                education_ntu_desc: '国家留学基金委联合培养项目；研究方向为高效基础模型推理与部署，尤其关注大模型压缩与量化。',
+                education_buaa_school: '北京航空航天大学',
+                education_buaa_phd_degree: '博士研究生，计算机学院',
+                education_buaa_phd_time: '2021年9月 - 2026年12月',
+                education_buaa_location: '中国，北京',
+                education_buaa_phd_advisor: '导师：<a href="https://xlliu-beihang.github.io/" target="_blank" rel="noopener">刘祥龙教授</a>与<a href="https://dr.ntu.edu.sg/entities/person/Tao-Dacheng" target="_blank" rel="noopener">陶大程教授</a>。',
+                education_buaa_phd_desc: '研究 Transformer 架构的量化与压缩，重点关注高效基础模型推理与部署。',
+                education_buaa_bachelor_school: '北京航空航天大学',
+                education_buaa_bachelor_degree: '工学学士，计算机科学与技术',
+                education_buaa_bachelor_time: '2017年9月 - 2021年6月',
+                education_buaa_bachelor_desc: 'GPA：3.80/4.0；排名：25/257。',
                 // 工作室页面
                 studio_title: '摄影作品集',
                 studio_description: '主业之外的创作空间。',
@@ -406,13 +482,20 @@ class LanguageManager {
                 contact_location_label: '位置',
                 contact_location_value: '中国北京',
                 contact_social_title: '社交媒体',
-                contact_form_title: '发送消息',
+                contact_form_title: '联系表单',
                 contact_form_name: '姓名',
+                contact_form_name_placeholder: '您的姓名',
                 contact_form_email: '您的邮箱 (可选)',
+                contact_form_email_placeholder: 'your@email.com',
                 contact_form_message: '消息',
+                contact_form_message_placeholder: '您的留言',
                 contact_form_send: '发送消息',
                 contact_form_success_line1: '感谢您的消息。',
                 contact_form_success_line2: '我会尽快回复您。',
+                contact_methods_title: '其他联系方式',
+                // contact_email_note: '更偏好的工作邮箱',
+                // contact_phone_sg_note: '新加坡手机号',
+                // contact_phone_cn_note: '电话 / 微信同号',
                 
                 // 通用
                 loading: '加载中...',
@@ -493,6 +576,16 @@ class LanguageManager {
             const key = element.getAttribute('data-i18n');
             if (translations[key]) {
                 element.textContent = translations[key];
+            }
+        });
+
+        document.querySelectorAll('[data-i18n-html]').forEach(element => {
+            const key = element.getAttribute('data-i18n-html');
+            if (translations[key]) {
+                element.innerHTML = translations[key]
+                    .replace(/<(?!\/?strong\b)[^>]*>/gi, '')
+                    .replace(/<strong\b[^>]*>/gi, '<strong>')
+                    .replace(/<\/strong>/gi, '</strong>');
             }
         });
 
@@ -596,8 +689,9 @@ const Utils = {
 class SidebarNavigationManager {
     constructor() {
         this.sidebarNav = document.querySelector('.page-sidebar-nav');
+        this.profileSidebar = document.querySelector('.home-profile-sidebar');
         this.navLinks = document.querySelectorAll('.page-sidebar-nav-link');
-        this.sections = document.querySelectorAll('#updates, #recent-papers, #workshop-services, #customized-tools, #discover-channels');
+        this.sections = document.querySelectorAll('#updates, #recent-papers, #workshop-services, #awards-funding');
         this.navHeight = document.querySelector('.main-nav')?.offsetHeight || 72;
         this.offset = 100;
         this.updatesSection = document.querySelector('#updates');
@@ -605,7 +699,7 @@ class SidebarNavigationManager {
     }
 
     init() {
-        if (!this.sidebarNav || !this.navLinks.length) return;
+        if (!this.sidebarNav && !this.profileSidebar) return;
 
         // Setup scroll spy
         this.setupScrollSpy();
@@ -658,13 +752,17 @@ class SidebarNavigationManager {
 
         // Show sidebar when scrolled to the Updates section
         if (scrollPosition >= updatesTop - windowHeight / 2) {
-            this.sidebarNav.classList.add('visible');
+            if (this.sidebarNav) this.sidebarNav.classList.add('visible');
+            if (this.profileSidebar) this.profileSidebar.classList.add('visible');
         } else {
-            this.sidebarNav.classList.remove('visible');
+            if (this.sidebarNav) this.sidebarNav.classList.remove('visible');
+            if (this.profileSidebar) this.profileSidebar.classList.remove('visible');
         }
     }
 
     updateActiveLink() {
+        if (!this.navLinks.length) return;
+
         const scrollPosition = window.pageYOffset + this.offset;
 
         // Find which section is currently in view
@@ -704,6 +802,37 @@ class SidebarNavigationManager {
 }
 
 // ===========================
+// CV Dropdown Manager
+// ===========================
+
+class CVDropdownManager {
+    constructor() {
+        this.switcher = document.querySelector('.cv-switcher');
+        this.button = document.querySelector('.cv-button');
+        this.init();
+    }
+
+    init() {
+        if (!this.switcher || !this.button) return;
+
+        this.button.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const isActive = this.switcher.classList.toggle('active');
+            this.button.setAttribute('aria-expanded', String(isActive));
+        });
+
+        this.switcher.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+
+        document.addEventListener('click', () => {
+            this.switcher.classList.remove('active');
+            this.button.setAttribute('aria-expanded', 'false');
+        });
+    }
+}
+
+// ===========================
 // Initialize Everything
 // ===========================
 
@@ -714,6 +843,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardManager = new CardManager();
     const themeManager = new ThemeManager();
     const sidebarNavigationManager = new SidebarNavigationManager();
+    const cvDropdownManager = new CVDropdownManager();
 
     // Add smooth scrolling for anchor links (only for #hash links, not page navigation)
     document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
@@ -915,6 +1045,22 @@ if (form) {
 
 // BibTex database embedded in JavaScript
 const BIBTEX_DATABASE = {
+    'moe-compression': `@inproceedings{ding2026moecompression,
+  title={Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression},
+  author={Ding, Yifu and Wang, Jiacheng and Yang, Ge and Jing, Yongcheng and Guo, Jinyang and Liu, Xianglong and Tao, Dacheng},
+  booktitle={Forty-third International Conference on Machine Learning},
+  year={2026},
+  url={https://openreview.net/forum?id=oreET6Wz52}
+}`,
+
+    'spa-cache': `@inproceedings{sun2026spacache,
+  title={Singular Proxies for Adaptive Caching in Diffusion Language Models},
+  author={Sun, Wenhao and Tu, Rong-Cheng and Ding, Yifu and Jin, Zhao and Liao, Jingyi and Jing, Yongcheng and Tao, Dacheng},
+  booktitle={Forty-third International Conference on Machine Learning},
+  year={2026},
+  url={https://icml.cc/virtual/2026/poster/66363}
+}`,
+
     'llm-quant-survey': `@article{gong2025llm-quant-survey,
 title = {A survey of low-bit large language models: Basics, systems, and algorithms},
 journal = {Neural Networks},

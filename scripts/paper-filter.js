@@ -68,6 +68,7 @@ function getGroupForKw(kw) {
     if (!root) return;
   
     const kwRow = root.querySelector("#kw-row");
+    const searchInput = root.querySelector("#paper-search");
     const statusEl = root.querySelector("#filter-status");
     const clearBtn = root.querySelector("#kw-clear");
     const modeBtns = Array.from(root.querySelectorAll(".mode-btn"));
@@ -81,7 +82,7 @@ function getGroupForKw(kw) {
       root.querySelectorAll(".pub-waterfall .pub-card, .pub-waterfall a.pub-card, .pub-waterfall .paper-card, .pub-waterfall a[data-tags]")
     );
   
-    const getCategories = () => Array.from(root.querySelectorAll(".pub-category"));
+    const getGroups = () => Array.from(root.querySelectorAll(".pub-year-group, .pub-category"));
   
     const getCardTags = (card) => {
       const ds = card.getAttribute("data-tags");
@@ -92,6 +93,12 @@ function getGroupForKw(kw) {
       if (!tagNodes || tagNodes.length === 0) return [];
   
       return Array.from(tagNodes).map(n => norm(n.textContent || n.getAttribute("data-tag"))).filter(Boolean);
+    };
+
+    const getSearchText = (card) => {
+      const dataSearch = card.getAttribute("data-search");
+      if (dataSearch) return norm(dataSearch);
+      return norm(card.textContent || "");
     };
   
     let mode = "and";
@@ -111,6 +118,11 @@ function getGroupForKw(kw) {
       if (selectedArr.length === 0) return true;
       if (mode === "and") return selectedArr.every(k => tags.includes(k));
       return selectedArr.some(k => tags.includes(k));
+    };
+
+    const matchesQuery = (card, query) => {
+      if (!query) return true;
+      return getSearchText(card).includes(query);
     };
   
     const GROUP_ORDER = ["model", "task", "application", "technique", "other"];
@@ -184,24 +196,25 @@ const renderKeywords = (allKeywords) => {
   
     const applyFilter = () => {
       const cards = getCards();
-      const cats = getCategories();
+      const groups = getGroups();
       const sel = Array.from(selected);
+      const query = norm(searchInput?.value || "");
   
       let visibleCount = 0;
   
       for (const c of cards) {
         const tags = getCardTags(c);
-        const ok = match(tags, sel);
+        const ok = match(tags, sel) && matchesQuery(c, query);
         c.classList.toggle("is-hidden", !ok);
         if (ok) visibleCount += 1;
       }
   
-    //   for (const cat of cats) {
-    //     const anyVisible = !!cat.querySelector(".pub-card:not(.is-hidden), .paper-card:not(.is-hidden), a.pub-card:not(.is-hidden)");
-    //     cat.classList.toggle("is-hidden", !anyVisible);
-    //   }
+      for (const group of groups) {
+        const anyVisible = !!group.querySelector(".pub-card:not(.is-hidden), .paper-card:not(.is-hidden), a.pub-card:not(.is-hidden)");
+        group.classList.toggle("is-hidden", !anyVisible);
+      }
   
-      if (sel.length === 0) {
+      if (sel.length === 0 && !query) {
         statusEl.textContent = `${visibleCount} papers`;
       } else {
         statusEl.textContent = `${visibleCount} papers`;
@@ -228,12 +241,17 @@ const renderKeywords = (allKeywords) => {
   
       clearBtn.addEventListener("click", () => {
         selected.clear();
+        if (searchInput) searchInput.value = "";
         root.querySelectorAll(".kw-btn.is-selected").forEach(x => {
           x.classList.remove("is-selected");
           x.setAttribute("aria-pressed", "false");
         });
         applyFilter();
       });
+
+      if (searchInput) {
+        searchInput.addEventListener("input", applyFilter);
+      }
   
       setMode("and");
       applyFilter();
@@ -241,8 +259,14 @@ const renderKeywords = (allKeywords) => {
       root.dataset.filterInited = "1";
     };
   
-    // Initialize after papers are rendered
-    document.addEventListener("papers:rendered", init);
+    // Initialize after papers are rendered, then re-apply active filters after re-sorting.
+    document.addEventListener("papers:rendered", () => {
+      if (root.dataset.filterInited === "1") {
+        applyFilter();
+        return;
+      }
+      init();
+    });
   
     // Also try once in case papers already rendered before listener registration
     window.addEventListener("load", init);
