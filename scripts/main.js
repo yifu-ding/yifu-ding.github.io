@@ -589,6 +589,121 @@ const Utils = {
 };
 
 // ===========================
+// ===========================
+// Sidebar Navigation Manager
+// ===========================
+
+class SidebarNavigationManager {
+    constructor() {
+        this.sidebarNav = document.querySelector('.page-sidebar-nav');
+        this.navLinks = document.querySelectorAll('.page-sidebar-nav-link');
+        this.sections = document.querySelectorAll('#updates, #recent-papers, #workshop-services, #customized-tools, #discover-channels');
+        this.navHeight = document.querySelector('.main-nav')?.offsetHeight || 72;
+        this.offset = 100;
+        this.updatesSection = document.querySelector('#updates');
+        this.init();
+    }
+
+    init() {
+        if (!this.sidebarNav || !this.navLinks.length) return;
+
+        // Setup scroll spy
+        this.setupScrollSpy();
+
+        // Setup click handlers for smooth scrolling
+        this.navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    e.preventDefault();
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - this.offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    }
+
+    setupScrollSpy() {
+        let ticking = false;
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    this.updateActiveLink();
+                    this.updateVisibility();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Initial check
+        this.updateActiveLink();
+        this.updateVisibility();
+    }
+
+    updateVisibility() {
+        if (!this.updatesSection) return;
+
+        const scrollPosition = window.pageYOffset;
+        const updatesTop = this.updatesSection.getBoundingClientRect().top + window.pageYOffset;
+        const windowHeight = window.innerHeight;
+
+        // Show sidebar when scrolled to the Updates section
+        if (scrollPosition >= updatesTop - windowHeight / 2) {
+            this.sidebarNav.classList.add('visible');
+        } else {
+            this.sidebarNav.classList.remove('visible');
+        }
+    }
+
+    updateActiveLink() {
+        const scrollPosition = window.pageYOffset + this.offset;
+
+        // Find which section is currently in view
+        let currentSection = null;
+        const sectionOffsets = [];
+
+        this.sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            sectionOffsets.push({
+                element: section,
+                top: sectionTop,
+                bottom: sectionBottom
+            });
+        });
+
+        // Find the section that's currently visible
+        for (let i = sectionOffsets.length - 1; i >= 0; i--) {
+            const { element, top } = sectionOffsets[i];
+            if (scrollPosition >= top) {
+                currentSection = element;
+                break;
+            }
+        }
+
+        // Update active state on nav links
+        this.navLinks.forEach(link => {
+            const targetId = link.getAttribute('href');
+
+            if (currentSection && targetId === `#${currentSection.id}`) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+}
+
+// ===========================
 // Initialize Everything
 // ===========================
 
@@ -598,6 +713,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const languageManager = new LanguageManager();
     const cardManager = new CardManager();
     const themeManager = new ThemeManager();
+    const sidebarNavigationManager = new SidebarNavigationManager();
 
     // Add smooth scrolling for anchor links (only for #hash links, not page navigation)
     document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
@@ -735,6 +851,7 @@ if (typeof module !== 'undefined' && module.exports) {
         LanguageManager,
         CardManager,
         NavigationManager,
+        SidebarNavigationManager,
         Utils
     };
 }

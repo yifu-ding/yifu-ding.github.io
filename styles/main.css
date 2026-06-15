@@ -974,6 +974,117 @@ button {
 
 /* Full Bleed Layout - Assembly Line Style */
 
+/* ===========================
+   Page Sidebar Navigation
+   =========================== */
+.page-sidebar-nav {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 900;
+    padding-left: 0;
+    padding-right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.page-sidebar-nav.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.page-sidebar-nav-inner {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+.page-sidebar-nav-title {
+    display: block;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    margin-bottom: 6px;
+    padding: 0 20px;
+}
+
+.page-sidebar-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.page-sidebar-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 6px 20px;
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    color: var(--color-text-muted);
+    border-radius: 0;
+    transition: color var(--transition-fast);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    gap: 8px;
+}
+
+.page-sidebar-nav-link .nav-arrow {
+    opacity: 0;
+    width: 0;
+    transition: opacity var(--transition-fast), width var(--transition-fast);
+    display: flex;
+    align-items: center;
+}
+
+.page-sidebar-nav-link:hover {
+    color: var(--color-text-primary);
+    background: transparent;
+}
+
+.page-sidebar-nav-link.active {
+    color: var(--color-text-primary);
+    background: transparent;
+}
+
+.page-sidebar-nav-link.active .nav-arrow {
+    opacity: 1;
+    width: 12px;
+}
+
+.nav-arrow::before {
+    content: '→';
+    font-size: var(--font-size-sm);
+}
+
+/* Dark mode for sidebar */
+[data-theme="dark"] .page-sidebar-nav-inner {
+    background: transparent;
+    border-color: transparent;
+}
+
+[data-theme="dark"] .page-sidebar-nav-link:hover {
+    background: transparent;
+}
+
+[data-theme="dark"] .page-sidebar-nav-link.active {
+    background: transparent;
+}
+
+/* Responsive: Hide sidebar on mobile */
+@media (max-width: 1200px) {
+    .page-sidebar-nav {
+        display: none;
+    }
+}
+
+/* Full Bleed Layout - Assembly Line Style */
+
 /* Break out of centered max-width container to fill viewport width */
 .full-bleed {
     width: 100vw;
