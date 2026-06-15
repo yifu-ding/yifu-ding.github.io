@@ -275,6 +275,7 @@ class LanguageManager {
                 view_details: 'View details',
                 close: 'Close',
                 load_more_papers: 'Load More Papers',
+                load_more_news: 'Load More News',
                 
                 // Gallery Page
                 back_to_studio: 'Back to Portfolio',
@@ -503,6 +504,7 @@ class LanguageManager {
                 view_details: '查看详情',
                 close: '关闭',
                 load_more_papers: '加载更多论文',
+                load_more_news: '加载更多动态',
                 
                 // 照片集页面
                 back_to_studio: '返回工作室',
@@ -1173,57 +1175,54 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ===========================
-// Load More Papers Functionality
+// Load More Functionality
 // ===========================
 
-document.addEventListener('DOMContentLoaded', () => {
-    const loadMoreBtn = document.getElementById('load-more-papers');
-    
+function setupLoadMore(buttonId, itemSelector, initialVisible, loadPerClick, visibleDisplay) {
+    const loadMoreBtn = document.getElementById(buttonId);
     if (!loadMoreBtn) return;
-    
-    const paperCards = document.querySelectorAll('.papers-list .paper-card');
-    const totalPapers = paperCards.length;
-    const initialVisible = 3;
-    const loadPerClick = 3;
+
+    const items = document.querySelectorAll(itemSelector);
+    const totalItems = items.length;
     let currentVisible = initialVisible;
-    
-    // Show only first 3 papers initially
-    paperCards.forEach((card, index) => {
+
+    items.forEach((item, index) => {
         if (index >= initialVisible) {
-            card.style.display = 'none';
+            item.style.display = 'none';
         }
     });
-    
-    // Hide button if all papers already visible
-    if (totalPapers <= initialVisible) {
+
+    if (totalItems <= initialVisible) {
         loadMoreBtn.style.display = 'none';
     }
-    
+
     loadMoreBtn.addEventListener('click', () => {
-        const nextVisible = Math.min(currentVisible + loadPerClick, totalPapers);
-        
-        // Show next batch of papers
+        const nextVisible = Math.min(currentVisible + loadPerClick, totalItems);
+
         for (let i = currentVisible; i < nextVisible; i++) {
-            if (paperCards[i]) {
-                paperCards[i].style.display = 'grid';
-                // Add entrance animation
+            if (items[i]) {
+                items[i].style.display = visibleDisplay;
                 setTimeout(() => {
-                    paperCards[i].style.opacity = '0';
-                    paperCards[i].style.transform = 'translateY(20px)';
-                    paperCards[i].style.transition = 'all 0.5s ease';
+                    items[i].style.opacity = '0';
+                    items[i].style.transform = 'translateY(20px)';
+                    items[i].style.transition = 'all 0.5s ease';
                     setTimeout(() => {
-                        paperCards[i].style.opacity = '1';
-                        paperCards[i].style.transform = 'translateY(0)';
+                        items[i].style.opacity = '1';
+                        items[i].style.transform = 'translateY(0)';
                     }, 50);
                 }, (i - currentVisible) * 100);
             }
         }
-        
+
         currentVisible = nextVisible;
-        
-        // Hide button if all papers are now visible
-        if (currentVisible >= totalPapers) {
+
+        if (currentVisible >= totalItems) {
             loadMoreBtn.style.display = 'none';
         }
     });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    setupLoadMore('load-more-papers', '.papers-list .paper-card', 3, 3, 'grid');
+    setupLoadMore('load-more-news', '.updates-timeline > li', 5, 3, 'list-item');
 });
