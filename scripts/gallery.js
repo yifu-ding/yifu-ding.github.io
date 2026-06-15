@@ -729,18 +729,54 @@ class GalleryManager {
         // 创建 lightbox
         this.createLightbox();
 
-        // 根据displayType决定渲染方式
-        if (this.currentDisplayType === 'detailed') {
-            // 详细模式：左右布局
-            this.renderDetailedGallery(data, container);
-        } else if (this.currentDisplayType === 'grid') {
-            // 网格模式：横向滚动组
-            this.renderGridGallery(data, container);
-        }
+        this.renderGridGallery(data, container);
 
         // 为所有图片添加点击事件
         this.attachImageClickHandlers();
+        this.setupMasonryLayout();
         this.updateToggleState();
+    }
+
+    setupMasonryLayout() {
+        const container = document.getElementById('gallery-container');
+        if (!container) return;
+
+        const layoutItems = () => {
+            const styles = window.getComputedStyle(container);
+            const rowHeight = parseFloat(styles.gridAutoRows) || 1;
+            const rowGap = parseFloat(styles.rowGap) || 0;
+            const items = [...container.querySelectorAll('.gallery-grid-item')];
+
+            items.forEach((item) => {
+                const image = item.querySelector('.gallery-grid-image');
+                if (!image || !image.complete || !image.naturalWidth) return;
+
+                item.classList.toggle('is-landscape', image.naturalWidth > image.naturalHeight);
+            });
+
+            requestAnimationFrame(() => {
+                items.forEach((item) => {
+                    const image = item.querySelector('.gallery-grid-image');
+                    if (!image || !image.complete || !image.naturalWidth) return;
+
+                    item.style.gridRowEnd = 'span 1';
+                    const itemHeight = item.scrollHeight;
+                    item.style.gridRowEnd = `span ${Math.ceil((itemHeight + rowGap) / (rowHeight + rowGap))}`;
+                });
+            });
+        };
+
+        container.querySelectorAll('.gallery-grid-image').forEach((image) => {
+            if (!image.complete) image.addEventListener('load', layoutItems, { once: true });
+        });
+
+        requestAnimationFrame(layoutItems);
+        setTimeout(layoutItems, 100);
+
+        if (!this.masonryResizeHandler) {
+            this.masonryResizeHandler = () => requestAnimationFrame(layoutItems);
+            window.addEventListener('resize', this.masonryResizeHandler);
+        }
     }
 
     collectAllImages(data) {
@@ -991,7 +1027,7 @@ class GalleryManager {
     }
 
     renderGridGallery(data, container) {
-        // 渲染网格滚动模式
+        // Render a clean waterfall while preserving the existing lightbox behavior.
         const groups = this.getGridGroups(data);
         const totalImages = groups.reduce((sum, group) => sum + group.images.length, 0);
         const imageCountText = this.currentLang === 'zh' 
@@ -999,9 +1035,10 @@ class GalleryManager {
             : `${totalImages} images`;
         document.getElementById('gallery-count').textContent = imageCountText;
 
-        groups.forEach((group, groupIndex) => {
-            const groupElement = this.createGridGroup(group, groupIndex, data.folder);
-            container.appendChild(groupElement);
+        groups.forEach((group) => {
+            group.images.forEach((image) => {
+                container.appendChild(this.createGridItem(image, data.folder));
+            });
         });
     }
 
@@ -1127,9 +1164,7 @@ class GalleryManager {
     }
 
     getSavedDisplayType(data) {
-        const storageKey = `galleryDisplayType:${this.currentCollection}`;
-        const stored = localStorage.getItem(storageKey);
-        return stored || data.displayType || 'detailed';
+        return 'grid';
     }
 
     setupViewToggle() {
@@ -1210,7 +1245,10 @@ class GalleryManager {
 
     getGridGroups(data) {
         if (data.groups) {
-            return data.groups;
+            return data.groups.map((group) => ({
+                ...group,
+                images: this.flattenDetailedImagesToGrid(group.images)
+            }));
         }
 
         const detailedGroups = this.getDetailedGroups(data);

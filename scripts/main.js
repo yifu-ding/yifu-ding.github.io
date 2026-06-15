@@ -109,8 +109,15 @@ class LanguageManager {
                 collaborator_jinyang: 'One of my PhD advisors, always supportive and generous with insightful advice.',
                 collaborator_wenhao: 'A helpful and active researcher in video diffusion acceleration, with rich industry experience.',
                 collaborator_zining: 'A humorous and resilient labmate, with research experience at ByteDance Seed.',
+                collaborator_yushi: 'A prolific open-source AI researcher with exceptional insight into visual understanding for large models.',
                 collaborators_section_title: '🤝 Quick links to my collaborators',
+                about_me_title: '👋 About Me',
+                about_me_paragraph_1: 'As graduation approaches, life has become busier than ever. Several projects that I co-lead or participate in are still ongoing, as listed on my <a href="research.html">Research page</a>. Some are coming soon, while others have been continuously explored for more than two years and are still in the darkness before dawn.',
+                about_me_paragraph_2: 'I feel fortunate to always have frontier research topics to work on and excellent teammates to work with. There has never been a dull moment in my Ph.D. life.',
+                about_me_paragraph_3: 'Beyond research, I also enjoy travel and photography. If you are interested, you can find my <a href="studio.html">portfolio here 📷</a>.',
                 update_fund_completion: 'Successfully passed the completion review for the <strong>Outstanding Doctoral Academic Fund</strong> at Beihang University.',
+                update_sam2_glow_2026: 'One paper <span class="paper-title">"Layer Sensitivity Matters: Mixed-Precision Post-Training Quantization for SAM2 Video Segmentation"</span> accepted to <strong>GLOW @ IJCAI 2026</strong>. Congratulations to Wenyu Zhou!',
+                update_sam2_glow_2026_date: 'Jun 2026',
                 fund_completion_title: 'Outstanding Doctoral Academic Fund Completion',
                 fund_completion_desc: 'Successfully passed the completion review for the Outstanding Doctoral Academic Fund at Beihang University.',
                 fund_completion_date: 'Jun 2026',
@@ -149,17 +156,26 @@ class LanguageManager {
                 timeline_ntu_visit_desc: 'Visited Nanyang Technological University in Singapore, supervised by Prof. Dacheng Tao.',
                 timeline_ntu_visit_date: 'Nov 2024',
                 timeline_emclr_publicity_title: 'Publicity Chair for EMCLR Workshop at ACM MM 2024',
-                timeline_emclr_publicity_desc: 'Served as Publicity Chair for the 1st International Workshop on Efficient Multimedia Computing under Limited Resources at ACM MM 2024.',
+                timeline_emclr_publicity_desc: 'Publicity Chair at <a href="https://eclr-workshop.github.io/index_2024.html" target="_blank" rel="noopener">the 1st International Workshop on Efficient Multimedia Computing under Limited Resources</a> at ACM MM 2024.',
                 timeline_emclr_publicity_date: 'Oct 2024',
                 timeline_glow_local_title: 'Local Arrangement Chair for GLOW Workshop at IJCAI 2024',
-                timeline_glow_local_desc: 'Served as Local Arrangement Chair for the 2nd International Workshop on Generalizing from Limited Resources in the Open World at IJCAI 2024, responsible for on-site logistics and coordination to ensure smooth workshop operations.',
+                timeline_glow_local_desc: 'Local Arrangement Chair at <a href="https://glow-ijcai.github.io/" target="_blank" rel="noopener">the 2nd International Workshop on Generalizing from Limited Resources in the Open World</a> at IJCAI 2024. Responsible for on-site logistics and coordination to ensure smooth conference operations.',
                 timeline_glow_local_date: 'Aug 2024',
+                timeline_student_editor_title: 'Student Editor for Springer CCIS Volume',
+                timeline_student_editor_desc: 'Co-edited the Springer CCIS volume <a href="https://link.springer.com/book/10.1007/978-981-97-6125-8" target="_blank" rel="noopener"><em>Generalizing from Limited Resources in the Open World</em></a>.',
+                timeline_student_editor_date: 'Aug 2024',
                 timeline_reg_ptq_title: 'Paper Accepted at CVPR 2024',
                 timeline_reg_ptq_desc: '"Reg-PTQ: Regression-specialized Post-training Quantization for Fully Quantized Object Detector" accepted at CVPR 2024.',
                 timeline_reg_ptq_date: 'Jun 2024',
                 timeline_proposal_title: 'Passed Ph.D. Proposal Defense with Outstanding Recognition',
                 timeline_proposal_desc: 'Passed the Ph.D. proposal defense at Beihang University and received Outstanding Proposal recognition.',
                 timeline_proposal_date: 'Mar 2024',
+                timeline_academic_affairs_title: 'Undergraduate Academic Affairs Assistant at Beihang University',
+                timeline_academic_affairs_desc: 'Served as an Undergraduate Academic Affairs Assistant at Beihang University.',
+                timeline_academic_affairs_date: 'Jul 2022 - Jul 2023',
+                timeline_course_ta_title: 'Teaching Assistant for English-Medium Courses',
+                timeline_course_ta_desc: 'Served as Teaching Assistant for "Western Art and Ideas" in Spring 2023 and "Cambridge English and Culture" in Fall 2022, both taught entirely in English.',
+                timeline_course_ta_date: 'Fall 2022 & Spring 2023',
                 timeline_qualification_title: 'Passed Ph.D. Qualification Exam',
                 timeline_qualification_desc: 'Passed the doctoral qualification exam at Beihang University.',
                 timeline_qualification_date: 'Oct 2022',
@@ -325,6 +341,8 @@ class LanguageManager {
                 // Studio Page
                 studio_title: 'Photography Portfolio',
                 studio_description: 'A space for creative work outside the main track.',
+                scroll_to_explore: 'Scroll to explore',
+                back_to_academic_homepage: 'Back to my academic homepage',
                 studio_filter_all: 'All',
                 studio_filter_photo: 'Photography',
                 studio_filter_reading: 'Reading',
@@ -456,8 +474,15 @@ class LanguageManager {
                 collaborator_jinyang: '我博士期间的指导老师之一，始终给予支持，并慷慨分享富有洞见的建议。',
                 collaborator_wenhao: '热心且积极的视频扩散模型加速研究者，拥有丰富的业界经验。',
                 collaborator_zining: '幽默风趣、抗压能力很强的同门，曾在字节跳动 Seed 团队从事研究。',
+                collaborator_yushi: '高产的开源 AI 研究者，在大模型视觉理解领域卓有见地。',
                 collaborators_section_title: '🤝 合作者快速链接',
+                about_me_title: '👋 关于我',
+                about_me_paragraph_1: '毕业季比以往任何一年的博士生涯更忙碌。目前，我仍有几个负责或参与的项目正在推进中，具体可见 <a href="research.html">Research 页面</a>中的 ongoing projects。其中一些成果即将发布，也有一些已经持续探索了两年多，仍处在黎明前的黑暗中。',
+                about_me_paragraph_2: '我很幸运，在博士阶段始终探索着最前沿的研究问题，也与最优秀的研究者们并肩合作，让六年的博士生活如白驹过隙。',
+                about_me_paragraph_3: '研究之外，我也喜欢旅行和摄影。如果你感兴趣，可以在这里查看我的<a href="studio.html">作品集📷</a>。',
                 update_fund_completion: '顺利通过北京航空航天大学<strong>优秀博士研究生学术卓越基金</strong>结题验收。',
+                update_sam2_glow_2026: '一篇论文<span class="paper-title">“Layer Sensitivity Matters: Mixed-Precision Post-Training Quantization for SAM2 Video Segmentation”</span>被 <strong>GLOW @ IJCAI 2026</strong> 接收。祝贺 Wenyu Zhou！',
+                update_sam2_glow_2026_date: '2026年6月',
                 fund_completion_title: '优秀博士研究生学术卓越基金结题',
                 fund_completion_desc: '顺利通过北京航空航天大学优秀博士研究生学术卓越基金结题验收。',
                 fund_completion_date: '2026年6月',
@@ -496,17 +521,26 @@ class LanguageManager {
                 timeline_ntu_visit_desc: '前往新加坡南洋理工大学访问，师从陶大程教授。',
                 timeline_ntu_visit_date: '2024年11月',
                 timeline_emclr_publicity_title: '担任 ACM MM 2024 EMCLR Workshop 宣传主席',
-                timeline_emclr_publicity_desc: '担任 ACM MM 2024 第 1 届 Efficient Multimedia Computing under Limited Resources 国际研讨会宣传主席。',
+                timeline_emclr_publicity_desc: '担任 ACM MM 2024 <a href="https://eclr-workshop.github.io/index_2024.html" target="_blank" rel="noopener">第 1 届有限资源下的高效多媒体计算国际研讨会</a>宣传主席。',
                 timeline_emclr_publicity_date: '2024年10月',
                 timeline_glow_local_title: '担任 IJCAI 2024 GLOW Workshop 会务主席',
-                timeline_glow_local_desc: '担任 IJCAI 2024 第 2 届 Generalizing from Limited Resources in the Open World 国际研讨会会务主席，负责现场会务和协调工作，保障 workshop 顺利运行。',
+                timeline_glow_local_desc: '担任 IJCAI 2024 <a href="https://glow-ijcai.github.io/" target="_blank" rel="noopener">第 2 届开放世界中的有限资源泛化国际研讨会</a>会务主席，负责现场会务和协调工作，保障会议顺利进行。',
                 timeline_glow_local_date: '2024年8月',
+                timeline_student_editor_title: '担任 Springer CCIS 丛书学生编辑',
+                timeline_student_editor_desc: '共同编辑 Springer CCIS 丛书<a href="https://link.springer.com/book/10.1007/978-981-97-6125-8" target="_blank" rel="noopener"><em>Generalizing from Limited Resources in the Open World</em></a>。',
+                timeline_student_editor_date: '2024年8月',
                 timeline_reg_ptq_title: '论文被 CVPR 2024 接收',
                 timeline_reg_ptq_desc: '论文“Reg-PTQ: Regression-specialized Post-training Quantization for Fully Quantized Object Detector”被 CVPR 2024 接收。',
                 timeline_reg_ptq_date: '2024年6月',
                 timeline_proposal_title: '博士开题答辩通过并获优秀开题',
                 timeline_proposal_desc: '在北京航空航天大学通过博士开题答辩，并获得优秀开题。',
                 timeline_proposal_date: '2024年3月',
+                timeline_academic_affairs_title: '北京航空航天大学本科生教务助理',
+                timeline_academic_affairs_desc: '担任北京航空航天大学本科生教务助理。',
+                timeline_academic_affairs_date: '2022年7月 - 2023年7月',
+                timeline_course_ta_title: '全英文课程助教',
+                timeline_course_ta_desc: '担任 2023 年春季《西方美术与观念》和 2022 年秋季《剑桥英语与文化》全英文课程助教。',
+                timeline_course_ta_date: '2022年秋季与2023年春季',
                 timeline_qualification_title: '通过博士生资格考试',
                 timeline_qualification_desc: '在北京航空航天大学通过博士生资格考试。',
                 timeline_qualification_date: '2022年10月',
@@ -672,6 +706,8 @@ class LanguageManager {
                 // 工作室页面
                 studio_title: '摄影作品集',
                 studio_description: '主业之外的创作空间。',
+                scroll_to_explore: '向下滚动，探索作品',
+                back_to_academic_homepage: '返回我的学术主页',
                 studio_filter_all: '全部',
                 studio_filter_photo: '摄影',
                 studio_filter_reading: '阅读',
@@ -788,7 +824,7 @@ class LanguageManager {
     sanitizeTranslationHtml(html) {
         const template = document.createElement('template');
         template.innerHTML = html;
-        const allowedTags = new Set(['A', 'STRONG', 'U']);
+        const allowedTags = new Set(['A', 'STRONG', 'U', 'EM']);
 
         Array.from(template.content.querySelectorAll('*')).forEach(element => {
             if (!allowedTags.has(element.tagName)) {
@@ -798,12 +834,15 @@ class LanguageManager {
 
             if (element.tagName === 'A') {
                 const href = element.getAttribute('href') || '';
-                const safeHref = /^(https?:\/\/|mailto:)/i.test(href);
+                const safeHref = /^(https?:\/\/|mailto:|#)/i.test(href)
+                    || !/^[a-z][a-z0-9+.-]*:/i.test(href);
                 Array.from(element.attributes).forEach(attribute => element.removeAttribute(attribute.name));
                 if (safeHref) {
                     element.setAttribute('href', href);
-                    element.setAttribute('target', '_blank');
-                    element.setAttribute('rel', 'noopener');
+                    if (/^https?:\/\//i.test(href)) {
+                        element.setAttribute('target', '_blank');
+                        element.setAttribute('rel', 'noopener');
+                    }
                 }
             } else {
                 Array.from(element.attributes).forEach(attribute => element.removeAttribute(attribute.name));

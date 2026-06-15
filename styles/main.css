@@ -100,6 +100,15 @@ body.simple-page {
     background: #fff;
 }
 
+.portfolio-page .main-nav {
+    display: none;
+}
+
+.portfolio-page .simple-page-shell {
+    width: min(1480px, calc(100% - 40px));
+    padding-top: var(--space-xl);
+}
+
 .simple-page a {
     color: var(--color-warm-gray-900);
 }
