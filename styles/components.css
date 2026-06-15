@@ -6155,3 +6155,22 @@ html, body {
   [data-theme="dark"] .simple-page .simple-metric-label {
     color: var(--color-warm-gray-600);
   }
+
+  [data-theme="dark"] body.portfolio-page {
+    background:
+      linear-gradient(
+        135deg,
+        rgba(var(--portfolio-gradient-start), 0.16),
+        rgba(var(--portfolio-gradient-end), 0.10)
+      ),
+      #fff;
+    background-attachment: fixed;
+  }
+
+  [data-theme="dark"] .portfolio-page .main-footer,
+  [data-theme="dark"] .portfolio-page .channels,
+  [data-theme="dark"] .portfolio-page .channels-section-title,
+  [data-theme="dark"] .portfolio-page .latest-header,
+  [data-theme="dark"] .portfolio-page #photography.photo-section-wrapper {
+    background: transparent;
+  }

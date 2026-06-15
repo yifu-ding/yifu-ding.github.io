@@ -104,6 +104,27 @@ body.simple-page {
     display: none;
 }
 
+body.portfolio-page {
+    --portfolio-gradient-start: 220, 231, 228;
+    --portfolio-gradient-end: 234, 226, 236;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(var(--portfolio-gradient-start), 0.16),
+            rgba(var(--portfolio-gradient-end), 0.10)
+        ),
+        #fff;
+    background-attachment: fixed;
+}
+
+.portfolio-page .main-footer,
+.portfolio-page .channels,
+.portfolio-page .channels-section-title,
+.portfolio-page .latest-header,
+.portfolio-page #photography.photo-section-wrapper {
+    background: transparent;
+}
+
 .portfolio-page .simple-page-shell {
     width: min(1480px, calc(100% - 40px));
     padding-top: var(--space-xl);

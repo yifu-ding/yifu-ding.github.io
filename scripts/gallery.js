@@ -668,7 +668,106 @@ const galleryData = {
             }
         ]
         
+    },
+    food_n_restaurant: {
+        location: 'FOOD N RESTAURANT',
+        title: 'Food N Restaurant',
+        titleZh: 'Food N Restaurant',
+        folder: 'food_n_restaurant',
+        displayType: 'grid',
+        images: [
+            {
+                file: [
+                    'IMG_1696.JPG', 'IMG_1697.JPG', 'IMG_1698.JPG', 'IMG_1699.JPG',
+                    'IMG_1863.JPG', 'IMG_1864.JPG', 'IMG_1892.JPG', 'IMG_1967.JPG',
+                    'IMG_1968.JPG', 'IMG_1969.JPG', 'IMG_1970.JPG', 'IMG_1971.JPG',
+                    'IMG_1972.JPG', 'IMG_1973.JPG', 'IMG_1974.JPG', 'IMG_1975.JPG',
+                    'IMG_1976.JPG', 'IMG_4159.JPG'
+                ],
+                caption: '',
+                captionEn: ''
+            }
+        ]
+    },
+    penang: {
+        location: 'PENANG',
+        title: 'Penang',
+        titleZh: 'Penang',
+        folder: 'penang',
+        displayType: 'grid',
+        images: [
+            {
+                file: ['IMG_0167.JPG', 'IMG_0168.JPG', 'IMG_0169.JPG', 'IMG_0170.JPG', 'IMG_0171.JPG'],
+                caption: '',
+                captionEn: ''
+            }
+        ]
+    },
+    jeju_island: {
+        location: 'JEJU ISLAND',
+        title: 'Jeju Island',
+        titleZh: 'Jeju Island',
+        folder: 'jeju-island',
+        displayType: 'grid',
+        images: [
+            {
+                file: [
+                    'mani.jpeg', 'mountain-1.JPG', 'mountain-2.jpeg', 'sea-1.JPG',
+                    'sea-2.JPG', 'sea-3.jpeg', 'sea-wave.JPG', 'ship-1.jpeg', 'ship-2.jpeg'
+                ],
+                caption: '',
+                captionEn: ''
+            }
+        ]
+    },
+    zhangbei: {
+        location: 'ZHANGBEI',
+        title: 'Zhangbei',
+        titleZh: 'Zhangbei',
+        folder: 'zhangbei',
+        displayType: 'grid',
+        images: [
+            {
+                file: ['IMG_0156.JPG', 'IMG_0163.JPG', 'IMG_0164.JPG'],
+                caption: '',
+                captionEn: ''
+            }
+        ]
+    },
+    qinhuangdao: {
+        location: 'QINHUANGDAO',
+        title: 'Qinhuangdao',
+        titleZh: 'Qinhuangdao',
+        folder: 'qinhuangdao',
+        displayType: 'grid',
+        images: [
+            {
+                file: [
+                    '1706774762139.jpeg', '1706851758960.jpeg', '1706853014250.jpeg',
+                    '1706853026350.jpeg', '1706915912179.jpeg', '1706944541290.jpeg',
+                    '1707018588300.jpeg', 'IMG_0160.JPG', 'IMG_0161.JPG', 'IMG_0162.JPG'
+                ],
+                caption: '',
+                captionEn: ''
+            }
+        ]
     }
+};
+
+const galleryBackgrounds = {
+    rocky: ['190, 215, 230', '222, 232, 218'],
+    guanajuato: ['239, 205, 184', '219, 205, 231'],
+    mexico: ['242, 216, 188', '225, 196, 181'],
+    sea: ['187, 220, 232', '215, 232, 224'],
+    sky: ['199, 218, 244', '226, 215, 240'],
+    thailand: ['220, 232, 195', '242, 219, 186'],
+    nature: ['205, 230, 207', '224, 235, 214'],
+    light: ['206, 218, 238', '221, 211, 235'],
+    food_n_restaurant: ['244, 218, 198', '238, 228, 202'],
+    penang: ['238, 210, 187', '221, 231, 206'],
+    jeju_island: ['196, 225, 235', '216, 232, 218'],
+    zhangbei: ['218, 228, 201', '231, 216, 194'],
+    qinhuangdao: ['196, 221, 238', '225, 232, 220']
 };
 
 // Gallery Manager
@@ -694,6 +793,7 @@ class GalleryManager {
 
         this.currentCollection = collection;
         const data = galleryData[this.currentCollection];
+        this.applyGalleryBackground(collection);
         this.currentDisplayType = this.getSavedDisplayType(data);
         this.setupViewToggle();
         this.loadGallery();
@@ -707,6 +807,12 @@ class GalleryManager {
         // 从localStorage获取当前语言
         this.currentLang = localStorage.getItem('language') || 'en';
         this.updateLanguage();
+    }
+
+    applyGalleryBackground(collection) {
+        const colors = galleryBackgrounds[collection] || ['214, 229, 225', '229, 222, 235'];
+        document.body.style.setProperty('--portfolio-gradient-start', colors[0]);
+        document.body.style.setProperty('--portfolio-gradient-end', colors[1]);
     }
 
     loadGallery() {
@@ -733,50 +839,7 @@ class GalleryManager {
 
         // 为所有图片添加点击事件
         this.attachImageClickHandlers();
-        this.setupMasonryLayout();
         this.updateToggleState();
-    }
-
-    setupMasonryLayout() {
-        const container = document.getElementById('gallery-container');
-        if (!container) return;
-
-        const layoutItems = () => {
-            const styles = window.getComputedStyle(container);
-            const rowHeight = parseFloat(styles.gridAutoRows) || 1;
-            const rowGap = parseFloat(styles.rowGap) || 0;
-            const items = [...container.querySelectorAll('.gallery-grid-item')];
-
-            items.forEach((item) => {
-                const image = item.querySelector('.gallery-grid-image');
-                if (!image || !image.complete || !image.naturalWidth) return;
-
-                item.classList.toggle('is-landscape', image.naturalWidth > image.naturalHeight);
-            });
-
-            requestAnimationFrame(() => {
-                items.forEach((item) => {
-                    const image = item.querySelector('.gallery-grid-image');
-                    if (!image || !image.complete || !image.naturalWidth) return;
-
-                    item.style.gridRowEnd = 'span 1';
-                    const itemHeight = item.scrollHeight;
-                    item.style.gridRowEnd = `span ${Math.ceil((itemHeight + rowGap) / (rowHeight + rowGap))}`;
-                });
-            });
-        };
-
-        container.querySelectorAll('.gallery-grid-image').forEach((image) => {
-            if (!image.complete) image.addEventListener('load', layoutItems, { once: true });
-        });
-
-        requestAnimationFrame(layoutItems);
-        setTimeout(layoutItems, 100);
-
-        if (!this.masonryResizeHandler) {
-            this.masonryResizeHandler = () => requestAnimationFrame(layoutItems);
-            window.addEventListener('resize', this.masonryResizeHandler);
-        }
     }
 
     collectAllImages(data) {
