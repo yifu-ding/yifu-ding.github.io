@@ -22,8 +22,8 @@
                     <a href="index.html" class="nav-link">
                         <span data-i18n="nav_home">Home</span>
                     </a>
-                    <a href="news.html" class="nav-link">
-                        <span data-i18n="nav_news">News</span>
+                    <a href="timeline.html" class="nav-link">
+                        <span data-i18n="nav_timeline">Timeline</span>
                     </a>
                     <a href="education.html" class="nav-link">
                         <span data-i18n="nav_education">Education</span>
@@ -68,8 +68,21 @@
         </div>
     </nav>
 
+    <aside class="page-sidebar-nav" aria-label="Page sections">
+      <div class="page-sidebar-nav-inner">
+        <nav class="page-sidebar-nav-links">
+          <a href="#research-overview" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Overview</span></a>
+          <a href="#selected-publications" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Selected</span></a>
+          <a href="#selected-efficient-foundation-models" class="page-sidebar-nav-link page-sidebar-nav-link-sub"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Efficient Foundation Models</span></a>
+          <a href="#selected-multimodal-videogen" class="page-sidebar-nav-link page-sidebar-nav-link-sub"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Multimodal and VideoGen</span></a>
+          <a href="#selected-kernels-hardware" class="page-sidebar-nav-link page-sidebar-nav-link-sub"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Kernels and Hardware</span></a>
+          <a href="#all-publications" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">All Publications</span></a>
+        </nav>
+      </div>
+    </aside>
+
     <main class="simple-page-shell">
-      <header class="simple-page-header">
+      <header id="research-overview" class="simple-page-header">
         <h1 class="simple-page-title" data-i18n="research_title">Research</h1>
         <p class="simple-page-subtitle" data-i18n="research_description">
           PhD Candidate at Beihang University, specializing in neural network compression and model quantization.
@@ -105,19 +118,19 @@
             <h2>Statistics</h2>
             <div class="simple-metrics-list">
               <div class="simple-metric">
-                <span class="simple-metric-value">1343</span>
+                <span class="simple-metric-value">1658</span>
                 <span class="simple-metric-label">Citations</span>
               </div>
               <div class="simple-metric">
-                <span class="simple-metric-value">32</span>
+                <span class="simple-metric-value">38</span>
                 <span class="simple-metric-label">Papers</span>
               </div>
               <div class="simple-metric">
-                <span class="simple-metric-value">17</span>
+                <span class="simple-metric-value">20</span>
                 <span class="simple-metric-label">H-index</span>
               </div>
               <div class="simple-metric">
-                <span class="simple-metric-value">23</span>
+                <span class="simple-metric-value">26</span>
                 <span class="simple-metric-label">I10-index</span>
               </div>
             </div>
@@ -125,12 +138,12 @@
         </section>
 
       <section id="selected-work" class="content-section selected-work" aria-label="Publications">
-        <section class="publication-subsection" aria-label="Selected Publications">
+        <section id="selected-publications" class="publication-subsection" aria-label="Selected Publications">
           <h2 class="publication-section-title">Selected Publications</h2>
           <div class="pub-waterfall pub-waterfall-selected" data-paper-list="selected"></div>
         </section>
 
-        <section class="publication-subsection" aria-label="All Publications">
+        <section id="all-publications" class="publication-subsection" aria-label="All Publications">
           <h2 class="publication-section-title" data-i18n="selected_work_title">All Publications</h2>
       
           <!-- Keyword Filter UI -->
@@ -150,6 +163,7 @@
               <button type="button" class="mode-btn is-active" data-mode="and" aria-pressed="true">AND</button>
               <button type="button" class="mode-btn" data-mode="or" aria-pressed="false">OR</button>
               <button type="button" class="clear-btn" id="kw-clear">Clear</button>
+              <span class="clear-feedback" id="clear-feedback" aria-live="polite">Cleared!</span>
             </div>
           
             <div class="paper-filter-row sort" role="group" aria-label="Sort order">
@@ -196,6 +210,42 @@
         </div>
     </footer>
 
+    <script>
+      window.SELECTED_PUBLICATION_GROUPS = [
+        {
+          id: "selected-efficient-foundation-models",
+          title: "Efficient Training and Inference for Foundation Models",
+          papers: [
+            "Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression",
+            "Dynamic Parallel Tree Search for Efficient LLM Reasoning",
+            "DA-KD: Difficulty-Aware Knowledge Distillation for Efficient Large Language Models",
+            "Singular Proxies for Adaptive Caching in Diffusion Language Models",
+            "A survey of low-bit large language models: Basics, systems, and algorithms",
+            "Llmcbench: Benchmarking large language model compression for efficient deployment"
+          ]
+        },
+        {
+          id: "selected-multimodal-videogen",
+          title: "Multimodal and Video Generation",
+          papers: [
+            "QVGen: Pushing the Limit of Quantized Video Generative Models",
+            "VORTA: Efficient Video Diffusion via Routing Sparse Attention",
+            "MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping",
+            "QuantSR: accurate low-bit quantization for efficient image super-resolution"
+          ]
+        },
+        {
+          id: "selected-kernels-hardware",
+          title: "High-Performance Kernels and Hardware-Aware Acceleration",
+          papers: [
+            "Diagonal-Tiled Mixed-Precision Attention for Efficient Low-Bit MXFP Inference",
+            "BWTA: Accurate and Efficient Binarized Transformer by Algorithm-Hardware Co-design",
+            "Low-bit FlashAttention Accelerated Operator Design Based on Triton",
+            "QuS: Towards High-Performance EfficientViT on FPGA by Quantization and Streamline Co-Design"
+          ]
+        }
+      ];
+    </script>
     <script src="scripts/papers-config.js"></script>
     <script src="scripts/load-papers.js"></script>
     <script src="scripts/paper-filter.js"></script>

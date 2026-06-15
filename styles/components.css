@@ -2009,6 +2009,30 @@ html, body {
     line-height: 1.38;
   }
 
+  .home-updates-section .updates-timeline li,
+  .home-updates-section .workshop-timeline li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 82px;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .timeline-entry-content {
+    min-width: 0;
+  }
+
+  .timeline-date,
+  .award-year {
+    color: var(--color-text-secondary);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.35;
+    text-align: right;
+    white-space: nowrap;
+  }
+
   .timeline-list li:last-child {
     margin-bottom: 0;
   }
@@ -2149,9 +2173,9 @@ html, body {
 
   .awards-list li {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--space-md);
-    align-items: baseline;
+    grid-template-columns: minmax(0, 1fr) 82px;
+    gap: 16px;
+    align-items: start;
   }
 
   .workshop-card-section {
@@ -2238,12 +2262,6 @@ html, body {
     font-size: var(--font-size-sm);
     line-height: 1.35;
     color: var(--color-text-secondary);
-  }
-
-  .award-year {
-    color: var(--color-text-primary);
-    font-weight: 600;
-    white-space: nowrap;
   }
 
   /* News page timeline */
@@ -2966,7 +2984,8 @@ html, body {
 
   .home-education-list {
     margin: 0;
-    padding-left: 20px;
+    padding-left: 0;
+    list-style: none;
     color: var(--color-text-primary);
     font-family: var(--font-sans);
     font-size: 0.88rem;
@@ -2974,24 +2993,28 @@ html, body {
   }
 
   .home-education-list li {
-    padding-left: 4px;
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 150px;
+    gap: 16px;
+    align-items: start;
+    padding-left: 16px;
     margin-bottom: 7px;
+  }
+
+  .home-education-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-text-primary);
   }
 
   .home-education-list li:last-child {
     margin-bottom: 0;
   }
 
-  .home-education-date,
   .home-education-detail {
     color: var(--color-text-secondary);
-  }
-
-  .home-education-date {
-    display: inline-block;
-    min-width: 142px;
-    margin-right: 8px;
-    font-variant-numeric: tabular-nums;
   }
 
   .home-education-list a {
@@ -3001,10 +3024,17 @@ html, body {
   }
 
   @media (max-width: 640px) {
-    .home-education-date {
-      display: block;
-      min-width: 0;
-      margin: 0 0 2px;
+    .home-updates-section .updates-timeline li,
+    .home-updates-section .workshop-timeline li,
+    .awards-list li,
+    .home-education-list li {
+      grid-template-columns: 1fr;
+      gap: 3px;
+    }
+
+    .timeline-date,
+    .award-year {
+      text-align: left;
     }
   }
 
@@ -3799,16 +3829,14 @@ html, body {
   }
 
   .pub-year-group {
-    display: grid;
-    grid-template-columns: 92px minmax(0, 1fr);
-    gap: var(--space-lg);
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .pub-year-title {
-    position: sticky;
-    top: 92px;
-    margin: 2px 0 0;
+    position: static;
+    margin: 0;
     font-family: var(--font-display);
     font-size: 1.35rem;
     font-weight: 700;
@@ -3847,7 +3875,7 @@ html, body {
     text-decoration: none;
     background: #FFFFFF;
     border: 1px solid rgba(17, 24, 39, 0.10);
-    box-shadow: 0 10px 28px rgba(17, 24, 39, 0.05);
+    box-shadow: 0 14px 34px rgba(17, 24, 39, 0.09);
     color: inherit;
     cursor: pointer;
     scroll-snap-align: start;
@@ -3857,7 +3885,7 @@ html, body {
   
   .pub-card:hover {
     border-color: rgba(42, 157, 143, 0.22);
-    box-shadow: 0 22px 58px rgba(17, 24, 39, 0.10);
+    box-shadow: 0 26px 68px rgba(17, 24, 39, 0.16);
     transform: translateY(-3px);
   }
 
@@ -3994,33 +4022,54 @@ html, body {
   .pub-card-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 12px;
     margin-top: auto;
-    padding-top: 14px;
+    padding-top: 10px;
   }
 
   .pub-action {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 30px;
-    padding: 6px 11px;
-    border-radius: 999px;
-    border: 1px solid rgba(17, 24, 39, 0.12);
-    background: rgba(255, 255, 255, 0.78);
-    color: rgba(17, 24, 39, 0.72);
+    gap: 5px;
+    padding: 2px 0;
+    border: 0;
+    background: transparent;
+    color: rgba(17, 24, 39, 0.60);
     font-size: 12px;
-    font-weight: 700;
-    line-height: 1;
+    font-weight: 400;
+    line-height: 1.2;
     text-decoration: none;
-    transition: transform 140ms ease, border-color 140ms ease, background 140ms ease, color 140ms ease;
+    transition: color 140ms ease, transform 140ms ease;
+  }
+
+  .pub-action svg {
+    width: 15px;
+    height: 15px;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .pub-action-code svg {
+    fill: currentColor;
+    stroke: none;
   }
 
   .pub-action:hover {
     transform: translateY(-1px);
-    border-color: rgba(42, 157, 143, 0.36);
-    background: rgba(42, 157, 143, 0.10);
-    color: rgba(17, 24, 39, 0.92);
+    color: #2A9D8F;
+  }
+
+  [data-theme="dark"] .pub-action {
+    color: rgba(229, 231, 235, 0.68);
+  }
+
+  [data-theme="dark"] .pub-action:hover {
+    color: #5ED5C8;
   }
   
   .pub-flat-row {
@@ -4433,7 +4482,7 @@ html, body {
   }
   
   .kw-btn.is-selected {
-    background: rgba(42, 157, 143, 0.18);
+    background: #FCD924;
     color: rgba(17, 24, 39, 0.9);
   }
   
@@ -4496,6 +4545,35 @@ html, body {
 .clear-btn {
     color: #51A4B7;
     text-decoration-color: #51A4B7;
+}
+
+.clear-feedback {
+    margin-left: -4px;
+    color: rgba(81, 164, 183, 0.72);
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(2px);
+    pointer-events: none;
+}
+
+.clear-feedback.is-visible {
+    animation: clear-feedback-fade 1s ease both;
+}
+
+@keyframes clear-feedback-fade {
+    0% {
+        opacity: 0;
+        transform: translateY(2px);
+    }
+    20%, 65% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-2px);
+    }
 }
 
 .mode-btn:hover,
@@ -5176,7 +5254,7 @@ html, body {
   .pub-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--space-lg);
+    gap: calc(var(--space-lg) * 1.3);
     width: 100%;
     flex: initial;
   }
@@ -5189,13 +5267,11 @@ html, body {
 
   @media (max-width: 760px) {
     .pub-year-group {
-      grid-template-columns: 1fr;
       gap: var(--space-sm);
     }
 
     .pub-year-title {
-      position: static;
-      margin-top: var(--space-md);
+      margin: 0;
     }
 
     .pub-grid {
@@ -5239,7 +5315,7 @@ html, body {
     max-width: none;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--space-lg);
+    gap: calc(var(--space-lg) * 1.3);
   }
   
   #selected-work .pub-grid > .pub-card {
@@ -5434,8 +5510,8 @@ html, body {
   }
   
   [data-theme="dark"] .kw-btn.is-selected {
-    background: #3E96D1;
-    color: #ffffff;
+    background: #FCD924;
+    color: #111827;
   }
   
   /* Research page publication cards - dark mode */

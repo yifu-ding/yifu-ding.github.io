@@ -8,6 +8,16 @@
       return String(tag || '').trim().toLowerCase().replace(/\s+/g, ' ');
     }
 
+    function normalizeTitle(title) {
+      return String(title || '').trim().toLowerCase().replace(/\s+/g, ' ');
+    }
+
+    function slugifyTitle(title) {
+      return normalizeTitle(title)
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
+    }
+
     function escapeHtml(value) {
       return String(value || '')
         .replaceAll('&', '&amp;')
@@ -28,7 +38,12 @@
       if (!href) return '';
       const target = getPaperTarget(href);
       const rel = target === '_blank' ? ' rel="noopener"' : '';
-      return `<a class="pub-action ${className}" href="${escapeHtml(href)}" target="${target}"${rel}>${escapeHtml(label)}</a>`;
+      const icons = {
+        Details: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 13.4a5 5 0 0 0 7.1 0l2.1-2.1a5 5 0 0 0-7.1-7.1l-1.2 1.2M13.4 10.6a5 5 0 0 0-7.1 0l-2.1 2.1a5 5 0 0 0 7.1 7.1l1.2-1.2"/></svg>',
+        PDF: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>',
+        Code: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.82a9.6 9.6 0 0 1 2.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.77c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>'
+      };
+      return `<a class="pub-action ${className}" href="${escapeHtml(href)}" target="${target}"${rel}>${icons[label] || ''}<span>${escapeHtml(label)}</span></a>`;
     }
 
     function createPaperCard(paper, isSelected) {
@@ -56,7 +71,6 @@
 
       const title = paper.title || 'Untitled paper';
       const venue = paper.venue || '';
-      const authors = paper.authors || '';
       const description = paper.description || paper.abstract || '';
       const imageUrl = paper.imageUrl || '';
       const pdfUrl = paper.pdfUrl || paper.url || '';
@@ -73,7 +87,6 @@
         <div class="pub-thumb${imageUrl ? ' has-image' : ''}">${thumb}</div>
         <div class="pub-info">
           <div class="pub-title">${escapeHtml(title)}</div>
-          ${authors && !isSelected ? `<div class="pub-authors">${escapeHtml(authors)}</div>` : ''}
           ${venue ? `<div class="pub-venue">${escapeHtml(venue)}</div>` : ''}
           ${description ? `<div class="pub-description">${escapeHtml(description)}</div>` : ''}
           <div class="pub-tags">
@@ -164,12 +177,92 @@
       }
       return Array.from(groups.entries());
     }
+
+    function getConfiguredSelectedGroups(allPapers) {
+      const groupsConfig = Array.isArray(window.SELECTED_PUBLICATION_GROUPS)
+        ? window.SELECTED_PUBLICATION_GROUPS
+        : [];
+      if (groupsConfig.length === 0) {
+        return [];
+      }
+
+      const papersByTitle = new Map();
+      for (const paper of allPapers) {
+        const key = normalizeTitle(paper && paper.title);
+        if (key && !papersByTitle.has(key)) {
+          papersByTitle.set(key, paper);
+        }
+      }
+
+      return groupsConfig
+        .map(group => {
+          const titles = Array.isArray(group && group.papers) ? group.papers : [];
+          const papers = titles
+            .map(title => {
+              const paper = papersByTitle.get(normalizeTitle(title));
+              if (!paper) {
+                console.warn('[papers] Selected publication title not found:', title);
+              }
+              return paper;
+            })
+            .filter(Boolean);
+
+          return {
+            id: group && group.id ? group.id : `selected-${slugifyTitle(group && group.title)}`,
+            title: group && group.title ? group.title : 'Selected Topic',
+            papers
+          };
+        })
+        .filter(group => group.papers.length > 0);
+    }
+
+    function renderSelectedPaperGroups(waterfall, groups) {
+      if (!waterfall) {
+        return;
+      }
+
+      waterfall.innerHTML = '';
+      for (const groupConfig of groups) {
+        const group = document.createElement('section');
+        group.className = 'pub-year-group pub-topic-group';
+        group.id = groupConfig.id;
+
+        const heading = document.createElement('h3');
+        heading.className = 'pub-year-title pub-topic-title';
+        heading.textContent = groupConfig.title;
+
+        const grid = document.createElement('div');
+        grid.className = 'pub-grid';
+        grid.setAttribute('aria-label', `${groupConfig.title} papers`);
+
+        for (const paper of groupConfig.papers) {
+          grid.appendChild(createPaperCard(paper, true));
+        }
+
+        group.appendChild(heading);
+        group.appendChild(grid);
+        waterfall.appendChild(group);
+      }
+    }
   
     function renderPaperList(waterfall, papers) {
       if (!waterfall) return;
   
       waterfall.innerHTML = '';
       const isSelected = waterfall.getAttribute('data-paper-list') === 'selected';
+
+      if (isSelected) {
+        const grid = document.createElement('div');
+        grid.className = 'pub-grid';
+        grid.setAttribute('aria-label', 'Selected publications');
+
+        for (const paper of papers) {
+          grid.appendChild(createPaperCard(paper, true));
+        }
+
+        waterfall.appendChild(grid);
+        return;
+      }
   
       for (const [year, items] of groupPapersByYear(papers)) {
         const group = document.createElement('section');
@@ -206,8 +299,13 @@
 
       const allPapers = flattenAllPapers();
       const sortedPapers = sortPapers(allPapers, currentSortOrder);
+      const selectedGroups = getConfiguredSelectedGroups(allPapers);
 
-      renderPaperList(selectedWaterfall, getSelectedPapers(sortedPapers));
+      if (selectedGroups.length > 0) {
+        renderSelectedPaperGroups(selectedWaterfall, selectedGroups);
+      } else {
+        renderPaperList(selectedWaterfall, getSelectedPapers(sortedPapers));
+      }
       renderPaperList(allWaterfall, sortedPapers);
   
       setTimeout(initRevealAnimation, 50);

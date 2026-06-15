@@ -1,26 +1,25 @@
 const KW_GROUPS = {
   model: new Set([
-    "BERT", "ViT", "LLM", "MoE", "SAM", "CNN", "FSMN", "PointNet", "RetinaNet", "Fast RCNN",  "Attention", "Diffusion"
+    "LLM", "Language Model", "MoE", "SAM", "Diffusion", "Attention",
+    "CNN", "BERT", "ViT", "FSMN", "PointNet", "Transformer"
   ]),
-  task: new Set([
-    "Action Recognition", "Detection", "Deepfake", "Segmentation", "Regression",
-    "Keyword Spotting", "Super-Resolution", "Few-shot Learning", "Reasoning", "GLUE", 
-    "X-ray"
-  ]),
-  application: new Set([
-    "Video Generation", "Point Clouds", "Visual Computing", "Multimedia", "Hardware", "On-chip",
-    "Tree of Thoughts"
+  taskApplication: new Set([
+    "Action Recognition", "Detection", "Image Detection", "Deepfake",
+    "Segmentation", "Regression", "Keyword Spotting", "Super-Resolution",
+    "Few-shot Learning", "Reasoning", "GLUE", "X-ray", "Multimodal",
+    "Video Generation", "Point Clouds", "Hardware", "On-chip",
+    "FPGA", "Tree of Thoughts", "Code Generation", "Mathematical Reasoning",
+    "Multimodal Understanding"
   ]),
   technique: new Set([
-    "Quantization", "PTQ", "Binarization", 
-    "Sparsification", "Knowledge Distillation",
-    "Domain Adaptation", "Expert Skipping", 
-    "Data-free",
-    "Efficient", "Triton Kernel",
-  ]), 
-  other:  new Set([
-      "Benchmark", "Survey", "Workshop",
-    ])
+    "Quantization", "PTQ", "Binarization", "Knowledge Distillation",
+    "Domain Adaptation", "Cross-domain", "Expert Skipping", "Data-free",
+    "Caching", "Pruning", "Acceleration", "Training-free", "Mid-Training",
+    "De-occlusion", "Triton Kernel", "CUDA Kernel", "MXFP"
+  ]),
+  other: new Set([
+    "Benchmark", "Survey", "Workshop", "Efficient Computing"
+  ])
 };
 
 function capitalizeKeyword(kw) {
@@ -71,6 +70,7 @@ function getGroupForKw(kw) {
     const searchInput = root.querySelector("#paper-search");
     const statusEl = root.querySelector("#filter-status");
     const clearBtn = root.querySelector("#kw-clear");
+    const clearFeedback = root.querySelector("#clear-feedback");
     const modeBtns = Array.from(root.querySelectorAll(".mode-btn"));
   
     if (!kwRow || !statusEl || !clearBtn || modeBtns.length === 0) return;
@@ -79,10 +79,53 @@ function getGroupForKw(kw) {
   
     // Make selectors tolerant in case your generator uses different class names.
     const getCards = () => Array.from(
-      root.querySelectorAll(".pub-waterfall .pub-card, .pub-waterfall a.pub-card, .pub-waterfall .paper-card, .pub-waterfall a[data-tags]")
+      root.querySelectorAll('[data-paper-list="all"] .pub-card, [data-paper-list="all"] a.pub-card, [data-paper-list="all"] .paper-card, [data-paper-list="all"] a[data-tags]')
     );
   
-    const getGroups = () => Array.from(root.querySelectorAll(".pub-year-group, .pub-category"));
+    const getGroups = () => Array.from(root.querySelectorAll('[data-paper-list="all"] .pub-year-group, [data-paper-list="all"] .pub-category'));
+
+    const getAllPapersWaterfall = () => root.querySelector('[data-paper-list="all"]');
+
+    const setFlatLayout = (enabled) => {
+      const waterfall = getAllPapersWaterfall();
+      if (!waterfall) return;
+
+      const existingFlatGrid = waterfall.querySelector(':scope > .pub-filter-results');
+
+      if (enabled) {
+        const flatGrid = existingFlatGrid || document.createElement("div");
+        if (!existingFlatGrid) {
+          flatGrid.className = "pub-grid pub-filter-results";
+          flatGrid.setAttribute("aria-label", "Filtered publications");
+          waterfall.appendChild(flatGrid);
+        }
+
+        for (const group of getGroups()) {
+          const year = group.getAttribute("data-year-group") || "";
+          for (const card of group.querySelectorAll(".pub-card, .paper-card, a[data-tags]")) {
+            card.dataset.filterYear = year;
+            flatGrid.appendChild(card);
+          }
+          group.classList.add("is-hidden");
+        }
+        return;
+      }
+
+      if (!existingFlatGrid) return;
+
+      const groupsByYear = new Map(
+        getGroups().map(group => [group.getAttribute("data-year-group") || "", group])
+      );
+
+      for (const card of Array.from(existingFlatGrid.children)) {
+        const group = groupsByYear.get(card.dataset.filterYear || "");
+        const grid = group?.querySelector(".pub-grid");
+        if (grid) grid.appendChild(card);
+        delete card.dataset.filterYear;
+      }
+
+      existingFlatGrid.remove();
+    };
   
     const getCardTags = (card) => {
       const ds = card.getAttribute("data-tags");
@@ -103,6 +146,7 @@ function getGroupForKw(kw) {
   
     let mode = "and";
     const selected = new Set();
+    let clearFeedbackTimer;
   
     const setMode = (m) => {
       mode = m;
@@ -124,12 +168,36 @@ function getGroupForKw(kw) {
       if (!query) return true;
       return getSearchText(card).includes(query);
     };
+
+    const updateKeywordVisibility = (cards, selectedArr) => {
+      const shouldNarrowKeywords = mode === "and" && selectedArr.length > 0;
+      const availableTags = new Set();
+
+      if (shouldNarrowKeywords) {
+        for (const card of cards) {
+          if (!card.classList.contains("is-hidden")) {
+            for (const tag of getCardTags(card)) availableTags.add(tag);
+          }
+        }
+      }
+
+      for (const btn of kwRow.querySelectorAll(".kw-btn")) {
+        const keyword = norm(btn.dataset.kw);
+        btn.hidden = shouldNarrowKeywords
+          && !selected.has(keyword)
+          && !availableTags.has(keyword);
+      }
+
+      for (const group of kwRow.querySelectorAll(".kw-group")) {
+        group.hidden = shouldNarrowKeywords
+          && !group.querySelector(".kw-btn:not([hidden])");
+      }
+    };
   
-    const GROUP_ORDER = ["model", "task", "application", "technique", "other"];
+    const GROUP_ORDER = ["model", "taskApplication", "technique", "other"];
 const GROUP_LABEL = {
   model: "Model & Structure",
-  task: "Task",
-  application: "Application",
+  taskApplication: "Task & Application",
   technique: "Technique",
   other: "Other"
 };
@@ -138,7 +206,7 @@ const renderKeywords = (allKeywords) => {
   kwRow.innerHTML = "";
 
   // bucket keywords
-  const buckets = { model: [], task: [], application: [], technique: [], other: [] };
+  const buckets = { model: [], taskApplication: [], technique: [], other: [] };
   for (const kw of allKeywords) {
     buckets[getGroupForKw(kw)].push(kw);
   }
@@ -195,10 +263,14 @@ const renderKeywords = (allKeywords) => {
 
   
     const applyFilter = () => {
-      const cards = getCards();
-      const groups = getGroups();
       const sel = Array.from(selected);
       const query = norm(searchInput?.value || "");
+      const useFlatLayout = sel.length > 0;
+
+      setFlatLayout(useFlatLayout);
+
+      const cards = getCards();
+      const groups = getGroups();
   
       let visibleCount = 0;
   
@@ -208,10 +280,16 @@ const renderKeywords = (allKeywords) => {
         c.classList.toggle("is-hidden", !ok);
         if (ok) visibleCount += 1;
       }
+
+      updateKeywordVisibility(cards, sel);
   
-      for (const group of groups) {
-        const anyVisible = !!group.querySelector(".pub-card:not(.is-hidden), .paper-card:not(.is-hidden), a.pub-card:not(.is-hidden)");
-        group.classList.toggle("is-hidden", !anyVisible);
+      if (useFlatLayout) {
+        for (const group of groups) group.classList.add("is-hidden");
+      } else {
+        for (const group of groups) {
+          const anyVisible = !!group.querySelector(".pub-card:not(.is-hidden), .paper-card:not(.is-hidden), a.pub-card:not(.is-hidden)");
+          group.classList.toggle("is-hidden", !anyVisible);
+        }
       }
   
       if (sel.length === 0 && !query) {
@@ -247,6 +325,16 @@ const renderKeywords = (allKeywords) => {
           x.setAttribute("aria-pressed", "false");
         });
         applyFilter();
+
+        if (clearFeedback) {
+          window.clearTimeout(clearFeedbackTimer);
+          clearFeedback.classList.remove("is-visible");
+          void clearFeedback.offsetWidth;
+          clearFeedback.classList.add("is-visible");
+          clearFeedbackTimer = window.setTimeout(() => {
+            clearFeedback.classList.remove("is-visible");
+          }, 1000);
+        }
       });
 
       if (searchInput) {

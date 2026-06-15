@@ -12,25 +12,25 @@ const PAPERS_CONFIG = [
     authors: "Yifu Ding, Jiacheng Wang, Ge Yang, Yongcheng Jing, Jinyang Guo, Xianglong Liu, Dacheng Tao",
     description: "Structurally compresses MoE models by pruning channels rather than whole experts, using attribution-guided coverage maximization to preserve important expert information.",
     selected: true,
-    tags: ["LLM","MoE","Pruning","Quantization"]
+    tags: ["LLM","MoE","Pruning","Quantization", "Language Model", "Training-free"]
   },
   {
     url: "https://icml.cc/virtual/2026/poster/66363",
-    pdfUrl: "https://icml.cc/virtual/2026/poster/66363",
+    pdfUrl: "https://arxiv.org/abs/2602.02544",
     codeUrl: "https://github.com/wenhao728/spa-cache",
     detailUrl: "",
-    imageUrl: "src/papers/imgs/db-llm.png",
+    imageUrl: "src/papers/imgs/singular-cache-overview.png",
     venue: "ICML 2026",
     year: 2026,
     title: "Singular Proxies for Adaptive Caching in Diffusion Language Models",
     authors: "Wenhao Sun, Rong-Cheng Tu, Yifu Ding, Zhao Jin, Jingyi Liao, Yongcheng Jing, Dacheng Tao",
     description: "SPA-Cache accelerates diffusion language model decoding with a singular proxy for update-critical tokens and adaptive layer-wise update budgets.",
     selected: true,
-    tags: ["LLM","Diffusion","Caching","Acceleration"]
+    tags: ["LLM","Diffusion","Caching","Acceleration", "Language Model", "Training-free"]
   },
   {
     url: "https://www.sciencedirect.com/science/article/abs/pii/S0893608025007361",
-    pdfUrl: "https://www.sciencedirect.com/science/article/abs/pii/S0893608025007361",
+    pdfUrl: "https://arxiv.org/abs/2409.16694",
     codeUrl: "",
     detailUrl: "",
     imageUrl: "src/papers/imgs/llm-quant-survey.png",
@@ -45,28 +45,28 @@ const PAPERS_CONFIG = [
   {
     url: "https://proceedings.neurips.cc/paper_files/paper/2024/file/9f4cc62d0632911c63163ea3d9ec19bd-Paper-Datasets_and_Benchmarks_Track.pdf",
     pdfUrl: "https://proceedings.neurips.cc/paper_files/paper/2024/file/9f4cc62d0632911c63163ea3d9ec19bd-Paper-Datasets_and_Benchmarks_Track.pdf",
-    codeUrl: "",
+    codeUrl: "https://github.com/AboveParadise/LLMCBench",
     detailUrl: "",
-    imageUrl: "",
-    venue: "NeurIPS 2024",
+    imageUrl: "src/papers/imgs/llmcbench.png",
+    venue: "NeurIPS 2024 Spotlight",
     year: 2024,
     title: "Llmcbench: Benchmarking large language model compression for efficient deployment",
-    authors: "",
-    description: "",
-    tags: ["LLM","Benchmark","Sparsification","Quantization"]
+    authors: "Ge Yang, Changyi He, Jinyang Guo, Jiannan Wu, Yifu Ding, Aishan Liu, Haotong Qin, Pengliang Ji, Xianglong Liu",
+    description: "LLMCBench evaluates 7 compression methods across 18 LLM architectures, 11 datasets, and 3 deployment platforms for efficient deployment.",
+    tags: ["LLM","Benchmark","Quantization", "Pruning"]
   },
   {
-    url: "https://openreview.net/pdf?id=sCGRhnuMUJ",
+    url: "https://dl.acm.org/doi/10.5555/3692070.3692743",
     pdfUrl: "https://openreview.net/pdf?id=sCGRhnuMUJ",
     codeUrl: "",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/jsq-overview.png",
     venue: "ICML 2024",
     year: 2024,
     title: "Compressing large language models by joint sparsification and quantization",
     authors: "",
     description: "",
-    tags: ["LLM","Sparsification","Quantization"]
+    tags: ["LLM","Pruning","Quantization","Language Model"]
   },
   {
     url: "https://openreview.net/pdf?id=NCYBdRCpw1",
@@ -80,25 +80,29 @@ const PAPERS_CONFIG = [
     authors: "Changyi He, Yifu Ding, Jinyang Guo, Ruihao Gong, Haotong Qin, Xianglong Liu",
     description: "DA-KD reduces distillation cost by dynamically selecting training samples based on difficulty and stabilizing optimization with bidirectional discrepancy loss.",
     selected: true,
-    tags: ["LLM","Knowledge Distillation"]
+    tags: ["LLM","Knowledge Distillation", "Language Model", "Mid-Training"]
   },
   {
     url: "https://arxiv.org/pdf/2511.15690",
+    pdfUrl: "https://arxiv.org/pdf/2511.15690",
+    codeUrl: "https://github.com/ModelTC/MoDES",
     detailUrl: "",
-    imageUrl: "",
-    venue: "arXiv 2025",
-    year: 2025,
+    imageUrl: "src/papers/imgs/modes-overview.png",
+    venue: "CVPR 2026",
+    year: 2026,
     title: "MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping",
-    tags: ["LLM","MoE","Expert Skipping"]
+    authors: "Yushi Huang, Zining Wang, Zhenyu Yuan, Yifu Ding, Ruihao Gong, Jinyang Guo, Xianglong Liu, Jun Zhang",
+    description: "MoDES accelerates multimodal LLM inference with training-free expert skipping driven by modality heterogeneity.",
+    tags: ["LLM","MoE","Expert Skipping", "Multimodal", "Multimodal Understanding", "Training-free"]
   },
   {
     url: "https://arxiv.org/pdf/2402.11960",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/db-llm.png",
     venue: "ACL Findings 2024",
     year: 2024,
     title: "DB-LLM: Accurate Dual-Binarization for Efficient LLMs",
-    tags: ["LLM","Binarization","Quantization"]
+    tags: ["LLM","Binarization","Quantization", "Language Model"]
   },
   {
     url: "https://aclanthology.org/2025.acl-long.550.pdf",
@@ -112,7 +116,7 @@ const PAPERS_CONFIG = [
     authors: "Yifu Ding, Wentao Jiang, Shunyu Liu, Yongcheng Jing, Jinyang Guo, Yingjie Wang, Jing Zhang, Zengmao Wang, Ziwei Liu, Bo Du, Xianglong Liu, Dacheng Tao",
     description: "DPTS accelerates Tree of Thoughts reasoning by reducing redundant exploration and focus switching, achieving 2-4x speedups on Qwen-2.5 and Llama-3.",
     selected: true,
-    tags: ["LLM","Tree of Thoughts","Reasoning"]
+    tags: ["LLM","Tree of Thoughts","Reasoning", "Code Generation", "Mathematical Reasoning", "Training-free"]
   },
   {
     url: "https://arxiv.org/pdf/2505.11497",
@@ -121,7 +125,7 @@ const PAPERS_CONFIG = [
     detailUrl: "",
     imageUrl: "src/papers/imgs/qvgen.png",
     venue: "ICLR 2026",
-    year: 2025,
+    year: 2026,
     title: "QVGen: Pushing the Limit of Quantized Video Generative Models",
     authors: "Yushi Huang, Ruihao Gong, Jing Liu, Yifu Ding, Chengtao Lv, Haotong Qin, Jun Zhang",
     description: "QVGen enables extremely low-bit quantization-aware training for video diffusion models while preserving near full-precision generation quality at 4-bit.",
@@ -131,7 +135,7 @@ const PAPERS_CONFIG = [
   {
     url: "https://openaccess.thecvf.com/content/CVPR2024/papers/Lv_PTQ4SAM_Post-Training_Quantization_for_Segment_Anything_CVPR_2024_paper.pdf",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/ptq4sam.png",
     venue: "CVPR 2024",
     year: 2024,
     title: "PTQ4SAM: Post-Training Quantization for Segment Anything",
@@ -140,7 +144,7 @@ const PAPERS_CONFIG = [
   {
     url: "https://openaccess.thecvf.com/content/CVPR2024/papers/Ding_Reg-PTQ_Regression-specialized_Post-training_Quantization_for_Fully_Quantized_Object_Detector_CVPR_2024_paper.pdf",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/reg-ptq.png",
     venue: "CVPR 2024",
     year: 2024,
     title: "Reg-PTQ: Regression-specialized Post-training Quantization for Fully Quantized Object Detector",
@@ -148,17 +152,21 @@ const PAPERS_CONFIG = [
   },
   {
     url: "https://openreview.net/pdf?id=3gamyee9Yh",
+    pdfUrl: "https://proceedings.neurips.cc/paper_files/paper/2023/file/b2169d573d75ff90c7b12dc3a5fc2898-Paper-Conference.pdf",
+    codeUrl: "https://github.com/htqin/QuantSR",
     detailUrl: "",
-    imageUrl: "",
-    venue: "NeurIPS 2023",
+    imageUrl: "src/papers/imgs/quantsr.png",
+    venue: "NeurIPS 2023 Spotlight",
     year: 2023,
     title: "QuantSR: accurate low-bit quantization for efficient image super-resolution",
+    authors: "Haotong Qin, Yulun Zhang, Yifu Ding, Yi Liu, Xianglong Liu, Martin Danelljan, Fisher Yu",
+    description: "QuantSR uses deep dynamic quantization with parameter redistribution for accurate low-bit image super-resolution.",
     tags: ["Super-Resolution","PTQ","Quantization"]
   },
   {
     url: "https://arxiv.org/pdf/2303.14341",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/apq-vit-towards.png",
     venue: "CVPR 2022",
     year: 2022,
     title: "Towards Accurate Post-Training Quantization for Vision Transformer",
@@ -167,7 +175,7 @@ const PAPERS_CONFIG = [
   {
     url: "https://arxiv.org/pdf/2109.00212",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/dsg-pami-overview.png",
     venue: "IEEE TPAMI 2023",
     year: 2023,
     title: "Diverse sample generation: Pushing the limit of generative data-free quantization",
@@ -176,16 +184,16 @@ const PAPERS_CONFIG = [
   {
     url: "https://openaccess.thecvf.com/content/CVPR2022W/ArtOfRobust/papers/Chen_An_Empirical_Study_of_Data-Free_Quantizations_Tuning_Robustness_CVPRW_2022_paper.pdf",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/an-emperical-study-of-datafree.png",
     venue: "CVPR Workshop 2022",
     year: 2022,
     title: "An Empirical Study of Data-Free Quantization's Tuning Robustness",
     tags: ["Data-free","CNN","PTQ","Quantization"]
   },
   {
-    url: "https://openaccess.thecvf.com/content/CVPR2021/papers/Cai_Diversifying_Sample_Generation_for_Accurate_Data-Free_Quantization_CVPR_2021_paper.pdf",
+    url: "https://arxiv.org/abs/2103.01049",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/dsg-cvpr-overview.png",
     venue: "CVPR 2021",
     year: 2021,
     title: "Diversifying Sample Generation for Accurate Data-Free Quantization",
@@ -194,7 +202,7 @@ const PAPERS_CONFIG = [
   {
     url: "https://proceedings.mlr.press/v202/qin23b/qin23b.pdf",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/bibench-clear.png",
     venue: "ICML 2023",
     year: 2023,
     title: "Bibench: Benchmarking and analyzing network binarization",
@@ -203,7 +211,7 @@ const PAPERS_CONFIG = [
   {
     url: "https://arxiv.org/pdf/2211.06987",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/bifsmn-v2.png",
     venue: "IEEE TNNLS 2024",
     year: 2024,
     title: "Bifsmnv2: Pushing binary neural networks for keyword spotting to real-network performance",
@@ -212,7 +220,7 @@ const PAPERS_CONFIG = [
   {
     url: "https://arxiv.org/pdf/2109.12338",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/distribution-sensitive-overview.png",
     venue: "IJCV 2022",
     year: 2022,
     title: "Distribution-sensitive information retention for accurate binary neural network",
@@ -221,7 +229,7 @@ const PAPERS_CONFIG = [
   {
     url: "https://openreview.net/pdf?id=EtKEzgslVg5",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/bibert.png",
     venue: "ICLR 2022",
     year: 2022,
     title: "Bibert: Accurate fully binarized bert",
@@ -230,7 +238,7 @@ const PAPERS_CONFIG = [
   {
     url: "https://www.ijcai.org/proceedings/2022/0603.pdf",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/bifsmn-overview.png",
     venue: "IJCAI 2021",
     year: 2021,
     title: "BiFSMN: Binary neural network for keyword spotting",
@@ -239,7 +247,7 @@ const PAPERS_CONFIG = [
   {
     url: "https://openreview.net/pdf?id=9QLRCVysdlO",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/bipointnet.png",
     venue: "ICLR 2021",
     year: 2021,
     title: "Bipointnet: Binary neural network for point clouds",
@@ -247,12 +255,53 @@ const PAPERS_CONFIG = [
   },
   {
     url: "https://openaccess.thecvf.com/content/ICCV2025W/ECLR/papers/Du_Low-bit_FlashAttention_Accelerated_Operator_Design_Based_on_Triton_ICCVW_2025_paper.pdf",
+    pdfUrl: "https://openaccess.thecvf.com/content/ICCV2025W/ECLR/papers/Du_Low-bit_FlashAttention_Accelerated_Operator_Design_Based_on_Triton_ICCVW_2025_paper.pdf",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/du-low-bit-flash-attention-overview.png",
     venue: "ECLR 2025 (ICCV Workshop)",
     year: 2025,
     title: "Low-bit FlashAttention Accelerated Operator Design Based on Triton",
+    authors: "Jinyang Du, Jinyang Guo, Yifu Ding",
+    description: "A Triton-based mixed-precision FlashAttention operator integrates quantization, dequantization, and attention for efficient low-bit inference.",
     tags: ["Attention","Triton Kernel","Quantization"]
+  },
+  {
+    url: "https://arxiv.org/abs/2604.03950",
+    pdfUrl: "https://arxiv.org/pdf/2604.03950",
+    codeUrl: "https://github.com/yifu-ding/MP-Sparse-Attn",
+    detailUrl: "",
+    imageUrl: "",
+    venue: "EDGE @ CVPR 2026",
+    year: 2026,
+    title: "Diagonal-Tiled Mixed-Precision Attention for Efficient Low-Bit MXFP Inference",
+    authors: "Yifu Ding, Xuan Zhang",
+    description: "A Triton-based MXFP mixed-precision attention kernel for efficient and accurate low-bit attention inference on NVIDIA B200.",
+    tags: ["Attention","Triton Kernel","Quantization","MXFP"]
+  },
+  {
+    url: "https://arxiv.org/abs/2604.03957",
+    pdfUrl: "https://arxiv.org/pdf/2604.03957",
+    codeUrl: "https://github.com/yifu-ding/BGEMM-CUDA",
+    detailUrl: "",
+    imageUrl: "src/papers/imgs/bwta-kernel.png",
+    venue: "Submitted to IEEE-TPAMI under review",
+    year: 2026,
+    title: "BWTA: Accurate and Efficient Binarized Transformer by Algorithm-Hardware Co-design",
+    authors: "Yifu Ding, Xianglong Liu, Shiyao Jin, Jinyang Guo, Jiliang Lu",
+    description: "Algorithm-hardware co-design with CUDA kernels for ultra-low-bit binary and ternary Transformer computation.",
+    tags: ["Binarization","CUDA Kernel","Hardware","Transformer"]
+  },
+  {
+    url: "https://openreview.net/forum?id=B2DRmwStm9",
+    pdfUrl: "https://openreview.net/forum?id=B2DRmwStm9",
+    detailUrl: "",
+    imageUrl: "src/papers/imgs/qus-figure4.png",
+    venue: "OpenReview",
+    year: 2026,
+    title: "QuS: Towards High-Performance EfficientViT on FPGA by Quantization and Streamline Co-Design",
+    authors: "Yicheng Zeng, Yifu Ding, Jinyang Guo, Haotong Qin, Yifan Xu, Nianxin Li, Yao Guo, Xianglong Liu",
+    description: "QuS co-designs DSP packing, low-buffer streamline, and distribution-aware quantization for high-performance ViT acceleration on FPGA.",
+    tags: ["ViT","FPGA","Hardware","Quantization"]
   },
   {
     url: "https://arxiv.org/pdf/2505.18809",
@@ -271,7 +320,7 @@ const PAPERS_CONFIG = [
   {
     url: "https://arxiv.org/pdf/2309.01945",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/on-chip-hardware-intro-figure.png",
     venue: "ACM MM 2022",
     year: 2022,
     title: "OHQ: On-chip Hardware-aware Quantization",
@@ -289,16 +338,16 @@ const PAPERS_CONFIG = [
     authors: "Renshuai Tao, Ziheng Qin, Yifu Ding, Chuangchuang Tan, Jiakai Wang, Wei Wang",
     description: "This work targets real-time edge deepfake detection with low-bit quantization, reducing compute and storage while preserving strong accuracy.",
     selected: true,
-    tags: ["Deepfake","Detection","Quantization"]
+    tags: ["Deepfake","Image Detection","Quantization"]
   },
   {
     url: "https://openaccess.thecvf.com/content/CVPR2022/papers/Tao_Exploring_Endogenous_Shift_for_Cross-Domain_Detection_A_Large-Scale_Benchmark_and_CVPR_2022_paper.pdf",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/tao-exploring-endogenuous-shift-overview.png",
     venue: "CVPR 2022",
     year: 2022,
     title: "Exploring Endogenous Shift for Cross-domain Detection: A Large-scale Benchmark and Perturbation Suppression Network",
-    tags: ["Detection","Benchmark","Domain Adaptation"]
+    tags: ["Image Detection","Benchmark","Domain Adaptation", "Cross-domain"]
   },
   {
     url: "https://doi.org/10.1109/TCSVT.2023.3250646",
@@ -316,7 +365,7 @@ const PAPERS_CONFIG = [
     venue: "ACM MM 2021",
     year: 2021,
     title: "Improving Generalization of Deepfake Detection with Domain Adaptive Batch Normalization",
-    tags: ["Deepfake","Detection","Domain Adaptation"]
+    tags: ["Deepfake","Image Detection","Domain Adaptation"]
   },
   {
     url: "https://ieeexplore.ieee.org/abstract/document/9428447",
@@ -325,7 +374,7 @@ const PAPERS_CONFIG = [
     venue: "ICME 2021",
     year: 2021,
     title: "Multi-pretext attention network for few-shot learning with self-supervision",
-    tags: ["Few-shot Learning","Attention"]
+    tags: ["Few-shot Learning"]
   },
   {
     url: "https://arxiv.org/pdf/2103.00809",
@@ -334,24 +383,24 @@ const PAPERS_CONFIG = [
     venue: "IEEE TRANSACTIONS ON MULTIMEDIA 2021",
     year: 2021,
     title: "Over-sampling de-occlusion attention network for prohibited items detection in noisy x-ray images",
-    tags: ["X-ray","Detection","Attention"]
+    tags: ["X-ray","Image Detection","De-occlusion"]
   },
   {
     url: "https://iccv.thecvf.com/virtual/2025/workshop/2785",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/workshops/posters/eclr-iccv-2025.png",
     venue: "ICCV 2025",
     year: 2025,
     title: "ECLR'25: 2nd Workshop on Efficient Computing under Limited Resources: Visual Computing",
-    tags: ["Workshop","Visual Computing","Efficient"]
+    tags: ["Workshop", "Efficient Computing"]
   },
   {
     url: "https://emclr-acmmm.github.io/",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/workshops/posters/emclr-acmmm-2024.png",
     venue: "EMCLR 2024",
     year: 2024,
     title: "2024 1st International Workshop on Efficient Multimedia Computing under Limited Resources Organization",
-    tags: ["Workshop","Multimedia","Efficient"]
+    tags: ["Workshop","Efficient Computing"]
   }
 ];

@@ -1311,21 +1311,21 @@ button {
    Page Sidebar Navigation
    =========================== */
 .page-sidebar-nav {
-    position: static;
-    left: auto;
-    top: auto;
-    transform: none;
+    position: fixed;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 900;
-    padding-left: 0;
-    padding-right: 0;
+    width: 238px;
     opacity: 0;
     visibility: hidden;
-    transition: opacity var(--transition-base), visibility var(--transition-base);
+    transition: opacity var(--transition-base), visibility var(--transition-base), transform var(--transition-base);
 }
 
 .page-sidebar-nav.visible {
     opacity: 1;
     visibility: visible;
+    transform: translateY(-50%);
 }
 
 .page-sidebar-nav-inner {
@@ -1365,6 +1365,13 @@ button {
     text-decoration: none;
     letter-spacing: 0.01em;
     gap: 8px;
+    white-space: nowrap;
+}
+
+.page-sidebar-nav-link-sub {
+    padding-left: 18px;
+    font-size: 0.8rem;
+    font-weight: 650;
 }
 
 .page-sidebar-nav-link .nav-arrow {

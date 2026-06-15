@@ -53,7 +53,7 @@ class LanguageManager {
             en: {
                 // Navigation
                 nav_home: 'Home',
-                nav_news: 'News',
+                nav_timeline: 'Timeline',
                 nav_education: 'Education',
                 nav_research: 'Research',
                 nav_repositories: 'Repositories',
@@ -103,7 +103,7 @@ class LanguageManager {
                 home_photo_credit: 'Photo taken by Zihao Jing, Model & Direction: Yifu Ding, November 2025, Lake Minnewanka, Canadian Rockies',
                 repositories_title: 'Repositories',
                 repositories_description: 'A collection of my open-source repositories.',
-                update_fund_completion: '<strong>Jun 2026:</strong> Successfully passed the completion review for the <strong>Outstanding Doctoral Academic Fund</strong> at Beihang University.',
+                update_fund_completion: 'Successfully passed the completion review for the <strong>Outstanding Doctoral Academic Fund</strong> at Beihang University.',
                 fund_completion_title: 'Outstanding Doctoral Academic Fund Completion',
                 fund_completion_desc: 'Successfully passed the completion review for the Outstanding Doctoral Academic Fund at Beihang University.',
                 fund_completion_date: 'Jun 2026',
@@ -282,7 +282,7 @@ class LanguageManager {
                 view_details: 'View details',
                 close: 'Close',
                 load_more_papers: 'Load More Papers',
-                load_more_news: 'Load More News',
+                load_more_news: 'Load More Updates',
                 
                 // Gallery Page
                 back_to_studio: 'Back to Portfolio',
@@ -291,7 +291,7 @@ class LanguageManager {
             zh: {
                 // 导航
                 nav_home: '首页',
-                nav_news: '新闻',
+                nav_timeline: '时间线',
                 nav_education: '教育经历',
                 nav_research: '研究',
                 nav_repositories: '代码仓库',
@@ -341,7 +341,7 @@ class LanguageManager {
                 home_photo_credit: '照片由景子昊拍摄，模特&指导：丁一芙，2025年11月，明尼旺卡湖，加拿大落基山脉',
                 repositories_title: '代码仓库',
                 repositories_description: '我的开源代码仓库合集。',
-                update_fund_completion: '<strong>Jun 2026：</strong>顺利通过北京航空航天大学<strong>优秀博士研究生学术卓越基金</strong>结题验收。',
+                update_fund_completion: '顺利通过北京航空航天大学<strong>优秀博士研究生学术卓越基金</strong>结题验收。',
                 fund_completion_title: '优秀博士研究生学术卓越基金结题',
                 fund_completion_desc: '顺利通过北京航空航天大学优秀博士研究生学术卓越基金结题验收。',
                 fund_completion_date: 'Jun 2026',
@@ -707,10 +707,13 @@ class SidebarNavigationManager {
         this.sidebarNav = document.querySelector('.page-sidebar-nav');
         this.profileSidebar = document.querySelector('.home-profile-sidebar');
         this.navLinks = document.querySelectorAll('.page-sidebar-nav-link');
-        this.sections = document.querySelectorAll('#updates, #recent-papers, #workshop-services, #awards-funding');
+        this.sections = [];
         this.navHeight = document.querySelector('.main-nav')?.offsetHeight || 72;
         this.offset = 100;
-        this.updatesSection = document.querySelector('#updates');
+        this.visibilityAnchor = null;
+        this.scrollLockTimer = null;
+        this.lockedTargetId = null;
+        this.refreshSections();
         this.init();
     }
 
@@ -728,16 +731,52 @@ class SidebarNavigationManager {
 
                 if (targetElement) {
                     e.preventDefault();
-                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    this.lockedTargetId = targetId;
+                    this.setActiveLink(targetId);
+                    window.clearTimeout(this.scrollLockTimer);
+
+                    if (targetId === '#top') {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+
+                        this.scrollLockTimer = window.setTimeout(() => {
+                            this.lockedTargetId = null;
+                            this.updateActiveLink();
+                        }, 900);
+                        return;
+                    }
+
+                    const targetAnchor = this.getSectionAnchor(targetElement);
+                    const elementPosition = targetAnchor.getBoundingClientRect().top + window.pageYOffset;
                     const offsetPosition = elementPosition - this.offset;
 
                     window.scrollTo({
                         top: offsetPosition,
                         behavior: 'smooth'
                     });
+
+                    this.scrollLockTimer = window.setTimeout(() => {
+                        this.lockedTargetId = null;
+                        this.updateActiveLink();
+                    }, 900);
                 }
             });
         });
+
+        document.addEventListener('papers:rendered', () => {
+            this.refreshSections();
+            this.updateActiveLink();
+            this.updateVisibility();
+        });
+    }
+
+    refreshSections() {
+        this.sections = Array.from(this.navLinks)
+            .map(link => document.querySelector(link.getAttribute('href')))
+            .filter(section => section && section.id !== 'top');
+        this.visibilityAnchor = this.sections[0] || null;
     }
 
     setupScrollSpy() {
@@ -760,14 +799,14 @@ class SidebarNavigationManager {
     }
 
     updateVisibility() {
-        if (!this.updatesSection) return;
+        if (!this.visibilityAnchor) return;
 
         const scrollPosition = window.pageYOffset;
-        const updatesTop = this.updatesSection.getBoundingClientRect().top + window.pageYOffset;
+        const anchorTop = this.visibilityAnchor.getBoundingClientRect().top + window.pageYOffset;
         const windowHeight = window.innerHeight;
 
-        // Show sidebar when scrolled to the Updates section
-        if (scrollPosition >= updatesTop - windowHeight / 2) {
+        // Show sidebar when approaching the first linked section.
+        if (scrollPosition >= anchorTop - windowHeight / 2) {
             if (this.sidebarNav) this.sidebarNav.classList.add('visible');
             if (this.profileSidebar) this.profileSidebar.classList.add('visible');
         } else {
@@ -778,15 +817,20 @@ class SidebarNavigationManager {
 
     updateActiveLink() {
         if (!this.navLinks.length) return;
+        if (this.lockedTargetId) {
+            this.setActiveLink(this.lockedTargetId);
+            return;
+        }
 
-        const scrollPosition = window.pageYOffset + this.offset;
+        const scrollPosition = window.pageYOffset + this.offset + 2;
 
         // Find which section is currently in view
         let currentSection = null;
         const sectionOffsets = [];
 
         this.sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+            const sectionAnchor = this.getSectionAnchor(section);
+            const sectionTop = sectionAnchor.getBoundingClientRect().top + window.pageYOffset;
             const sectionBottom = sectionTop + section.offsetHeight;
             sectionOffsets.push({
                 element: section,
@@ -804,16 +848,19 @@ class SidebarNavigationManager {
             }
         }
 
-        // Update active state on nav links
-        this.navLinks.forEach(link => {
-            const targetId = link.getAttribute('href');
+        this.setActiveLink(currentSection ? `#${currentSection.id}` : null);
+    }
 
-            if (currentSection && targetId === `#${currentSection.id}`) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
+    setActiveLink(targetId) {
+        this.navLinks.forEach(link => {
+            link.classList.toggle('active', Boolean(targetId) && link.getAttribute('href') === targetId);
         });
+    }
+
+    getSectionAnchor(section) {
+        return section.querySelector(
+            '.publication-section-title, .subsection-title, .simple-page-title, h1, h2, h3, h4'
+        ) || section;
     }
 }
 
@@ -1238,5 +1285,5 @@ function setupLoadMore(buttonId, itemSelector, initialVisible, loadPerClick, vis
 
 document.addEventListener('DOMContentLoaded', () => {
     setupLoadMore('load-more-papers', '.papers-list .paper-card', 3, 3, 'grid');
-    setupLoadMore('load-more-news', '.updates-timeline > li', 5, 3, 'list-item');
+    setupLoadMore('load-more-news', '.updates-timeline > li', 5, 3, '');
 });

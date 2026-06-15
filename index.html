@@ -21,7 +21,7 @@
             <div class="nav-center">
                 <div class="nav-links">
                     <a href="index.html" class="nav-link active"><span data-i18n="nav_home">Home</span></a>
-                    <a href="news.html" class="nav-link"><span data-i18n="nav_news">News</span></a>
+                    <a href="timeline.html" class="nav-link"><span data-i18n="nav_timeline">Timeline</span></a>
                     <a href="education.html" class="nav-link">
                         <span data-i18n="nav_education">Education</span>
                     </a>
@@ -97,40 +97,19 @@
                 </div>
             </div>
 
-            <!-- Page Sidebar Navigation hidden
-            <div class="page-sidebar-nav">
-                <div class="page-sidebar-nav-inner">
-                    <div class="page-sidebar-nav-title">Quick Links</div>
-                    <nav class="page-sidebar-nav-links">
-                        <a href="#updates" class="page-sidebar-nav-link" data-section="updates">
-                            <span class="nav-arrow"></span>
-                            <span class="page-sidebar-nav-label">Updates</span>
-                        </a>
-                        <a href="#recent-papers" class="page-sidebar-nav-link" data-section="recent-papers">
-                            <span class="nav-arrow"></span>
-                            <span class="page-sidebar-nav-label">Recent Papers</span>
-                        </a>
-                        <a href="#workshop-services" class="page-sidebar-nav-link" data-section="workshop-services">
-                            <span class="nav-arrow"></span>
-                            <span class="page-sidebar-nav-label">Workshop Services</span>
-                        </a>
-                        <a href="#awards-funding" class="page-sidebar-nav-link" data-section="awards-funding">
-                            <span class="nav-arrow"></span>
-                            <span class="page-sidebar-nav-label">Awards & Funding</span>
-                        </a>
-                        <!-- <a href="#customized-tools" class="page-sidebar-nav-link" data-section="customized-tools">
-                            <span class="nav-arrow"></span>
-                            <span class="page-sidebar-nav-label">Customized Tools</span>
-                        </a> -->
-                        <a href="#discover-channels" class="page-sidebar-nav-link" data-section="discover-channels">
-                            <span class="nav-arrow"></span>
-                            <span class="page-sidebar-nav-label">Discover by Channels</span>
-                        </a>
-                    </nav>
-                </div>
-            </div>
-            -->
+        </aside>
 
+        <aside class="page-sidebar-nav" aria-label="Page sections">
+            <div class="page-sidebar-nav-inner">
+                <nav class="page-sidebar-nav-links">
+                    <a href="#top" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Back to Top</span></a>
+                    <a href="#updates" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Updates</span></a>
+                    <a href="#recent-papers" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Recent Papers</span></a>
+                    <a href="#workshop-services" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Workshops</span></a>
+                    <a href="#home-education" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Education</span></a>
+                    <a href="#awards-funding" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Awards</span></a>
+                </nav>
+            </div>
         </aside>
 
         <!-- 1) Welcome (Split hero, full width) -->
@@ -231,20 +210,27 @@
                     <div class="subsection-content">
                         <ol class="updates-list timeline-list updates-timeline">
                             <li>
-                                <span class="update-icon">🏆</span> <span data-i18n-html="update_fund_completion"><strong>Jun 2026:</strong> Successfully passed the completion review for the <strong>Outstanding Doctoral Academic Fund</strong> at Beihang University.</span>
+                                <span class="update-icon">📢</span>
+                                <span class="timeline-entry-content">We warmly welcome potential speakers to join us at this year's workshop, <strong>The 3rd Efficient Computing under Limited Resources: Modern AI Models and Systems</strong>. Past workshop homepages:
+                                <a href="https://eclr-workshop.github.io/" target="_blank" rel="noopener">2nd at ICCV 2025</a>,
+                                <a href="https://eclr-workshop.github.io/index_2024.html" target="_blank" rel="noopener">1st at ACM MM 2024</a>.</span>
+                                <time class="timeline-date" datetime="2026-06">Jun 2026</time>
                             </li>
                             <li>
-                                <span class="update-icon">📄</span> Two papers accepted by <strong>ICML 2026</strong>: <span class="paper-title">"<a href="https://openreview.net/forum?id=oreET6Wz52" target="_blank" rel="noopener">Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression</a>"</span> and <span class="paper-title">"<a href="https://icml.cc/virtual/2026/poster/66363" target="_blank" rel="noopener">Singular Proxies for Adaptive Caching in Diffusion Language Models</a>"</span>. Congratulations to co-authors!
+                                <span class="update-icon">🏆</span>
+                                <span class="timeline-entry-content" data-i18n-html="update_fund_completion">Successfully passed the completion review for the <strong>Outstanding Doctoral Academic Fund</strong> at Beihang University.</span>
+                                <time class="timeline-date" datetime="2026-06">Jun 2026</time>
+                            </li>
+                            <li>
+                                <span class="update-icon">📄</span>
+                                <span class="timeline-entry-content">Two papers accepted by <strong>ICML 2026</strong>: <span class="paper-title">"<a href="https://openreview.net/forum?id=oreET6Wz52" target="_blank" rel="noopener">Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression</a>"</span> and <span class="paper-title">"<a href="https://icml.cc/virtual/2026/poster/66363" target="_blank" rel="noopener">Singular Proxies for Adaptive Caching in Diffusion Language Models</a>"</span>. Congratulations to co-authors!</span>
+                                <time class="timeline-date" datetime="2026-04">Apr 2026</time>
                             </li>
 
                             <li>
-                                <span class="update-icon">📢</span> We warmly welcome potential speakers to join us at this year's workshop, <strong>The 3rd Efficient Computing under Limited Resources: Modern AI Models and Systems</strong>. Past workshop homepages:
-                                <a href="https://eclr-workshop.github.io/" target="_blank" rel="noopener">2nd at ICCV 2025</a>,
-                                <a href="https://eclr-workshop.github.io/index_2024.html" target="_blank" rel="noopener">1st at ACM MM 2024</a>.
-                            </li>
-                            
-                            <li>
-                                <span class="update-icon">📄</span> One paper accepted by <strong>ICLR 2026</strong>: <span class="paper-title">"<a href="https://arxiv.org/pdf/2505.11497" target="_blank" rel="noopener">QVGen: Pushing the Limit of Quantized Video Generative Models</a>"</span>. Congratulations to <a href="https://harahan.github.io/" target="_blank" rel="noopener">Yushi Huang</a>!
+                                <span class="update-icon">📄</span>
+                                <span class="timeline-entry-content">One paper accepted by <strong>ICLR 2026</strong>: <span class="paper-title">"<a href="https://arxiv.org/pdf/2505.11497" target="_blank" rel="noopener">QVGen: Pushing the Limit of Quantized Video Generative Models</a>"</span>. Congratulations to <a href="https://harahan.github.io/" target="_blank" rel="noopener">Yushi Huang</a>!</span>
+                                <time class="timeline-date" datetime="2026-01">Jan 2026</time>
                             </li>
                             
                             <li>
@@ -252,25 +238,35 @@
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                         <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
                                     </svg>
-                                </span> A GitHub repository of <strong>Edge LLMs</strong> 
+                                </span>
+                                <span class="timeline-entry-content">A GitHub repository of <strong>Edge LLMs</strong>
                                 <a href="https://github.com/yifu-ding/Awesome-Edge-LLMs" target="_blank" rel="noopener">Awesome-Edge-LLMs</a> 
-                                collecting papers, deployment toolchains, frameworks, whitebooks about large language models on edge scenarios.
+                                collecting papers, deployment toolchains, frameworks, whitebooks about large language models on edge scenarios.</span>
+                                <time class="timeline-date" datetime="2025-06">Jun 2025</time>
                             </li>
                             <li>
-                                <span class="update-icon">📄</span> One paper accepted by <strong>ICML 2025</strong>: <span class="paper-title">"<a href="https://openreview.net/forum?id=NCYBdRCpw1" target="_blank" rel="noopener">DA-KD: Difficulty-Aware Knowledge Distillation for Efficient Large Language Models</a>"</span>. Congratulations to Changyi He!
+                                <span class="update-icon">📄</span>
+                                <span class="timeline-entry-content">One paper accepted by <strong>ICML 2025</strong>: <span class="paper-title">"<a href="https://openreview.net/forum?id=NCYBdRCpw1" target="_blank" rel="noopener">DA-KD: Difficulty-Aware Knowledge Distillation for Efficient Large Language Models</a>"</span>. Congratulations to Changyi He!</span>
+                                <time class="timeline-date" datetime="2025">2025</time>
                             </li>
                             <li>
-                                <span class="update-icon">📄</span> One paper accepted by <strong>ACL 2025</strong>: <span class="paper-title">"<a href="https://aclanthology.org/2025.acl-long.550.pdf" target="_blank" rel="noopener">Dynamic Parallel Tree Search for Efficient LLM Reasoning</a>"</span>.
+                                <span class="update-icon">📄</span>
+                                <span class="timeline-entry-content">One paper accepted by <strong>ACL 2025</strong>: <span class="paper-title">"<a href="https://aclanthology.org/2025.acl-long.550.pdf" target="_blank" rel="noopener">Dynamic Parallel Tree Search for Efficient LLM Reasoning</a>"</span>.</span>
+                                <time class="timeline-date" datetime="2025-05">May 2025</time>
                             </li>
                             <li>
-                                <span class="update-icon">📄</span> One paper accepted by <strong>IJCAI 2025</strong>: <span class="paper-title">"<a href="https://www.ijcai.org/proceedings/2025/0059.pdf" target="_blank" rel="noopener">Unlocking the Potential of Lightweight Quantized Models for Deepfake Detection</a>"</span>. Congratulations to Ziheng Qin!
+                                <span class="update-icon">📄</span>
+                                <span class="timeline-entry-content">One paper accepted by <strong>IJCAI 2025</strong>: <span class="paper-title">"<a href="https://www.ijcai.org/proceedings/2025/0059.pdf" target="_blank" rel="noopener">Unlocking the Potential of Lightweight Quantized Models for Deepfake Detection</a>"</span>. Congratulations to Ziheng Qin!</span>
+                                <time class="timeline-date" datetime="2025">2025</time>
                             </li>
                             <li>
-                                <span class="update-icon">📄</span> One paper accepted by <strong>NeurIPS 2025</strong>: <span class="paper-title">"<a href="https://arxiv.org/pdf/2505.18809" target="_blank" rel="noopener">VORTA: Efficient Video Diffusion via Routing Sparse Attention</a>"</span>. Congratulations to <a href="https://scholar.google.com/citations?user=pUevLugAAAAJ&hl" target="_blank" rel="noopener">Wenhao Sun</a>!
+                                <span class="update-icon">📄</span>
+                                <span class="timeline-entry-content">One paper accepted by <strong>NeurIPS 2025</strong>: <span class="paper-title">"<a href="https://arxiv.org/pdf/2505.18809" target="_blank" rel="noopener">VORTA: Efficient Video Diffusion via Routing Sparse Attention</a>"</span>. Congratulations to <a href="https://scholar.google.com/citations?user=pUevLugAAAAJ&hl" target="_blank" rel="noopener">Wenhao Sun</a>!</span>
+                                <time class="timeline-date" datetime="2025">2025</time>
                             </li>
                         </ol>
                         <div class="load-more-container">
-                            <button id="load-more-news" class="load-more-btn"><span class="load-more-label" data-i18n="load_more_news">Load More News</span></button>
+                            <button id="load-more-news" class="load-more-btn"><span class="load-more-label" data-i18n="load_more_news">Load More Updates</span></button>
                         </div>
                     </div>
                 </div>
@@ -402,7 +398,7 @@
                                 </div>
                             </div>
 
-                            <!-- Paper 5: Deepfake Detection -->
+                            <!-- Paper 5: Deepfake Detection
                             <div class="paper-card">
                                 <div class="paper-card-left">
                                     <div class="paper-card-image-wrapper">
@@ -420,7 +416,7 @@
                                     <p class="paper-card-authors">Renshuai Tao, Ziheng Qin, <strong>Yifu Ding</strong>, Chuangchuang Tan, Jiakai Wang, Wei Wang</p>
                                     <p class="paper-card-abstract">This work targets real-time edge deepfake detection via low-bit quantization. A Connected Quantized Block captures shared forgery features while preserving textures. Results show 10.8× compute and 12.4× storage reduction with strong accuracy.</p>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- Paper 6: QVGen -->
                             <div class="paper-card" style="display: none;">
@@ -458,22 +454,28 @@
                     <div class="subsection-content">
                         <ol class="updates-list timeline-list workshop-timeline">
                             <li>
-                                <strong>Program Chair</strong> at the 3rd ECLR workshop: Efficient Computing under Limited Resources: Modern AI Models and Systems. <strong><u>(⭐️Proposal prepared for submission. Speaker invitations are still open.⭐️)</u></strong>.
+                                <span class="timeline-entry-content"><strong>Program Chair</strong> at the 3rd ECLR workshop: Efficient Computing under Limited Resources: Modern AI Models and Systems. <strong><u>(⭐️Proposal prepared for submission. Speaker invitations are still open.⭐️)</u></strong>.</span>
+                                <time class="timeline-date">TBD</time>
                             </li>
                             <li>
-                                My lab colleagues held <a href="https://cvpr26-advml.github.io/" target="_blank" rel="noopener">the 6th Workshop of Adversarial Machine Learning on Computer Vision: Safety of Vision-Language Agents</a> at CVPR 2026. Welcome to follow! 
+                                <span class="timeline-entry-content">My lab colleagues held <a href="https://cvpr26-advml.github.io/" target="_blank" rel="noopener">the 6th Workshop of Adversarial Machine Learning on Computer Vision: Safety of Vision-Language Agents</a> at CVPR 2026. Welcome to follow!</span>
+                                <time class="timeline-date" datetime="2026-06">Jun 2026</time>
                             </li>
                             <li>
-                                <strong>Program Chair</strong> at <a href="https://eclr-workshop.github.io/" target="_blank" rel="noopener">the 2nd Workshop on Efficient Computing under Limited Resources: Visual Computing</a> at ICCV 2025. Responsible for full process coordination, including workshop promotion, reviewer assignment, decision organization, and final camera-ready metadata submission.
+                                <span class="timeline-entry-content"><strong>Program Chair</strong> at <a href="https://eclr-workshop.github.io/" target="_blank" rel="noopener">the 2nd Workshop on Efficient Computing under Limited Resources: Visual Computing</a> at ICCV 2025. Responsible for full process coordination, including workshop promotion, reviewer assignment, decision organization, and final camera-ready metadata submission.</span>
+                                <time class="timeline-date" datetime="2025-10">Oct 2025</time>
                             </li>
                             <li>
-                                My lab colleagues held <a href="https://glow-ijcai-2025.github.io/glow-ijcai-2025" target="_blank" rel="noopener">the 3rd International Workshop on Generalizing from Limited Resources in the Open World</a> at IJCAI 2025. Welcome to follow!
+                                <span class="timeline-entry-content">My lab colleagues held <a href="https://glow-ijcai-2025.github.io/glow-ijcai-2025" target="_blank" rel="noopener">the 3rd International Workshop on Generalizing from Limited Resources in the Open World</a> at IJCAI 2025. Welcome to follow!</span>
+                                <time class="timeline-date" datetime="2025-08">Aug 2025</time>
                             </li>
                             <li>
-                                <strong>Local Arrangement Chair</strong> at <a href="https://glow-ijcai.github.io/" target="_blank" rel="noopener">the 2nd International Workshop on Generalizing from Limited Resources in the Open World</a> at IJCAI 2024. Responsible for on-site logistics and coordination to ensure smooth conference operations.
+                                <span class="timeline-entry-content"><strong>Local Arrangement Chair</strong> at <a href="https://glow-ijcai.github.io/" target="_blank" rel="noopener">the 2nd International Workshop on Generalizing from Limited Resources in the Open World</a> at IJCAI 2024. Responsible for on-site logistics and coordination to ensure smooth conference operations.</span>
+                                <time class="timeline-date" datetime="2024-08">Aug 2024</time>
                             </li>
                             <li>
-                                <strong>Publicity Chair</strong> at <a href="https://eclr-workshop.github.io/index_2024.html" target="_blank" rel="noopener">the 1st International Workshop on Efficient Multimedia Computing under Limited Resources</a> at ACM MM 2024.
+                                <span class="timeline-entry-content"><strong>Publicity Chair</strong> at <a href="https://eclr-workshop.github.io/index_2024.html" target="_blank" rel="noopener">the 1st International Workshop on Efficient Multimedia Computing under Limited Resources</a> at ACM MM 2024.</span>
+                                <time class="timeline-date" datetime="2024-10">Oct 2024</time>
                             </li>
                             
                         </ol>
@@ -487,9 +489,9 @@
                     </div>
                     <div class="subsection-content">
                         <ul class="home-education-list">
-                            <li><span class="home-education-date">Nov 2024 - Nov 2026</span> <strong>Joint-Training Doctoral Student</strong>, <a href="https://www.ntu.edu.sg/" target="_blank" rel="noopener">Nanyang Technological University</a> (<a href="https://www.ntu.edu.sg/computing" target="_blank" rel="noopener">College of Computing and Data Science</a>). <span class="home-education-detail">Singapore. Supervised by <a href="https://dr.ntu.edu.sg/entities/person/Tao-Dacheng" target="_blank" rel="noopener">Prof. Dacheng Tao</a>.</span></li>
-                            <li><span class="home-education-date">Sep 2021 - Dec 2026</span> <strong>Ph.D. Candidate, Computer Science</strong>, <a href="https://www.buaa.edu.cn/" target="_blank" rel="noopener">Beihang University</a> (<a href="https://scse.buaa.edu.cn/" target="_blank" rel="noopener">School of Computer Science and Engineering</a>). <span class="home-education-detail">Beijing, China. Supervised by <a href="https://xlliu-beihang.github.io/" target="_blank" rel="noopener">Prof. Xianglong Liu</a> and <a href="https://dr.ntu.edu.sg/entities/person/Tao-Dacheng" target="_blank" rel="noopener">Prof. Dacheng Tao</a>.</span></li>
-                            <li><span class="home-education-date">Sep 2017 - Jun 2021</span> <strong>B.Eng., Computer Science</strong>, <a href="https://www.buaa.edu.cn/" target="_blank" rel="noopener">Beihang University</a> (<a href="https://scse.buaa.edu.cn/" target="_blank" rel="noopener">School of Computer Science and Engineering</a>). <span class="home-education-detail">Beijing, China. GPA: 3.80/4.0; rank: 25/257.</span></li>
+                            <li><span class="timeline-entry-content"><strong>Joint-Training Doctoral Student</strong>, <a href="https://www.ntu.edu.sg/" target="_blank" rel="noopener">Nanyang Technological University</a> (<a href="https://www.ntu.edu.sg/computing" target="_blank" rel="noopener">College of Computing and Data Science</a>). <span class="home-education-detail">Singapore. Supervised by <a href="https://dr.ntu.edu.sg/entities/person/Tao-Dacheng" target="_blank" rel="noopener">Prof. Dacheng Tao</a>.</span></span><time class="timeline-date">Nov 2024 - Nov 2026</time></li>
+                            <li><span class="timeline-entry-content"><strong>Ph.D. Candidate, Computer Science</strong>, <a href="https://www.buaa.edu.cn/" target="_blank" rel="noopener">Beihang University</a> (<a href="https://scse.buaa.edu.cn/" target="_blank" rel="noopener">School of Computer Science and Engineering</a>). <span class="home-education-detail">Beijing, China. Supervised by <a href="https://xlliu-beihang.github.io/" target="_blank" rel="noopener">Prof. Xianglong Liu</a> and <a href="https://dr.ntu.edu.sg/entities/person/Tao-Dacheng" target="_blank" rel="noopener">Prof. Dacheng Tao</a>.</span></span><time class="timeline-date">Sep 2021 - Dec 2026</time></li>
+                            <li><span class="timeline-entry-content"><strong>B.Eng., Computer Science</strong>, <a href="https://www.buaa.edu.cn/" target="_blank" rel="noopener">Beihang University</a> (<a href="https://scse.buaa.edu.cn/" target="_blank" rel="noopener">School of Computer Science and Engineering</a>). <span class="home-education-detail">Beijing, China. GPA: 3.80/4.0; rank: 25/257.</span></span><time class="timeline-date">Sep 2017 - Jun 2021</time></li>
                         </ul>
                     </div>
                 </div>

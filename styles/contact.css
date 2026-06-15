@@ -332,6 +332,28 @@
     margin-top: 0;
 }
 
+.contact-method-list .phone-line {
+    width: 100%;
+}
+
+.contact-method-list .phone-line .phone-entry {
+    display: flex;
+    width: max-content;
+    max-width: none;
+    flex-wrap: nowrap;
+    gap: 6px;
+    white-space: nowrap;
+    font-size: 0.92rem;
+}
+
+.contact-method-list .phone-line .phone-entry a,
+.contact-method-list .phone-line .phone-entry .phone-note {
+    display: inline;
+    flex: 0 0 auto;
+    margin: 0;
+    white-space: nowrap;
+}
+
 
 .form-success {
     display: none;
