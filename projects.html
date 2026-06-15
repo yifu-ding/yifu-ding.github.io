@@ -3,115 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery - Yifu Ding</title>
-    <meta name="description" content="Photography collection by Yifu Ding">
+    <title>Projects - Yifu Ding</title>
+    <meta name="description" content="A collection of open-source projects and personal works by Yifu Ding.">
     <link rel="stylesheet" href="styles/colors.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/components.css">
-    <link rel="stylesheet" href="styles/gallery.css">
 </head>
-<body class="simple-page">
-    <!-- Navigation -->
+<body class="simple-page projects-page" id="top">
     <nav class="main-nav">
         <div class="nav-container">
             <div class="nav-left">
                 <a href="index.html" class="nav-brand">Yifu Ding</a>
             </div>
-            
+
             <div class="nav-center">
                 <div class="nav-links">
-                    <a href="index.html" class="nav-link">
-                        <span data-i18n="nav_home">Home</span>
-                    </a>
-                    <a href="news.html" class="nav-link">
-                        <span data-i18n="nav_news">News</span>
-                    </a>
-                    <a href="education.html" class="nav-link">
-                        <span data-i18n="nav_education">Education</span>
-                    </a>
-                    <a href="research.html" class="nav-link">
-                        <span data-i18n="nav_research">Research</span>
-                    </a>
-                                        <a href="projects.html" class="nav-link">
-                        <span data-i18n="nav_projects">Projects</span>
-                    </a>
-<a href="workshops.html" class="nav-link">
-                        <span data-i18n="nav_workshops">Workshops</span>
-                    </a>
-                    <a href="studio.html" class="nav-link active">
-                        <span data-i18n="nav_studio">Photography</span>
-                    </a>
-                    <a href="contact.html" class="nav-link">
-                        <span data-i18n="nav_contact">Contact</span>
-                    </a>
+                    <a href="index.html" class="nav-link"><span data-i18n="nav_home">Home</span></a>
+                    <a href="news.html" class="nav-link"><span data-i18n="nav_news">News</span></a>
+                    <a href="education.html" class="nav-link"><span data-i18n="nav_education">Education</span></a>
+                    <a href="research.html" class="nav-link"><span data-i18n="nav_research">Research</span></a>
+                    <a href="projects.html" class="nav-link active"><span data-i18n="nav_projects">Projects</span></a>
+                    <a href="workshops.html" class="nav-link"><span data-i18n="nav_workshops">Workshops</span></a>
+                    <!-- <a href="studio.html" class="nav-link"><span data-i18n="nav_studio">Photography</span></a> -->
+                    <a href="contact.html" class="nav-link"><span data-i18n="nav_contact">Contact</span></a>
                 </div>
             </div>
 
             <div class="nav-right">
-                <!-- Dark Mode Toggle -->
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
                     <span class="theme-icon theme-icon-light">☀️</span>
                     <span class="theme-icon theme-icon-dark">🌙</span>
                 </button>
-                
-                <!-- Language Switcher -->
+
                 <div class="lang-switcher">
-                    <button class="lang-button">
-                        <span>EN</span>
-                    </button>
+                    <button class="lang-button"><span>EN</span></button>
                     <div class="lang-dropdown">
                         <button class="lang-option active" data-lang="en">English</button>
                         <button class="lang-option" data-lang="zh">中文</button>
                     </div>
                 </div>
-
-                <!-- User Icon -->
-                <!-- <div class="user-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                </div> -->
             </div>
         </div>
     </nav>
 
-    <main class="simple-page-shell gallery-main">
-        
-        <!-- Gallery Header -->
-        <div class="simple-page-header gallery-header">
-            <div class="gallery-meta">
-                <span class="gallery-location" id="gallery-location">LOADING...</span>
-                <h1 class="simple-page-title gallery-title" id="gallery-title">Loading...</h1>
-                <p class="gallery-count" id="gallery-count">0 images</p>
-            </div>
-        </div>
-
-        <div class="simple-page-content">
-            <div class="gallery-back">
-                <a href="studio.html" class="back-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span data-i18n="back_to_studio">Back to Portfolio</span>
+    <main class="projects-shell">
+        <header class="projects-header">
+            <h1 data-i18n="projects_title">Projects</h1>
+            <p data-i18n="projects_description">A collection of my open-source projects and personal works.</p>
+            <div class="projects-meta-row">
+                <span class="projects-live-pill">
+                    <span class="projects-live-dot" aria-hidden="true"></span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.44 5.44 0 0 0 3.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    <span data-i18n="projects_live">Live from GitHub</span>
+                </span>
+                <a class="projects-profile-link" href="https://github.com/yifu-ding" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub Profile</span>
                 </a>
-                <div class="gallery-view-toggle" role="group" aria-label="View mode">
-                    <button class="gallery-view-btn" type="button" data-view="grid">
-                        <span data-i18n="gallery_view_grid">Grid</span>
-                    </button>
-                    <button class="gallery-view-btn" type="button" data-view="detailed">
-                        <span data-i18n="gallery_view_detailed">Detailed</span>
-                    </button>
-                </div>
             </div>
+        </header>
 
-            <!-- Gallery Grid -->
-            <div class="gallery-container" id="gallery-container">
-                <!-- Photos will be loaded dynamically -->
-            </div>
-        </div>
+        <section class="projects-topic-row" data-project-topics aria-label="Project topics"></section>
+        <section class="projects-grid" data-project-grid aria-label="GitHub projects"></section>
+        <p class="projects-status" data-project-status>Loading GitHub repositories...</p>
     </main>
 
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-top">
@@ -136,6 +92,6 @@
     </footer>
 
     <script src="scripts/main.js"></script>
-    <script src="scripts/gallery.js"></script>
+    <script src="scripts/load-projects.js"></script>
 </body>
 </html>

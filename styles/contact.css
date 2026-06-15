@@ -66,10 +66,10 @@
 
 .contact-page-content {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+    grid-template-columns: minmax(0, 0.9fr) minmax(460px, 1.1fr);
     gap: clamp(20px, 3vw, 36px);
     align-items: stretch;
-    max-width: 990px;
+    max-width: 1120px;
     margin: 0 auto;
 }
 
@@ -171,17 +171,37 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 0;
 }
 
 .contact-method-list li {
+    position: relative;
     display: grid;
     grid-template-columns: 28px minmax(0, 1fr);
     gap: 16px;
     align-items: center;
+    padding: 12px 0;
     color: var(--color-text-secondary);
     font-size: var(--font-size-lg);
     line-height: 1.35;
+}
+
+.contact-method-list li:first-child {
+    padding-top: 0;
+}
+
+.contact-method-list li:last-child {
+    padding-bottom: 0;
+}
+
+.contact-method-list li + li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 44px;
+    right: 10px;
+    height: 1px;
+    background: rgba(17, 24, 39, 0.08);
 }
 
 .contact-method-icon {
@@ -207,7 +227,11 @@
     display: flex;
     align-items: baseline;
     gap: 10px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-base);
+    line-height: 1.35;
 }
 
 .contact-method-list .email-line + .email-line {
@@ -224,6 +248,11 @@
     margin: 0;
 }
 
+.contact-method-list .email-line a {
+    font-size: inherit;
+    line-height: inherit;
+}
+
 .phone-line {
     display: flex;
     flex-direction: column;
@@ -235,9 +264,10 @@
     display: inline-flex;
     align-items: baseline;
     gap: 6px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    white-space: nowrap;
     color: var(--color-text-secondary);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
     line-height: 1.35;
 }
 
@@ -263,7 +293,7 @@
 
 .contact-method-list .phone-entry {
     color: var(--color-text-secondary);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
     margin-top: 0;
 }
 
@@ -281,6 +311,10 @@
     margin-top: 0;
     color: var(--color-text-secondary);
     font-size: var(--font-size-lg);
+}
+
+.contact-method-list div .email-line:first-child {
+    font-size: var(--font-size-base);
 }
 
 .contact-method-list div a + span,
@@ -335,6 +369,16 @@
 
     .contact-method-list li {
         font-size: var(--font-size-base);
+    }
+
+    .contact-method-list .email-line {
+        flex-wrap: wrap;
+        white-space: normal;
+    }
+
+    .phone-entry {
+        flex-wrap: wrap;
+        white-space: normal;
     }
 }
 

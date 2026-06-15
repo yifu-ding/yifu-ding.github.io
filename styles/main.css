@@ -1093,39 +1093,83 @@ button {
 }
 
 /* ===========================
-   Footer - Assembly Line Style
+   Footer
    =========================== */
 .main-footer {
-    border-top: 1px solid var(--border-color-light);
-    padding: var(--space-xxl) 0;
+    border-top: 1px solid rgba(17, 24, 39, 0.06);
+    padding: clamp(48px, 7vw, 78px) 0 34px;
     margin-top: var(--space-huge);
     background-color: var(--color-warm-white);
 }
 
 .footer-container {
-    max-width: var(--max-width);
+    max-width: min(1180px, 92vw);
     margin: 0 auto;
-    padding: 0 var(--space-xxl);
+    padding: 0 var(--space-lg);
+}
+
+.footer-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: clamp(28px, 8vw, 120px);
 }
 
-.footer-left span {
-    color: var(--color-text-muted);
-    font-size: 0.875rem;
-    letter-spacing: 0.01em;
+.footer-built {
+    margin: 0;
+    color: rgba(17, 24, 39, 0.52);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.5;
 }
 
-.footer-link {
-    font-size: 0.875rem;
-    color: var(--color-text-secondary);
-    transition: color var(--transition-fast);
-    letter-spacing: 0.01em;
+.footer-built a {
+    color: rgba(17, 24, 39, 0.66);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
 }
 
-.footer-link:hover {
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(24px, 4vw, 42px);
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    color: rgba(17, 24, 39, 0.86);
+    border-radius: 999px;
+    transition: transform var(--transition-fast), color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.footer-social a:hover {
+    transform: translateY(-2px);
     color: var(--color-text-primary);
+    background: rgba(17, 24, 39, 0.04);
+}
+
+.footer-social svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.footer-rights {
+    margin: clamp(46px, 7vw, 78px) 0 0;
+    text-align: center;
+    color: rgba(17, 24, 39, 0.52);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 /* ===========================
@@ -1181,6 +1225,27 @@ button {
     
     .home-card {
         min-height: 320px;
+    }
+
+    .main-footer {
+        padding: 42px 0 28px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+        gap: 26px;
+    }
+
+    .footer-rights {
+        margin-top: 38px;
+        font-size: 0.9rem;
     }
 }
 

@@ -22,8 +22,14 @@
                 <div class="nav-links">
                     <a href="index.html" class="nav-link active"><span data-i18n="nav_home">Home</span></a>
                     <a href="news.html" class="nav-link"><span data-i18n="nav_news">News</span></a>
+                    <a href="education.html" class="nav-link">
+                        <span data-i18n="nav_education">Education</span>
+                    </a>
                     <a href="research.html" class="nav-link"><span data-i18n="nav_research">Research</span></a>
-                    <a href="workshops.html" class="nav-link"><span data-i18n="nav_workshops">Workshops</span></a>
+                                        <a href="projects.html" class="nav-link">
+                        <span data-i18n="nav_projects">Projects</span>
+                    </a>
+<a href="workshops.html" class="nav-link"><span data-i18n="nav_workshops">Workshops</span></a>
                     <!-- <a href="studio.html" class="nav-link"><span data-i18n="nav_studio">Photography</span></a> -->
                     <a href="contact.html" class="nav-link"><span data-i18n="nav_contact">Contact</span></a>
                 </div>
@@ -166,7 +172,7 @@
                                 <p class="personal-intro-paragraph">
                                     <span class="intro-line"><span class="intro-label" data-i18n="intro_bio_label">Bio:</span> <strong><span data-i18n="intro_phd_label">PhD Candidate</span></strong> <span data-i18n="intro_at">at</span> <a href="https://www.buaa.edu.cn/" target="_blank" rel="noopener"><span data-i18n="intro_buaa">Beihang University</span></a> (<a href="https://scse.buaa.edu.cn/" target="_blank" rel="noopener"><span data-i18n="intro_buaa_school">School of Computer Science and Engineering</span></a>)<span class="nowrap"> & </span><a href="https://www.ntu.edu.sg/" target="_blank" rel="noopener"><span data-i18n="intro_ntu">Nanyang Technological University</span></a> (<a href="https://www.ntu.edu.sg/computing" target="_blank" rel="noopener"><span data-i18n="intro_ntu_college">College of Computing and Data Science</span></a>) <span data-i18n="intro_joint">(joint programme).</span></span>
                                     <span class="intro-line"><span class="intro-label" data-i18n="intro_supervised">Supervised by</span> <a href="https://xlliu-beihang.github.io/" target="_blank" rel="noopener"><span data-i18n="intro_prof_liu">Prof. Xianglong Liu</span></a> <span data-i18n="intro_and">and</span> <a href="https://dr.ntu.edu.sg/entities/person/Tao-Dacheng" target="_blank" rel="noopener"><span data-i18n="intro_prof_tao">Prof. Dacheng Tao</span></a>.</span>
-                                    <span class="intro-line"><span class="intro-label" data-i18n="intro_research_label">Research focus:</span> <em><span data-i18n="intro_research_area">Model compression and inference efficiency</span></em>.</span>
+                                    <span class="intro-line"><span class="intro-label" data-i18n="intro_research_label">Research focus:</span> <em><span data-i18n="intro_research_area">Efficient foundation-model inference and deployment</span></em>.</span>
                                     <!-- <span class="intro-label" data-i18n="intro_bachelor">Bachelor's degree</span> <span data-i18n="intro_bachelor_graduated">Graduated 2021</span>.<br> -->
                                     <span class="intro-line"><span class="intro-label" data-i18n="intro_phd_expected_label">PhD Expected Graduation:</span> <em><span data-i18n="intro_phd_expected_date">Dec 2026</span></em>.</span>
                                 </p>
@@ -225,7 +231,7 @@
                     <div class="subsection-content">
                         <ol class="updates-list timeline-list updates-timeline">
                             <li>
-                                <span class="update-icon">📄</span> Two papers accepted by <strong>ICLR 2026</strong>.
+                                <span class="update-icon">📄</span> Two papers accepted by <strong>ICML 2026</strong>: <span class="paper-title">"<a href="https://openreview.net/forum?id=oreET6Wz52" target="_blank" rel="noopener">Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression</a>"</span> and <span class="paper-title">"<a href="https://icml.cc/virtual/2026/poster/66363" target="_blank" rel="noopener">Singular Proxies for Adaptive Caching in Diffusion Language Models</a>"</span>. Congratulations to co-authors!
                             </li>
 
                             <li>
@@ -441,7 +447,7 @@
                 <!-- Workshop Services Subsection -->
                 <div id="workshop-services" class="subsection-item">
                     <div class="subsection-label">
-                        <h3 class="subsection-title">🎤 Workshop Services</h3>
+                        <h3 class="subsection-title">🎤 Workshops</h3>
                     </div>
                     <div class="subsection-content">
                         <ol class="updates-list timeline-list workshop-timeline">
@@ -584,12 +590,24 @@
 
     <footer class="main-footer">
         <div class="footer-container">
-            <div class="footer-left">
-                <span>&copy; 2026 Yifu Ding</span>
+            <div class="footer-top">
+                <p class="footer-built">Built by <a href="index.html">Yifu Ding</a> with research, code, and curiosity.</p>
+                <div class="footer-social" aria-label="Footer links">
+                    <a href="https://scholar.google.com/citations?user=RCEI1r0AAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+                    </a>
+                    <a href="https://github.com/yifu-ding" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yifu-ding-253614186/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.2 9.6V20M12 20v-5.8c0-2.7 1.5-4.6 4-4.6s3.8 1.7 3.8 4.7V20M4.4 6.5a2.1 2.1 0 1 0 0-4.2 2.1 2.1 0 0 0 0 4.2ZM2.6 9.6h3.6V20H2.6V9.6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="mailto:yifuding@buaa.edu.cn" title="Email" aria-label="Email">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v.35l8 5.2 8-5.2V6H4Zm0 2.74V18h16V8.74l-7.45 4.84a1 1 0 0 1-1.1 0L4 8.74Z"/></svg>
+                    </a>
+                </div>
             </div>
-            <div class="footer-right">
-                <a href="#top" class="footer-link">Back to top ↑</a>
-            </div>
+            <p class="footer-rights">&copy; 2026 Yifu Ding. All rights reserved.</p>
         </div>
     </footer>
 
