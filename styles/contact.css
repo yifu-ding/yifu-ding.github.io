@@ -36,7 +36,7 @@
     min-height: 100vh;
     min-height: 100svh;
     margin: 0;
-    padding: calc(72px + var(--space-xl)) clamp(20px, 5vw, 72px) var(--space-xxxl);
+    padding: calc(72px + var(--space-xl)) clamp(20px, 5vw, 72px) var(--space-xl);
     position: relative;
     background: url("../src/photos/rocky/IMG_0154.JPG") center 42% / cover no-repeat;
 }
@@ -284,6 +284,11 @@
 .contact-method-list a {
     color: var(--color-text-secondary);
     text-decoration: none;
+}
+
+.contact-method-list li > div > a {
+    font-size: var(--font-size-base);
+    line-height: 1.35;
 }
 
 .contact-method-list a:hover {

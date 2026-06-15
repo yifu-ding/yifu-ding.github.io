@@ -7,8 +7,11 @@ const WORKSHOPS_CONFIG = [
     workshop: "AdvML",
     venue: "CVPR",
     time: "Jun 2026",
+    timeZh: "2026年6月",
     location: "Denver, Colorado",
-    title: "Adversarial Machine Learning on Computer Vision: Safety of Vision-Language Agents"
+    locationZh: "美国科罗拉多州丹佛",
+    title: "Adversarial Machine Learning on Computer Vision: Safety of Vision-Language Agents",
+    titleZh: "计算机视觉对抗机器学习：视觉语言智能体安全"
   },
   {
     url: "https://glow-ijcai-2026.github.io/glow-ijcai-2026/",
@@ -17,8 +20,11 @@ const WORKSHOPS_CONFIG = [
     workshop: "GLOW",
     venue: "IJCAI",
     time: "Jun 2026",
+    timeZh: "2026年6月",
     location: "Bremen, Germany",
-    title: "Generalizing from Limited Resources in the Open World"
+    locationZh: "德国不来梅",
+    title: "Generalizing from Limited Resources in the Open World",
+    titleZh: "开放世界中的有限资源泛化"
   },
   {
     url: "https://eclr-workshop.github.io/",
@@ -27,8 +33,11 @@ const WORKSHOPS_CONFIG = [
     workshop: "ECLR",
     venue: "ICCV",
     time: "Oct 2025",
+    timeZh: "2025年10月",
     location: "Honolulu, Hawaii",
-    title: "Efficient Computing under Limited Resources: Visual Computing"
+    locationZh: "美国夏威夷檀香山",
+    title: "Efficient Computing under Limited Resources: Visual Computing",
+    titleZh: "有限资源下的高效计算：视觉计算"
   },
   {
     url: "https://glow-ijcai-2025.github.io/glow-ijcai-2025",
@@ -37,8 +46,11 @@ const WORKSHOPS_CONFIG = [
     workshop: "GLOW",
     venue: "IJCAI",
     time: "Aug 2025",
+    timeZh: "2025年8月",
     location: "Montreal, Canada",
-    title: "Generalizing from Limited Resources in the Open World"
+    locationZh: "加拿大蒙特利尔",
+    title: "Generalizing from Limited Resources in the Open World",
+    titleZh: "开放世界中的有限资源泛化"
   },
   {
     url: "https://practical-dl.github.io/",
@@ -47,8 +59,11 @@ const WORKSHOPS_CONFIG = [
     workshop: "Practical-DL",
     venue: "IJCAI",
     time: "Aug 2025",
+    timeZh: "2025年8月",
     location: "Montreal, Canada",
-    title: "Toward Robust Compressed Foundation Models in the Real World"
+    locationZh: "加拿大蒙特利尔",
+    title: "Toward Robust Compressed Foundation Models in the Real World",
+    titleZh: "面向真实世界鲁棒压缩基础模型的实用深度学习"
   },
   {
     url: "https://eclr-workshop.github.io/index_2024.html",
@@ -57,8 +72,11 @@ const WORKSHOPS_CONFIG = [
     workshop: "EMCLR",
     venue: "ACM MM",
     time: "Oct 2024",
+    timeZh: "2024年10月",
     location: "Melbourne, Australia",
-    title: "Efficient Multimedia Computing under Limited Resources"
+    locationZh: "澳大利亚墨尔本",
+    title: "Efficient Multimedia Computing under Limited Resources",
+    titleZh: "有限资源下的高效多媒体计算"
   },
   {
     url: "https://glow-ijcai.github.io/",
@@ -67,8 +85,11 @@ const WORKSHOPS_CONFIG = [
     workshop: "GLOW",
     venue: "IJCAI",
     time: "Aug 2024",
+    timeZh: "2024年8月",
     location: "Jeju, South Korea",
-    title: "Generalizing from Limited Resources in the Open World"
+    locationZh: "韩国济州",
+    title: "Generalizing from Limited Resources in the Open World",
+    titleZh: "开放世界中的有限资源泛化"
   },
   {
     url: "https://sites.google.com/view/glow-ijcai-23",
@@ -77,8 +98,11 @@ const WORKSHOPS_CONFIG = [
     workshop: "GLOW",
     venue: "IJCAI",
     time: "Aug 2023",
+    timeZh: "2023年8月",
     location: "Macao, S.A.R.",
-    title: "Generalizing from Limited Resources in the Open World"
+    locationZh: "中国澳门",
+    title: "Generalizing from Limited Resources in the Open World",
+    titleZh: "开放世界中的有限资源泛化"
   },
   {
     url: "https://practical-dl.github.io/",
@@ -87,8 +111,11 @@ const WORKSHOPS_CONFIG = [
     workshop: "Practical-DL",
     venue: "IEEE CAI",
     time: "Jun 2024",
+    timeZh: "2024年6月",
     location: "Singapore",
-    title: "Towards Efficient and Reliable LLMs"
+    locationZh: "新加坡",
+    title: "Towards Efficient and Reliable LLMs",
+    titleZh: "面向高效可靠大语言模型的实用深度学习"
   },
   {
     url: "https://practical-dl.github.io/2023/index",
@@ -97,8 +124,11 @@ const WORKSHOPS_CONFIG = [
     workshop: "Practical-DL",
     venue: "AAAI",
     time: "Feb 2023",
+    timeZh: "2023年2月",
     location: "Washington, D.C.",
-    title: "Practical Deep Learning in the Wild"
+    locationZh: "美国华盛顿特区",
+    title: "Practical Deep Learning in the Wild",
+    titleZh: "真实场景中的实用深度学习"
   },
   {
     url: "https://practical-dl.github.io/2022/index",
@@ -107,7 +137,10 @@ const WORKSHOPS_CONFIG = [
     workshop: "Practical-DL",
     venue: "AAAI",
     time: "Feb 2022",
+    timeZh: "2022年2月",
     location: "Virtual",
-    title: "Practical Deep Learning in the Wild"
+    locationZh: "线上",
+    title: "Practical Deep Learning in the Wild",
+    titleZh: "真实场景中的实用深度学习"
   }
 ];

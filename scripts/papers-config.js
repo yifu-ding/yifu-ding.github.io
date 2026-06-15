@@ -22,7 +22,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/singular-cache-overview.png",
     venue: "ICML 2026",
     year: 2026,
-    title: "Singular Proxies for Adaptive Caching in Diffusion Language Models",
+    title: "SPA-Cache: Singular Proxies for Adaptive Caching in Diffusion Language Models",
     authors: "Wenhao Sun, Rong-Cheng Tu, Yifu Ding, Zhao Jin, Jingyi Liao, Yongcheng Jing, Dacheng Tao",
     description: "SPA-Cache accelerates diffusion language model decoding with a singular proxy for update-critical tokens and adaptive layer-wise update budgets.",
     selected: true,
@@ -350,9 +350,10 @@ const PAPERS_CONFIG = [
     tags: ["Action Recognition","Domain Adaptation"]
   },
   {
-    url: "https://doi.org/10.1145/3475724.3483603",
+    url: "https://dl.acm.org/doi/pdf/10.1145/3475724.3483603",
     detailUrl: "",
-    imageUrl: "",
+    pdfUrl: "https://dl.acm.org/doi/pdf/10.1145/3475724.3483603",
+    imageUrl: "src/papers/imgs/advm-2021-overview.jpg",
     venue: "ACM MM 2021",
     year: 2021,
     title: "Improving Generalization of Deepfake Detection with Domain Adaptive Batch Normalization",
@@ -361,7 +362,7 @@ const PAPERS_CONFIG = [
   {
     url: "https://ieeexplore.ieee.org/abstract/document/9428447",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/icme-2021-overview.jpg",
     venue: "ICME 2021",
     year: 2021,
     title: "Multi-pretext attention network for few-shot learning with self-supervision",
@@ -370,7 +371,7 @@ const PAPERS_CONFIG = [
   {
     url: "https://arxiv.org/pdf/2103.00809",
     detailUrl: "",
-    imageUrl: "",
+    imageUrl: "src/papers/imgs/tmm-2021-oversampling-overview.jpg",
     venue: "IEEE TRANSACTIONS ON MULTIMEDIA 2021",
     year: 2021,
     title: "Over-sampling de-occlusion attention network for prohibited items detection in noisy x-ray images",

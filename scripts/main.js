@@ -103,13 +103,48 @@ class LanguageManager {
                 home_photo_credit: 'Photo taken by Zihao Jing, Model & Direction: Yifu Ding, November 2025, Lake Minnewanka, Canadian Rockies',
                 repositories_title: 'Repositories',
                 repositories_description: 'A collection of my open-source repositories.',
+                selected_repositories_title: '📦 Selected Repositories',
+                collaborator_zihao: 'The most talented and meticulous AI researcher I have ever met.',
+                collaborator_xingyu: 'A hardworking and focused labmate with deep insight into diffusion models.',
+                collaborator_jinyang: 'One of my PhD advisors, always supportive and generous with insightful advice.',
+                collaborator_wenhao: 'A helpful and active researcher in video diffusion acceleration, with rich industry experience.',
+                collaborator_zining: 'A humorous and resilient labmate, with research experience at ByteDance Seed.',
+                collaborators_section_title: '🤝 Quick links to my collaborators',
                 update_fund_completion: 'Successfully passed the completion review for the <strong>Outstanding Doctoral Academic Fund</strong> at Beihang University.',
                 fund_completion_title: 'Outstanding Doctoral Academic Fund Completion',
                 fund_completion_desc: 'Successfully passed the completion review for the Outstanding Doctoral Academic Fund at Beihang University.',
                 fund_completion_date: 'Jun 2026',
+                timeline_page_title: 'Timeline',
+                timeline_page_subtitle: 'Latest updates, publications, and milestones.',
                 timeline_phd_completion_title: '⭐️ Expected Ph.D. Completion and Open to Industry Research Opportunities ⭐️',
                 timeline_phd_completion_desc: 'Expected to complete my Ph.D. in December 2026. I am currently seeking Singapore-based opportunities at major technology companies and warmly welcome interview opportunities.',
                 timeline_phd_completion_date: 'Dec 2026',
+                timeline_gold_reviewer_title: 'Gold Reviewer at ICML 2026',
+                timeline_gold_reviewer_desc: 'Recognized as a Gold Reviewer for ICML 2026.',
+                timeline_gold_reviewer_date: 'May 2026',
+                timeline_icml_2026_title: 'Two Papers Accepted at ICML 2026',
+                timeline_icml_2026_desc: '"<a href="https://openreview.net/pdf?id=oreET6Wz52" target="_blank" rel="noopener">Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression</a>" was accepted as a spotlight paper, and "<a href="https://arxiv.org/pdf/2602.02544" target="_blank" rel="noopener">SPA-Cache: Singular Proxies for Adaptive Caching in Diffusion Language Models</a>" was accepted at ICML 2026.',
+                timeline_icml_2026_date: 'Apr 2026',
+                timeline_iclr_2026_title: 'Paper Accepted at ICLR 2026',
+                timeline_iclr_2026_desc: '"<a href="https://arxiv.org/pdf/2505.11497" target="_blank" rel="noopener">QVGen: Pushing the Limit of Quantized Video Generative Models</a>" accepted at ICLR 2026.',
+                timeline_iclr_2026_date: 'Jan 2026',
+                timeline_eclr_program_title: 'Program Chair for ECLR Workshop at ICCV 2025',
+                timeline_eclr_program_desc: 'Served as Program Chair for the <a href="https://eclr-workshop.github.io/" target="_blank" rel="noopener">2nd Workshop on Efficient Computing under Limited Resources: Visual Computing</a>.',
+                timeline_eclr_program_date: 'Oct 2025',
+                timeline_acl_2025_title: 'Paper Accepted at ACL 2025',
+                timeline_acl_2025_desc: '"<a href="https://aclanthology.org/2025.acl-long.550.pdf" target="_blank" rel="noopener">Dynamic Parallel Tree Search for Efficient LLM Reasoning</a>" accepted at ACL 2025.',
+                timeline_acl_2025_date: 'May 2025',
+                timeline_neurips_2025_title: 'Paper Accepted at NeurIPS 2025',
+                timeline_neurips_2025_desc: '"<a href="https://arxiv.org/pdf/2505.18809" target="_blank" rel="noopener">VORTA: Efficient Video Diffusion via Routing Sparse Attention</a>" accepted at NeurIPS 2025.',
+                timeline_fund_award_title: 'Outstanding Doctoral Academic Fund',
+                timeline_fund_award_desc: 'Received the Outstanding Doctoral Academic Fund from Beihang University.',
+                timeline_fund_award_date: 'Apr 2025',
+                timeline_national_scholarship_title: 'National Scholarship for Graduate Students',
+                timeline_national_scholarship_desc: 'Received the National Scholarship for Graduate Students from the Ministry of Education of the P.R. China.',
+                timeline_national_scholarship_date: 'Nov 2024',
+                timeline_state_scholarship_title: 'State Scholarship Fund',
+                timeline_state_scholarship_desc: 'Awarded by the China Scholarship Council to support joint doctoral research.',
+                timeline_state_scholarship_date: 'Jul 2024',
                 timeline_ntu_visit_title: 'Started Visiting Research at Nanyang Technological University',
                 timeline_ntu_visit_desc: 'Visited Nanyang Technological University in Singapore, supervised by Prof. Dacheng Tao.',
                 timeline_ntu_visit_date: 'Nov 2024',
@@ -146,6 +181,37 @@ class LanguageManager {
                 timeline_tag_education: 'Education',
                 timeline_tag_opportunity: 'Opportunity',
                 timeline_tag_service: 'Service',
+                timeline_tag_career: 'Career',
+                timeline_tag_award: 'Award',
+                timeline_tag_publication: 'Publication',
+                timeline_filter_label: 'Filter',
+                timeline_filter_clear: 'Clear',
+
+                workshops_page_title: 'Workshops',
+                workshops_page_subtitle: 'Workshop services and academic organization activities.',
+                workshops_quick_links_title: 'Quick Links for Workshop Series',
+                workshop_event_eclr_3: '<strong>Program Chair</strong> at the 3rd ECLR workshop: Efficient Computing under Limited Resources: Modern AI Models and Systems. <strong><u>(Proposal prepared for submission. Speaker invitations are still open.)</u></strong>.',
+                workshop_event_glow_4: 'My lab colleagues held <a href="https://glow-ijcai-2026.github.io/glow-ijcai-2026/" target="_blank" rel="noopener">the 4th International Workshop on Generalizing from Limited Resources in the Open World</a> at IJCAI 2026 in Bremen, Germany.',
+                workshop_event_advml_6: 'My lab colleagues held <a href="https://cvpr26-advml.github.io/" target="_blank" rel="noopener">the 6th Workshop of Adversarial Machine Learning on Computer Vision: Safety of Vision-Language Agents</a> at CVPR 2026. Welcome to follow!',
+                workshop_event_eclr_2: '<strong>Program Chair</strong> at <a href="https://eclr-workshop.github.io/" target="_blank" rel="noopener">the 2nd Workshop on Efficient Computing under Limited Resources: Visual Computing</a> at ICCV 2025. Responsible for full process coordination, including workshop promotion, reviewer assignment, decision organization, and final camera-ready metadata submission.',
+                workshop_event_glow_3: 'My lab colleagues held <a href="https://glow-ijcai-2025.github.io/glow-ijcai-2025" target="_blank" rel="noopener">the 3rd International Workshop on Generalizing from Limited Resources in the Open World</a> at IJCAI 2025. Welcome to follow!',
+                workshop_event_practical_4: 'My lab colleagues held <a href="https://practical-dl.github.io/" target="_blank" rel="noopener">the 4th Workshop on Practical Deep Learning: Toward Robust Compressed Foundation Models in the Real World</a> at IJCAI 2025 in Montreal, Canada.',
+                workshop_event_emclr_1: '<strong>Publicity Chair</strong> at <a href="https://eclr-workshop.github.io/index_2024.html" target="_blank" rel="noopener">the 1st International Workshop on Efficient Multimedia Computing under Limited Resources</a> at ACM MM 2024.',
+                workshop_event_glow_2: '<strong>Local Arrangement Chair</strong> at <a href="https://glow-ijcai.github.io/" target="_blank" rel="noopener">the 2nd International Workshop on Generalizing from Limited Resources in the Open World</a> at IJCAI 2024. Responsible for on-site logistics and coordination to ensure smooth conference operations.',
+                workshop_event_practical_3: 'My lab colleagues held <a href="https://practical-dl.github.io/" target="_blank" rel="noopener">the 3rd International Workshop on Practical Deep Learning: Towards Efficient and Reliable LLMs</a> at IEEE CAI 2024 in Singapore.',
+                workshop_event_glow_1: 'My lab colleagues held <a href="https://sites.google.com/view/glow-ijcai-23" target="_blank" rel="noopener">the 1st International Workshop on Generalizing from Limited Resources in the Open World</a> at IJCAI 2023 in Macao, S.A.R.',
+                workshop_event_practical_2: 'My lab colleagues held <a href="https://practical-dl.github.io/2023/index" target="_blank" rel="noopener">the 2nd International Workshop on Practical Deep Learning in the Wild</a> at AAAI 2023 in Washington, D.C.',
+                workshop_event_practical_1: 'My lab colleagues held <a href="https://practical-dl.github.io/2022/index" target="_blank" rel="noopener">the 1st International Workshop on Practical Deep Learning in the Wild</a> at AAAI 2022.',
+                workshop_date_tbd: 'TBD',
+                workshop_date_jun_2026: 'Jun 2026',
+                workshop_date_oct_2025: 'Oct 2025',
+                workshop_date_aug_2025: 'Aug 2025',
+                workshop_date_oct_2024: 'Oct 2024',
+                workshop_date_aug_2024: 'Aug 2024',
+                workshop_date_jun_2024: 'Jun 2024',
+                workshop_date_aug_2023: 'Aug 2023',
+                workshop_date_feb_2023: 'Feb 2023',
+                workshop_date_feb_2022: 'Feb 2022',
                 
                 btn_view_research: 'Research',
                 btn_view_research_2: 'View Research →',
@@ -155,7 +221,9 @@ class LanguageManager {
                 dropdown_development: 'Development',
                 metrics_publications: 'Publications',
                 metrics_citations: 'Citations',
+                metrics_papers: 'Papers',
                 metrics_h_index: 'h-index',
+                metrics_i10_index: 'i10-index',
                 now_title: 'Now',
                 now_local_time: 'Local time',
                 now_location: 'Location',
@@ -205,6 +273,7 @@ class LanguageManager {
                 // Research Page
                 research_title: 'Research',
                 research_description: 'AI researcher and Ph.D. candidate in Computer Science, specializing in model compression and acceleration for efficient foundation-model inference and deployment. ',
+                research_statistics_title: 'Statistics',
                 research_photo_credit: 'Photo taken by Yifu Ding in Yellowknife, Canada, December 2025 - Northern Lights',
                 research_focus_title: 'Research Focus',
                 research_focus_1_bold: 'Efficient inference and deployment for large language models and MoE models.',
@@ -322,6 +391,7 @@ class LanguageManager {
                 close: 'Close',
                 load_more_papers: 'Load More Papers',
                 load_more_news: 'Load More Updates',
+                load_more_repositories: 'Load More Repositories',
                 
                 // Gallery Page
                 back_to_studio: 'Back to Portfolio',
@@ -380,13 +450,48 @@ class LanguageManager {
                 home_photo_credit: '照片由景子昊拍摄，模特&指导：丁一芙，2025年11月，明尼旺卡湖，加拿大落基山脉',
                 repositories_title: '代码仓库',
                 repositories_description: '我的开源代码仓库合集。',
+                selected_repositories_title: '📦 精选代码仓库',
+                collaborator_zihao: '我所见过最有天赋、也最细致的 AI 研究者。',
+                collaborator_xingyu: '勤奋且专注的同门，在扩散模型领域有深入见解。',
+                collaborator_jinyang: '我博士期间的指导老师之一，始终给予支持，并慷慨分享富有洞见的建议。',
+                collaborator_wenhao: '热心且积极的视频扩散模型加速研究者，拥有丰富的业界经验。',
+                collaborator_zining: '幽默风趣、抗压能力很强的同门，曾在字节跳动 Seed 团队从事研究。',
+                collaborators_section_title: '🤝 合作者快速链接',
                 update_fund_completion: '顺利通过北京航空航天大学<strong>优秀博士研究生学术卓越基金</strong>结题验收。',
                 fund_completion_title: '优秀博士研究生学术卓越基金结题',
                 fund_completion_desc: '顺利通过北京航空航天大学优秀博士研究生学术卓越基金结题验收。',
-                fund_completion_date: 'Jun 2026',
+                fund_completion_date: '2026年6月',
+                timeline_page_title: '时间线',
+                timeline_page_subtitle: '近期动态、论文发表与重要里程碑。',
                 timeline_phd_completion_title: '⭐️ 即将完成博士学业，并寻找新加坡工作机会 ⭐️',
                 timeline_phd_completion_desc: '预计于 2026 年 12 月完成博士学业。目前正积极关注新加坡地区大型科技公司的研究与工程岗位机会，欢迎相关面试邀约。',
                 timeline_phd_completion_date: '2026年12月',
+                timeline_gold_reviewer_title: '获评 ICML 2026 金牌审稿人',
+                timeline_gold_reviewer_desc: '获评 ICML 2026 金牌审稿人。',
+                timeline_gold_reviewer_date: '2026年5月',
+                timeline_icml_2026_title: '两篇论文被 ICML 2026 接收',
+                timeline_icml_2026_desc: '论文“<a href="https://openreview.net/pdf?id=oreET6Wz52" target="_blank" rel="noopener">Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression</a>”被接收为 Spotlight，论文“<a href="https://arxiv.org/pdf/2602.02544" target="_blank" rel="noopener">SPA-Cache: Singular Proxies for Adaptive Caching in Diffusion Language Models</a>”被 ICML 2026 接收。',
+                timeline_icml_2026_date: '2026年4月',
+                timeline_iclr_2026_title: '论文被 ICLR 2026 接收',
+                timeline_iclr_2026_desc: '论文“<a href="https://arxiv.org/pdf/2505.11497" target="_blank" rel="noopener">QVGen: Pushing the Limit of Quantized Video Generative Models</a>”被 ICLR 2026 接收。',
+                timeline_iclr_2026_date: '2026年1月',
+                timeline_eclr_program_title: '担任 ICCV 2025 ECLR Workshop 程序主席',
+                timeline_eclr_program_desc: '担任<a href="https://eclr-workshop.github.io/" target="_blank" rel="noopener">第 2 届有限资源下的高效计算：视觉计算研讨会</a>程序主席。',
+                timeline_eclr_program_date: '2025年10月',
+                timeline_acl_2025_title: '论文被 ACL 2025 接收',
+                timeline_acl_2025_desc: '论文“<a href="https://aclanthology.org/2025.acl-long.550.pdf" target="_blank" rel="noopener">Dynamic Parallel Tree Search for Efficient LLM Reasoning</a>”被 ACL 2025 接收。',
+                timeline_acl_2025_date: '2025年5月',
+                timeline_neurips_2025_title: '论文被 NeurIPS 2025 接收',
+                timeline_neurips_2025_desc: '论文“<a href="https://arxiv.org/pdf/2505.18809" target="_blank" rel="noopener">VORTA: Efficient Video Diffusion via Routing Sparse Attention</a>”被 NeurIPS 2025 接收。',
+                timeline_fund_award_title: '获北京航空航天大学优秀博士研究生学术卓越基金',
+                timeline_fund_award_desc: '获得北京航空航天大学优秀博士研究生学术卓越基金资助。',
+                timeline_fund_award_date: '2025年4月',
+                timeline_national_scholarship_title: '获研究生国家奖学金',
+                timeline_national_scholarship_desc: '获得中华人民共和国教育部研究生国家奖学金。',
+                timeline_national_scholarship_date: '2024年11月',
+                timeline_state_scholarship_title: '获国家留学基金资助',
+                timeline_state_scholarship_desc: '获得国家留学基金管理委员会资助，支持博士联合培养研究。',
+                timeline_state_scholarship_date: '2024年7月',
                 timeline_ntu_visit_title: '赴南洋理工大学访问研究',
                 timeline_ntu_visit_desc: '前往新加坡南洋理工大学访问，师从陶大程教授。',
                 timeline_ntu_visit_date: '2024年11月',
@@ -423,6 +528,37 @@ class LanguageManager {
                 timeline_tag_education: '教育',
                 timeline_tag_opportunity: '机会',
                 timeline_tag_service: '服务',
+                timeline_tag_career: '职业',
+                timeline_tag_award: '奖项',
+                timeline_tag_publication: '论文',
+                timeline_filter_label: '筛选',
+                timeline_filter_clear: '清除',
+
+                workshops_page_title: '研讨会',
+                workshops_page_subtitle: '学术研讨会服务与组织经历。',
+                workshops_quick_links_title: 'Workshop 系列快速链接',
+                workshop_event_eclr_3: '担任第 3 届 ECLR Workshop：有限资源下的高效计算：现代 AI 模型与系统的<strong>程序主席</strong>。<strong><u>（提案准备提交中，演讲嘉宾邀请仍在进行。）</u></strong>',
+                workshop_event_glow_4: '实验室同事在德国不来梅举行的 IJCAI 2026 上举办<a href="https://glow-ijcai-2026.github.io/glow-ijcai-2026/" target="_blank" rel="noopener">第 4 届开放世界中的有限资源泛化国际研讨会</a>。',
+                workshop_event_advml_6: '实验室同事在 CVPR 2026 上举办<a href="https://cvpr26-advml.github.io/" target="_blank" rel="noopener">第 6 届计算机视觉对抗机器学习研讨会：视觉语言智能体安全</a>，欢迎关注！',
+                workshop_event_eclr_2: '担任 ICCV 2025 <a href="https://eclr-workshop.github.io/" target="_blank" rel="noopener">第 2 届有限资源下的高效计算：视觉计算研讨会</a><strong>程序主席</strong>，负责宣传、审稿人分配、录用决策组织和终稿元数据提交等全流程协调工作。',
+                workshop_event_glow_3: '实验室同事在 IJCAI 2025 上举办<a href="https://glow-ijcai-2025.github.io/glow-ijcai-2025" target="_blank" rel="noopener">第 3 届开放世界中的有限资源泛化国际研讨会</a>，欢迎关注！',
+                workshop_event_practical_4: '实验室同事在加拿大蒙特利尔举行的 IJCAI 2025 上举办<a href="https://practical-dl.github.io/" target="_blank" rel="noopener">第 4 届实用深度学习研讨会：面向真实世界鲁棒压缩基础模型</a>。',
+                workshop_event_emclr_1: '担任 ACM MM 2024 <a href="https://eclr-workshop.github.io/index_2024.html" target="_blank" rel="noopener">第 1 届有限资源下的高效多媒体计算国际研讨会</a><strong>宣传主席</strong>。',
+                workshop_event_glow_2: '担任 IJCAI 2024 <a href="https://glow-ijcai.github.io/" target="_blank" rel="noopener">第 2 届开放世界中的有限资源泛化国际研讨会</a><strong>会务主席</strong>，负责现场会务和协调工作，保障会议顺利进行。',
+                workshop_event_practical_3: '实验室同事在新加坡举行的 IEEE CAI 2024 上举办<a href="https://practical-dl.github.io/" target="_blank" rel="noopener">第 3 届实用深度学习国际研讨会：面向高效可靠的大语言模型</a>。',
+                workshop_event_glow_1: '实验室同事在中国澳门举行的 IJCAI 2023 上举办<a href="https://sites.google.com/view/glow-ijcai-23" target="_blank" rel="noopener">第 1 届开放世界中的有限资源泛化国际研讨会</a>。',
+                workshop_event_practical_2: '实验室同事在美国华盛顿特区举行的 AAAI 2023 上举办<a href="https://practical-dl.github.io/2023/index" target="_blank" rel="noopener">第 2 届真实场景中的实用深度学习国际研讨会</a>。',
+                workshop_event_practical_1: '实验室同事在 AAAI 2022 上举办<a href="https://practical-dl.github.io/2022/index" target="_blank" rel="noopener">第 1 届真实场景中的实用深度学习国际研讨会</a>。',
+                workshop_date_tbd: '待定',
+                workshop_date_jun_2026: '2026年6月',
+                workshop_date_oct_2025: '2025年10月',
+                workshop_date_aug_2025: '2025年8月',
+                workshop_date_oct_2024: '2024年10月',
+                workshop_date_aug_2024: '2024年8月',
+                workshop_date_jun_2024: '2024年6月',
+                workshop_date_aug_2023: '2023年8月',
+                workshop_date_feb_2023: '2023年2月',
+                workshop_date_feb_2022: '2022年2月',
                 
                 btn_view_research: '研究工作',
                 btn_view_research_2: '查看研究 →',
@@ -432,7 +568,9 @@ class LanguageManager {
                 dropdown_development: '开发',
                 metrics_publications: '论文',
                 metrics_citations: '引用',
+                metrics_papers: '论文',
                 metrics_h_index: 'h指数',
+                metrics_i10_index: 'i10指数',
                 now_title: '当前',
                 now_local_time: '本地时间',
                 now_location: '位置',
@@ -481,6 +619,7 @@ class LanguageManager {
                 // 研究页面
                 research_title: '研究',
                 research_description: 'AI 研究者，计算机专业博士研究生，研究方向为基础模型的压缩与推理加速，致力于提升深度学习模型的部署效率与实际应用能力。',
+                research_statistics_title: '论文与引用数据',
                 research_photo_credit: '照片由丁一芙拍摄于2025年12月加拿大黄刀镇 - 极光',
                 research_focus_title: '研究重点',
                 research_focus_1_bold: '面向大语言模型和 MoE 模型的高效推理与部署。',
@@ -597,6 +736,7 @@ class LanguageManager {
                 close: '关闭',
                 load_more_papers: '加载更多论文',
                 load_more_news: '加载更多动态',
+                load_more_repositories: '加载更多代码仓库',
                 
                 // 照片集页面
                 back_to_studio: '返回工作室',
@@ -645,6 +785,34 @@ class LanguageManager {
         this.applyLanguage();
     }
 
+    sanitizeTranslationHtml(html) {
+        const template = document.createElement('template');
+        template.innerHTML = html;
+        const allowedTags = new Set(['A', 'STRONG', 'U']);
+
+        Array.from(template.content.querySelectorAll('*')).forEach(element => {
+            if (!allowedTags.has(element.tagName)) {
+                element.replaceWith(...element.childNodes);
+                return;
+            }
+
+            if (element.tagName === 'A') {
+                const href = element.getAttribute('href') || '';
+                const safeHref = /^(https?:\/\/|mailto:)/i.test(href);
+                Array.from(element.attributes).forEach(attribute => element.removeAttribute(attribute.name));
+                if (safeHref) {
+                    element.setAttribute('href', href);
+                    element.setAttribute('target', '_blank');
+                    element.setAttribute('rel', 'noopener');
+                }
+            } else {
+                Array.from(element.attributes).forEach(attribute => element.removeAttribute(attribute.name));
+            }
+        });
+
+        return template.innerHTML;
+    }
+
     applyLanguage() {
         // Update language button text
         const langButton = document.querySelector('.lang-button');
@@ -676,10 +844,7 @@ class LanguageManager {
         document.querySelectorAll('[data-i18n-html]').forEach(element => {
             const key = element.getAttribute('data-i18n-html');
             if (translations[key]) {
-                element.innerHTML = translations[key]
-                    .replace(/<(?!\/?strong\b)[^>]*>/gi, '')
-                    .replace(/<strong\b[^>]*>/gi, '<strong>')
-                    .replace(/<\/strong>/gi, '</strong>');
+                element.innerHTML = this.sanitizeTranslationHtml(translations[key]);
             }
         });
 
@@ -690,6 +855,10 @@ class LanguageManager {
                 element.placeholder = translations[key];
             }
         });
+
+        window.dispatchEvent(new CustomEvent('languageChanged', {
+            detail: { lang: this.currentLang }
+        }));
     }
 
     getCurrentLanguage() {
@@ -1060,6 +1229,8 @@ class NavigationManager {
     init() {
         if (!this.nav) return;
 
+        this.setupMobileMenu();
+
         let ticking = false;
 
         window.addEventListener('scroll', () => {
@@ -1074,6 +1245,8 @@ class NavigationManager {
     }
 
     handleScroll() {
+        if (document.body.classList.contains('mobile-menu-open')) return;
+
         const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
         // 在页面顶部，始终显示导航栏
@@ -1104,6 +1277,77 @@ class NavigationManager {
         }
 
         this.lastScrollTop = currentScrollTop;
+    }
+
+    setupMobileMenu() {
+        const navLeft = this.nav.querySelector('.nav-left');
+        const navCenter = this.nav.querySelector('.nav-center');
+        const navContainer = this.nav.querySelector('.nav-container');
+        const navLinks = this.nav.querySelector('.nav-links');
+        const navRight = this.nav.querySelector('.nav-right');
+        const navBrand = this.nav.querySelector('.nav-brand');
+        if (!navLeft || !navCenter || !navContainer || !navLinks || !navRight) return;
+
+        const toggle = document.createElement('button');
+        toggle.className = 'mobile-menu-toggle';
+        toggle.type = 'button';
+        toggle.setAttribute('aria-label', 'Open navigation menu');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.innerHTML = '<span class="mobile-menu-toggle-icon" aria-hidden="true"></span>';
+        navLeft.prepend(toggle);
+
+        const overlay = document.createElement('button');
+        overlay.className = 'mobile-menu-overlay';
+        overlay.type = 'button';
+        overlay.setAttribute('aria-label', 'Close navigation menu');
+        document.body.appendChild(overlay);
+
+        const closeMenu = () => {
+            document.body.classList.remove('mobile-menu-open');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.setAttribute('aria-label', 'Open navigation menu');
+        };
+
+        const updateMenuMode = () => {
+            const navLinkItems = Array.from(navLinks.querySelectorAll('.nav-link'));
+            const canvas = updateMenuMode.canvas || (updateMenuMode.canvas = document.createElement('canvas'));
+            const context = canvas.getContext('2d');
+            const linksWidth = navLinkItems.reduce((total, link) => {
+                const style = window.getComputedStyle(link);
+                context.font = `${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
+                return total + context.measureText(link.textContent.trim()).width;
+            }, 0)
+                + Math.max(0, navLinkItems.length - 1) * 48;
+            const requiredWidth =
+                90 +
+                linksWidth +
+                navRight.scrollWidth +
+                260;
+            const shouldUseMenu = window.innerWidth <= 768 || requiredWidth > navContainer.clientWidth;
+
+            document.body.classList.toggle('nav-menu-mode', shouldUseMenu);
+            if (!shouldUseMenu) closeMenu();
+        };
+
+        const openMenu = () => {
+            this.nav.classList.remove('nav-hidden');
+            this.nav.classList.add('nav-visible');
+            document.body.classList.add('mobile-menu-open');
+            toggle.setAttribute('aria-expanded', 'true');
+            toggle.setAttribute('aria-label', 'Close navigation menu');
+        };
+
+        toggle.addEventListener('click', () => {
+            document.body.classList.contains('mobile-menu-open') ? closeMenu() : openMenu();
+        });
+        overlay.addEventListener('click', closeMenu);
+        navCenter.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') closeMenu();
+        });
+        window.addEventListener('resize', updateMenuMode);
+        document.fonts?.ready.then(updateMenuMode);
+        window.requestAnimationFrame(updateMenuMode);
     }
 }
 
@@ -1195,7 +1439,7 @@ const BIBTEX_DATABASE = {
 }`,
 
     'spa-cache': `@inproceedings{sun2026spacache,
-  title={Singular Proxies for Adaptive Caching in Diffusion Language Models},
+  title={SPA-Cache: Singular Proxies for Adaptive Caching in Diffusion Language Models},
   author={Sun, Wenhao and Tu, Rong-Cheng and Ding, Yifu and Jin, Zhao and Liao, Jingyi and Jing, Yongcheng and Tao, Dacheng},
   booktitle={Forty-third International Conference on Machine Learning},
   year={2026},
@@ -1355,6 +1599,7 @@ function setupLoadMore(buttonId, itemSelector, initialVisible, loadPerClick, vis
         }
 
         isFinalAction = true;
+        loadMoreBtn.classList.add('is-final-action');
         loadMoreBtn.style.display = '';
         loadMoreBtn.removeAttribute('data-i18n');
         const label = loadMoreBtn.querySelector('.load-more-label');
@@ -1415,5 +1660,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setupLoadMore('load-more-news', '.updates-timeline > li', 4, 3, '', {
         text: 'Go to Timeline Page',
         href: 'timeline.html'
+    });
+    setupLoadMore('load-more-workshops', '#workshop-services .workshop-timeline > li', 3, 3, '', {
+        text: 'Go to Workshop Page',
+        href: 'workshops.html'
+    });
+    setupLoadMore('load-more-repositories', '#selected-repositories .project-card', 4, 4, 'flex', {
+        text: 'Go to Repositories Page',
+        href: 'repositories.html'
     });
 });
