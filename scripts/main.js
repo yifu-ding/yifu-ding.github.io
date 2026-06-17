@@ -103,7 +103,28 @@ class LanguageManager {
                 home_photo_credit: 'Photo taken by Zihao Jing, Model & Direction: Yifu Ding, November 2025, Lake Minnewanka, Canadian Rockies',
                 repositories_title: 'Repositories',
                 repositories_description: 'A collection of my open-source repositories.',
+                home_updates_title: '📌 Updates',
+                home_recent_papers_title: '📄 Recent Papers',
+                home_workshops_title: '👥 Workshops',
+                home_education_title: '📖 Education',
+                home_awards_title: '🏆 Awards & Funding',
                 selected_repositories_title: '📦 Selected Repositories',
+                sidebar_back_top: 'Back to Top',
+                sidebar_updates: 'Updates',
+                sidebar_recent_papers: 'Recent Papers',
+                sidebar_repositories: 'Repositories',
+                sidebar_workshops: 'Workshops',
+                sidebar_education: 'Education',
+                sidebar_awards: 'Awards',
+                sidebar_a_few_words: 'A Few Words',
+                sidebar_collaborators: 'Collaborators',
+                research_sidebar_overview: 'Overview',
+                research_sidebar_selected: 'Selected',
+                research_sidebar_efficient_foundation_models: 'Efficient Foundation Models',
+                research_sidebar_multimodal_videogen: 'Multimodal and VideoGen',
+                research_sidebar_kernels_hardware: 'Kernels and Hardware',
+                research_sidebar_all_publications: 'All Publications',
+                research_selected_publications_title: 'Selected Publications',
                 collaborator_zihao: 'The most talented and meticulous AI researcher I have ever met.',
                 collaborator_xingyu: 'A hardworking and focused labmate with deep insight into diffusion models.',
                 collaborator_jinyang: 'One of my PhD advisors, always supportive and generous with insightful advice.',
@@ -118,6 +139,19 @@ class LanguageManager {
                 update_fund_completion: 'Successfully passed the completion review for the <strong>Outstanding Doctoral Academic Fund</strong> at Beihang University.',
                 update_sam2_glow_2026: 'One paper <span class="paper-title">"Layer Sensitivity Matters: Mixed-Precision Post-Training Quantization for SAM2 Video Segmentation"</span> accepted to <strong>GLOW @ IJCAI 2026</strong>. Congratulations to Wenyu Zhou!',
                 update_sam2_glow_2026_date: 'Jun 2026',
+                update_eclr_3_speakers: 'We warmly welcome potential speakers to join us at this year\'s workshop, <strong>The 3rd Efficient Computing under Limited Resources: Modern AI Models and Systems</strong>. Past workshop homepages: <a href="https://eclr-workshop.github.io/" target="_blank" rel="noopener">2nd at ICCV 2025</a>, <a href="https://eclr-workshop.github.io/index_2024.html" target="_blank" rel="noopener">1st at ACM MM 2024</a>.',
+                update_glow_4_2026: 'My colleagues are holding <a href="https://glow-ijcai-2026.github.io/glow-ijcai-2026/" target="_blank" rel="noopener"><strong>the 4th International Workshop on Generalizing from Limited Resources in the Open World</strong></a> at IJCAI 2026 in Bremen, Germany. Welcome to follow and attend.',
+                update_icml_2026: 'Two papers accepted by <strong>ICML 2026</strong>: "<a href="https://openreview.net/forum?id=oreET6Wz52" target="_blank" rel="noopener">Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression</a>" and "<a href="https://icml.cc/virtual/2026/poster/66363" target="_blank" rel="noopener">SPA-Cache: Singular Proxies for Adaptive Caching in Diffusion Language Models</a>". Congratulations to co-authors!',
+                update_iclr_2026: 'One paper accepted by <strong>ICLR 2026</strong>: "<a href="https://arxiv.org/pdf/2505.11497" target="_blank" rel="noopener">QVGen: Pushing the Limit of Quantized Video Generative Models</a>". Congratulations to <a href="https://harahan.github.io/" target="_blank" rel="noopener">Yushi Huang</a>!',
+                update_acl_2025: 'One paper accepted by <strong>ACL 2025</strong>: "<a href="https://aclanthology.org/2025.acl-long.550.pdf" target="_blank" rel="noopener">Dynamic Parallel Tree Search for Efficient LLM Reasoning</a>".',
+                home_education_ntu: '<strong>Joint-Training Doctoral Student</strong>, <a href="https://www.ntu.edu.sg/" target="_blank" rel="noopener">Nanyang Technological University</a> (<a href="https://www.ntu.edu.sg/computing" target="_blank" rel="noopener">College of Computing and Data Science</a>). Singapore. Supervised by <a href="https://dr.ntu.edu.sg/entities/person/Tao-Dacheng" target="_blank" rel="noopener">Prof. Dacheng Tao</a>.',
+                home_education_buaa_phd: '<strong>Ph.D. Candidate, Computer Science</strong>, <a href="https://www.buaa.edu.cn/" target="_blank" rel="noopener">Beihang University</a> (<a href="https://scse.buaa.edu.cn/" target="_blank" rel="noopener">School of Computer Science and Engineering</a>). Beijing, China. Supervised by <a href="https://xlliu-beihang.github.io/" target="_blank" rel="noopener">Prof. Xianglong Liu</a> and <a href="https://dr.ntu.edu.sg/entities/person/Tao-Dacheng" target="_blank" rel="noopener">Prof. Dacheng Tao</a>.',
+                home_education_buaa_bachelor: '<strong>B.Eng., Computer Science</strong>, <a href="https://www.buaa.edu.cn/" target="_blank" rel="noopener">Beihang University</a> (<a href="https://scse.buaa.edu.cn/" target="_blank" rel="noopener">School of Computer Science and Engineering</a>). Beijing, China. GPA: 3.80/4.0; rank: 25/257.',
+                home_award_doctoral_fund: '<strong>Outstanding Doctoral Academic Fund</strong>, Beihang University. CNY 40,000.',
+                home_award_state_scholarship: '<strong>State Scholarship Fund</strong>, China Scholarship Council. SGD 26,400 (approx. CNY 140,000).',
+                home_award_national_scholarship: '<strong>National Scholarship for Graduate Students</strong>, Ministry of Education of the P.R. China. CNY 50,000.',
+                home_award_academic_achievement: '<strong>Outstanding Academic Achievement Award</strong>, Beihang University.',
+                home_award_doctoral_scholarship: '<strong>Doctoral Academic Scholarship</strong>, First Prize, Beihang University.',
                 fund_completion_title: 'Outstanding Doctoral Academic Fund Completion',
                 fund_completion_desc: 'Successfully passed the completion review for the Outstanding Doctoral Academic Fund at Beihang University.',
                 fund_completion_date: 'Jun 2026',
@@ -410,6 +444,11 @@ class LanguageManager {
                 load_more_papers: 'Load More Papers',
                 load_more_news: 'Load More Updates',
                 load_more_repositories: 'Load More Repositories',
+                load_more_workshops: 'Load More Workshop News',
+                go_to_publication_page: 'Go to Publication Page',
+                go_to_timeline_page: 'Go to Timeline Page',
+                go_to_workshop_page: 'Go to Workshop Page',
+                go_to_repositories_page: 'Go to Repositories Page',
                 
                 // Gallery Page
                 back_to_studio: 'Back to Portfolio',
@@ -468,7 +507,28 @@ class LanguageManager {
                 home_photo_credit: '照片由景子昊拍摄，模特&指导：丁一芙，2025年11月，明尼旺卡湖，加拿大落基山脉',
                 repositories_title: '代码仓库',
                 repositories_description: '我的开源代码仓库合集。',
+                home_updates_title: '📌 近期动态',
+                home_recent_papers_title: '📄 近期论文',
+                home_workshops_title: '👥 学术研讨会',
+                home_education_title: '📖 教育经历',
+                home_awards_title: '🏆 荣誉与资助',
                 selected_repositories_title: '📦 精选代码仓库',
+                sidebar_back_top: '返回顶部',
+                sidebar_updates: '近期动态',
+                sidebar_recent_papers: '近期论文',
+                sidebar_repositories: '代码仓库',
+                sidebar_workshops: '研讨会',
+                sidebar_education: '教育经历',
+                sidebar_awards: '荣誉奖项',
+                sidebar_a_few_words: '一些感想',
+                sidebar_collaborators: '合作者',
+                research_sidebar_overview: '概览',
+                research_sidebar_selected: '精选论文',
+                research_sidebar_efficient_foundation_models: '高效基础模型',
+                research_sidebar_multimodal_videogen: '多模态与视频生成',
+                research_sidebar_kernels_hardware: '算子与硬件',
+                research_sidebar_all_publications: '全部论文',
+                research_selected_publications_title: '精选论文',
                 collaborator_zihao: '我所见过最有天赋、也最细致的 AI 研究者。',
                 collaborator_xingyu: '勤奋且专注的同门，在扩散模型领域有深入见解。',
                 collaborator_jinyang: '我博士期间的指导老师之一，始终给予支持，并慷慨分享富有洞见的建议。',
@@ -476,13 +536,26 @@ class LanguageManager {
                 collaborator_zining: '幽默风趣、抗压能力很强的同门，曾在字节跳动 Seed 团队从事研究。',
                 collaborator_yushi: '高产的开源 AI 研究者，在大模型视觉理解领域卓有见地。',
                 collaborators_section_title: '🤝 合作者快速链接',
-                about_me_title: '👋 关于我',
+                about_me_title: '👋 一些感想',
                 about_me_paragraph_1: '毕业季比以往任何一年的博士生涯更忙碌。目前，我仍有几个负责或参与的项目正在推进中，具体可见 <a href="research.html">Research 页面</a>中的 ongoing projects。其中一些成果即将发布，也有一些已经持续探索了两年多，仍处在黎明前的黑暗中。',
                 about_me_paragraph_2: '我很幸运，在博士阶段始终探索着最前沿的研究问题，也与最优秀的研究者们并肩合作，让六年的博士生活如白驹过隙。随着这个阶段逐渐接近尾声，我兴奋并且期待接下来在工业界的新旅程。',
                 about_me_paragraph_3: '研究之外，我也喜欢旅行和摄影。如果你感兴趣，可以在这里查看我的<a href="studio.html">作品集📷</a>。',
                 update_fund_completion: '顺利通过北京航空航天大学<strong>优秀博士研究生学术卓越基金</strong>结题验收。',
                 update_sam2_glow_2026: '一篇论文<span class="paper-title">“Layer Sensitivity Matters: Mixed-Precision Post-Training Quantization for SAM2 Video Segmentation”</span>被 <strong>GLOW @ IJCAI 2026</strong> 接收。祝贺 Wenyu Zhou！',
                 update_sam2_glow_2026_date: '2026年6月',
+                update_eclr_3_speakers: '诚邀潜在演讲嘉宾加入今年的研讨会：<strong>第 3 届有限资源下的高效计算：现代 AI 模型与系统</strong>。往届主页：<a href="https://eclr-workshop.github.io/" target="_blank" rel="noopener">ICCV 2025 第 2 届</a>，<a href="https://eclr-workshop.github.io/index_2024.html" target="_blank" rel="noopener">ACM MM 2024 第 1 届</a>。',
+                update_glow_4_2026: '我的实验室同事将在德国不来梅 IJCAI 2026 举办<a href="https://glow-ijcai-2026.github.io/glow-ijcai-2026/" target="_blank" rel="noopener"><strong>第 4 届开放世界中的有限资源泛化国际研讨会</strong></a>，欢迎关注和参加。',
+                update_icml_2026: '两篇论文被 <strong>ICML 2026</strong> 接收：“<a href="https://openreview.net/forum?id=oreET6Wz52" target="_blank" rel="noopener">Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression</a>” 和 “<a href="https://icml.cc/virtual/2026/poster/66363" target="_blank" rel="noopener">SPA-Cache: Singular Proxies for Adaptive Caching in Diffusion Language Models</a>”。祝贺合作者们！',
+                update_iclr_2026: '一篇论文被 <strong>ICLR 2026</strong> 接收：“<a href="https://arxiv.org/pdf/2505.11497" target="_blank" rel="noopener">QVGen: Pushing the Limit of Quantized Video Generative Models</a>”。祝贺 <a href="https://harahan.github.io/" target="_blank" rel="noopener">Yushi Huang</a>！',
+                update_acl_2025: '一篇论文被 <strong>ACL 2025</strong> 接收：“<a href="https://aclanthology.org/2025.acl-long.550.pdf" target="_blank" rel="noopener">Dynamic Parallel Tree Search for Efficient LLM Reasoning</a>”。',
+                home_education_ntu: '<strong>联合培养博士生</strong>，<a href="https://www.ntu.edu.sg/" target="_blank" rel="noopener">新加坡南洋理工大学</a>（<a href="https://www.ntu.edu.sg/computing" target="_blank" rel="noopener">College of Computing and Data Science</a>）。新加坡。导师：<a href="https://dr.ntu.edu.sg/entities/person/Tao-Dacheng" target="_blank" rel="noopener">陶大程教授</a>。',
+                home_education_buaa_phd: '<strong>计算机科学博士研究生</strong>，<a href="https://www.buaa.edu.cn/" target="_blank" rel="noopener">北京航空航天大学</a>（<a href="https://scse.buaa.edu.cn/" target="_blank" rel="noopener">计算机学院</a>）。中国北京。导师：<a href="https://xlliu-beihang.github.io/" target="_blank" rel="noopener">刘祥龙教授</a>与<a href="https://dr.ntu.edu.sg/entities/person/Tao-Dacheng" target="_blank" rel="noopener">陶大程教授</a>。',
+                home_education_buaa_bachelor: '<strong>工学学士，计算机科学与技术</strong>，<a href="https://www.buaa.edu.cn/" target="_blank" rel="noopener">北京航空航天大学</a>（<a href="https://scse.buaa.edu.cn/" target="_blank" rel="noopener">计算机学院</a>）。中国北京。GPA：3.80/4.0；排名：25/257。',
+                home_award_doctoral_fund: '<strong>优秀博士研究生学术卓越基金</strong>，北京航空航天大学。人民币 40,000 元。',
+                home_award_state_scholarship: '<strong>国家留学基金</strong>，国家留学基金管理委员会。新币 26,400 元（约人民币 140,000 元）。',
+                home_award_national_scholarship: '<strong>研究生国家奖学金</strong>，中华人民共和国教育部。人民币 50,000 元。',
+                home_award_academic_achievement: '<strong>优秀学术成果奖</strong>，北京航空航天大学。',
+                home_award_doctoral_scholarship: '<strong>博士研究生学业奖学金</strong>，一等奖，北京航空航天大学。',
                 fund_completion_title: '优秀博士研究生学术卓越基金结题',
                 fund_completion_desc: '顺利通过北京航空航天大学优秀博士研究生学术卓越基金结题验收。',
                 fund_completion_date: '2026年6月',
@@ -773,6 +846,11 @@ class LanguageManager {
                 load_more_papers: '加载更多论文',
                 load_more_news: '加载更多动态',
                 load_more_repositories: '加载更多代码仓库',
+                load_more_workshops: '加载更多研讨会动态',
+                go_to_publication_page: '前往论文页面',
+                go_to_timeline_page: '前往时间线页面',
+                go_to_workshop_page: '前往研讨会页面',
+                go_to_repositories_page: '前往代码仓库页面',
                 
                 // 照片集页面
                 back_to_studio: '返回工作室',
@@ -1189,6 +1267,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize managers
     const clockManager = new ClockManager();
     const languageManager = new LanguageManager();
+    window.languageManager = languageManager;
     const cardManager = new CardManager();
     const themeManager = new ThemeManager();
     const sidebarNavigationManager = new SidebarNavigationManager();
@@ -1643,11 +1722,19 @@ function setupLoadMore(buttonId, itemSelector, initialVisible, loadPerClick, vis
         loadMoreBtn.style.display = '';
         loadMoreBtn.removeAttribute('data-i18n');
         const label = loadMoreBtn.querySelector('.load-more-label');
+        const currentTranslations = window.languageManager?.translations?.[window.languageManager.currentLang];
+        const finalText = finalAction.textKey && currentTranslations?.[finalAction.textKey]
+            ? currentTranslations[finalAction.textKey]
+            : finalAction.text;
         if (label) {
-            label.removeAttribute('data-i18n');
-            label.textContent = finalAction.text;
+            if (finalAction.textKey) {
+                label.setAttribute('data-i18n', finalAction.textKey);
+            } else {
+                label.removeAttribute('data-i18n');
+            }
+            label.textContent = finalText;
         } else {
-            loadMoreBtn.textContent = finalAction.text;
+            loadMoreBtn.textContent = finalText;
         }
     };
 
@@ -1695,18 +1782,22 @@ function setupLoadMore(buttonId, itemSelector, initialVisible, loadPerClick, vis
 document.addEventListener('DOMContentLoaded', () => {
     setupLoadMore('load-more-papers', '.papers-list .paper-card', 3, 3, 'grid', {
         text: 'Go to Publication Page',
+        textKey: 'go_to_publication_page',
         href: 'research.html#all-publications'
     });
     setupLoadMore('load-more-news', '.updates-timeline > li', 4, 3, '', {
         text: 'Go to Timeline Page',
+        textKey: 'go_to_timeline_page',
         href: 'timeline.html'
     });
     setupLoadMore('load-more-workshops', '#workshop-services .workshop-timeline > li', 3, 3, '', {
         text: 'Go to Workshop Page',
+        textKey: 'go_to_workshop_page',
         href: 'workshops.html'
     });
     setupLoadMore('load-more-repositories', '#selected-repositories .project-card', 4, 4, 'flex', {
         text: 'Go to Repositories Page',
+        textKey: 'go_to_repositories_page',
         href: 'repositories.html'
     });
 });

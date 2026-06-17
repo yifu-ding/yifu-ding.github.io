@@ -71,12 +71,12 @@
     <aside class="page-sidebar-nav research-sidebar-nav" aria-label="Page sections">
       <div class="page-sidebar-nav-inner">
         <nav class="page-sidebar-nav-links">
-          <a href="#research-overview" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Overview</span></a>
-          <a href="#selected-publications" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Selected</span></a>
-          <a href="#selected-efficient-foundation-models" class="page-sidebar-nav-link page-sidebar-nav-link-sub"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Efficient Foundation Models</span></a>
-          <a href="#selected-multimodal-videogen" class="page-sidebar-nav-link page-sidebar-nav-link-sub"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Multimodal and VideoGen</span></a>
-          <a href="#selected-kernels-hardware" class="page-sidebar-nav-link page-sidebar-nav-link-sub"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">Kernels and Hardware</span></a>
-          <a href="#all-publications" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label">All Publications</span></a>
+          <a href="#research-overview" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label" data-i18n="research_sidebar_overview">Overview</span></a>
+          <a href="#selected-publications" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label" data-i18n="research_sidebar_selected">Selected</span></a>
+          <a href="#selected-efficient-foundation-models" class="page-sidebar-nav-link page-sidebar-nav-link-sub"><span class="nav-arrow"></span><span class="page-sidebar-nav-label" data-i18n="research_sidebar_efficient_foundation_models">Efficient Foundation Models</span></a>
+          <a href="#selected-multimodal-videogen" class="page-sidebar-nav-link page-sidebar-nav-link-sub"><span class="nav-arrow"></span><span class="page-sidebar-nav-label" data-i18n="research_sidebar_multimodal_videogen">Multimodal and VideoGen</span></a>
+          <a href="#selected-kernels-hardware" class="page-sidebar-nav-link page-sidebar-nav-link-sub"><span class="nav-arrow"></span><span class="page-sidebar-nav-label" data-i18n="research_sidebar_kernels_hardware">Kernels and Hardware</span></a>
+          <a href="#all-publications" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label" data-i18n="research_sidebar_all_publications">All Publications</span></a>
         </nav>
       </div>
     </aside>
@@ -139,7 +139,7 @@
 
       <section id="selected-work" class="content-section selected-work" aria-label="Publications">
         <section id="selected-publications" class="publication-subsection" aria-label="Selected Publications">
-          <h2 class="publication-section-title">Selected Publications</h2>
+          <h2 class="publication-section-title" data-i18n="research_selected_publications_title">Selected Publications</h2>
           <div class="pub-waterfall pub-waterfall-selected" data-paper-list="selected"></div>
         </section>
 
@@ -215,6 +215,7 @@
         {
           id: "selected-efficient-foundation-models",
           title: "⚡ Efficient Training and Inference for Foundation Models",
+          titleZh: "⚡ 基础模型的高效训练与推理",
           papers: [
             "Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression",
             "SPA-Cache: Singular Proxies for Adaptive Caching in Diffusion Language Models",
@@ -227,6 +228,7 @@
         {
           id: "selected-multimodal-videogen",
           title: "🎬 Multimodal and Video Generation",
+          titleZh: "🎬 多模态与视频生成",
           papers: [
             "QVGen: Pushing the Limit of Quantized Video Generative Models",
             "MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping",
@@ -237,6 +239,7 @@
         {
           id: "selected-kernels-hardware",
           title: "🧩 High-Performance Kernels and Hardware-Aware Acceleration",
+          titleZh: "🧩 高性能算子与硬件感知加速",
           papers: [
             "Diagonal-Tiled Mixed-Precision Attention for Efficient Low-Bit MXFP Inference",
             "BWTA: Accurate and Efficient Binarized Transformer by Algorithm-Hardware Co-design",

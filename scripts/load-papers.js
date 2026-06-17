@@ -18,6 +18,17 @@
         .replace(/^-|-$/g, '');
     }
 
+    function getCurrentLang() {
+      return localStorage.getItem('language') || 'en';
+    }
+
+    function getGroupTitle(group) {
+      if (getCurrentLang() === 'zh' && group && group.titleZh) {
+        return group.titleZh;
+      }
+      return group && group.title ? group.title : 'Selected Topic';
+    }
+
     function escapeHtml(value) {
       return String(value || '')
         .replaceAll('&', '&amp;')
@@ -209,7 +220,9 @@
 
           return {
             id: group && group.id ? group.id : `selected-${slugifyTitle(group && group.title)}`,
-            title: group && group.title ? group.title : 'Selected Topic',
+            title: getGroupTitle(group),
+            titleEn: group && group.title ? group.title : 'Selected Topic',
+            titleZh: group && group.titleZh ? group.titleZh : '',
             papers
           };
         })
@@ -347,6 +360,10 @@
         loadPapers();
       }
     };
+
+    window.addEventListener('languageChanged', () => {
+      loadPapers();
+    });
   
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => {

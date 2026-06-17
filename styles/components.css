@@ -5997,12 +5997,74 @@ html, body {
     background: linear-gradient(90deg, rgba(45, 212, 191, 0.28), rgba(243, 244, 246, 0.06));
   }
 
+  [data-theme="dark"] .news-content h2 {
+    color: #f8fafc;
+  }
+
   [data-theme="dark"] .news-content h2.timeline-highlight-red {
     color: #f87171;
   }
 
   [data-theme="dark"] .timeline-entry-title-alert {
     color: #f87171;
+  }
+
+  [data-theme="dark"] .timeline-list::before,
+  [data-theme="dark"] .news-timeline::before {
+    background: rgba(248, 250, 252, 0.18);
+  }
+
+  [data-theme="dark"] .timeline-list li::before,
+  [data-theme="dark"] .workshop-timeline li::before,
+  [data-theme="dark"] .awards-timeline li::before,
+  [data-theme="dark"] .home-updates-section .workshop-timeline li::before,
+  [data-theme="dark"] .news-marker {
+    background: #0f1419;
+    border-color: rgba(248, 250, 252, 0.28);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.32);
+  }
+
+  [data-theme="dark"] .awards-timeline li::before,
+  [data-theme="dark"] .home-updates-section .workshop-timeline li::before {
+    box-shadow: none;
+  }
+
+  [data-theme="dark"] .timeline-date,
+  [data-theme="dark"] .award-year,
+  [data-theme="dark"] .workshop-date,
+  [data-theme="dark"] .news-item time {
+    color: #cbd5e1;
+  }
+
+  [data-theme="dark"] .load-more-btn.is-final-action,
+  [data-theme="dark"] .load-more-btn.is-final-action:hover {
+    color: #f8fafc;
+  }
+
+  [data-theme="dark"] .workshop-card {
+    background: #111827;
+    border-color: rgba(248, 250, 252, 0.14);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.34);
+  }
+
+  [data-theme="dark"] .workshop-card:hover {
+    border-color: rgba(45, 212, 191, 0.42);
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.48);
+  }
+
+  [data-theme="dark"] .workshop-card-thumb {
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.12), rgba(248, 250, 252, 0.04));
+    border-bottom-color: rgba(248, 250, 252, 0.12);
+    color: rgba(248, 250, 252, 0.58);
+  }
+
+  [data-theme="dark"] .workshop-card-title {
+    color: #f8fafc;
+  }
+
+  [data-theme="dark"] .workshop-card-kicker,
+  [data-theme="dark"] .workshop-card-meta {
+    color: #cbd5e1;
   }
   
   /* Publication card text elements - dark mode */
@@ -6037,6 +6099,61 @@ html, body {
   
   [data-theme="dark"] .filter-rule-label {
     color: #9ca3af;
+  }
+
+  [data-theme="dark"] .paper-search-label {
+    background: #111827;
+    border-color: rgba(248, 250, 252, 0.14);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+  }
+
+  [data-theme="dark"] .mode-btn,
+  [data-theme="dark"] .clear-btn,
+  [data-theme="dark"] .sort-btn {
+    border: 1px solid rgba(248, 250, 252, 0.16);
+    border-radius: 8px;
+    background: rgba(15, 23, 42, 0.72);
+    text-decoration-line: none;
+  }
+
+  [data-theme="dark"] .mode-btn:hover,
+  [data-theme="dark"] .clear-btn:hover,
+  [data-theme="dark"] .sort-btn:hover {
+    opacity: 1;
+    background: rgba(31, 41, 55, 0.96);
+  }
+
+  [data-theme="dark"] .mode-btn[data-mode="and"],
+  [data-theme="dark"] .mode-btn[data-mode="or"],
+  [data-theme="dark"] .clear-btn,
+  [data-theme="dark"] .sort-btn {
+    color: #cbd5e1;
+  }
+
+  [data-theme="dark"] .mode-btn[data-mode="and"].is-active {
+    background: rgba(168, 85, 247, 0.24);
+    border-color: rgba(216, 180, 254, 0.72);
+    color: #f5d0fe;
+    box-shadow: inset 0 0 0 1px rgba(216, 180, 254, 0.32);
+  }
+
+  [data-theme="dark"] .mode-btn[data-mode="or"].is-active {
+    background: rgba(249, 115, 22, 0.22);
+    border-color: rgba(253, 186, 116, 0.72);
+    color: #fed7aa;
+    box-shadow: inset 0 0 0 1px rgba(253, 186, 116, 0.32);
+  }
+
+  [data-theme="dark"] .sort-btn.is-active {
+    background: rgba(221, 94, 86, 0.22);
+    border-color: rgba(248, 113, 113, 0.72);
+    color: #fecaca;
+    box-shadow: inset 0 0 0 1px rgba(248, 113, 113, 0.28);
+  }
+
+  [data-theme="dark"] .clear-btn {
+    border-color: rgba(103, 232, 249, 0.34);
+    color: #67e8f9;
   }
   
   /* Timeline filter - dark mode */
@@ -6143,30 +6260,135 @@ html, body {
     color: #f3f4f6;
   }
 
-  /* Simple inner pages stay white even when the site theme is toggled. */
+  /* Simple inner pages follow the global dark theme. */
   [data-theme="dark"] body.simple-page,
-  [data-theme="dark"] .simple-page .main-footer,
+  [data-theme="dark"] body.news-page,
+  [data-theme="dark"] body.projects-page,
+  [data-theme="dark"] body.education-page,
+  [data-theme="dark"] body.contact-page,
+  [data-theme="dark"] body.research-page {
+    background: #05070a;
+    color: #e5e7eb;
+  }
+
+  [data-theme="dark"] .simple-page .simple-page-shell,
+  [data-theme="dark"] .simple-page .simple-page-content,
+  [data-theme="dark"] .simple-page .content-section,
   [data-theme="dark"] .simple-page .channels,
   [data-theme="dark"] .simple-page .channels-section-title,
   [data-theme="dark"] .simple-page .latest-header,
-  [data-theme="dark"] .simple-page #photography.photo-section-wrapper,
+  [data-theme="dark"] .simple-page #photography.photo-section-wrapper {
+    background: transparent;
+    color: #e5e7eb;
+  }
+
   [data-theme="dark"] .simple-page .simple-focus-card,
   [data-theme="dark"] .simple-page .simple-metrics-card {
-    background: #fff;
+    background: #111827;
+    border-color: rgba(248, 250, 252, 0.12);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.32);
   }
 
   [data-theme="dark"] .simple-page .simple-page-title,
   [data-theme="dark"] .simple-page .simple-focus-card h2,
   [data-theme="dark"] .simple-page .simple-focus-card h3,
   [data-theme="dark"] .simple-page .simple-metrics-card h2,
-  [data-theme="dark"] .simple-page .simple-metric-value {
-    color: var(--color-warm-gray-900);
+  [data-theme="dark"] .simple-page .simple-metric-value,
+  [data-theme="dark"] .simple-page .section-title,
+  [data-theme="dark"] .simple-page .subsection-title,
+  [data-theme="dark"] .simple-page .projects-header h1,
+  [data-theme="dark"] .simple-page .news-header h1 {
+    color: #f8fafc;
   }
 
   [data-theme="dark"] .simple-page .simple-page-subtitle,
   [data-theme="dark"] .simple-page .simple-focus-card ul,
-  [data-theme="dark"] .simple-page .simple-metric-label {
-    color: var(--color-warm-gray-600);
+  [data-theme="dark"] .simple-page .simple-metric-label,
+  [data-theme="dark"] .simple-page .projects-header p,
+  [data-theme="dark"] .simple-page .news-header p {
+    color: #cbd5e1;
+  }
+
+  [data-theme="dark"] .project-topic,
+  [data-theme="dark"] .projects-live-pill,
+  [data-theme="dark"] .projects-profile-link {
+    background: rgba(15, 23, 42, 0.92);
+    border-color: rgba(248, 250, 252, 0.12);
+    color: #e5e7eb;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+  }
+
+  [data-theme="dark"] .project-card {
+    background: #111827;
+    border-color: rgba(248, 250, 252, 0.14);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.34);
+  }
+
+  [data-theme="dark"] .project-card:hover {
+    border-color: rgba(148, 194, 250, 0.42);
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.48);
+  }
+
+  [data-theme="dark"] .project-card h2 {
+    color: #f8fafc;
+  }
+
+  [data-theme="dark"] .project-card time,
+  [data-theme="dark"] .project-card p {
+    color: #cbd5e1;
+  }
+
+  [data-theme="dark"] .project-tag {
+    background: rgba(248, 250, 252, 0.08);
+    color: #e5e7eb;
+  }
+
+  [data-theme="dark"] .project-tag-language {
+    background: rgba(34, 197, 94, 0.16);
+    color: #86efac;
+  }
+
+  [data-theme="dark"] .project-github-link {
+    background: #0f1419;
+    border-color: rgba(248, 250, 252, 0.16);
+    color: #f8fafc;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+  }
+
+  [data-theme="dark"] .education-timeline::before {
+    background: rgba(248, 250, 252, 0.16);
+  }
+
+  [data-theme="dark"] .education-marker {
+    background: #0f1419;
+    border-color: rgba(248, 250, 252, 0.32);
+  }
+
+  [data-theme="dark"] .education-card {
+    background: #111827;
+    border-color: rgba(248, 250, 252, 0.14);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.34);
+  }
+
+  [data-theme="dark"] .education-card:hover {
+    border-color: rgba(148, 194, 250, 0.42);
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.48);
+  }
+
+  [data-theme="dark"] .education-card h2,
+  [data-theme="dark"] .education-card h3,
+  [data-theme="dark"] .education-icon {
+    color: #f8fafc;
+  }
+
+  [data-theme="dark"] .education-card p,
+  [data-theme="dark"] .education-location,
+  [data-theme="dark"] .education-item time {
+    color: #cbd5e1;
+  }
+
+  [data-theme="dark"] .education-card p:first-of-type {
+    color: #e5e7eb;
   }
 
   [data-theme="dark"] body.portfolio-page {
@@ -6222,20 +6444,50 @@ html, body {
     color: #cbd5e1;
   }
 
+  [data-theme="dark"] .portfolio-page .latest-header,
+  [data-theme="dark"] .portfolio-page .content-section,
+  [data-theme="dark"] .portfolio-page .video-section-wrapper {
+    background: #05070a;
+  }
+
+  [data-theme="dark"] .portfolio-page .latest-title {
+    color: #f8fafc;
+  }
+
   [data-theme="dark"] .portfolio-page .video-item-guana::before {
-    background-color: #f5d7c4;
+    background-color: #05070a;
   }
 
   [data-theme="dark"] .portfolio-page .video-item-north-light::before {
-    background-color: #a9c6e7;
+    background-color: #05070a;
   }
 
   [data-theme="dark"] .portfolio-page .video-item-macritchie::before {
-    background-color: #cbedc8;
+    background-color: #05070a;
   }
 
   [data-theme="dark"] .portfolio-page .video-title,
   [data-theme="dark"] .portfolio-page .video-text,
   [data-theme="dark"] .portfolio-page .video-text p {
-    color: #111827;
+    color: #e5e7eb;
+  }
+
+  [data-theme="dark"] .main-footer {
+    background: #05070a;
+    border-top-color: rgba(248, 250, 252, 0.12);
+  }
+
+  [data-theme="dark"] .footer-built,
+  [data-theme="dark"] .footer-rights {
+    color: rgba(248, 250, 252, 0.72);
+  }
+
+  [data-theme="dark"] .footer-built a,
+  [data-theme="dark"] .footer-social a {
+    color: rgba(248, 250, 252, 0.9);
+  }
+
+  [data-theme="dark"] .footer-social a:hover {
+    color: #ffffff;
+    background: rgba(248, 250, 252, 0.1);
   }
