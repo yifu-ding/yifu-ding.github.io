@@ -111,9 +111,9 @@ class LanguageManager {
                 collaborator_zining: 'A humorous and resilient labmate, with research experience at ByteDance Seed.',
                 collaborator_yushi: 'A prolific open-source AI researcher with exceptional insight into visual understanding for large models.',
                 collaborators_section_title: '🤝 Quick links to my collaborators',
-                about_me_title: '👋 About Me',
+                about_me_title: '👋 A Few Words',
                 about_me_paragraph_1: 'As graduation approaches, life has become busier than ever. Several projects that I co-lead or participate in are still ongoing, as listed on my <a href="research.html">Research page</a>. Some are coming soon, while others have been continuously explored for more than two years and are still in the darkness before dawn.',
-                about_me_paragraph_2: 'I feel fortunate to always have frontier research topics to work on and excellent teammates to work with. There has never been a dull moment in my Ph.D. life.',
+                about_me_paragraph_2: 'I feel fortunate to always have frontier research topics to work on and excellent teammates to work with. There has never been a dull moment in my Ph.D. life. As this chapter gradually comes to a close, I am excited and looking forward to embracing my upcoming journey in industry.',
                 about_me_paragraph_3: 'Beyond research, I also enjoy travel and photography. If you are interested, you can find my <a href="studio.html">portfolio here 📷</a>.',
                 update_fund_completion: 'Successfully passed the completion review for the <strong>Outstanding Doctoral Academic Fund</strong> at Beihang University.',
                 update_sam2_glow_2026: 'One paper <span class="paper-title">"Layer Sensitivity Matters: Mixed-Precision Post-Training Quantization for SAM2 Video Segmentation"</span> accepted to <strong>GLOW @ IJCAI 2026</strong>. Congratulations to Wenyu Zhou!',
@@ -478,7 +478,7 @@ class LanguageManager {
                 collaborators_section_title: '🤝 合作者快速链接',
                 about_me_title: '👋 关于我',
                 about_me_paragraph_1: '毕业季比以往任何一年的博士生涯更忙碌。目前，我仍有几个负责或参与的项目正在推进中，具体可见 <a href="research.html">Research 页面</a>中的 ongoing projects。其中一些成果即将发布，也有一些已经持续探索了两年多，仍处在黎明前的黑暗中。',
-                about_me_paragraph_2: '我很幸运，在博士阶段始终探索着最前沿的研究问题，也与最优秀的研究者们并肩合作，让六年的博士生活如白驹过隙。',
+                about_me_paragraph_2: '我很幸运，在博士阶段始终探索着最前沿的研究问题，也与最优秀的研究者们并肩合作，让六年的博士生活如白驹过隙。随着这个阶段逐渐接近尾声，我兴奋并且期待接下来在工业界的新旅程。',
                 about_me_paragraph_3: '研究之外，我也喜欢旅行和摄影。如果你感兴趣，可以在这里查看我的<a href="studio.html">作品集📷</a>。',
                 update_fund_completion: '顺利通过北京航空航天大学<strong>优秀博士研究生学术卓越基金</strong>结题验收。',
                 update_sam2_glow_2026: '一篇论文<span class="paper-title">“Layer Sensitivity Matters: Mixed-Precision Post-Training Quantization for SAM2 Video Segmentation”</span>被 <strong>GLOW @ IJCAI 2026</strong> 接收。祝贺 Wenyu Zhou！',
@@ -1221,7 +1221,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 class ThemeManager {
     constructor() {
-        this.currentTheme = localStorage.getItem('theme') || 'light';
+        this.isPortfolioPage = document.body.classList.contains('portfolio-page');
+        this.currentTheme = this.isPortfolioPage ? 'dark' : (localStorage.getItem('theme') || 'light');
         this.themeToggle = document.getElementById('theme-toggle');
         this.init();
     }

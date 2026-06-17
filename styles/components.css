@@ -241,6 +241,7 @@ html, body {
 .personal-intro-text {
     margin-bottom: var(--space-md);
     max-width: 65ch;
+    min-width: 0;
 }
 
 .personal-intro-paragraph {
@@ -316,6 +317,7 @@ html, body {
     align-items: center;
     gap: var(--space-sm);
     flex-wrap: wrap;
+    max-width: 100%;
 }
 
 .profile-link {
@@ -1505,11 +1507,14 @@ html, body {
   .split-hero-left {
     display: flex;
     align-items: flex-end;
+    min-width: 0;
     padding: clamp(28px, 5vw, 64px);
   }
   
   .split-hero-copy {
+    width: 100%;
     max-width: 760px;
+    min-width: 0;
   }
   
   .split-hero-title {
@@ -5283,6 +5288,14 @@ html, body {
     min-height: 100vh;
     min-height: 100svh;
   }
+
+  .welcome-hero .split-hero-left {
+    padding-top: calc(72px + clamp(28px, 5vw, 64px) + env(safe-area-inset-top));
+  }
+
+  .split-hero-title {
+    overflow-wrap: anywhere;
+  }
   
   .split-hero-right {
     height: 54vh;
@@ -6170,7 +6183,59 @@ html, body {
   [data-theme="dark"] .portfolio-page .main-footer,
   [data-theme="dark"] .portfolio-page .channels,
   [data-theme="dark"] .portfolio-page .channels-section-title,
-  [data-theme="dark"] .portfolio-page .latest-header,
   [data-theme="dark"] .portfolio-page #photography.photo-section-wrapper {
     background: transparent;
+  }
+
+  [data-theme="dark"] body.portfolio-page {
+    background: #05070a;
+    color: #e5e7eb;
+  }
+
+  [data-theme="dark"] .portfolio-page .simple-page-shell,
+  [data-theme="dark"] .portfolio-page .simple-page-content {
+    background: transparent;
+    color: #e5e7eb;
+  }
+
+  [data-theme="dark"] .portfolio-page .channels,
+  [data-theme="dark"] .portfolio-page .channels-section-title,
+  [data-theme="dark"] .portfolio-page #photography.photo-section-wrapper {
+    background: #05070a;
+  }
+
+  [data-theme="dark"] .portfolio-page .channels-section-title .channels-section-heading {
+    color: #f8fafc;
+  }
+
+  [data-theme="dark"] .portfolio-page .photo-showcase-image {
+    background: #111827;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.38);
+  }
+
+  [data-theme="dark"] .portfolio-page .photo-showcase-title {
+    color: #f8fafc;
+  }
+
+  [data-theme="dark"] .portfolio-page .photo-showcase-location,
+  [data-theme="dark"] .portfolio-page .photo-showcase-count {
+    color: #cbd5e1;
+  }
+
+  [data-theme="dark"] .portfolio-page .video-item-guana::before {
+    background-color: #f5d7c4;
+  }
+
+  [data-theme="dark"] .portfolio-page .video-item-north-light::before {
+    background-color: #a9c6e7;
+  }
+
+  [data-theme="dark"] .portfolio-page .video-item-macritchie::before {
+    background-color: #cbedc8;
+  }
+
+  [data-theme="dark"] .portfolio-page .video-title,
+  [data-theme="dark"] .portfolio-page .video-text,
+  [data-theme="dark"] .portfolio-page .video-text p {
+    color: #111827;
   }
