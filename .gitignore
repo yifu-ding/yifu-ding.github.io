@@ -24,3 +24,6 @@ Icon?
 *.tmp
 *.temp
 
+
+# Node tooling
+node_modules/

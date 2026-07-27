@@ -1,0 +1,46 @@
+name: Sync Calendar Availability
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-calendar
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync calendar availability
+        env:
+          CALENDAR_URL_1: ${{ secrets.CALENDAR_URL_1 }}
+          CALENDAR_URL_2: ${{ secrets.CALENDAR_URL_2 }}
+        run: npm run sync-calendar
+
+      - name: Commit updated availability data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/calendar-busy.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: sync calendar availability [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi

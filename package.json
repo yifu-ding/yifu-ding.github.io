@@ -1,0 +1,11 @@
+{
+  "name": "yifu-ding-github-io",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync-calendar": "node scripts/sync-calendar.mjs"
+  },
+  "dependencies": {
+    "node-ical": "^0.27.1"
+  }
+}

@@ -2472,6 +2472,11 @@ html, body {
     background: #dbeafe;
   }
 
+  .tl-tag-btn.is-selected.tag-activity {
+    color: #0284c7;
+    background: #e0f2fe;
+  }
+
   .tl-tag-btn.is-selected.tag-career {
     color: #7c3aed;
     background: #ede9fe;
@@ -2633,6 +2638,11 @@ html, body {
     background: #ede9fe;
   }
 
+  .tag-activity {
+    color: #0284c7;
+    background: #e0f2fe;
+  }
+
   .tag-grant {
     color: #16a34a;
     background: #dcfce7;
@@ -2673,7 +2683,7 @@ html, body {
   .projects-header h1 {
     margin: 0 0 6px;
     font-family: var(--font-display);
-    font-size: clamp(1.75rem, 3vw, 2.4rem);
+    font-size: clamp(1.95rem, 4vw, 3rem);
     font-weight: 800;
     line-height: var(--line-height-tight);
     letter-spacing: 0;
@@ -2906,7 +2916,6 @@ html, body {
 
   .education-page .simple-page-title {
     margin-bottom: 6px;
-    font-size: clamp(1.7rem, 3vw, 2.35rem);
     line-height: 1.15;
   }
 
@@ -5840,12 +5849,6 @@ html, body {
     transform: translateY(2px);
   }
 
-  .load-more-btn.is-final-action {
-    color: #000;
-    font-size: var(--font-size-base);
-    font-weight: 600;
-  }
-
   .load-more-btn.is-final-action .load-more-label::before {
     content: none;
   }
@@ -5855,8 +5858,8 @@ html, body {
   }
 
   .load-more-btn.is-final-action:hover {
-    color: #000;
-    transform: translateX(8px);
+    color: #178f8d;
+    transform: translateY(2px);
   }
   
   @media (max-width: 768px) {
@@ -5945,7 +5948,143 @@ html, body {
   [data-theme="dark"] .paper-card-abstract::before {
     color: #e5e7eb;
   }
-  
+
+  /* ── Thought / Reflections card ── */
+  .thoughts-grid {
+    position: relative;
+  }
+
+  .reflections-subtitle {
+    color: var(--color-text-tertiary, rgba(17, 24, 39, 0.45));
+    font-size: var(--font-size-sm);
+    line-height: 1.55;
+    margin: 8px 0 0;
+  }
+
+  .reflections-subtitle a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .reflections-subtitle a:hover {
+    color: #1CB3B0;
+  }
+
+  [data-theme="dark"] .reflections-subtitle {
+    color: rgba(255, 255, 255, 0.38);
+  }
+
+  .thought-card {
+    --glow-x: 50%;
+    --glow-y: 50%;
+    --glow-intensity: 0;
+    --glow-radius: 280px;
+    --glow-color-rgb: 28, 179, 176;
+    background: #ffffff;
+    border: 1px solid rgba(17, 24, 39, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 520px;
+    overflow: hidden;
+    padding: var(--space-md);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .thought-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .thought-card--glow::after {
+    background: radial-gradient(
+      var(--glow-radius) circle at var(--glow-x) var(--glow-y),
+      rgba(59, 130, 246, calc(var(--glow-intensity) * 0.9)) 0%,
+      rgba(20, 184, 166, calc(var(--glow-intensity) * 0.65)) 38%,
+      rgba(16, 185, 129, calc(var(--glow-intensity) * 0.3)) 58%,
+      transparent 72%
+    );
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    padding: 1px;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+  }
+
+  .thought-card__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+
+  .thought-card__label {
+    color: #1CB3B0;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .thought-card__date {
+    color: rgba(17, 24, 39, 0.42);
+    font-size: 0.72rem;
+  }
+
+  .thought-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .thought-card__title {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .thought-card__desc {
+    color: var(--color-text-secondary);
+    display: -webkit-box;
+    font-size: var(--font-size-sm);
+    line-height: 1.55;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  [data-theme="dark"] .thought-card {
+    background: #1a1f26;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  [data-theme="dark"] .thought-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  [data-theme="dark"] .thought-card__date {
+    color: rgba(255, 255, 255, 0.38);
+  }
+
   [data-theme="dark"] .updates-list li {
     border-left-color: #374151;
   }
@@ -6036,10 +6175,6 @@ html, body {
     color: #cbd5e1;
   }
 
-  [data-theme="dark"] .load-more-btn.is-final-action,
-  [data-theme="dark"] .load-more-btn.is-final-action:hover {
-    color: #f8fafc;
-  }
 
   [data-theme="dark"] .workshop-card {
     background: #111827;

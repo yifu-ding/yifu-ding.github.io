@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/components.css">
     <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/calendar-widget.css">
 </head>
 <body class="simple-page contact-page">
     <!-- Navigation -->
@@ -107,7 +108,6 @@
                             name="email"
                             data-i18n-placeholder="contact_form_email_placeholder"
                             placeholder="your@email.com"
-                            required
                         />
                     </div>
 
@@ -194,15 +194,38 @@
                             </svg>
                         </span>
                         <div>
-                            <a href="www.linkedin.com/in/yifu-ding-ai" target="_blank" rel="noopener">linkedin.com/in/yifuding123</a>
+                            <a href="https://www.linkedin.com/in/yifu-ding-ai" target="_blank" rel="noopener">linkedin.com/in/yifu-ding-ai</a>
                         </div>
                     </li>
                 </ul>
             </aside>
         </div>
+
+        <section class="availability-section" aria-labelledby="availability-title">
+            <div class="availability-card">
+                <div class="availability-title-row">
+                    <h2 class="availability-section-title" id="availability-title" data-i18n="availability_title">Availability</h2>
+                    <span class="availability-subtitle" data-i18n="availability_subtitle">Auto-synced from my calendar.</span>
+                </div>
+                <div class="availability-legend">
+                    <span class="availability-legend-item"><span class="legend-dot busy"></span><span data-i18n="availability_legend_busy">Busy</span></span>
+                    <span class="availability-legend-item"><span class="legend-dot free"></span><span data-i18n="availability_legend_free">Free</span></span>
+                    <span class="availability-updated"></span>
+                </div>
+                <div class="availability-loading" id="availability-loading" data-i18n="availability_loading">Loading availability…</div>
+                <div class="availability-grid" id="availability-grid" hidden>
+                    <div class="avail-header-row"></div>
+                    <div class="avail-allday-row"></div>
+                    <div class="avail-body-wrap">
+                        <div class="avail-hour-col"></div>
+                        <div class="avail-days-col"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    
-    
+
+
 
     <!-- Footer -->
     <footer class="main-footer">
@@ -216,7 +239,7 @@
                     <a href="https://github.com/yifu-ding" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
                     </a>
-                    <a href="www.linkedin.com/in/yifu-ding-ai" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/yifu-ding-ai" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
                         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.2 9.6V20M12 20v-5.8c0-2.7 1.5-4.6 4-4.6s3.8 1.7 3.8 4.7V20M4.4 6.5a2.1 2.1 0 1 0 0-4.2 2.1 2.1 0 0 0 0 4.2ZM2.6 9.6h3.6V20H2.6V9.6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </a>
                     <a href="mailto:yifuding@buaa.edu.cn" title="Email" aria-label="Email">
@@ -229,5 +252,6 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/calendar-widget.js"></script>
 </body>
 </html>

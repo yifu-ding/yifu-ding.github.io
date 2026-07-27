@@ -73,9 +73,9 @@
         <nav class="page-sidebar-nav-links">
           <a href="#research-overview" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label" data-i18n="research_sidebar_overview">Overview</span></a>
           <a href="#selected-publications" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label" data-i18n="research_sidebar_selected">Selected</span></a>
-          <a href="#selected-efficient-foundation-models" class="page-sidebar-nav-link page-sidebar-nav-link-sub"><span class="nav-arrow"></span><span class="page-sidebar-nav-label" data-i18n="research_sidebar_efficient_foundation_models">Efficient Foundation Models</span></a>
-          <a href="#selected-multimodal-videogen" class="page-sidebar-nav-link page-sidebar-nav-link-sub"><span class="nav-arrow"></span><span class="page-sidebar-nav-label" data-i18n="research_sidebar_multimodal_videogen">Multimodal and VideoGen</span></a>
-          <a href="#selected-kernels-hardware" class="page-sidebar-nav-link page-sidebar-nav-link-sub"><span class="nav-arrow"></span><span class="page-sidebar-nav-label" data-i18n="research_sidebar_kernels_hardware">Kernels and Hardware</span></a>
+          <a href="#selected-kernels-hardware" class="page-sidebar-nav-link page-sidebar-nav-link-sub"><span class="nav-arrow"></span><span class="page-sidebar-nav-label" data-i18n="research_sidebar_kernels">High-Performance Kernels</span></a>
+          <a href="#selected-model-compression" class="page-sidebar-nav-link page-sidebar-nav-link-sub"><span class="nav-arrow"></span><span class="page-sidebar-nav-label" data-i18n="research_sidebar_compression">Model Compression</span></a>
+          <a href="#selected-inference-optimization" class="page-sidebar-nav-link page-sidebar-nav-link-sub"><span class="nav-arrow"></span><span class="page-sidebar-nav-label" data-i18n="research_sidebar_inference">Inference Optimization</span></a>
           <a href="#all-publications" class="page-sidebar-nav-link"><span class="nav-arrow"></span><span class="page-sidebar-nav-label" data-i18n="research_sidebar_all_publications">All Publications</span></a>
         </nav>
       </div>
@@ -96,10 +96,9 @@
             <div class="simple-focus-card">
               <h2><strong data-i18n="research_focus_title">Research Focus</strong></h2>
               <ul>
-                <li data-i18n-html="research_focus_1">Efficient inference and deployment for large language models and MoE models.</li>
-                <li data-i18n-html="research_focus_2">Post-training compression and acceleration, e.g., quantization, pruning, kv cache and decoding optimization.</li>
-                <li data-i18n-html="research_focus_3">High-performance operators and kernels for low-bit, sparse, and hardware-aware computation.</li>
-                <li data-i18n-html="research_focus_4">Multimodal understanding and generation, including vision-language models and image/video diffusion models.</li>
+                <li data-i18n-html="research_focus_1">High-performance kernels for low-bit, sparse, and hardware-aware computation, hand-tuned with Triton and CUDA for GPUs and FPGAs.</li>
+                <li data-i18n-html="research_focus_2">Model compression through quantization, pruning, and knowledge distillation for large language models, MoE models, and generative models.</li>
+                <li data-i18n-html="research_focus_3">Inference optimization, including KV cache and decoding strategies, expert routing/skipping, and attention/step caching for faster generation.</li>
               </ul>
             </div>
 
@@ -198,7 +197,7 @@
                     <a href="https://github.com/yifu-ding" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
                     </a>
-                    <a href="www.linkedin.com/in/yifu-ding-ai" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/yifu-ding-ai" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
                         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.2 9.6V20M12 20v-5.8c0-2.7 1.5-4.6 4-4.6s3.8 1.7 3.8 4.7V20M4.4 6.5a2.1 2.1 0 1 0 0-4.2 2.1 2.1 0 0 0 0 4.2ZM2.6 9.6h3.6V20H2.6V9.6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </a>
                     <a href="mailto:yifuding@buaa.edu.cn" title="Email" aria-label="Email">
@@ -213,30 +212,6 @@
     <script>
       window.SELECTED_PUBLICATION_GROUPS = [
         {
-          id: "selected-efficient-foundation-models",
-          title: "⚡ Efficient Training and Inference for Foundation Models",
-          titleZh: "⚡ 基础模型的高效训练与推理",
-          papers: [
-            "Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression",
-            "SPA-Cache: Singular Proxies for Adaptive Caching in Diffusion Language Models",
-            "A survey of low-bit large language models: Basics, systems, and algorithms",
-            "Dynamic Parallel Tree Search for Efficient LLM Reasoning",
-            "DA-KD: Difficulty-Aware Knowledge Distillation for Efficient Large Language Models",
-            "Llmcbench: Benchmarking large language model compression for efficient deployment"
-          ]
-        },
-        {
-          id: "selected-multimodal-videogen",
-          title: "🎬 Multimodal and Video Generation",
-          titleZh: "🎬 多模态与视频生成",
-          papers: [
-            "QVGen: Pushing the Limit of Quantized Video Generative Models",
-            "MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping",
-            "VORTA: Efficient Video Diffusion via Routing Sparse Attention"
-            // "QuantSR: accurate low-bit quantization for efficient image super-resolution"
-          ]
-        },
-        {
           id: "selected-kernels-hardware",
           title: "🧩 High-Performance Kernels and Hardware-Aware Acceleration",
           titleZh: "🧩 高性能算子与硬件感知加速",
@@ -244,7 +219,26 @@
             "Diagonal-Tiled Mixed-Precision Attention for Efficient Low-Bit MXFP Inference",
             "BWTA: Accurate and Efficient Binarized Transformer by Algorithm-Hardware Co-design",
             "Low-bit FlashAttention Accelerated Operator Design Based on Triton"
-            // "QuS: Towards High-Performance EfficientViT on FPGA by Quantization and Streamline Co-Design"
+          ]
+        },
+        {
+          id: "selected-model-compression",
+          title: "🗜️ Model Compression",
+          titleZh: "🗜️ 模型压缩",
+          papers: [
+            "Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression",
+            "A survey of low-bit large language models: Basics, systems, and algorithms",
+            "QVGen: Pushing the Limit of Quantized Video Generative Models"
+          ]
+        },
+        {
+          id: "selected-inference-optimization",
+          title: "⚡ Inference Optimization",
+          titleZh: "⚡ 推理优化",
+          papers: [
+            "SPA-Cache: Singular Proxies for Adaptive Caching in Diffusion Language Models",
+            "MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping",
+            "VORTA: Efficient Video Diffusion via Routing Sparse Attention"
           ]
         }
       ];

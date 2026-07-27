@@ -36,7 +36,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/llm-quant-survey.png",
     venue: "Neural Networks",
     year: 2026,
-    title: "A survey of low-bit large language models: Basics, systems, and algorithms",
+    title: "A Survey of Low-Bit Large Language Models: Basics, Systems, and Algorithms",
     authors: "Ruihao Gong, Yifu Ding, Zining Wang, Chengtao Lv, Xingyu Zheng, Jinyang Du, Haotong Qin, Jinyang Guo, Michele Magno, Xianglong Liu",
     description: "This survey reviews low-bit quantization for large language models, covering core principles, data formats, system support, and algorithmic methods.",
     selected: true,
@@ -50,7 +50,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/llmcbench.png",
     venue: "NeurIPS 2024 Spotlight",
     year: 2024,
-    title: "Llmcbench: Benchmarking large language model compression for efficient deployment",
+    title: "LLMCBench: Benchmarking Large Language Model Compression for Efficient Deployment",
     authors: "Ge Yang, Changyi He, Jinyang Guo, Jiannan Wu, Yifu Ding, Aishan Liu, Haotong Qin, Pengliang Ji, Xianglong Liu",
     description: "LLMCBench evaluates 7 compression methods across 18 LLM architectures, 11 datasets, and 3 deployment platforms for efficient deployment.",
     tags: ["LLM","Benchmark","Quantization", "Pruning"]
@@ -63,7 +63,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/jsq-overview.png",
     venue: "ICML 2024",
     year: 2024,
-    title: "Compressing large language models by joint sparsification and quantization",
+    title: "Compressing Large Language Models by Joint Sparsification and Quantization",
     authors: "",
     description: "",
     tags: ["LLM","Pruning","Quantization","Language Model"]
@@ -147,7 +147,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/reg-ptq.png",
     venue: "CVPR 2024",
     year: 2024,
-    title: "Reg-PTQ: Regression-specialized Post-training Quantization for Fully Quantized Object Detector",
+    title: "Reg-PTQ: Regression-Specialized Post-Training Quantization for Fully Quantized Object Detector",
     tags: ["Detection","PTQ","Regression","Quantization"]
   },
   {
@@ -158,7 +158,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/quantsr.png",
     venue: "NeurIPS 2023 Spotlight",
     year: 2023,
-    title: "QuantSR: accurate low-bit quantization for efficient image super-resolution",
+    title: "QuantSR: Accurate Low-Bit Quantization for Efficient Image Super-Resolution",
     authors: "Haotong Qin, Yulun Zhang, Yifu Ding, Yi Liu, Xianglong Liu, Martin Danelljan, Fisher Yu",
     description: "QuantSR uses deep dynamic quantization with parameter redistribution for accurate low-bit image super-resolution.",
     tags: ["Super-Resolution","PTQ","Quantization"]
@@ -178,7 +178,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/dsg-pami-overview.png",
     venue: "IEEE TPAMI 2023",
     year: 2023,
-    title: "Diverse sample generation: Pushing the limit of generative data-free quantization",
+    title: "Diverse Sample Generation: Pushing the Limit of Generative Data-Free Quantization",
     tags: ["Data-free","CNN","PTQ","Quantization"]
   },
   {
@@ -205,7 +205,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/bibench-clear.png",
     venue: "ICML 2023",
     year: 2023,
-    title: "Bibench: Benchmarking and analyzing network binarization",
+    title: "BiBench: Benchmarking and Analyzing Network Binarization",
     tags: ["Benchmark","Binarization"]
   },
   {
@@ -214,7 +214,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/bifsmn-v2.png",
     venue: "IEEE TNNLS 2024",
     year: 2024,
-    title: "Bifsmnv2: Pushing binary neural networks for keyword spotting to real-network performance",
+    title: "BiFSMNv2: Pushing Binary Neural Networks for Keyword Spotting to Real-Network Performance",
     tags: ["Keyword Spotting","Binarization"]
   },
   {
@@ -223,7 +223,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/distribution-sensitive-overview.png",
     venue: "IJCV 2022",
     year: 2022,
-    title: "Distribution-sensitive information retention for accurate binary neural network",
+    title: "Distribution-Sensitive Information Retention for Accurate Binary Neural Network",
     tags: ["Binarization","CNN"]
   },
   {
@@ -232,7 +232,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/bibert.png",
     venue: "ICLR 2022",
     year: 2022,
-    title: "Bibert: Accurate fully binarized bert",
+    title: "BiBERT: Accurate Fully Binarized BERT",
     tags: ["BERT","Binarization"]
   },
   {
@@ -241,7 +241,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/bifsmn-overview.png",
     venue: "IJCAI 2021",
     year: 2021,
-    title: "BiFSMN: Binary neural network for keyword spotting",
+    title: "BiFSMN: Binary Neural Network for Keyword Spotting",
     tags: ["Keyword Spotting","Binarization","FSMN"]
   },
   {
@@ -250,7 +250,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/bipointnet.png",
     venue: "ICLR 2021",
     year: 2021,
-    title: "Bipointnet: Binary neural network for point clouds",
+    title: "BiPointNet: Binary Neural Network for Point Clouds",
     tags: ["Point Clouds","Binarization","PointNet"]
   },
   {
@@ -260,7 +260,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/du-low-bit-flash-attention-overview.png",
     venue: "ECLR 2025 (ICCV Workshop)",
     year: 2025,
-    title: "Low-bit FlashAttention Accelerated Operator Design Based on Triton",
+    title: "Low-Bit FlashAttention Accelerated Operator Design Based on Triton",
     authors: "Jinyang Du, Jinyang Guo, Yifu Ding",
     description: "A Triton-based mixed-precision FlashAttention operator integrates quantization, dequantization, and attention for efficient low-bit inference.",
     tags: ["Attention","Triton Kernel","Quantization"]
@@ -286,7 +286,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/bwta-kernel.png",
     venue: "Submitted to IEEE-TPAMI under review",
     year: 2026,
-    title: "BWTA: Accurate and Efficient Binarized Transformer by Algorithm-Hardware Co-design",
+    title: "BWTA: Accurate and Efficient Binarized Transformer by Algorithm-Hardware Co-Design",
     authors: "Yifu Ding, Xianglong Liu, Shiyao Jin, Jinyang Guo, Jiliang Lu",
     description: "Algorithm-hardware co-design with CUDA kernels for ultra-low-bit binary and ternary Transformer computation.",
     tags: ["Binarization","CUDA Kernel","Hardware","Transformer"]
@@ -337,7 +337,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/tao-exploring-endogenuous-shift-overview.png",
     venue: "CVPR 2022",
     year: 2022,
-    title: "Exploring Endogenous Shift for Cross-domain Detection: A Large-scale Benchmark and Perturbation Suppression Network",
+    title: "Exploring Endogenous Shift for Cross-Domain Detection: A Large-Scale Benchmark and Perturbation Suppression Network",
     tags: ["Image Detection","Benchmark","Domain Adaptation", "Cross-domain"]
   },
   {
@@ -346,7 +346,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/spatial-temporal-adaptive-overview.png",
     venue: "IEEE TCSVT 2021",
     year: 2021,
-    title: "Spatio-temporal adaptive network with bidirectional temporal difference for action recognition",
+    title: "Spatio-Temporal Adaptive Network with Bidirectional Temporal Difference for Action Recognition",
     tags: ["Action Recognition","Domain Adaptation"]
   },
   {
@@ -365,7 +365,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/icme-2021-overview.jpg",
     venue: "ICME 2021",
     year: 2021,
-    title: "Multi-pretext attention network for few-shot learning with self-supervision",
+    title: "Multi-Pretext Attention Network for Few-Shot Learning with Self-Supervision",
     tags: ["Few-shot Learning"]
   },
   {
@@ -374,7 +374,7 @@ const PAPERS_CONFIG = [
     imageUrl: "src/papers/imgs/tmm-2021-oversampling-overview.jpg",
     venue: "IEEE TRANSACTIONS ON MULTIMEDIA 2021",
     year: 2021,
-    title: "Over-sampling de-occlusion attention network for prohibited items detection in noisy x-ray images",
+    title: "Over-Sampling De-Occlusion Attention Network for Prohibited Items Detection in Noisy X-Ray Images",
     tags: ["X-ray","Image Detection","De-occlusion"]
   },
   {
