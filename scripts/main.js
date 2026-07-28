@@ -125,7 +125,7 @@ class LanguageManager {
                 reflections_subtitle: 'Thoughts and reflections recorded at different stages. Feel free to <a href="contact.html">reach out</a> anytime.',
                 thought_label: 'Essay',
                 thought_1_title: 'The Future of AI Infrastructure',
-                thought_1_desc: 'How AI Infra evolves from regularized inference toward dynamic agentic systems, and where post-training algorithms are heading.',
+                thought_1_desc: 'AI infrastructure is shifting from optimizing for static, regular inference to orchestrating dynamic, agentic systems, while the boundary between training and post-training continues to blur.',
                 writing_back: '← Back to Reflections',
                 writing_read_time: '5 min read',
                 writing_footer: 'If this resonates with you or you have a different take, I\'d love to hear it — <a href="contact.html">reach out anytime</a>.',
@@ -1315,6 +1315,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.body.classList.add('loaded');
     }, 100);
+
+    // Navigate to the linked post when a reflections thought-card is clicked
+    document.querySelectorAll('.thought-card[data-thought-link]').forEach(card => {
+        card.addEventListener('click', () => {
+            window.location.href = card.dataset.thoughtLink;
+        });
+    });
 
     console.log('✨ Personal homepage initialized successfully!');
 });
