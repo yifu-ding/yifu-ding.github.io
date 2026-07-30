@@ -7,6 +7,7 @@
   if (!grid || !topicRow || !statusEl) return;
 
   const API_URL = 'https://api.github.com/users/yifu-ding/repos?per_page=100&sort=created&direction=desc';
+  const CACHE_URL = 'data/repositories.json';
 
   function escapeHtml(value) {
     return String(value || '')
@@ -33,6 +34,12 @@
     for (const topic of repo.topics || []) tags.push(topic);
     if (repo.stargazers_count > 0) tags.push(`${repo.stargazers_count} stars`);
     return Array.from(new Set(tags)).slice(0, 7);
+  }
+
+  function normalizeRepos(repos) {
+    return (repos || [])
+      .filter(repo => !repo.archived)
+      .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
   }
 
   function renderTopics(repos) {
@@ -74,20 +81,50 @@
     }).join('');
   }
 
+  function showRepos(repos, statusText) {
+    const visibleRepos = normalizeRepos(repos);
+    renderTopics(visibleRepos);
+    renderRepos(visibleRepos);
+    statusEl.textContent = statusText.replace('{count}', String(visibleRepos.length));
+  }
+
+  async function fetchLiveRepos() {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 8000);
+    try {
+      const response = await fetch(API_URL, {
+        headers: { Accept: 'application/vnd.github+json' },
+        signal: controller.signal
+      });
+      if (!response.ok) throw new Error(`GitHub API ${response.status}`);
+      return await response.json();
+    } finally {
+      clearTimeout(timeoutId);
+    }
+  }
+
+  async function fetchCachedRepos() {
+    const response = await fetch(CACHE_URL, { headers: { Accept: 'application/json' } });
+    if (!response.ok) throw new Error(`Cache ${response.status}`);
+    const payload = await response.json();
+    return Array.isArray(payload) ? payload : (payload.repositories || []);
+  }
+
   async function loadRepositories() {
     try {
-      const response = await fetch(API_URL, { headers: { Accept: 'application/vnd.github+json' } });
-      if (!response.ok) throw new Error(`GitHub API ${response.status}`);
-      const repos = await response.json();
-      const visibleRepos = repos
-        .filter(repo => !repo.archived)
-        .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-      renderTopics(visibleRepos);
-      renderRepos(visibleRepos);
-      statusEl.textContent = `${visibleRepos.length} public repositories loaded from GitHub.`;
-    } catch (error) {
+      const repos = await fetchLiveRepos();
+      showRepos(repos, '{count} public repositories loaded from GitHub.');
+      return;
+    } catch (liveError) {
+      console.warn('GitHub API unavailable, falling back to local cache.', liveError);
+    }
+
+    try {
+      const repos = await fetchCachedRepos();
+      showRepos(repos, '{count} repositories shown from local cache (GitHub API unavailable).');
+    } catch (cacheError) {
       statusEl.textContent = 'Unable to load GitHub repositories right now.';
-      console.error(error);
+      console.error(cacheError);
     }
   }
 

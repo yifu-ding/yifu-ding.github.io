@@ -1,0 +1,297 @@
+{
+  "updated_at": "2026-07-30T07:31:29Z",
+  "source": "https://api.github.com/users/yifu-ding/repos",
+  "repositories": [
+    {
+      "name": "MoE-Slimming",
+      "html_url": "https://github.com/yifu-ding/MoE-Slimming",
+      "description": "Official ICML 2026 Spotlight implementation for structural MoE compression, including attribution-guided channel scoring, coverage-maximized pruning, compact checkpoint construction, and fine-tuning support.",
+      "language": "Python",
+      "fork": false,
+      "topics": [
+        "llm",
+        "llm-compression",
+        "model-quantization",
+        "moe",
+        "pruning",
+        "sparsification",
+        "structural-pruning"
+      ],
+      "stargazers_count": 2,
+      "created_at": "2026-05-23T14:47:55Z",
+      "archived": false
+    },
+    {
+      "name": "Multimodal-MoE-Slimming",
+      "html_url": "https://github.com/yifu-ding/Multimodal-MoE-Slimming",
+      "description": "Multimodal-MoE-Slimming is a post-training compression framework for multimodal Mixture-of-Experts models. It analyzes how experts respond differently to visual and textual information, then uses this modality-aware behavior to reduce redundant expert capacity and build compact MoE checkpoints for more efficient deployment.",
+      "language": "Python",
+      "fork": false,
+      "topics": [
+        "efficient-llm",
+        "model-compression",
+        "moe",
+        "multimodal",
+        "pruning",
+        "structural-pruning"
+      ],
+      "stargazers_count": 0,
+      "created_at": "2026-04-10T04:45:14Z",
+      "archived": false
+    },
+    {
+      "name": "Conference-Workshop-Proposal-Template",
+      "html_url": "https://github.com/yifu-ding/Conference-Workshop-Proposal-Template",
+      "description": "A simple conference workshop proposal template based on successful proposals from previous workshops.",
+      "language": "TeX",
+      "fork": false,
+      "topics": [
+        "conference-workshop",
+        "template",
+        "workshop-proposal"
+      ],
+      "stargazers_count": 0,
+      "created_at": "2026-02-04T19:52:00Z",
+      "archived": false
+    },
+    {
+      "name": "VocabularyBuilder",
+      "html_url": "https://github.com/yifu-ding/VocabularyBuilder",
+      "description": "An offline iOS vocabulary learning app based on etymology, word roots, and multi-stage practice.",
+      "language": "Swift",
+      "fork": false,
+      "topics": [
+        "english-learning",
+        "etymology",
+        "ios",
+        "language-learning",
+        "swift",
+        "swiftui",
+        "vocabulary"
+      ],
+      "stargazers_count": 1,
+      "created_at": "2025-12-20T07:38:17Z",
+      "archived": false
+    },
+    {
+      "name": "FastDeploy",
+      "html_url": "https://github.com/yifu-ding/FastDeploy",
+      "description": "FastDeploy fork with SQAttn integration for efficient sparse-quantized long-context Transformer inference.",
+      "language": "Python",
+      "fork": true,
+      "topics": [
+        "fastdeploy",
+        "long-context",
+        "paddlepaddle",
+        "sparse-attention"
+      ],
+      "stargazers_count": 0,
+      "created_at": "2025-11-09T23:28:04Z",
+      "archived": false
+    },
+    {
+      "name": "LongContext-SparseQuant-Attn",
+      "html_url": "https://github.com/yifu-ding/LongContext-SparseQuant-Attn",
+      "description": "This repository implements an ultra-long-context inference framework in PaddlePaddle, featuring an accelerated sparse-quantized SQAttn attention kernel and hybrid CPU-GPU execution. It supports up to 1,024K-token inference and enables efficient large-scale attention computation for long-context language models.",
+      "language": "Python",
+      "fork": false,
+      "topics": [
+        "1024k-context",
+        "attention",
+        "hybrid-inference",
+        "llm-inference",
+        "long-context",
+        "paddlepaddle",
+        "sparse-attention"
+      ],
+      "stargazers_count": 0,
+      "created_at": "2025-10-29T20:29:55Z",
+      "archived": false
+    },
+    {
+      "name": "Journal-Response-Template",
+      "html_url": "https://github.com/yifu-ding/Journal-Response-Template",
+      "description": "A clean LaTeX template for preparing journal revision responses and reviewer rebuttal letters.",
+      "language": "TeX",
+      "fork": false,
+      "topics": [
+        "cover-letter",
+        "journal-response",
+        "latex",
+        "paper-revision",
+        "rebuttal",
+        "reviewer-response",
+        "template"
+      ],
+      "stargazers_count": 3,
+      "created_at": "2025-08-31T18:28:21Z",
+      "archived": false
+    },
+    {
+      "name": "MP-Sparse-Attn",
+      "html_url": "https://github.com/yifu-ding/MP-Sparse-Attn",
+      "description": "MP-Sparse-Attn provides Triton kernels for Diagonal-Tiled Mixed-Precision Attention, targeting efficient low-bit MXFP inference for Transformer models. It combines tile-level mixed-precision computation and kernel fusion to accelerate attention on modern GPUs.",
+      "language": "Python",
+      "fork": false,
+      "topics": [
+        "attention",
+        "llm-inference",
+        "low-bit-quantization",
+        "mixed-precision",
+        "mxfp",
+        "triton"
+      ],
+      "stargazers_count": 2,
+      "created_at": "2025-05-26T05:58:02Z",
+      "archived": false
+    },
+    {
+      "name": "Awesome-Edge-LLMs",
+      "html_url": "https://github.com/yifu-ding/Awesome-Edge-LLMs",
+      "description": "This is a repository accompanying the survey Edge AI Meets LLM (coming soon), containing a comprehensive list of papers, codebases, toolchains, and open-source frameworks. It is intended to serve as a handbook for researchers and developers interested in Edge/Mobile LLMs.",
+      "language": null,
+      "fork": false,
+      "topics": [
+        "edge-ai",
+        "edge-llm",
+        "efficient-ai",
+        "llm-inference",
+        "on-device-ai"
+      ],
+      "stargazers_count": 17,
+      "created_at": "2025-05-22T13:59:48Z",
+      "archived": false
+    },
+    {
+      "name": "DPTS",
+      "html_url": "https://github.com/yifu-ding/DPTS",
+      "description": "Official implementation of Dynamic Parallel Tree Search for accelerating LLM reasoning with test-time parallel search.",
+      "language": "Python",
+      "fork": false,
+      "topics": [
+        "code-generation",
+        "inference-acceleration",
+        "llm-reasoning",
+        "mathematical-reasoning",
+        "test-time-compute",
+        "tree-of-thoughts",
+        "tree-search"
+      ],
+      "stargazers_count": 4,
+      "created_at": "2025-04-03T13:32:07Z",
+      "archived": false
+    },
+    {
+      "name": "BGEMM-CUDA",
+      "html_url": "https://github.com/yifu-ding/BGEMM-CUDA",
+      "description": "BGEMM-CUDA is a CUDA-based low-bit GEMM kernel library for efficient neural network inference. It implements optimized binary and ternary matrix multiplication primitives, including binary-weight and ternary-activation computation, with PyTorch extension support for model-level integration. ",
+      "language": "Cuda",
+      "fork": false,
+      "topics": [
+        "bgemm",
+        "binarization",
+        "cuda",
+        "cuda-kernels",
+        "gemm",
+        "high-performance-computing",
+        "low-bit-quantization",
+        "lowbit-kernel"
+      ],
+      "stargazers_count": 20,
+      "created_at": "2024-06-04T00:52:24Z",
+      "archived": false
+    },
+    {
+      "name": "photo2cartoon-mindspore",
+      "html_url": "https://github.com/yifu-ding/photo2cartoon-mindspore",
+      "description": "MindSpore implementation of GAN-based photo-to-cartoon portrait stylization.",
+      "language": "Python",
+      "fork": false,
+      "topics": [
+        "gan",
+        "image-style-transfer",
+        "image-stylization",
+        "mindspore",
+        "photo2cartoon"
+      ],
+      "stargazers_count": 30,
+      "created_at": "2022-06-25T14:58:04Z",
+      "archived": false
+    },
+    {
+      "name": "Optimization-Methods-Python",
+      "html_url": "https://github.com/yifu-ding/Optimization-Methods-Python",
+      "description": "Python implementations of optimization algorithms for Prof. Li Gao's Optimization Methods course assignments at BUAA.",
+      "language": "Python",
+      "fork": false,
+      "topics": [
+        "bfgs",
+        "dfp",
+        "line-search",
+        "newton-method",
+        "numerical-optimization",
+        "optimization",
+        "quasi-newton"
+      ],
+      "stargazers_count": 2,
+      "created_at": "2021-11-15T11:28:09Z",
+      "archived": false
+    },
+    {
+      "name": "yifu-ding.github.io",
+      "html_url": "https://github.com/yifu-ding/yifu-ding.github.io",
+      "description": "Yifu Ding's Personal Page",
+      "language": "JavaScript",
+      "fork": false,
+      "topics": [],
+      "stargazers_count": 0,
+      "created_at": "2021-01-13T11:05:11Z",
+      "archived": false
+    },
+    {
+      "name": "awesome-model-quantization",
+      "html_url": "https://github.com/yifu-ding/awesome-model-quantization",
+      "description": "A list of papers, docs, codes about model quantization. This repo is aimed to provide the info for model quantization research, we are continuously improving the project. Welcome to PR the works (papers, repositories) that are missed by the repo.",
+      "language": null,
+      "fork": true,
+      "topics": [
+        "model-quantization",
+        "paper-collection"
+      ],
+      "stargazers_count": 5,
+      "created_at": "2020-09-30T00:52:51Z",
+      "archived": false
+    },
+    {
+      "name": "CitizenScience-Mobile",
+      "html_url": "https://github.com/yifu-ding/CitizenScience-Mobile",
+      "description": "A Flutter-based citizen science mobile app developed as a BUAA Software Engineering course team project.",
+      "language": "Dart",
+      "fork": false,
+      "topics": [
+        "dart",
+        "flutter",
+        "mobile-app",
+        "software-engineering"
+      ],
+      "stargazers_count": 0,
+      "created_at": "2020-04-08T13:50:08Z",
+      "archived": false
+    },
+    {
+      "name": "BUAA_OSLAB",
+      "html_url": "https://github.com/yifu-ding/BUAA_OSLAB",
+      "description": "Operating System course lab implementation for BUAA, covering bootstrapping, memory management, drivers, and kernel utilities.",
+      "language": "C",
+      "fork": false,
+      "topics": [
+        "buaa",
+        "operating-system",
+        "oslab"
+      ],
+      "stargazers_count": 5,
+      "created_at": "2019-04-16T13:01:03Z",
+      "archived": false
+    }
+  ]
+}
